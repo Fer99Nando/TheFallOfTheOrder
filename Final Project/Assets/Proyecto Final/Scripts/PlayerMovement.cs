@@ -2,53 +2,41 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour {
+public class PlayerMovement : MonoBehaviour
+{
+    public float speed = 10.0f;
+    public float jumpForce = 8.0f;
+    public float gravity = 9.81f;
 
-	private CharacterController controller;
-	private Vector2 axis;
-	public float speed;
-	public Vector3 moveDirection;
-	private float forceToGround = Physics.gravity.y;
-
-	public float jumpSpeed;
-	private bool jump;
-	public float gravityMagnitude = 1.0f;
-
+    private Vector3 moveDir = Vector3.zero;
+	// Use this for initialization
 	void Start ()
-	{
-		controller = GetComponent<CharacterController>();
+    {
+		
 	}
-
+	
+	// Update is called once per frame
 	void Update ()
-	{
-		if(controller.isGrounded && !jump)
-		{
-			moveDirection.y = forceToGround;
-		}
-		else
-		{
-			jump = false;
-			moveDirection.y += Physics.gravity.y * gravityMagnitude * Time.deltaTime;
-		}
+    {
+        CharacterController controller = gameObject.GetComponent<CharacterController>();
+        
+        if (controller.isGrounded)
+        {
+            moveDir = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
 
-		Vector3 transformDirection = axis.x * transform.right + axis.y * transform.forward;
+            moveDir = transform.TransformDirection(moveDir);
 
-		moveDirection.x = transformDirection.x * speed;
-		moveDirection.z = transformDirection.z * speed;
+            moveDir *= speed;
 
-		controller.Move(moveDirection * Time.deltaTime);
-	}
+            if ( Input.GetButtonDown("Jump"))
+            {
+                moveDir.y = jumpForce;
 
-	public void SetAxis(Vector2 inputAxis)
-	{
-		axis = inputAxis;
-	}
+            }
+        }
 
-	public void StartJump()
-	{
-		if(!controller.isGrounded) return;
+        moveDir.y -= gravity * Time.deltaTime;
 
-		moveDirection.y = jumpSpeed;
-		jump = true;
+        controller.Move ( moveDir * Time.deltaTime);
 	}
 }
