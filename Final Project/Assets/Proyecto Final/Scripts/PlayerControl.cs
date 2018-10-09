@@ -36,17 +36,25 @@ public class PlayerControl : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        GetInput ();
-        Rotate ();
+        if (GetInput ())
+        {
+            Rotate ();
+        }
         Move ();
 	}
 
     // Escucha todas las teclas que controlan al jugador
-    private void GetInput()
+    private bool GetInput()
     {
         this.inputV = Input.GetAxis("Vertical");
         this.inputH = Input.GetAxis("Horizontal");
         this.jumpInput = Input.GetAxis("Jump");
+
+        if(this.inputV != 0 || this.inputH != 0 || this.jumpInput != 0)
+        {
+            return true;
+        }
+        return false;
     }
 
     // Mueve al personaje si se usan las teclas de control

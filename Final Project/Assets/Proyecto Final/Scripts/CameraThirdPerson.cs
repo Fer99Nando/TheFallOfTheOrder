@@ -27,7 +27,7 @@ public class CameraThirdPerson : MonoBehaviour
 	void Update () 
 	{
 		this.distance += Input.GetAxis("Mouse ScrollWheel") * this.sensitivityWheel; //zoom
-		this.distance = Mathf.Clamp(this.distance, 10f, 6f); // Limitacion de zoom in and zoom out
+		this.distance = Mathf.Clamp(this.distance, 2f, 6f); // Limitacion de zoom in and zoom out
 
 		this.fixedDist = fixDistance();
 	}
