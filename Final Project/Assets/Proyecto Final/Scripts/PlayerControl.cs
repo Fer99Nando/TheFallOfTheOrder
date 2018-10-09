@@ -6,6 +6,8 @@ public class PlayerControl : MonoBehaviour
 {
     private CharacterController controller;
 
+    public Transform lookAt;
+
     public float forwardSpeed;              // Velocidad de avance
     private float diagonalForwardSpeed;     // Velocidad de avance en cada eje cuando avanza diagonalmente
     private float backSpeed;                // Velocidad de retroceso
@@ -122,7 +124,7 @@ public class PlayerControl : MonoBehaviour
 
     private void Rotate ()
     {
-        transform.Rotate(0, Input.GetAxis("Mouse X") * 4.0f, 0);
+        transform.rotation = Quaternion.Euler(0, this.lookAt.eulerAngles.y, 0);
     }
     private bool Grounded ()
     {

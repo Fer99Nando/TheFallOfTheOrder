@@ -521,6 +521,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114732191557286074, guid: 38eaf55dec1eb0048a816c168d2107c6,
+        type: 2}
+      propertyPath: lookAt
+      value: 
+      objectReference: {fileID: 426559524}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38eaf55dec1eb0048a816c168d2107c6, type: 2}
   m_IsPrefabAsset: 0
@@ -534,6 +539,7 @@ GameObject:
   - component: {fileID: 2006784991}
   - component: {fileID: 2006784990}
   - component: {fileID: 2006784989}
+  - component: {fileID: 2006784992}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -601,3 +607,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 23.111002, y: -90, z: 0}
+--- !u!114 &2006784992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2006784988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 212bb15e6d7489c4d8aeb9cf872a1274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lookAt: {fileID: 426559524}
+  distance: 10
