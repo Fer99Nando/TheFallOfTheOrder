@@ -13,8 +13,10 @@ public class CameraThirdPerson : MonoBehaviour
 
 	float sensitivityWheel; //sensibilidad del zoom (Rueda del raton)
 
-	// Use this for initialization
-	void Start () 
+    public Transform cameraPos;
+
+    // Use this for initialization
+    void Start () 
 	{
 		this.positionIncrease = this.lookAt.forward * this.distance; //Calcula el incremento de la posicion
 		transform.position = this.lookAt.position - this.positionIncrease; //Creamos una posicion orbital
@@ -34,7 +36,7 @@ public class CameraThirdPerson : MonoBehaviour
 	void LateUpdate()
 	{
 		this.positionIncrease = this.lookAt.forward * this.fixedDist;
-		transform.position = Vector3.Lerp(transform.position, this.lookAt.position - this.positionIncrease, 25f * Time.deltaTime);
+		transform.position = Vector3.Lerp(transform.position, this.lookAt.position - this.positionIncrease, 0.3f * Time.deltaTime );
 		transform.LookAt(this.lookAt);
 	}
 	//Corrige la distancia ante las colisiones u oclusiones de la camara

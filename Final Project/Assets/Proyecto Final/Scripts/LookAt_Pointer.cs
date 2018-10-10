@@ -15,7 +15,7 @@ public class LookAt_Pointer : MonoBehaviour
     {
         transform.position = player.position + new Vector3(0, 2f, 0) + transform.right * 0.5f;
 
-        this.sensitivityX = 4f;
+        this.sensitivityX = 2f;
         this.sensitivityY = 1.5f;
 	}
 	
