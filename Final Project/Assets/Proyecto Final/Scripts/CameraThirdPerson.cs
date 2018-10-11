@@ -54,7 +54,7 @@ public class CameraThirdPerson : MonoBehaviour
             Debug.DrawLine(this.lookAt.position, hit.point, Color.red);
             return hit.distance; //si colisiona se devuelve la distancia corregida
         }
-        return hit.distance = 9; //Si no colisiona se devuelve la distancia original
+        return hit.distance = 5; //Si no colisiona se devuelve la distancia original
  
 	}
 }
