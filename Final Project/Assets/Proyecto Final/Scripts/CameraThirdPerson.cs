@@ -5,8 +5,9 @@ using UnityEngine;
 public class CameraThirdPerson : MonoBehaviour 
 {
 	public Transform lookAt; //lookAt del personaje
+    public Transform CamaraPos;
 
-	Vector3 positionIncrease; //Incremento de la posicion de la camara respecto al lookAt
+    Vector3 positionIncrease; //Incremento de la posicion de la camara respecto al lookAt
 
 	public float distance; //distancia original de la camara respecto al lookAt
 	float fixedDist; //distancia corregida de la camara respecto al lookAt en caso de collision u oclusion
@@ -28,19 +29,20 @@ public class CameraThirdPerson : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		this.distance += Input.GetAxis("Mouse ScrollWheel") * this.sensitivityWheel; //zoom
-		this.distance = Mathf.Clamp(this.distance, 2f, 6f); // Limitacion de zoom in and zoom out
+		this.distance += Input.GetAxis("Mouse ScrollWheel"); //zoom
+		this.distance = Mathf.Clamp(this.distance, 5f, 10f); // Limitacion de zoom in and zoom out
 
-		this.fixedDist = fixDistance();
+		this.fixedDist = FixDistance();
 	}
 	void LateUpdate()
 	{
 		this.positionIncrease = this.lookAt.forward * this.fixedDist;
-		transform.position = Vector3.Lerp(transform.position, this.lookAt.position - this.positionIncrease, 0.3f * Time.deltaTime );
+		transform.position = Vector3.Lerp(transform.position, this.lookAt.position - this.positionIncrease, 5f * Time.deltaTime );
+
 		transform.LookAt(this.lookAt);
 	}
 	//Corrige la distancia ante las colisiones u oclusiones de la camara
-	float fixDistance()
+	float FixDistance()
 	{
 		RaycastHit hit; //Guarda la informacion de la colision
 		LayerMask layerMask = 1 << 8; //Asignamos el layer 8 que es el del player
@@ -52,7 +54,7 @@ public class CameraThirdPerson : MonoBehaviour
             Debug.DrawLine(this.lookAt.position, hit.point, Color.red);
             return hit.distance; //si colisiona se devuelve la distancia corregida
         }
-        return hit.distance; //Si no colisiona se devuelve la distancia original
+        return hit.distance = 9; //Si no colisiona se devuelve la distancia original
  
 	}
 }
