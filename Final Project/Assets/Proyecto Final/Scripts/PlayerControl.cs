@@ -21,6 +21,8 @@ public class PlayerControl : MonoBehaviour
     private float inputH;                   // Tecla de avance lateral
     private float jumpInput;                // Tecla de salto
 
+    public GameObject healthbar;
+
 	// Use this for initialization
 	void Start ()
     {
@@ -31,6 +33,8 @@ public class PlayerControl : MonoBehaviour
         this.diagonalBackSpeed = (float)Mathf.Sqrt(this.backSpeed * backSpeed / 2);
 
         this.moveDirection = Vector3.zero;
+
+        healthbar = GameObject.Find ("HealthBar");
 	}
 	
 	// Update is called once per frame
@@ -137,5 +141,9 @@ public class PlayerControl : MonoBehaviour
     private bool Grounded ()
     {
         return Physics.Raycast(transform.position + this.controller.center, Vector3.down, this.controller.bounds.extents.y + 0.001f);
+    }
+    public void EnemyDamage ()
+    {
+        healthbar.SendMessage ("TakeDamage", 15);
     }
 }
