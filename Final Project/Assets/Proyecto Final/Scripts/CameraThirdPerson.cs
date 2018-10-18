@@ -5,7 +5,6 @@ using UnityEngine;
 public class CameraThirdPerson : MonoBehaviour 
 {
 	public Transform lookAt; //lookAt del personaje
-    public Transform CamaraPos;
 
     Vector3 positionIncrease; //Incremento de la posicion de la camara respecto al lookAt
 
@@ -13,8 +12,6 @@ public class CameraThirdPerson : MonoBehaviour
 	float fixedDist; //distancia corregida de la camara respecto al lookAt en caso de collision u oclusion
 
 	float sensitivityWheel; //sensibilidad del zoom (Rueda del raton)
-
-    public Transform cameraPos;
 
     // Use this for initialization
     void Start () 

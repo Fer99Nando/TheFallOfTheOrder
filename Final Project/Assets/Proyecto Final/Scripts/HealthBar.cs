@@ -5,8 +5,6 @@ using UnityEngine;
 public class HealthBar : MonoBehaviour 
 {
 
-	private float hp = 100f;
-	private float maxHp = 100f;
 	// Use this for initialization
 	void Start () 
 	{
