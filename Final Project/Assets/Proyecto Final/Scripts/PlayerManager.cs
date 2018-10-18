@@ -8,8 +8,8 @@ public class PlayerManager : MonoBehaviour
 {
 	float curHp;
 	float curVirus;
+
 	public float maxHp = 100f;
-	public float maxVirus = 100f;
 
 	public Image healthBar;
 	public Image virusBar;
@@ -21,15 +21,13 @@ public class PlayerManager : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
-		counterVirus++;
-
 		//myAnim = GetComponent<Animator> ();
 		
 		curHp = maxHp;
 
 		healthBar.fillAmount = curHp / maxHp;
 
-		virusBar.fillAmount = curVirus / maxVirus;
+		virusBar.fillAmount = 0;
 	}
 	
 	// Update is called once per frame
@@ -39,16 +37,7 @@ public class PlayerManager : MonoBehaviour
 	}
 	void LateUpdate ()
 	{
-		if (counterVirus > 24f)
-		{
-			curVirus += 2f;
 
-			virusBar.fillAmount = curVirus / maxVirus;
-		}
-		if (counterVirus > 26)
-		{
-			counterVirus = 0;
-		}
 	}
 	private void OnTriggerEnter (Collider col)
 	{
@@ -59,9 +48,22 @@ public class PlayerManager : MonoBehaviour
 
 			healthBar.fillAmount = curHp / maxHp;
 
+			curVirus += 10f;
+
+			virusBar.fillAmount = curVirus / 500;
+
+			if (curVirus >= 50)
+			{
+				//SONIDO 50
+			}
+			if (curVirus >= 100)
+			{
+				//SONIDO 100
+			}
+
 			if (curHp <= 0)
 			{
-			//myAnim.SetBool("dead", true);
+				//myAnim.SetBool("dead", true);
 			}
 		}
 	}
