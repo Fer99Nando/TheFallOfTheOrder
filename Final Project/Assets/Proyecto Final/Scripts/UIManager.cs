@@ -17,6 +17,10 @@ public class UIManager : MonoBehaviour
 
 		
 	}
+	public void MenuPrincipalScene ()
+	{
+		SceneManager.LoadScene ("Menu_Principal");
+	}
 	public void GameplayScene ()
 	{
 		SceneManager.LoadScene ("Gameplay");

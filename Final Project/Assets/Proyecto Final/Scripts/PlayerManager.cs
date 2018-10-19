@@ -14,8 +14,11 @@ public class PlayerManager : MonoBehaviour
 	public Image healthBar;
 	public Image virusBar;
 
-	private float counterVirus;
+    private float timeCount;
+	private float toxicTime;
 
+	private bool intoxicate;
+	
 	//Animator myAnim;
 
 	// Use this for initialization
@@ -33,7 +36,26 @@ public class PlayerManager : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		
+		timeCount += Time.deltaTime;
+		if(timeCount >= 3 && intoxicate)
+		{
+			curVirus += 2f;
+
+			virusBar.fillAmount = curVirus / 500;
+
+			timeCount = 0;
+		}
+
+		if (intoxicate)
+		{
+			toxicTime += Time.deltaTime;
+			if(toxicTime >= 7)
+			{
+				intoxicate = false;
+				toxicTime = 0;
+			}
+		}
+
 	}
 	void LateUpdate ()
 	{
@@ -43,6 +65,8 @@ public class PlayerManager : MonoBehaviour
 	{
 		if (col.CompareTag ("Enemy"))
 		{
+			intoxicate = true;
+			
 			//curHp -= col.GetComponent<EnemyManager>().damageValue;
 			curHp -= 10f;
 
@@ -65,6 +89,7 @@ public class PlayerManager : MonoBehaviour
 			{
 				//myAnim.SetBool("dead", true);
 			}
+			toxicTime = 0;
 		}
 	}
 }

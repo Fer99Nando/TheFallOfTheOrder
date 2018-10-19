@@ -12,21 +12,25 @@ public class CameraThirdPerson : MonoBehaviour
 	float fixedDist; //distancia corregida de la camara respecto al lookAt en caso de collision u oclusion
 
 	float sensitivityWheel; //sensibilidad del zoom (Rueda del raton)
+	public LayerMask cameraMask;
+
+	private float timeCount;
 
     // Use this for initialization
     void Start () 
 	{
+		Cursor.visible = false;
+
 		this.positionIncrease = this.lookAt.forward * this.distance; //Calcula el incremento de la posicion
 		transform.position = this.lookAt.position - this.positionIncrease; //Creamos una posicion orbital
 		transform.LookAt(this.lookAt); // la camara mira al lookAt (puntero)
 
-		this.sensitivityWheel = 3f;
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
-		this.distance += Input.GetAxis("Mouse ScrollWheel"); //zoom
+
 		this.distance = Mathf.Clamp(this.distance, 5f, 6f); // Limitacion de zoom in and zoom out
 
 		this.fixedDist = FixDistance();
@@ -42,11 +46,11 @@ public class CameraThirdPerson : MonoBehaviour
 	float FixDistance()
 	{
 		RaycastHit hit; //Guarda la informacion de la colision
-		LayerMask layerMask = 1 << 8; //Asignamos el layer 8 que es el del player
-		layerMask = ~layerMask; //invierte el layer para que colisione con cualquier layer excepto este
+		//LayerMask layerMask = 1 << 8; //Asignamos el layer 8 que es el del player
+		//layerMask = ~layerMask; //invierte el layer para que colisione con cualquier layer excepto este
 
         /*Emite un raycast desde el lookAt a la camara colisionara conel primer collider que encuentre ( punto mas cercano al lookAt colisionara solo en el layer pasado por parametro */
-        if (Physics.Raycast(this.lookAt.position, -this.lookAt.forward, out hit, this.distance, layerMask))
+        if (Physics.Raycast(this.lookAt.position, -this.lookAt.forward, out hit, this.distance, cameraMask))
         {
             Debug.DrawLine(this.lookAt.position, hit.point, Color.red);
             return hit.distance; //si colisiona se devuelve la distancia corregida
