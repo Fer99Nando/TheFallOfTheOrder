@@ -27,11 +27,11 @@ public class UIManager : MonoBehaviour
 	}
 	public void OptionsSnece ()
 	{
-		SceneManager.LoadScene ("Credits");
+		SceneManager.LoadScene ("Options");
 	}
 	public void CreditsScene ()
 	{
-		SceneManager.LoadScene ("Options");
+		SceneManager.LoadScene ("Credits");
 	}
 	public void Exit()
 	{
