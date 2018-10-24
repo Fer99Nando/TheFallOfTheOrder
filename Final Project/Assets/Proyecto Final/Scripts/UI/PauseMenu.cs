@@ -18,7 +18,10 @@ public class PauseMenu : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
-		
+		pauseMenuUI.SetActive(false);
+		Time.timeScale = 1f;
+		GameIsPaused = false;
+		Cursor.visible = false;
 	}
 	
 	// Update is called once per frame
