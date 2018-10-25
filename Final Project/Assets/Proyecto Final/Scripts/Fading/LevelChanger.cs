@@ -2,15 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LevelChanger : MonoBehaviour {
+public class LevelChanger : MonoBehaviour
+{
 
-	// Use this for initialization
-	void Start () {
-		
-	}
+    public Animator animator;
 	
 	// Update is called once per frame
-	void Update () {
-		
-	}
+	void Update ()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            FadeToLevel(1);
+        }
+    }
+    public void FadeToLevel (int levelIndex)
+    {
+        animator.SetTrigger("FadeOut");
+    }
 }
