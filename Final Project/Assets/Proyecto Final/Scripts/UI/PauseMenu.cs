@@ -18,10 +18,7 @@ public class PauseMenu : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
-		pauseMenuUI.SetActive(false);
-		Time.timeScale = 1f;
-		GameIsPaused = false;
-		Cursor.visible = false;
+
 	}
 	
 	// Update is called once per frame
@@ -62,7 +59,9 @@ public class PauseMenu : MonoBehaviour
 	} 
 		public void MenuPrincipalScene ()
 	{
+		SceneManager.UnloadSceneAsync ("Gameplay");
 		SceneManager.LoadScene ("Menu_Principal");
+		
 	}
 	public void Exit()
 	{
