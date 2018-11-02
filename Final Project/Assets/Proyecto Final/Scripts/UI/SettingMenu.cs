@@ -60,4 +60,5 @@ public class SettingMenu : MonoBehaviour
         Screen.fullScreen = isFullscreen;
     }
 
+
 }

@@ -10,12 +10,26 @@ public class LevelChanger : MonoBehaviour
 
     private int levelToLoad;
 
+    private float count;
+
+    private void Start()
+    {
+        
+    }
     // Update is called once per frame
     void Update ()
     {
-        if (Input.GetMouseButtonDown(0))
+        count++;
+
+        count = Time.deltaTime;
+
+        if (count >  3 && count < 6)
         {
             FadeToNextLevel();
+        }
+        if (Input.GetMouseButtonDown(0))
+        {
+
         }
     }
 
@@ -27,7 +41,7 @@ public class LevelChanger : MonoBehaviour
     public void FadeToLevel (int levelIndex)
     {
         levelToLoad = levelIndex;
-        animator.SetTrigger("FadeOut");
+        animator.SetBool("FadeOut", true);
     }
 
     public void OnFadeComplete ()
