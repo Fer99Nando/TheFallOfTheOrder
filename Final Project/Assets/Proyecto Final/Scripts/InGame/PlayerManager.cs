@@ -57,10 +57,7 @@ public class PlayerManager : MonoBehaviour
 		}
 
 	}
-	void LateUpdate ()
-	{
 
-	}
 	private void OnTriggerEnter (Collider col)
 	{
 		if (col.CompareTag ("Enemy"))
@@ -85,9 +82,11 @@ public class PlayerManager : MonoBehaviour
 				//SONIDO 100
 			}
 
-			if (curHp <= 0)
+			if (healthBar.fillAmount <= 0)
 			{
-				//myAnim.SetBool("dead", true);
+                //myAnim.SetBool("dead", true);
+
+                GameOverManager.gameOverManager.CallGameOver();
 			}
 			toxicTime = 0;
 		}
