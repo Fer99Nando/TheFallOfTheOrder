@@ -11,6 +11,8 @@ public class PauseMenu : MonoBehaviour
 	public static bool GameIsPaused = false;
 	
 	public GameObject pauseMenuUI;
+	public GameObject gameOver;
+
 	public bool resumeButton;
 
     public Dropdown resolutionsDropsown;
@@ -56,23 +58,30 @@ public class PauseMenu : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		if (Input.GetKeyDown(KeyCode.Escape))
+		if (gameOver == false)
 		{
-			if (GameIsPaused)
+			if (Input.GetKeyDown(KeyCode.Escape))
 			{
-				if (resumeButton == true )
+				if (GameIsPaused)
 				{
-					Resume ();
+					if (resumeButton == true )
+					{
+						Resume ();
+					}
+					else
+					{
+
+					}
 				}
 				else
 				{
-
+				Pause();
 				}
 			}
-			else
-			{
-				Pause();
-			}
+		}
+		else
+		{
+
 		}
 	}
 

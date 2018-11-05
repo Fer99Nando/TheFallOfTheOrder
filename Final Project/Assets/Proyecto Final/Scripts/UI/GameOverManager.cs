@@ -5,6 +5,8 @@ using UnityEngine;
 public class GameOverManager : MonoBehaviour
 {
 
+    public static bool GameIsPaused = false;
+
     public GameObject gameOver;
 
     public static GameOverManager gameOverManager;
@@ -23,6 +25,15 @@ public class GameOverManager : MonoBehaviour
 
     public void CallGameOver ()
     {
-        gameOver.SetActive (true);
+        Pause ();
     }
+
+    	void Pause ()
+	{
+        gameOver.SetActive (true);
+		Time.timeScale = 0f;
+		GameIsPaused = true;
+        Cursor.visible = true;
+	} 
+    
 }
