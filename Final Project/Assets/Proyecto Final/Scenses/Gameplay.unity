@@ -9343,7 +9343,7 @@ MonoBehaviour:
   distance: 10
   cameraMask:
     serializedVersion: 2
-    m_Bits: 1047
+    m_Bits: 1031
 --- !u!92 &2006784993
 Behaviour:
   m_ObjectHideFlags: 0
