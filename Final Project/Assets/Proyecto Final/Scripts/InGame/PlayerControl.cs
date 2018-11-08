@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
 {
+
+    //public Animator anim;
+
     private CharacterController controller;
 
     public Transform lookAt;
@@ -68,6 +71,7 @@ public class PlayerControl : MonoBehaviour
 
             {
                 this.moveDirection.Set(0, 0, 0);
+                //anim.SetTrigger("Grounded");
             }
             else if (this.inputV > 0 && this.inputH == 0) // AVANZA
 

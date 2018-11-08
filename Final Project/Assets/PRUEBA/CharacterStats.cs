@@ -1,13 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class CharacterStats : MonoBehaviour
 {
 
-    public List<BaseStats> stats = new List<BaseStats>();
+    private List<BaseStats> stats = new List<BaseStats>();
 
-    private void Start()
+    void Start()
     {
         stats.Add(new BaseStats(4, "Power", "Your power level."));
         stats.Add(new BaseStats(2, "Vitality", "Your vitality level."));
@@ -20,7 +19,7 @@ public class CharacterStats : MonoBehaviour
     {
         foreach (BaseStats statBonus in statBonuses)
         {
-            stats.Find(x=> x.StatName == statBonus.StatName).AddStatBonus(new StatBonus(statBonus.BaseValue));
+            stats.Find(x => x.StatName == statBonus.StatName).AddStatBonus(new StatBonus(statBonus.BaseValue));
         }
     }
 
