@@ -378,13 +378,13 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 268851343}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.885, y: 1.446991, z: 0.414}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.8849945, y: 1.446991, z: 0.41400146}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 229322989}
-  m_Father: {fileID: 628748943}
-  m_RootOrder: 2
+  m_Father: {fileID: 1469021912}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &281799659
 GameObject:
@@ -1183,7 +1183,6 @@ Transform:
   m_Children:
   - {fileID: 458578440}
   - {fileID: 625714545}
-  - {fileID: 268851344}
   m_Father: {fileID: 911135955}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1199,8 +1198,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea066c2c3dd8ae84d857ebff9496af71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 628748947}
   lookAt: {fileID: 2044915115}
-  forwardSpeed: 6
+  forwardSpeed: 10
   jumpSpeed: 7
   gravity: 25
 --- !u!143 &628748946
@@ -1234,7 +1234,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 1193d486e3f1869498a8c334dd82a340, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -2208,7 +2208,8 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 268851344}
   m_Father: {fileID: 458578440}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

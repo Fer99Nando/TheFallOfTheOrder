@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerControl : MonoBehaviour
 {
 
-    //public Animator anim;
+    public Animator anim;
 
     private CharacterController controller;
 
@@ -71,48 +71,52 @@ public class PlayerControl : MonoBehaviour
 
             {
                 this.moveDirection.Set(0, 0, 0);
-                //anim.SetTrigger("Grounded");
+                anim.SetTrigger("Idle");
+                
             }
             else if (this.inputV > 0 && this.inputH == 0) // AVANZA
-
             {
                 this.moveDirection.Set(0, 0, this.inputV * this.forwardSpeed);
-            }
-            else if (this.inputV < 0 && this.inputH == 0) // RETROCEDE
+                anim.SetTrigger("Run");
 
+            }
+
+            else if (this.inputV < 0 && this.inputH == 0) // RETROCEDE
             {
                 this.moveDirection.Set(0, 0, this.inputV * this.backSpeed);
             }
+            
             else if (this.inputH > 0 && this.inputV == 0) // DERECHA
-
             {
                 this.moveDirection.Set(this.inputH * this.forwardSpeed, 0, 0);
             }
+
             else if (this.inputH < 0 && this.inputV == 0) // IZQUIERDA
 
             {
                 this.moveDirection.Set(this.inputH * this.backSpeed, 0, 0);
             }
+
             else if (this.inputV > 0 && this.inputH > 0) // AVANZA-DERECHA
-
             {
                 this.moveDirection.Set(this.inputH * this.diagonalForwardSpeed, 0, this.inputV * this.diagonalForwardSpeed);
             }
+
             else if (this.inputV > 0 && this.inputH < 0) // AVANZA-IZQUIERDA
-
             {
                 this.moveDirection.Set(this.inputH * this.diagonalForwardSpeed, 0, this.inputV * this.diagonalForwardSpeed);
             }
+
             else if (this.inputV < 0 && this.inputH > 0) // RETROCEDE-DERECHA
-
             {
                 this.moveDirection.Set(this.inputH * this.diagonalBackSpeed, 0, this.inputV * this.diagonalBackSpeed);
             }
+
             else if (this.inputV < 0 && this.inputH < 0) // RETROCEDE-IZQUIERDA
-
             {
                 this.moveDirection.Set(this.inputH * this.diagonalBackSpeed, 0, this.inputV * this.diagonalBackSpeed);
             }
+
             this.moveDirection = transform.TransformDirection(this.moveDirection); // Transformamos la direccion de loca a world space
 
             if (this.jumpInput > 0) // SALTA
@@ -120,6 +124,7 @@ public class PlayerControl : MonoBehaviour
                 this.moveDirection.y = this.jumpSpeed;
             }
         }
+
         else // EN EL ARIE
         {
             this.gravity = 25.0f;
@@ -129,6 +134,7 @@ public class PlayerControl : MonoBehaviour
                 this.moveDirection.y = 0;
             }
         }
+
         this.moveDirection.y -= this.gravity * Time.deltaTime; // Le aplica gravedad constante a la direccion Y
 
         this.controller.Move(this.moveDirection * Time.deltaTime); // SE MUEVE
