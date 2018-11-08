@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerControl : MonoBehaviour
 {
 
-    public Animator anim;
+    //public Animator anim;
 
     private CharacterController controller;
 
@@ -67,55 +67,23 @@ public class PlayerControl : MonoBehaviour
         {
             this.gravity = 0;
 
-            if (this.inputV == 0 && this.inputH == 0) // QUIETO
+            float speedv = 0.0f;
+            if (inputV > 0)
+                speedv = forwardSpeed;
+            else if (inputV < 0)
+                speedv = backSpeed;
 
-            {
-                this.moveDirection.Set(0, 0, 0);
-                anim.SetTrigger("Idle");
-                
-            }
-            else if (this.inputV > 0 && this.inputH == 0) // AVANZA
-            {
-                this.moveDirection.Set(0, 0, this.inputV * this.forwardSpeed);
-                anim.SetTrigger("Run");
+            float speedh = 0.0f;
+            if (inputH > 0)
+                speedh = forwardSpeed;
+            else if (inputH < 0)
+                speedh = backSpeed;
 
-            }
+            moveDirection.Set(inputH * speedh, 0, inputV * speedv);
 
-            else if (this.inputV < 0 && this.inputH == 0) // RETROCEDE
-            {
-                this.moveDirection.Set(0, 0, this.inputV * this.backSpeed);
-            }
-            
-            else if (this.inputH > 0 && this.inputV == 0) // DERECHA
-            {
-                this.moveDirection.Set(this.inputH * this.forwardSpeed, 0, 0);
-            }
-
-            else if (this.inputH < 0 && this.inputV == 0) // IZQUIERDA
-
-            {
-                this.moveDirection.Set(this.inputH * this.backSpeed, 0, 0);
-            }
-
-            else if (this.inputV > 0 && this.inputH > 0) // AVANZA-DERECHA
-            {
-                this.moveDirection.Set(this.inputH * this.diagonalForwardSpeed, 0, this.inputV * this.diagonalForwardSpeed);
-            }
-
-            else if (this.inputV > 0 && this.inputH < 0) // AVANZA-IZQUIERDA
-            {
-                this.moveDirection.Set(this.inputH * this.diagonalForwardSpeed, 0, this.inputV * this.diagonalForwardSpeed);
-            }
-
-            else if (this.inputV < 0 && this.inputH > 0) // RETROCEDE-DERECHA
-            {
-                this.moveDirection.Set(this.inputH * this.diagonalBackSpeed, 0, this.inputV * this.diagonalBackSpeed);
-            }
-
-            else if (this.inputV < 0 && this.inputH < 0) // RETROCEDE-IZQUIERDA
-            {
-                this.moveDirection.Set(this.inputH * this.diagonalBackSpeed, 0, this.inputV * this.diagonalBackSpeed);
-            }
+            if (moveDirection.Equals(Vector3.zero))
+                //anim.SetTrigger("Idle");
+            else
 
             this.moveDirection = transform.TransformDirection(this.moveDirection); // Transformamos la direccion de loca a world space
 
@@ -140,7 +108,7 @@ public class PlayerControl : MonoBehaviour
         this.controller.Move(this.moveDirection * Time.deltaTime); // SE MUEVE
     }
 
-    private void Rotate ()
+            private void Rotate ()
     {
         transform.rotation = Quaternion.Euler(0, this.lookAt.eulerAngles.y, 0);
     }
