@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class PauseMenu : MonoBehaviour 
 {
 	
-	public static bool GameIsPaused = false;
+	public static bool GameIsPaused;
 	
 	public GameObject pauseMenuUI;
 	public GameObject gameOver;
@@ -29,6 +29,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         GameIsPaused = false;
         Cursor.visible = false;
+		gameOver.SetActive (false);
 
  
         resolutions = Screen.resolutions;
@@ -56,13 +57,12 @@ public class PauseMenu : MonoBehaviour
     }
 	
 	// Update is called once per frame
-	void Update () 
+	void LateUpdate () 
 	{
-		if (gameOver == false)
-		{
+		
 			if (Input.GetKeyDown(KeyCode.Escape))
 			{
-				if (GameIsPaused)
+				if (GameIsPaused == true)
 				{
 					if (resumeButton == true )
 					{
@@ -73,16 +73,13 @@ public class PauseMenu : MonoBehaviour
 
 					}
 				}
+
 				else
 				{
-				Pause();
+				Pause ();
 				}
 			}
-		}
-		else
-		{
 
-		}
 	}
 
 	public void Resume ()

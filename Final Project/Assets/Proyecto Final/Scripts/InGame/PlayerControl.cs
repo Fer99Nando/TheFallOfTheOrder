@@ -82,9 +82,11 @@ public class PlayerControl : MonoBehaviour
             moveDirection.Set(inputH * speedh, 0, inputV * speedv);
 
             if (moveDirection.Equals(Vector3.zero))
+            {
                 //anim.SetTrigger("Idle");
-            else
+            }
 
+            else
             this.moveDirection = transform.TransformDirection(this.moveDirection); // Transformamos la direccion de loca a world space
 
             if (this.jumpInput > 0) // SALTA
