@@ -1,9 +1,7 @@
 # CHANGELOG
  
-git log v0.0.1 
+git log v2.2.0...v2.2.1
 
---pretty=format:'<li> <a href="https://github.com/Fer99Nando/FinalProject/commits/%H">
- 
- view commit &bull;</a> %s</li> ' 
- 
- --reverse
+--pretty=format:'<li> <a href="http://github.com/jerel/project/commit/%H">view commit &bull;</a> %s</li> ' 
+
+--reverse | grep -v Merge
