@@ -1,7 +1,8 @@
 # CHANGELOG
  
-git log v2.2.0...v2.2.1
+git log v0.0.1
 
---pretty=format:'<li> <a href="http://github.com/jerel/project/commit/%H">view commit &bull;</a> %s</li> ' 
+Added
+Remove
+Deployd
 
---reverse | grep -v Merge
