@@ -10,25 +10,29 @@ public class LevelChanger : MonoBehaviour
 
     private int levelToLoad;
 
+    private float count;
+
     //private float count;
 
     private void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update ()
     {
-        /*count++;
+        
 
-        count = Time.deltaTime;
+        
 
-        if (count >  3 && count < 10)
+        count++;
+
+        if (count >=  480)
         {
-            
+            FadeToNextLevel();
         }
-        */
+        
 
         if (Input.GetMouseButtonDown(0))
         {

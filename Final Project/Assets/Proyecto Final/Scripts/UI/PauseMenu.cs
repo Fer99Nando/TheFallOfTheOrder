@@ -101,7 +101,12 @@ public class PauseMenu : MonoBehaviour
 		SceneManager.LoadScene ("Menu_Principal");
 	}
 
-	public void Exit()
+    public void MenuInicioScene()
+    {
+        SceneManager.LoadScene("Menu_Inicio");
+    }
+
+    public void Exit()
 	{
 		Application.Quit ();
 	}
