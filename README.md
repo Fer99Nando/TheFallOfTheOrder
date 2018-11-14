@@ -18,6 +18,7 @@ Aun en desarrollo
 
 **Arte 3D**
 - ZBrush
+- 3DMAX
 
 ## Donde Puedes Encontrar Este Proyecto?
 Pagina del proyecto: [github.com/Fer99Nando/FinalProject](https://github.com/Fer99Nando/FinalProject)
