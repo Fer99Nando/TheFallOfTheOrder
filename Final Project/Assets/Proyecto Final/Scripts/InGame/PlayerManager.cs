@@ -6,6 +6,9 @@ using UnityEngine.UI;
 
 public class PlayerManager : MonoBehaviour 
 {
+    public static PlayerManager instance;
+    public GameObject player;
+
 	float curHp;
 	float curVirus;
 
@@ -18,11 +21,16 @@ public class PlayerManager : MonoBehaviour
 	private float toxicTime;
 
 	private bool intoxicate;
-	
-	//Animator myAnim;
 
-	// Use this for initialization
-	void Start () 
+    //Animator myAnim;
+
+    // Use this for initialization
+    private void Awake()
+    {
+        instance = this;
+    }
+
+    void Start () 
 	{
 		//myAnim = GetComponent<Animator> ();
 		
