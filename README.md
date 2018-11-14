@@ -7,16 +7,16 @@ Tai, nuestro protagonista, es encerrado en una prisión donde un brote de un vir
 Aun en desarrollo
 
 ## Programas Utilizados
-Conjunto:
+**Build**
 - Unity
 
-Programacion:
+**Programacion**
 - Visual Studios
 
-Arte 2D
+**Arte 2D**
 - Photoshop
 
-Arte 3D
+**Arte 3D**
 - ZBrush
 
 ## Donde Puedes Encontrar Este Proyecto?
