@@ -38,7 +38,6 @@ public class EnemyManager : MonoBehaviour
 
     private bool canAttack = false;     // El ataque del enemigo desactivado
 
-
     [Header("Properties")]
 
     public int hitDamage;           // Daño recibido
@@ -66,6 +65,27 @@ public class EnemyManager : MonoBehaviour
     }
 
     #region AllUpdatesStates
+
+    void IdleUdate()
+    {
+        // El personaje este quieto
+        if (timeCounter >= idleTime)
+        {
+            // Pasar al Patrol
+        }
+        else timeCounter += Time.deltaTime;
+    }
+
+    void PatrolUpdate()
+    {
+        if (distanceFromTarget < chaseRange)
+        {
+            // Pasar al chase
+            return;
+        }
+
+
+    }
     #endregion
 
     #region Sets
