@@ -84,7 +84,59 @@ public class EnemyManager : MonoBehaviour
             return;
         }
 
+        if (agent.remainingDistance <= agent.stoppingDistance) // Que Alex me explique esto
+        {
+            pathIndex++;
 
+            if (pathIndex >= points.Length)
+            {
+                pathIndex = 0;
+            }
+        }
+        // Si queremos que se pare cuando llegue a un punto
+        // SetIdle();
+
+        // Aqui va el rugido de los monstruos cada x tiempo
+        // if (timeCounter >= roarTime)
+
+    }
+
+    void ChaseUpdate()
+    {
+        agent.SetDestination(targetTransform.position);
+
+        if (distanceFromTarget > chaseRange)
+        {
+            // Pasa al Patrol
+            return;
+        }
+
+        if (distanceFromTarget > attackRange)
+        {
+            // Pasa a Action
+            return;
+        }
+    }
+
+    void ActionUpdate()
+    {
+        agent.SetDestination(targetTransform.position);
+
+        if (canAttack)
+        {
+            agent.Stop(); // 5.5 // agent.isStopped = true; // 5.6 PREGUNTAR A ALEX
+            // Recibir daño del player
+            // targetTransform.GetComponent<PlayerManager> SetDamage(hitDamage);
+            idleTime = coolDownAttack; // Esto es si quiero que tenga un time para quese  enfrie y poderle atacar
+            // Pasar a Idle
+            return;
+        }
+    }
+
+    void DeadUpdate()
+    {
+        // Quieto
+        // Animacion de la muerte
     }
     #endregion
 
