@@ -37,6 +37,7 @@ public class PlayerManager : MonoBehaviour
 	void Update () 
 	{
 		timeCount += Time.deltaTime;
+
 		if(timeCount >= 3 && intoxicate)
 		{
 			curVirus += 2f;
@@ -58,16 +59,23 @@ public class PlayerManager : MonoBehaviour
 
 	}
 
+    public void SetDamage(float hitDamage)
+    {
+        hitDamage = curHp;
+        curHp -= 10f;
+
+        healthBar.fillAmount = curHp / maxHp;
+    }
+
 	private void OnTriggerEnter (Collider col)
 	{
+
 		if (col.CompareTag ("Enemy"))
 		{
 			intoxicate = true;
-			
+         
 			//curHp -= col.GetComponent<EnemyManager>().damageValue;
-			curHp -= 10f;
 
-			healthBar.fillAmount = curHp / maxHp;
 
 			curVirus += 10f;
 
@@ -88,6 +96,7 @@ public class PlayerManager : MonoBehaviour
 
                 GameOverManager.gameOverManager.CallGameOver();
 			}
+
 			toxicTime = 0;
 		}
 	}

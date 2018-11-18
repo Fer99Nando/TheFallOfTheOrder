@@ -5,7 +5,8 @@ using UnityEngine.AI;
 
 public class EnemyBehaviour : MonoBehaviour
 {
-    private enum EnemyState { Idle, Patrol, Chase, Attack, Stun, Dead }
+
+    private enum EnemyState { Idle, Patrol, Chase, Attack, Dead }
     [SerializeField] private EnemyState state;
 
     private NavMeshAgent agent;
@@ -17,90 +18,57 @@ public class EnemyBehaviour : MonoBehaviour
     public Transform[] points;
     public int pathIndex = 0;
 
-    [Header("Distances")]
-
-    public float chaseRange;
-    public float attackRange;
-    [SerializeField] private float distanceFromTarget = Mathf.Infinity;
+    public float chaseRange;        // Rango de Persecucion
+    public float attackRange;       // Rango de Ataque
+    [SerializeField] private float distanceFromTarget = Mathf.Infinity;     // Distancia del target que puede ser hasta infinito
 
     [Header("Speeds")]
 
-    public float chaseSpeed;
-    public float patrolSpeed;
+    public float chaseSpeed;        // Velocidad de Persecucion
+    public float patrolSpeed;       // Velocidad  mientras Patrulla
 
     [Header("Timers")]
 
-    public float idleTime = 1;
-    private float timeCounter = 0;
+    public float idleTime = 1;      // IDLE
+    private float timeCounter = 0;  // Contador de tiempo
 
-    public float coolDownAttack = 1f;
-    public float stunTime = 1;
-    private float moanTime = 0;
+    public float coolDownAttack = 1f;   // Enfriamineto despues de atacar
 
     [Header("Stats")]
 
-    private bool canAttack = false;
+    private bool canAttack = false;     // El ataque del enemigo desactivado
 
     [Header("Properties")]
 
-    public int hitDamage;
-    public int life = 100;
-
-    [Header("Audio")]
-
-    public AudioSource zombieMoan;
-    public AudioSource zombieReceiveDamage;
-    public AudioSource zombieAttack;
-    public AudioSource zombieDie;
+    public int hitDamage;           // Daño recibido
+    public int life = 100;          // Vida del Enemy
 
     [Header("Animation")]
 
-    public Animator anim;
+    public Animator anim;           // Para poder poner Animaciones
 
-	void Start ()
+    // Use this for initialization
+    void Start ()
     {
         agent = GetComponent<NavMeshAgent>();
 
         targetTransform = GameObject.FindGameObjectWithTag("Player").transform;
-
-        moanTime = Random.Range(3.5f, 10.0f);
-
-        SetIdle();
-	}
+    }
 	
+	// Update is called once per frame
 	void Update ()
     {
-        distanceFromTarget = GetDistanceFromTarget();
+        
+        /* poner aqui los case con un switch para que en cada caso
+        vuelva a repetir el proceso y cambiar de case */
 
-        switch (state)
-        {
-            case EnemyState.Idle:
-                IdleUpdate();
-                break;
-            case EnemyState.Patrol:
-                PatrolUpdate();
-                break;
-            case EnemyState.Chase:
-                ChaseUpdate();
-                break;
-            case EnemyState.Attack:
-                AttackUpdate();
-                break;
-            case EnemyState.Stun:
-                StunUpdate();
-                break;
-            case EnemyState.Dead:
-                //DeadUpdate();
-                break;
-            default:
-                break;
-        }
-	}
+    }
 
-    #region Updates
+    #region AllUpdatesStates
 
-    void IdleUpdate()
+    void IdleUdate()
     {
+        // El personaje este quieto
         if (timeCounter >= idleTime)
         {
             SetPatrol();
@@ -110,88 +78,73 @@ public class EnemyBehaviour : MonoBehaviour
 
     void PatrolUpdate()
     {
-        if(distanceFromTarget < chaseRange)
+        if (distanceFromTarget < chaseRange)
         {
-            SetChase();
+            // Pasar al chase
             return;
         }
-        if(agent.remainingDistance <= agent.stoppingDistance)
+
+        if (agent.remainingDistance <= agent.stoppingDistance)  // Por si acaso Que explique alex
         {
             pathIndex++;
-            if(pathIndex >= points.Length)
+
+            if (pathIndex >= points.Length)
             {
                 pathIndex = 0;
             }
 
-            SetPatrol();
-
-            // Si queremos que se pare cuando llegue a un punto
-            // SetIdle();
+            SetPatrol(); 
+            
+            SetIdle();  // Si queremos que se pare cuando llegue a un punto
         }
 
-        if (timeCounter >= moanTime)
-        {
-            zombieMoan.Play();
-            zombieMoan.volume = Random.Range(0.8f, 0.9f);
-            zombieMoan.volume = Random.Range(0.8f, 0.9f);
-            moanTime = Random.Range(3.5f, 6.5f);
-            timeCounter = 0;
-        }
-        else timeCounter += Time.deltaTime;
+
+        // Aqui va el rugido de los monstruos cada x tiempo
+        // if (timeCounter >= roarTime)
+
     }
 
     void ChaseUpdate()
     {
         agent.SetDestination(targetTransform.position);
 
-        if(distanceFromTarget > chaseRange)
+        if (distanceFromTarget > chaseRange)
         {
             SetPatrol();
             return;
         }
 
-        if(distanceFromTarget < attackRange)
+        if (distanceFromTarget > attackRange)
         {
-            SetAttack();
+            SetAction();
             return;
         }
     }
 
-    void AttackUpdate()
+    void ActionUpdate()
     {
-        agent.SetDestination(targetTransform.position);
+        agent.SetDestination(targetTransform.position); 
 
-        if(canAttack)
+        if (canAttack)
         {
-            agent.Stop(); // 5.5 // agent.isStopped = true; // 5.6
-            targetTransform.GetComponent<PlayerBehaviour>().SetDamage(hitDamage);
-            idleTime = coolDownAttack;
-            SetIdle();
+            agent.Stop(); // 5.5 // agent.isStopped = true; // 5.6 PREGUNTAR A ALEX
+
+            // Recibir daño del player
+            targetTransform.GetComponent<PlayerManager>().SetDamage(hitDamage); // preguntar esto Alex
+
+            idleTime = coolDownAttack; // Esto es si quiero que tenga un time para quese  enfrie y poderle atacar
+            
+            // Pasar a Idle
             return;
         }
-
-        if(distanceFromTarget > attackRange)
-        {
-            SetChase();
-            return;
-        }
-    }
-
-    void StunUpdate()
-    {
-        if (timeCounter >= stunTime)
-        {
-            idleTime = 0;
-            SetIdle();
-        }
-        else timeCounter += Time.deltaTime;
     }
 
     void DeadUpdate()
     {
+        // Quieto
 
+        // Animacion de la muerte
     }
-
     #endregion
 
     #region Sets
@@ -207,11 +160,11 @@ public class EnemyBehaviour : MonoBehaviour
     {
         agent.Resume();
 
-        anim.SetBool("Walk", true);
+        // Animacion de caminar
 
-        agent.speed = patrolSpeed;
+        agent.speed = patrolSpeed;   // La velocidad del enemigo pasa a ser igual que la de modo Patrol
 
-        state = EnemyState.Patrol;
+        state = EnemyState.Patrol;   // El estado pasa a ser Patrol
 
         agent.SetDestination(points[pathIndex].position);
 
@@ -220,81 +173,61 @@ public class EnemyBehaviour : MonoBehaviour
 
     void SetChase()
     {
-        // Feedback de información de persecución
+        // Animacion de caminar
 
-        anim.SetBool("Walk", true);
+        agent.speed = chaseSpeed;   // La velocidad del enemigo pasa a ser igual que la de modo persecucion
 
-        agent.speed = chaseSpeed;
-
-        state = EnemyState.Chase;
+        state = EnemyState.Chase;   // El estado pasa a ser persecucion
     }
 
-    void SetAttack()
+    void SetAction()
     {
-        // Feedback
+        // Animacion de atacar
 
-        anim.SetTrigger("Attack");
-
-        zombieAttack.Play();
-        zombieAttack.pitch = Random.Range(0.98f, 1.03f);
-        zombieAttack.volume = Random.Range(0.8f, 0.9f);
+        // Sonidos de Ataque si los tiene
 
         state = EnemyState.Attack;
     }
 
-    void SetStun()
-    {
-        agent.Stop();
-        timeCounter = 0;
-        anim.SetTrigger("ReceiveDMG");
-        // Feedback, animación, sonido, etc.
-        zombieReceiveDamage.Play();
-        zombieReceiveDamage.pitch = Random.Range(0.98f, 1.03f);
-        zombieReceiveDamage.volume = Random.Range(0.8f, 0.9f);
-        state = EnemyState.Stun;
-    }
-
     void SetDead()
     {
-        anim.SetTrigger("Dead");
+        // Animacion de muerte
+
         agent.Stop();
         state = EnemyState.Dead;
 
-        zombieDie.Play();
-        zombieDie.pitch = Random.Range(0.98f, 1.03f);
-        zombieDie.volume = Random.Range(0.8f, 0.9f);
-        //Destroy(this.gameObject);
-        // this.gameObject.SetActive(false);
+        // Sonidos de muerte si los tiene
+        // Hacer un if de si la animacion a terminado llamar al destroy
+        
     }
 
     #endregion
 
-    #region Public functions
+    #region PublicFunctions
 
     public void SetDamage(int hit)
     {
-        if (state == EnemyState.Dead) return;
+        if (state == EnemyState.Dead) return;   // Si el estado es muerto, sale de esta funcion
 
         life -= hit;
 
-        if (life <= 0)
+        if(life <= 0)
         {
             SetDead();
             return;
         }
-        SetStun();
     }
 
     #endregion
 
-    float GetDistanceFromTarget()
+    float GetDistanceFromTarget()       // Calcula la distancia con el player
     {
         return Vector3.Distance(targetTransform.position, transform.position);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Player")
+        if (other.tag == "Player")
         {
             canAttack = true;
         }
@@ -319,5 +252,10 @@ public class EnemyBehaviour : MonoBehaviour
     public void DesactivateEnemy()
     {
         this.gameObject.SetActive(false);
+    }
+
+    public void OnDestroy()
+    {
+        Destroy(this.gameObject);
     }
 }
