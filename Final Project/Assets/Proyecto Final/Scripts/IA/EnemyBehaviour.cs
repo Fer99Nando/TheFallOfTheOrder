@@ -47,26 +47,48 @@ public class EnemyBehaviour : MonoBehaviour
 
     public Animator anim;           // Para poder poner Animaciones
 
+    private void Awake()
+    {
+        agent = GetComponent<NavMeshAgent>();
+    }
+
     // Use this for initialization
     void Start ()
     {
-        agent = GetComponent<NavMeshAgent>();
-
         targetTransform = GameObject.FindGameObjectWithTag("Player").transform;
     }
 	
 	// Update is called once per frame
 	void Update ()
     {
-        
-        /* poner aqui los case con un switch para que en cada caso
-        vuelva a repetir el proceso y cambiar de case */
+        distanceFromTarget = GetDistanceFromTarget();
+
+        switch (state)
+        {
+            case EnemyState.Idle:
+                IdleUpdate();
+                break;
+            case EnemyState.Patrol:
+                PatrolUpdate();
+                break;
+            case EnemyState.Chase:
+                ChaseUpdate();
+                break;
+            case EnemyState.Attack:
+                ActionUpdate();
+                break;
+            case EnemyState.Dead:
+                //DeadUpdate();
+                break;
+            default:
+                break;
+        }
 
     }
 
     #region AllUpdatesStates
 
-    void IdleUdate()
+    void IdleUpdate()
     {
         // El personaje este quieto
         if (timeCounter >= idleTime)
@@ -80,7 +102,7 @@ public class EnemyBehaviour : MonoBehaviour
     {
         if (distanceFromTarget < chaseRange)
         {
-            // Pasar al chase
+            ChaseUpdate();
             return;
         }
 
@@ -93,9 +115,10 @@ public class EnemyBehaviour : MonoBehaviour
                 pathIndex = 0;
             }
 
-            SetPatrol(); 
+            
             
             SetIdle();  // Si queremos que se pare cuando llegue a un punto
+
         }
 
 
@@ -106,6 +129,7 @@ public class EnemyBehaviour : MonoBehaviour
 
     void ChaseUpdate()
     {
+        
         agent.SetDestination(targetTransform.position);
 
         if (distanceFromTarget > chaseRange)
@@ -113,8 +137,9 @@ public class EnemyBehaviour : MonoBehaviour
             SetPatrol();
             return;
         }
+        else SetChase();
 
-        if (distanceFromTarget > attackRange)
+        if (distanceFromTarget < attackRange)
         {
             SetAction();
             return;
@@ -130,11 +155,11 @@ public class EnemyBehaviour : MonoBehaviour
             agent.Stop(); // 5.5 // agent.isStopped = true; // 5.6 PREGUNTAR A ALEX
 
             // Recibir daño del player
-            targetTransform.GetComponent<PlayerManager>().SetDamage(hitDamage); // preguntar esto Alex
+            targetTransform.GetComponent<PlayerManager>().SetDamage(); // preguntar esto Alex
 
             idleTime = coolDownAttack; // Esto es si quiero que tenga un time para quese  enfrie y poderle atacar
-            
-            // Pasar a Idle
+
+            SetIdle();
             return;
         }
     }

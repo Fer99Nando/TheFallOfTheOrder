@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,10 +8,10 @@ using UnityEngine.UI;
 public class PlayerManager : MonoBehaviour 
 {
 
-	float curHp;
-	float curVirus;
+	int curHp;
+	int curVirus;
 
-	public float maxHp = 100f;
+	public int maxHp = 100;
 
 	public Image healthBar;
 	public Image virusBar;
@@ -40,7 +41,7 @@ public class PlayerManager : MonoBehaviour
 
 		if(timeCount >= 3 && intoxicate)
 		{
-			curVirus += 2f;
+			curVirus += 2;
 
 			virusBar.fillAmount = curVirus / 500;
 
@@ -59,10 +60,10 @@ public class PlayerManager : MonoBehaviour
 
 	}
 
-    public void SetDamage(float hitDamage)
+    public void SetDamage()
     {
-        hitDamage = curHp;
-        curHp -= 10f;
+        
+        curHp -= 10;
 
         healthBar.fillAmount = curHp / maxHp;
     }
@@ -73,11 +74,12 @@ public class PlayerManager : MonoBehaviour
 		if (col.CompareTag ("Enemy"))
 		{
 			intoxicate = true;
-         
+
+            SetDamage();
 			//curHp -= col.GetComponent<EnemyManager>().damageValue;
 
 
-			curVirus += 10f;
+			curVirus += 10;
 
 			virusBar.fillAmount = curVirus / 500;
 
