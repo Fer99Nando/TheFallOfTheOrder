@@ -178,6 +178,7 @@ public class EnemyBehaviour : MonoBehaviour
 
         if(distanceFromTarget > attackRange)
         {
+            anim.SetBool("Action", false);
             SetChase();
             return;
         }

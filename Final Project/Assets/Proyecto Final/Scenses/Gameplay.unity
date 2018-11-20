@@ -2327,7 +2327,7 @@ MonoBehaviour:
   - {fileID: 723561657}
   pathIndex: 0
   chaseRange: 5
-  attackRange: 1.5
+  attackRange: 2.2
   distanceFromTarget: Infinity
   chaseSpeed: 4
   patrolSpeed: 2
@@ -5309,7 +5309,7 @@ GameObject:
   - component: {fileID: 1075420777}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Damage
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5908,6 +5908,7 @@ GameObject:
   - component: {fileID: 1141649009}
   - component: {fileID: 1141649008}
   - component: {fileID: 1141649011}
+  - component: {fileID: 1141649012}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -5982,6 +5983,23 @@ MonoBehaviour:
   maxHp: 100
   healthBar: {fileID: 2075562696}
   virusBar: {fileID: 1572986425}
+--- !u!114 &1141649012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1141649007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b4eb8df9e88f9340bd9040ff6f8b752, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHp: 100
+  currentHp: 0
+  healthSlider: {fileID: 0}
+  damageImage: {fileID: 0}
+  flashSpeed: 5
+  flashColour: {r: 1, g: 0, b: 0, a: 0.1}
 --- !u!1 &1145675683
 GameObject:
   m_ObjectHideFlags: 0
@@ -6656,7 +6674,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1275577223
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8814,7 +8832,7 @@ GameObject:
   - component: {fileID: 1805618334}
   m_Layer: 0
   m_Name: GameObject
-  m_TagString: Untagged
+  m_TagString: Damage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8825,14 +8843,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1805618333}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.087, y: 0.159, z: -0.589}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0.5, y: -0.5, z: 0.5, w: 0.5}
+  m_LocalPosition: {x: 0.563, y: 0.159, z: -0.04}
+  m_LocalScale: {x: 1.2244, y: 1, z: 1}
   m_Children:
   - {fileID: 1075420776}
   m_Father: {fileID: 424787542}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 90}
 --- !u!1 &1837824142
 GameObject:
   m_ObjectHideFlags: 0
@@ -10318,7 +10336,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2075562695
 RectTransform:
   m_ObjectHideFlags: 0

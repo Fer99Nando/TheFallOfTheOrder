@@ -8,10 +8,10 @@ using UnityEngine.UI;
 public class PlayerManager : MonoBehaviour 
 {
 
-	private int curHp;
-	private int curVirus;
+	float curHp;
+	float curVirus;
 
-	public int maxHp = 100;
+	public float maxHp = 100f;
 
 	public Image healthBar;
 	public Image virusBar;
@@ -34,15 +34,12 @@ public class PlayerManager : MonoBehaviour
 	void Update () 
 	{
         Virus();
-
 	}
 
     public void SetDamage()
     {
         
-        curHp -= 10;
 
-        healthBar.fillAmount = curHp / maxHp;
     }
     #region Barras
 
@@ -51,7 +48,7 @@ public class PlayerManager : MonoBehaviour
         curHp = maxHp;
 
         healthBar.fillAmount = curHp / maxHp;
-
+        
         virusBar.fillAmount = 0;
     }
 
@@ -64,7 +61,7 @@ public class PlayerManager : MonoBehaviour
             curVirus += 2;
 
             virusBar.fillAmount = curVirus / 500;
-
+            
             timeCount = 0;
         }
 
@@ -83,26 +80,21 @@ public class PlayerManager : MonoBehaviour
     private void OnTriggerEnter (Collider col)
 	{
 
-		if (col.CompareTag ("Enemy"))
+		if (col.CompareTag ("Damage"))
 		{
-			intoxicate = true;
             Debug.Log("PUM DAÑO");
-            SetDamage();
+            
+			intoxicate = true;
+
+        curHp -= 10f;
+
+        healthBar.fillAmount = curHp / maxHp;
 
 			// curHp -= col.GetComponent<EnemyBehaviour>().damageValue;
 
-			curVirus += 10;
+			curVirus += 10f;
 
 			virusBar.fillAmount = curVirus / 500;
-
-			if (curVirus >= 50)
-			{
-				//SONIDO 50
-			}
-			if (curVirus >= 100)
-			{
-				//SONIDO 100
-			}
 
 			if (healthBar.fillAmount <= 0)
 			{
