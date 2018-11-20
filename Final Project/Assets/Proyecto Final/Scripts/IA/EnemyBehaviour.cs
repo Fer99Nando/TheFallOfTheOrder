@@ -31,6 +31,7 @@ public class EnemyBehaviour : MonoBehaviour
 
     public float idleTime = 1;      // IDLE
     private float timeCounter = 0;  // Contador de tiempo
+    private float timeToPatrol = 0; // Contador para pasar a patrol desde chase
 
     public float coolDownAttack = 1f;   // Enfriamineto despues de atacar
 
@@ -100,6 +101,7 @@ public class EnemyBehaviour : MonoBehaviour
 
     void PatrolUpdate()
     {
+        
         distanceFromTarget = GetDistanceFromTarget();
         if (distanceFromTarget < chaseRange)
         {
@@ -131,20 +133,18 @@ public class EnemyBehaviour : MonoBehaviour
 
     void ChaseUpdate()
     {
+        anim.SetBool("Chase", true);
         timeCounter = 0;
-
-        Debug.Log("TE PERSIGO");
 
         agent.SetDestination(targetTransform.position);
 
         if (distanceFromTarget > chaseRange)
         {
-            timeCounter += Time.deltaTime;
-            if (timeCounter >= 3)
+            timeToPatrol += Time.deltaTime;
+            if (timeToPatrol >= 3)
             {
                 SetPatrol();
-                timeCounter = 0;
-                Debug.Log("timeCounter %d");
+                timeToPatrol = 0;
                 return;
             }
         }
@@ -159,6 +159,7 @@ public class EnemyBehaviour : MonoBehaviour
 
     void ActionUpdate()
     {
+        anim.SetBool("Action", true);
         agent.SetDestination(targetTransform.position); 
 
         if (canAttack)
@@ -170,8 +171,14 @@ public class EnemyBehaviour : MonoBehaviour
             targetTransform.GetComponent<PlayerManager>().SetDamage(); // preguntar esto Alex
 
             idleTime = coolDownAttack; // Esto es si quiero que tenga un time para quese  enfrie y poderle atacar
-
+            Debug.Log("ATTACK");
             SetIdle();
+            return;
+        }
+
+        if(distanceFromTarget > attackRange)
+        {
+            SetChase();
             return;
         }
 

@@ -39,7 +39,7 @@ public class PlayerManager : MonoBehaviour
 
     public void SetDamage()
     {
-
+        
         curHp -= 10;
 
         healthBar.fillAmount = curHp / maxHp;
@@ -86,7 +86,7 @@ public class PlayerManager : MonoBehaviour
 		if (col.CompareTag ("Enemy"))
 		{
 			intoxicate = true;
-
+            Debug.Log("PUM DAÑO");
             SetDamage();
 
 			// curHp -= col.GetComponent<EnemyBehaviour>().damageValue;
