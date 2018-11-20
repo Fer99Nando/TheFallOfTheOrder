@@ -100,9 +100,11 @@ public class EnemyBehaviour : MonoBehaviour
 
     void PatrolUpdate()
     {
+        distanceFromTarget = GetDistanceFromTarget();
         if (distanceFromTarget < chaseRange)
         {
-            ChaseUpdate();
+            
+            SetChase();
             return;
         }
 
@@ -129,13 +131,22 @@ public class EnemyBehaviour : MonoBehaviour
 
     void ChaseUpdate()
     {
-        
+        timeCounter = 0;
+
+        Debug.Log("TE PERSIGO");
+
         agent.SetDestination(targetTransform.position);
 
         if (distanceFromTarget > chaseRange)
         {
-            SetPatrol();
-            return;
+            timeCounter += Time.deltaTime;
+            if (timeCounter >= 3)
+            {
+                SetPatrol();
+                timeCounter = 0;
+                Debug.Log("timeCounter %d");
+                return;
+            }
         }
         else SetChase();
 
@@ -152,9 +163,10 @@ public class EnemyBehaviour : MonoBehaviour
 
         if (canAttack)
         {
-            agent.Stop(); // 5.5 // agent.isStopped = true; // 5.6 PREGUNTAR A ALEX
+            agent.isStopped = true;
+            //agent.Stop(); // 5.5 // agent.isStopped = true; // 5.6 PREGUNTAR A ALEX
 
-            // Recibir daño del player
+            // Recibir o hacer daño del player?
             targetTransform.GetComponent<PlayerManager>().SetDamage(); // preguntar esto Alex
 
             idleTime = coolDownAttack; // Esto es si quiero que tenga un time para quese  enfrie y poderle atacar
@@ -162,6 +174,8 @@ public class EnemyBehaviour : MonoBehaviour
             SetIdle();
             return;
         }
+
+
     }
 
     void DeadUpdate()
@@ -183,7 +197,8 @@ public class EnemyBehaviour : MonoBehaviour
 
     void SetPatrol()
     {
-        agent.Resume();
+        agent.isStopped = false;
+        //agent.Resume();
 
         // Animacion de caminar
 
@@ -218,7 +233,7 @@ public class EnemyBehaviour : MonoBehaviour
     {
         // Animacion de muerte
 
-        agent.Stop();
+        agent.isStopped = true;
         state = EnemyState.Dead;
 
         // Sonidos de muerte si los tiene

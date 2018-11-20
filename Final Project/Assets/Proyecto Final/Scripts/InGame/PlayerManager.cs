@@ -8,8 +8,8 @@ using UnityEngine.UI;
 public class PlayerManager : MonoBehaviour 
 {
 
-	int curHp;
-	int curVirus;
+	private int curHp;
+	private int curVirus;
 
 	public int maxHp = 100;
 
@@ -25,50 +25,62 @@ public class PlayerManager : MonoBehaviour
 
     void Start () 
 	{
-		//myAnim = GetComponent<Animator> ();
-		
-		curHp = maxHp;
+        //myAnim = GetComponent<Animator> ();
 
-		healthBar.fillAmount = curHp / maxHp;
-
-		virusBar.fillAmount = 0;
+        HealthBar();
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
-		timeCount += Time.deltaTime;
-
-		if(timeCount >= 3 && intoxicate)
-		{
-			curVirus += 2;
-
-			virusBar.fillAmount = curVirus / 500;
-
-			timeCount = 0;
-		}
-
-		if (intoxicate)
-		{
-			toxicTime += Time.deltaTime;
-			if(toxicTime >= 7)
-			{
-				intoxicate = false;
-				toxicTime = 0;
-			}
-		}
+        Virus();
 
 	}
 
     public void SetDamage()
     {
-        
+
         curHp -= 10;
 
         healthBar.fillAmount = curHp / maxHp;
     }
+    #region Barras
 
-	private void OnTriggerEnter (Collider col)
+    public void HealthBar()
+    {
+        curHp = maxHp;
+
+        healthBar.fillAmount = curHp / maxHp;
+
+        virusBar.fillAmount = 0;
+    }
+
+    public void Virus()
+    {
+        timeCount += Time.deltaTime;
+
+        if (timeCount >= 3 && intoxicate)
+        {
+            curVirus += 2;
+
+            virusBar.fillAmount = curVirus / 500;
+
+            timeCount = 0;
+        }
+
+        if (intoxicate)
+        {
+            toxicTime += Time.deltaTime;
+            if (toxicTime >= 7)
+            {
+                intoxicate = false;
+                toxicTime = 0;
+            }
+        }
+    }
+
+    #endregion
+    private void OnTriggerEnter (Collider col)
 	{
 
 		if (col.CompareTag ("Enemy"))
@@ -76,8 +88,8 @@ public class PlayerManager : MonoBehaviour
 			intoxicate = true;
 
             SetDamage();
-			//curHp -= col.GetComponent<EnemyManager>().damageValue;
 
+			// curHp -= col.GetComponent<EnemyBehaviour>().damageValue;
 
 			curVirus += 10;
 
