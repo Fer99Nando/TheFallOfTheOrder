@@ -8,6 +8,8 @@ public class PlayerHealth : MonoBehaviour
 	
 	public int currentHp;
 
+    private int damage;
+
 	public Slider healthSlider;
 
 	public Image damageImage;
@@ -52,6 +54,7 @@ public class PlayerHealth : MonoBehaviour
 	{
 		damaged = true;
 
+        damage = amount;
 		currentHp -= amount;
 
 		healthSlider.value = currentHp;
@@ -72,4 +75,12 @@ public class PlayerHealth : MonoBehaviour
 
 		playerControl.enabled = false;
 	}
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag ("Damage"))
+        {
+            damage = 10;
+        }
+    }
 }
