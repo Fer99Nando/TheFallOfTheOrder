@@ -11,6 +11,8 @@ public class EnemyBehaviour : MonoBehaviour
 
     private NavMeshAgent agent;
 
+    private BoxCollider boxCol;
+
     [SerializeField] private Transform targetTransform;
 
     [Header("Paths")]
@@ -33,7 +35,7 @@ public class EnemyBehaviour : MonoBehaviour
     private float timeCounter = 0;  // Contador de tiempo
     private float timeToPatrol = 0; // Contador para pasar a patrol desde chase
 
-    public float coolDownAttack = 1f;   // Enfriamineto despues de atacar
+    public float coolDownAttack = 0;   // Enfriamineto despues de atacar
 
     [Header("Stats")]
 
@@ -62,6 +64,8 @@ public class EnemyBehaviour : MonoBehaviour
         targetTransform = GameObject.FindGameObjectWithTag("Player").transform;
 
         playerHealth = targetTransform.GetComponent<PlayerHealth>();
+
+        boxCol = GetComponentInChildren<BoxCollider>();
     }
 	
 	// Update is called once per frame
@@ -170,11 +174,13 @@ public class EnemyBehaviour : MonoBehaviour
 
         if (distanceFromTarget < attackRange)
         {
+            
             Debug.Log("ATTACK");
             agent.isStopped = true;
             anim.SetBool("Action", true);
 
-            SetDamage();
+            //SetDamage();
+            
             return;
             //agent.Stop(); // 5.5 // agent.isStopped = true; // 5.6 PREGUNTAR A ALEX
 
@@ -192,8 +198,6 @@ public class EnemyBehaviour : MonoBehaviour
             SetChase();
             return;
         }
-
-
     }
 
     void DeadUpdate()
@@ -270,6 +274,8 @@ public class EnemyBehaviour : MonoBehaviour
         if (playerHealth.currentHp > 0)
         {
             playerHealth.TakeDamage (damage);
+                SetIdle();
+                return;
         }
 
         if(life <= 0)
