@@ -17,7 +17,7 @@ public class EnemyBehaviour : MonoBehaviour
 
     public Transform[] points;
     public int pathIndex = 0;
-
+    private int damage = 10;        // Daño al Player
     public float chaseRange;        // Rango de Persecucion
     public float attackRange;       // Rango de Ataque
     [SerializeField] private float distanceFromTarget = Mathf.Infinity;     // Distancia del target que puede ser hasta infinito
@@ -43,6 +43,7 @@ public class EnemyBehaviour : MonoBehaviour
 
     public int hitDamage;           // Daño recibido
     public int life = 100;          // Vida del Enemy
+    PlayerHealth playerHealth;      // Llamamos a la vida del player para restarla
 
     [Header("Animation")]
 
@@ -51,12 +52,16 @@ public class EnemyBehaviour : MonoBehaviour
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
+
+        anim = GetComponent<Animator>();        // Llamamos a las animaciones
     }
 
     // Use this for initialization
     void Start ()
     {
         targetTransform = GameObject.FindGameObjectWithTag("Player").transform;
+
+        playerHealth = targetTransform.GetComponent<PlayerHealth>();
     }
 	
 	// Update is called once per frame
@@ -76,6 +81,7 @@ public class EnemyBehaviour : MonoBehaviour
                 ChaseUpdate();
                 break;
             case EnemyState.Attack:
+                Debug.Log("PUPA");
                 ActionUpdate();
                 break;
             case EnemyState.Dead:
@@ -159,25 +165,29 @@ public class EnemyBehaviour : MonoBehaviour
 
     void ActionUpdate()
     {
-        anim.SetBool("Action", true);
+        Debug.Log("CASI DAÑO");
         agent.SetDestination(targetTransform.position); 
 
-        if (canAttack)
+        if (distanceFromTarget < attackRange)
         {
+            Debug.Log("ATTACK");
             agent.isStopped = true;
+            anim.SetBool("Action", true);
+
+            SetDamage();
+            return;
             //agent.Stop(); // 5.5 // agent.isStopped = true; // 5.6 PREGUNTAR A ALEX
 
             // Recibir o hacer daño del player?
-            targetTransform.GetComponent<PlayerManager>().SetDamage(); // preguntar esto Alex
+            //targetTransform.GetComponent<PlayerManager>().SetDamage(); // preguntar esto Alex
 
             idleTime = coolDownAttack; // Esto es si quiero que tenga un time para quese  enfrie y poderle atacar
-            Debug.Log("ATTACK");
+            
             SetIdle();
-            return;
         }
-
-        if(distanceFromTarget > attackRange)
+        else
         {
+            Debug.Log("Salio Del Range");
             anim.SetBool("Action", false);
             SetChase();
             return;
@@ -253,11 +263,14 @@ public class EnemyBehaviour : MonoBehaviour
 
     #region PublicFunctions
 
-    public void SetDamage(int hit)
+    public void SetDamage()
     {
         if (state == EnemyState.Dead) return;   // Si el estado es muerto, sale de esta funcion
 
-        life -= hit;
+        if (playerHealth.currentHp > 0)
+        {
+            playerHealth.TakeDamage (damage);
+        }
 
         if(life <= 0)
         {
@@ -278,6 +291,8 @@ public class EnemyBehaviour : MonoBehaviour
         if (other.tag == "Player")
         {
             canAttack = true;
+            Debug.Log ("ENTRO");
+            
         }
     }
 
@@ -306,4 +321,6 @@ public class EnemyBehaviour : MonoBehaviour
     {
         Destroy(this.gameObject);
     }
+
+
 }
