@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class Weapon : MonoBehaviour {
 
 	private PlayerHealth playerHealth;
+	private PlayerHealth virusHealth;
 
 	public int damage = 10;
 	// Use this for initialization
@@ -15,6 +16,7 @@ public class Weapon : MonoBehaviour {
 		targetTransform = GameObject.FindGameObjectWithTag("Player").transform;
 
         playerHealth = targetTransform.GetComponent<PlayerHealth>();
+		virusHealth = targetTransform.GetComponent<PlayerHealth>();
 	}
 	
 	// Update is called once per frame
@@ -28,6 +30,7 @@ public class Weapon : MonoBehaviour {
 		{
 			playerHealth = other.GetComponent<PlayerHealth>();
 			playerHealth.TakeDamage (damage);
+			virusHealth.TakeVirus(damage);			
 		}
 	}
 }

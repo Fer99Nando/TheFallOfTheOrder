@@ -5,12 +5,16 @@ using UnityEngine.UI;
 public class PlayerHealth : MonoBehaviour 
 {
 	public int startingHp;
+	public int startingV;
 	
 	public int currentHp;
+	public int currentV;
 
     private int damage;
+	private int vDamage;
 
 	public Slider healthSlider;
+	public Slider virusSlider;
 
 	public Image damageImage;
 
@@ -34,6 +38,8 @@ public class PlayerHealth : MonoBehaviour
 		anim = GetComponent<Animator>();
 		playerControl = GetComponent<PlayerControl>();
 		currentHp = startingHp;
+		currentV = startingV;
+		virusSlider.value = startingV;
 	}
 	
 	// Update is called once per frame
@@ -67,6 +73,21 @@ public class PlayerHealth : MonoBehaviour
 		}
 	}
 
+		public void TakeVirus (int vAmount)
+	{
+        vDamage = vAmount;
+		currentV += vAmount;
+
+		virusSlider.value = currentV;
+
+		// Sonido asignado del jugador
+
+		if(currentHp <= 0 && !isDead)
+		{
+			return;
+		}
+	}
+
 	void Death()
 	{
 		isDead = true;
@@ -81,6 +102,7 @@ public class PlayerHealth : MonoBehaviour
         if (other.CompareTag ("Damage"))
         {
             damage = 10;
+			vDamage = 20;
         }
     }
 }

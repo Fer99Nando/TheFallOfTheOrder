@@ -11,8 +11,6 @@ public class EnemyBehaviour : MonoBehaviour
 
     private NavMeshAgent agent;
 
-    private BoxCollider boxCol;
-
     [SerializeField] private Transform targetTransform;
 
     [Header("Paths")]
@@ -56,16 +54,14 @@ public class EnemyBehaviour : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
 
         anim = GetComponent<Animator>();        // Llamamos a las animaciones
+
+        targetTransform = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     // Use this for initialization
     void Start ()
     {
-        targetTransform = GameObject.FindGameObjectWithTag("Player").transform;
-
         playerHealth = targetTransform.GetComponent<PlayerHealth>();
-
-        boxCol = GetComponentInChildren<BoxCollider>();
     }
 	
 	// Update is called once per frame
@@ -111,8 +107,6 @@ public class EnemyBehaviour : MonoBehaviour
 
     void PatrolUpdate()
     {
-        
-        distanceFromTarget = GetDistanceFromTarget();
         if (distanceFromTarget < chaseRange)
         {
             
@@ -129,8 +123,6 @@ public class EnemyBehaviour : MonoBehaviour
                 pathIndex = 0;
             }
 
-            
-            
             SetIdle();  // Si queremos que se pare cuando llegue a un punto
 
         }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3996,7 +3996,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -622.9, y: 282.99}
+  m_AnchoredPosition: {x: -546, y: 282.99}
   m_SizeDelta: {x: 134, y: 133.98}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &691189930
@@ -6220,8 +6220,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHp: 100
+  startingV: 0
   currentHp: 0
+  currentV: 0
   healthSlider: {fileID: 2119577497}
+  virusSlider: {fileID: 1297807918}
   damageImage: {fileID: 2042788420}
   flashSpeed: 5
   flashColour: {r: 1, g: 0, b: 0, a: 0.1}
@@ -10205,7 +10208,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1960827117}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.460812, y: 4.671, z: -4.3549795}
+  m_LocalPosition: {x: 3.23, y: 4.671, z: -23.89}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 424787542}
