@@ -17,7 +17,6 @@ public class EnemyBehaviour : MonoBehaviour
 
     public Transform[] points;
     public int pathIndex = 0;
-    private int damage = 10;        // Daño al Player
     public float chaseRange;        // Rango de Persecucion
     public float attackRange;       // Rango de Ataque
     [SerializeField] private float distanceFromTarget = Mathf.Infinity;     // Distancia del target que puede ser hasta infinito
@@ -263,13 +262,6 @@ public class EnemyBehaviour : MonoBehaviour
     {
         if (state == EnemyState.Dead) return;   // Si el estado es muerto, sale de esta funcion
 
-        if (playerHealth.currentHp > 0)
-        {
-            playerHealth.TakeDamage (damage);
-                SetIdle();
-                return;
-        }
-
         if(life <= 0)
         {
             SetDead();
@@ -282,24 +274,6 @@ public class EnemyBehaviour : MonoBehaviour
     float GetDistanceFromTarget()       // Calcula la distancia con el player
     {
         return Vector3.Distance(targetTransform.position, transform.position);
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "Player")
-        {
-            canAttack = true;
-            Debug.Log ("ENTRO");
-            
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.tag == "Player")
-        {
-            canAttack = false;
-        }
     }
 
     private void OnDrawGizmos()

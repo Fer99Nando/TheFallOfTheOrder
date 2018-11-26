@@ -88,7 +88,26 @@ public class PlayerHealth : MonoBehaviour
 		}
 	}
 
-	void Death()
+
+    /*public void SetDamage()
+    {
+        if (state == EnemyState.Dead) return;   // Si el estado es muerto, sale de esta funcion
+
+        if (playerHealth.currentHp > 0)
+        {
+            playerHealth.TakeDamage(damage);
+            SetIdle();
+            return;
+        }
+
+        if (life <= 0)
+        {
+            SetDead();
+            return;
+        }
+    }*/
+
+    void Death()
 	{
 		isDead = true;
 

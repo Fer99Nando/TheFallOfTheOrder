@@ -21,6 +21,8 @@ public class PlayerManager : MonoBehaviour
 
 	private bool intoxicate;
 
+    EnemyHealth enemyHealth;
+
     //Animator myAnim;
 
     void Start () 
@@ -36,11 +38,6 @@ public class PlayerManager : MonoBehaviour
         Virus();
 	}
 
-    public void SetDamage()
-    {
-        
-
-    }
     #region Barras
 
     public void HealthBar()

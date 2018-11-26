@@ -4,6 +4,9 @@ using UnityEngine.UI;
 
 public class EnemyHealth : MonoBehaviour
 {
+    // Activamos el gameobject GameOver
+    public GameObject gameOver;
+
     public int startingHp;
 
     public int currentHp;
@@ -12,35 +15,27 @@ public class EnemyHealth : MonoBehaviour
 
     public Slider healthSlider;
 
-    public Image damageImage;
-
     // Sonido muerte
 
     Animator anim;
 
     // Sonidos
 
-    EnemyBehaviour playerControl;
+    EnemyBehaviour enemyBehaviour;
 
     bool isDead;
-    bool damaged;
 
     void Awake()
     {
         anim = GetComponent<Animator>();
-        playerControl = GetComponent<EnemyBehaviour>();
+        enemyBehaviour = GetComponent<EnemyBehaviour>();
         currentHp = startingHp;
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
+        gameOver.SetActive(true);
     }
 
     public void TakeDamage(int amount)
     {
-        damaged = true;
-
         damage = amount;
         currentHp -= amount;
 
@@ -60,16 +55,10 @@ public class EnemyHealth : MonoBehaviour
 
         // Animacion de muerte;
 
-        playerControl.enabled = false;
-        
-    }
+        enemyBehaviour.enabled = false;
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Damage"))
-        {
-            damage = 10;
-        }
+        gameOver.SetActive(true);
+        
     }
 
     private void OnDestroy()
