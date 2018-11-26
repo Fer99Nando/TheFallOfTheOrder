@@ -24,9 +24,14 @@ public class PlayerControl : MonoBehaviour
     private float inputH;                   // Tecla de avance lateral
     private float jumpInput;                // Tecla de salto
 
+    private bool attackOne;
+
+    public Animator anim;
+
 	// Use this for initialization
 	void Start ()
     {
+        anim = GetComponent<Animator>();
         this.controller = GetComponent<CharacterController>();
 
         this.diagonalForwardSpeed = (float)Mathf.Sqrt(this.forwardSpeed * this.forwardSpeed / 2);
@@ -39,6 +44,20 @@ public class PlayerControl : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
+        if (Input.GetButtonDown("Fire1"))
+        {
+            attackOne = true;
+            if (attackOne == true)
+            {
+                anim.SetBool("Attack", true);
+            }
+            
+        }
+        else 
+        {
+            attackOne = false;
+        }
+
         if (GetInput ())
         {
             Rotate ();

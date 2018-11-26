@@ -9,6 +9,8 @@ public class Weapon : MonoBehaviour {
 	private PlayerHealth virusHealth;
 
 	public int damage = 10;
+	public int vDamage = 5;
+
 	// Use this for initialization
 	[SerializeField] private Transform targetTransform;
 	void Start () 
@@ -28,9 +30,9 @@ public class Weapon : MonoBehaviour {
 	{
 		if (other.tag == "Player")
 		{
-			playerHealth = other.GetComponent<PlayerHealth>();
 			playerHealth.TakeDamage (damage);
-			virusHealth.TakeVirus(damage);			
+			virusHealth.TakeVirus(vDamage);
+					
 		}
 	}
 }

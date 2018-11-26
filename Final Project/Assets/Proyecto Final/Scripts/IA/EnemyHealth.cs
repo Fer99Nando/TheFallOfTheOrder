@@ -36,7 +36,6 @@ public class EnemyHealth : MonoBehaviour
 
     public void TakeDamage(int amount)
     {
-        damage = amount;
         currentHp -= amount;
 
         healthSlider.value = currentHp;
@@ -59,6 +58,14 @@ public class EnemyHealth : MonoBehaviour
 
         gameOver.SetActive(true);
         
+    }
+
+        private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag ("Damage"))
+        {
+            damage = 20;
+        }
     }
 
     private void OnDestroy()
