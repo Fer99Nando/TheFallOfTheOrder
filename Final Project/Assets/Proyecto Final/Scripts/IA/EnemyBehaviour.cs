@@ -17,6 +17,7 @@ public class EnemyBehaviour : MonoBehaviour
 
     public Transform[] points;
     public int pathIndex = 0;
+    private int damage = 10;        // Daño al Player
     public float chaseRange;        // Rango de Persecucion
     public float attackRange;       // Rango de Ataque
     [SerializeField] private float distanceFromTarget = Mathf.Infinity;     // Distancia del target que puede ser hasta infinito
@@ -66,7 +67,7 @@ public class EnemyBehaviour : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        distanceFromTarget = GetDistanceFromTarget();
+        
 
         switch (state)
         {
@@ -83,13 +84,18 @@ public class EnemyBehaviour : MonoBehaviour
                 Debug.Log("PUPA");
                 ActionUpdate();
                 break;
-            case EnemyState.Dead:
+            /*case EnemyState.Dead:
                 //DeadUpdate();
-                break;
+                break;*/
             default:
                 break;
         }
 
+    }
+
+    void LateUpdate()
+    {
+        distanceFromTarget = GetDistanceFromTarget();
     }
 
     #region AllUpdatesStates
@@ -108,7 +114,6 @@ public class EnemyBehaviour : MonoBehaviour
     {
         if (distanceFromTarget < chaseRange)
         {
-            
             SetChase();
             return;
         }
@@ -123,19 +128,16 @@ public class EnemyBehaviour : MonoBehaviour
             }
 
             SetIdle();  // Si queremos que se pare cuando llegue a un punto
-
         }
-
-
+        
         // Aqui va el rugido de los monstruos cada x tiempo
         // if (timeCounter >= roarTime)
-
     }
 
     void ChaseUpdate()
     {
+        // animacion de giro hacia el personaje
         anim.SetBool("Chase", true);
-        timeCounter = 0;
 
         agent.SetDestination(targetTransform.position);
 
@@ -149,7 +151,6 @@ public class EnemyBehaviour : MonoBehaviour
                 return;
             }
         }
-        else SetChase();
 
         if (distanceFromTarget < attackRange)
         {
@@ -178,9 +179,9 @@ public class EnemyBehaviour : MonoBehaviour
             // Recibir o hacer daño del player?
             //targetTransform.GetComponent<PlayerManager>().SetDamage(); // preguntar esto Alex
 
-            idleTime = coolDownAttack; // Esto es si quiero que tenga un time para quese  enfrie y poderle atacar
+            //idleTime = coolDownAttack; // Esto es si quiero que tenga un time para quese  enfrie y poderle atacar
             
-            SetIdle();
+            //SetIdle();
         }
         else
         {
@@ -242,7 +243,7 @@ public class EnemyBehaviour : MonoBehaviour
         state = EnemyState.Attack;
     }
 
-    void SetDead()
+    /*void SetDead()
     {
         // Animacion de muerte
 
@@ -262,12 +263,19 @@ public class EnemyBehaviour : MonoBehaviour
     {
         if (state == EnemyState.Dead) return;   // Si el estado es muerto, sale de esta funcion
 
+        if (playerHealth.currentHp > 0)
+        {
+            playerHealth.TakeDamage (damage);
+                SetIdle();
+                return;
+        }
+
         if(life <= 0)
         {
             SetDead();
             return;
         }
-    }
+    }*/
 
     #endregion
 
@@ -282,11 +290,6 @@ public class EnemyBehaviour : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, chaseRange);
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, attackRange);
-    }
-
-    public void DesactivateEnemy()
-    {
-        this.gameObject.SetActive(false);
     }
 
     public void OnDestroy()
