@@ -24,15 +24,12 @@ public class PlayerHealth : MonoBehaviour
 	public Slider healthSlider;
 	public Slider virusSlider;
 
-	public Image damageImage;
+    // Activamos el gameobject GameOver
+    public GameObject gameOver;
 
-	// Sonido muerte
+    // Sonido muerte
 
-	public float flashSpeed = 5f;
-
-	public Color flashColour = new Color(1f, 0f, 0f, 0.1f);
-
-	[Header("Animation")]
+    [Header("Animation")]
 	Animator anim;
 
 	// Sonidos
@@ -56,16 +53,6 @@ public class PlayerHealth : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		if (damaged)
-		{
-			damageImage.color = flashColour;
-		}
-		else
-		{
-			damageImage.color = Color.Lerp (damageImage.color, Color.clear, flashSpeed * Time.deltaTime);
-		}
-		damaged = false;
-
 		if(intoxicate)
 		{
 			timeCount += Time.deltaTime;
@@ -76,7 +63,6 @@ public class PlayerHealth : MonoBehaviour
 
 	public void TakeDamage (int amount)
 	{
-		damaged = true;
 
         damage = amount;
 		currentHp -= amount;
@@ -157,7 +143,9 @@ public class PlayerHealth : MonoBehaviour
 		// Animacion de muerte;
 
 		playerControl.enabled = false;
-	}
+        gameOver.SetActive(true);
+        Cursor.visible = true;
+    }
 
     private void OnTriggerEnter(Collider other)
     {

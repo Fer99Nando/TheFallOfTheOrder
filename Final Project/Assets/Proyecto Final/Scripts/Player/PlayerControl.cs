@@ -46,22 +46,19 @@ public class PlayerControl : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            attackOne = true;
-            if (attackOne == true)
-            {
-                anim.SetBool("Attack", true);
-            }
-            
+            anim.SetBool("Attack", true);     
         }
-        else 
+        if (Input.GetButtonDown("Fire2"))
         {
-            attackOne = false;
+            anim.SetBool("Attack", false);
         }
 
         if (GetInput ())
         {
+            anim.SetBool("Walk", true);
             Rotate ();
         }
+        else anim.SetBool("Walk", false);
         Move ();
 	}
 

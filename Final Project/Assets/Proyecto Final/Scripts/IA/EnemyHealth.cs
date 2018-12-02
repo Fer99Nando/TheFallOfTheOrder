@@ -4,9 +4,6 @@ using UnityEngine.UI;
 
 public class EnemyHealth : MonoBehaviour
 {
-    // Activamos el gameobject GameOver
-    public GameObject gameOver;
-
     public int startingHp;
 
     public int currentHp;
@@ -30,8 +27,6 @@ public class EnemyHealth : MonoBehaviour
         anim = GetComponent<Animator>();
         enemyBehaviour = GetComponent<EnemyBehaviour>();
         currentHp = startingHp;
-
-        gameOver.SetActive(true);
     }
 
     public void TakeDamage(int amount)
@@ -54,10 +49,7 @@ public class EnemyHealth : MonoBehaviour
 
         // Animacion de muerte;
 
-        enemyBehaviour.enabled = false;
-
-        gameOver.SetActive(true);
-        
+        enemyBehaviour.enabled = false;    
     }
 
         private void OnTriggerEnter(Collider other)

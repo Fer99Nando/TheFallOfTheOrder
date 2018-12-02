@@ -23,12 +23,12 @@ public class LogoUI : MonoBehaviour
 
 	public void LogoToMenuScene ()
 	{
-		if (timeCounter >= 7)
+		if (timeCounter >= 6)
 		{
-			SceneManager.LoadScene ("Menu_Principal");
+			SceneManager.LoadScene ("Menu_Inicio");
 		}
 
-		if(Input.anyKeyDown && timeCounter <= 7)
+		if(Input.anyKeyDown && timeCounter <= 6)
 		{
 			StartCoroutine(Fading());
 		}
@@ -38,6 +38,6 @@ public class LogoUI : MonoBehaviour
 	{
 		anim.SetBool("Fade", true);
 		yield return new WaitForSeconds (1.0f);
-		SceneManager.LoadScene("Menu_Principal");
+		SceneManager.LoadScene("Menu_Inicio");
 	}
 }
