@@ -23,12 +23,12 @@ public class LogoUI : MonoBehaviour
 
 	public void LogoToMenuScene ()
 	{
-		if (timeCounter >= 6)
+		if (timeCounter >= 5)
 		{
-			SceneManager.LoadScene ("Menu_Inicio");
+			StartCoroutine(Fading());
 		}
 
-		if(Input.anyKeyDown && timeCounter <= 6)
+		if(Input.anyKeyDown && timeCounter <= 5)
 		{
 			StartCoroutine(Fading());
 		}

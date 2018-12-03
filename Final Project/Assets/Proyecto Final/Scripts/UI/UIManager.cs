@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour 
 {
-	public GameObject fade; 	
+	public GameObject fade;
+	public GameObject fadeLayer;	
 
 	public Animator anim;
 
@@ -14,17 +15,12 @@ public class UIManager : MonoBehaviour
 	{
 		anim.SetBool("Fade", false);
 	}
-
-	// Use this for initialization
-	void Start () 
-	{
-		
-	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
 		timeCounter += Time.deltaTime;
+		if (timeCounter >= 1) fadeLayer.SetActive (false);
 	}
 	public void MenuPrincipalScene ()
 	{
@@ -39,6 +35,7 @@ public class UIManager : MonoBehaviour
 
 	public void GameplayScene ()
 	{
+		fadeLayer.SetActive (true);
 		StartCoroutine(Fading());
 		SceneManager.LoadScene ("Gameplay");
 	}
@@ -63,6 +60,7 @@ public class UIManager : MonoBehaviour
 	IEnumerator Fading()
 	{
 		anim.SetBool("Fade", true);
+		timeCounter = 0;
 		yield return new WaitForSeconds (1.0f);
 		SceneManager.LoadScene("Menu_Principal");
 	}

@@ -27,13 +27,18 @@ public class PlayerControl : MonoBehaviour
     private bool attackOne;
 
     public Animator anim;
+    private bool canMove;
+    public AnimationClip attackAnim;
+    private float attackTime;
 
 	// Use this for initialization
 	void Start ()
     {
+        attackTime = attackAnim.length;
+        attackTime *= 0.8f;
         anim = GetComponent<Animator>();
         this.controller = GetComponent<CharacterController>();
-
+        canMove = true;
         this.diagonalForwardSpeed = (float)Mathf.Sqrt(this.forwardSpeed * this.forwardSpeed / 2);
         this.backSpeed = this.forwardSpeed / 2;
         this.diagonalBackSpeed = (float)Mathf.Sqrt(this.backSpeed * backSpeed / 2);
@@ -46,21 +51,29 @@ public class PlayerControl : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            anim.SetBool("Attack", true);     
-        }
-        if (Input.GetButtonDown("Fire2"))
-        {
-            anim.SetBool("Attack", false);
+            StartCoroutine(Attack());   
         }
 
-        if (GetInput ())
-        {
-            anim.SetBool("Walk", true);
-            Rotate ();
+        if(canMove){
+            if (GetInput ())
+            {
+                anim.SetBool("Walk", true);
+                Rotate ();
+            }
+            else anim.SetBool("Walk", false);
+
+            Move();
         }
-        else anim.SetBool("Walk", false);
-        Move ();
 	}
+
+    IEnumerator Attack(){
+        canMove = false;
+        anim.SetBool("Walk", false);
+        anim.SetBool("Attack", true);
+        yield return new WaitForSeconds(attackTime);
+        canMove = true;
+        anim.SetBool("Attack", false);
+    }
 
     // Escucha todas las teclas que controlan al jugador
     private bool GetInput()
