@@ -136,6 +136,7 @@ public class EnemyBehaviour : MonoBehaviour
 
     void ChaseUpdate()
     {
+        Debug.Log("Te Persigo");
         // animacion de giro hacia el personaje
         anim.SetBool("Chase", true);
 
@@ -149,6 +150,14 @@ public class EnemyBehaviour : MonoBehaviour
                 SetPatrol();
                 timeToPatrol = 0;
                 return;
+            }
+        }
+        else
+        {
+            if (distanceFromTarget > attackRange)
+
+            {
+                agent.SetDestination(targetTransform.position);
             }
         }
 
@@ -228,6 +237,7 @@ public class EnemyBehaviour : MonoBehaviour
     void SetChase()
     {
         // Animacion de caminar
+        
 
         agent.speed = chaseSpeed;   // La velocidad del enemigo pasa a ser igual que la de modo persecucion
 
@@ -253,11 +263,11 @@ public class EnemyBehaviour : MonoBehaviour
         // Sonidos de muerte si los tiene
         // Hacer un if de si la animacion a terminado llamar al destroy
         
-    }
+    }*/
 
     #endregion
 
-    #region PublicFunctions
+   /* #region PublicFunctions
 
     public void SetDamage()
     {
@@ -275,9 +285,9 @@ public class EnemyBehaviour : MonoBehaviour
             SetDead();
             return;
         }
-    }*/
+    }
 
-    #endregion
+    #endregion*/
 
     float GetDistanceFromTarget()       // Calcula la distancia con el player
     {

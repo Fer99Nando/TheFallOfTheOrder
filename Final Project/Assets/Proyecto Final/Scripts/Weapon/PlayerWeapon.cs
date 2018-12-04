@@ -9,11 +9,11 @@ public class PlayerWeapon : MonoBehaviour {
 
 	private void OnTriggerEnter(Collider other)
 	{
-		Debug.Log(other.tag);
-		if (other.gameObject.tag == "Enemy")
+		
+		if (other.tag == "Enemy")
 		{
-			Debug.Log(other.tag);
-			EnemyHealth enemy = other.GetComponent<EnemyHealth>();
+            Debug.Log("enemy atravesado");
+            EnemyHealth enemy = other.GetComponent<EnemyHealth>();
 			enemy.TakeDamage (damage);
 		}
 	}
