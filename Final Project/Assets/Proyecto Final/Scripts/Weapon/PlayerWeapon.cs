@@ -2,15 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerWeapon : MonoBehaviour {
-
-
+public class PlayerWeapon : MonoBehaviour 
+{
 	public int damage = 10;
 
-	private void OnTriggerEnter(Collider other)
+	void OnTriggerEnter(Collider other)
 	{
-		
-		if (other.tag == "Enemy")
+		Debug.Log("Toca");
+		if (other.tag == "Wall")
 		{
             Debug.Log("enemy atravesado");
             EnemyHealth enemy = other.GetComponent<EnemyHealth>();

@@ -35,7 +35,7 @@ public class PlayerControl : MonoBehaviour
 	void Start ()
     {
         attackTime = attackAnim.length;
-        attackTime *= 0.8f;
+        attackTime *= 0.3f;
         anim = GetComponent<Animator>();
         this.controller = GetComponent<CharacterController>();
         canMove = true;

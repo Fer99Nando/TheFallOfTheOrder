@@ -12739,7 +12739,6 @@ MonoBehaviour:
   patrolSpeed: 2
   idleTime: 0
   coolDownAttack: 1
-  hitDamage: 10
   life: 100
   anim: {fileID: 424787547}
 --- !u!95 &424787547
@@ -48471,7 +48470,7 @@ GameObject:
   - component: {fileID: 1634249638}
   m_Layer: 10
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8

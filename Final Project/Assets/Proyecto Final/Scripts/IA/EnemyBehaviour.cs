@@ -17,7 +17,6 @@ public class EnemyBehaviour : MonoBehaviour
 
     public Transform[] points;
     public int pathIndex = 0;
-    private int damage = 10;        // Daño al Player
     public float chaseRange;        // Rango de Persecucion
     public float attackRange;       // Rango de Ataque
     [SerializeField] private float distanceFromTarget = Mathf.Infinity;     // Distancia del target que puede ser hasta infinito
@@ -41,9 +40,7 @@ public class EnemyBehaviour : MonoBehaviour
 
     [Header("Properties")]
 
-    public int hitDamage;           // Daño recibido
     public int life = 100;          // Vida del Enemy
-    PlayerHealth playerHealth;      // Llamamos a la vida del player para restarla
 
     [Header("Animation")]
 
@@ -58,12 +55,6 @@ public class EnemyBehaviour : MonoBehaviour
         targetTransform = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
-    // Use this for initialization
-    void Start ()
-    {
-        playerHealth = targetTransform.GetComponent<PlayerHealth>();
-    }
-	
 	// Update is called once per frame
 	void Update ()
     {
@@ -179,9 +170,7 @@ public class EnemyBehaviour : MonoBehaviour
             Debug.Log("ATTACK");
             agent.isStopped = true;
             anim.SetBool("Action", true);
-
             //SetDamage();
-            
             return;
             //agent.Stop(); // 5.5 // agent.isStopped = true; // 5.6 PREGUNTAR A ALEX
 
@@ -253,6 +242,27 @@ public class EnemyBehaviour : MonoBehaviour
         state = EnemyState.Attack;
     }
 
+    #endregion
+    
+    float GetDistanceFromTarget()       // Calcula la distancia con el player
+    {
+        return Vector3.Distance(targetTransform.position, transform.position);
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, chaseRange);
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, attackRange);
+    }
+
+    public void OnDestroy()
+    {
+        Destroy(this.gameObject);
+    }
+}
+
     /*void SetDead()
     {
         // Animacion de muerte
@@ -264,8 +274,6 @@ public class EnemyBehaviour : MonoBehaviour
         // Hacer un if de si la animacion a terminado llamar al destroy
         
     }*/
-
-    #endregion
 
    /* #region PublicFunctions
 
@@ -289,23 +297,3 @@ public class EnemyBehaviour : MonoBehaviour
 
     #endregion*/
 
-    float GetDistanceFromTarget()       // Calcula la distancia con el player
-    {
-        return Vector3.Distance(targetTransform.position, transform.position);
-    }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, chaseRange);
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, attackRange);
-    }
-
-    public void OnDestroy()
-    {
-        Destroy(this.gameObject);
-    }
-
-
-}
