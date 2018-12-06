@@ -13,7 +13,7 @@ public class LookAt_Pointer : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
-        transform.position = player.position + new Vector3(0, 2f, 0) + transform.right * 0.5f;
+        transform.position = player.position + new Vector3(0, 1f, 0) + transform.right * 0.5f;
 
         this.sensitivityX = 2f;
         this.sensitivityY = 1.5f;
@@ -22,7 +22,7 @@ public class LookAt_Pointer : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        transform.position = player.position + new Vector3(0, 2f, 0) + transform.right * 0.5f;
+        transform.position = player.position + new Vector3(0, 1f, 0) + transform.right * 0.5f;
 
         mouseX = Input.GetAxis("Mouse X") * sensitivityX;
         mouseY = Input.GetAxis("Mouse Y") * sensitivityY;

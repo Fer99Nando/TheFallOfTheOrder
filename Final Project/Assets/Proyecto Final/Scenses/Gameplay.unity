@@ -3884,7 +3884,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 126777064}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.77000064, y: 1.0800002, z: 0}
+  m_LocalPosition: {x: 0.77000064, y: 0.44, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1313575836}
@@ -13029,7 +13029,7 @@ GameObject:
   - component: {fileID: 428989072}
   - component: {fileID: 428989075}
   - component: {fileID: 428989071}
-  - component: {fileID: 428989070}
+  - component: {fileID: 428989068}
   - component: {fileID: 428989069}
   m_Layer: 8
   m_Name: Player
@@ -13038,6 +13038,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &428989068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 428989067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c63d81e9237fed4bb5cb78953471fa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lookAt: {fileID: 126777065}
+  forwardSpeed: 5
+  jumpSpeed: 5
+  gravity: 0
+  anim: {fileID: 428989075}
+  attackAnim: {fileID: 7400000, guid: 0bc12529b25aaea45b72eeb383f3c26d, type: 2}
 --- !u!114 &428989069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13056,23 +13073,6 @@ MonoBehaviour:
   healthSlider: {fileID: 2119577497}
   virusSlider: {fileID: 111253184}
   gameOver: {fileID: 1145675683}
---- !u!114 &428989070
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 428989067}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea066c2c3dd8ae84d857ebff9496af71, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lookAt: {fileID: 126777065}
-  forwardSpeed: 7
-  jumpSpeed: 6
-  gravity: 0
-  anim: {fileID: 0}
-  attackAnim: {fileID: 7400000, guid: 0bc12529b25aaea45b72eeb383f3c26d, type: 2}
 --- !u!143 &428989071
 CharacterController:
   m_ObjectHideFlags: 0
@@ -59156,7 +59156,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2006784988}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -5.55, y: 1.8, z: 9.69}
+  m_LocalPosition: {x: -6.27, y: 1.8, z: 9.69}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

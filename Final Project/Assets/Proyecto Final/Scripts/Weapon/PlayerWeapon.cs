@@ -9,7 +9,7 @@ public class PlayerWeapon : MonoBehaviour
 	void OnTriggerEnter(Collider other)
 	{
 		Debug.Log("Toca");
-		if (other.tag == "Wall")
+		if (other.tag == "Enemy")
 		{
             Debug.Log("enemy atravesado");
             EnemyHealth enemy = other.GetComponent<EnemyHealth>();

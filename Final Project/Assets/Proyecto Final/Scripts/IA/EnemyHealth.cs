@@ -43,6 +43,14 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
+    void ChangeBoss()
+    {
+        if (currentHp <= 50)
+        {
+            StartCoroutine(PhaseTwo());
+        }
+    }
+
     void Death()
     {
         isDead = true;
@@ -63,5 +71,12 @@ public class EnemyHealth : MonoBehaviour
     private void OnDestroy()
     {
         // que se destruya el objeto
+    }
+
+    private IEnumerator PhaseTwo ()
+    {
+        anim.SetBool("PhaseTwo", true);
+        yield return new WaitForSeconds(5.0f);
+        currentHp = 100;
     }
 }

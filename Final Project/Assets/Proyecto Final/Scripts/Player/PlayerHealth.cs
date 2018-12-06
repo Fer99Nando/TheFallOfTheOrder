@@ -34,7 +34,7 @@ public class PlayerHealth : MonoBehaviour
 
 	// Sonidos
 
-	PlayerControl playerControl;
+	PlayerBehaviour playerControl;
 
 	bool isDead;
 	bool damaged;
@@ -44,10 +44,11 @@ public class PlayerHealth : MonoBehaviour
 	void Awake()
 	{
 		anim = GetComponent<Animator>();
-		playerControl = GetComponent<PlayerControl>();
+		playerControl = GetComponent<PlayerBehaviour>();
 		currentHp = startingHp;
 		currentV = startingV;
 		virusSlider.value = startingV;
+        isDead = false;
 	}
 	
 	// Update is called once per frame
@@ -73,6 +74,7 @@ public class PlayerHealth : MonoBehaviour
 
 		if(currentHp <= 0 && !isDead)
 		{
+            
 			Death();
 		}
 	}
