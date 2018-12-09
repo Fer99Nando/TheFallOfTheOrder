@@ -49,7 +49,7 @@ public class CameraThirdPerson : MonoBehaviour
 		//LayerMask layerMask = 1 << 8; //Asignamos el layer 8 que es el del player
 		//layerMask = ~layerMask; //invierte el layer para que colisione con cualquier layer excepto este
 
-        /*Emite un raycast desde el lookAt a la camara colisionara conel primer collider que encuentre ( punto mas cercano al lookAt colisionara solo en el layer pasado por parametro */
+        /*Emite un raycast desde el lookAt a la camara colisionara con el primer collider que encuentre ( punto mas cercano al lookAt colisionara solo en el layer pasado por parametro */
         if (Physics.Raycast(this.lookAt.position, -this.lookAt.forward, out hit, this.distance, cameraMask))
         {
             Debug.DrawLine(this.lookAt.position, hit.point, Color.red);

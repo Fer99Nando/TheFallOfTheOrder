@@ -23,16 +23,16 @@ public class PlayerControl : MonoBehaviour
     private float inputV;                   // Tecla de avance recto
     private float inputH;                   // Tecla de avance lateral
     private float jumpInput;                // Tecla de salto
-
-    private bool attackOne;
-
-    public Animator anim;
-    private bool canMove;
-    public AnimationClip attackAnim;
     private float attackTime;
 
-	// Use this for initialization
-	void Start ()
+    private bool attackOne;
+    private bool canMove;
+
+    public Animator anim;
+    public AnimationClip attackAnim;
+
+    // Use this for initialization
+    void Start ()
     {
         attackTime = attackAnim.length;
         attackTime *= 0.3f;
