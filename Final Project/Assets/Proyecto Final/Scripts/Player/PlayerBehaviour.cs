@@ -58,6 +58,11 @@ public class PlayerBehaviour : MonoBehaviour
             StartCoroutine(Attack());
         }
 
+        if(Input.GetKey("Shift"))
+        {
+
+        }
+
         if (canMove)
         {
             if (GetInput())
