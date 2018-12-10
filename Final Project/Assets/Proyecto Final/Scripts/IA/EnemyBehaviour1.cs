@@ -38,10 +38,6 @@ public class EnemyBehaviour : MonoBehaviour
 
     private bool canAttack = false;     // El ataque del enemigo desactivado
 
-    [Header("Properties")]
-
-    public int life = 100;          // Vida del Enemy
-
     [Header("Animation")]
 
     public Animator anim;           // Para poder poner Animaciones
@@ -72,7 +68,6 @@ public class EnemyBehaviour : MonoBehaviour
                 ChaseUpdate();
                 break;
             case EnemyState.Attack:
-                Debug.Log("PUPA");
                 ActionUpdate();
                 break;
             /*case EnemyState.Dead:
@@ -127,7 +122,6 @@ public class EnemyBehaviour : MonoBehaviour
 
     void ChaseUpdate()
     {
-        Debug.Log("Te Persigo");
         // animacion de giro hacia el personaje
         anim.SetBool("Chase", true);
 

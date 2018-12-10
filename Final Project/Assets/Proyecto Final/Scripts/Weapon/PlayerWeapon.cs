@@ -8,14 +8,14 @@ public class PlayerWeapon : MonoBehaviour
 	//public int damage;
     private int bonusStats;
 
-    //PlayerHealth virus;
+    PlayerHealth death;
 
     public Slider virusSlider;
     public Slider healthSlider;
 
     void Start()
     {
-        //virus = GetComponent<PlayerHealth>();
+        death = GetComponent<PlayerHealth>();
         //damage = bonusStats;
     }
     void Update()
@@ -75,8 +75,10 @@ public class PlayerWeapon : MonoBehaviour
 
             if (healthSlider.value > 0)
             {
-                healthSlider.value-= Time.deltaTime;
+                healthSlider.value -= Time.deltaTime;
             }
+            
+            if(healthSlider.value <= 0) death.Death();
         }
     }
 }
