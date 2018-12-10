@@ -1,16 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerWeapon : MonoBehaviour 
 {
-	public int damage = 10;
+	//public int damage;
+    private int bonusStats;
 
-    public LayerMask layerMask;
+    //PlayerHealth virus;
 
-    private void Update()
+    public Slider virusSlider;
+
+    void Start()
     {
-        //MaskWeapon();
+        //virus = GetComponent<PlayerHealth>();
+        //damage = bonusStats;
+    }
+    void Update()
+    {
+        DamageVirus();
     }
 
     void OnTriggerEnter(Collider other)
@@ -20,15 +29,48 @@ public class PlayerWeapon : MonoBehaviour
 		{
             Debug.Log("enemy atravesado");
             EnemyHealth enemy = other.GetComponent<EnemyHealth>();
-			enemy.TakeDamage (damage);
+			enemy.TakeDamage (bonusStats);
 		}
 	}
 
-    /*public void MaskWeapon()
+    public void DamageVirus()
     {
-        
-        if (Physics.Raycast(transform.position, Vector3.forward, Mathf.Infinity, layerMask))
+        Debug.Log("Sube Daño");
+        //if (virus.TakeVirus());
+        if (virusSlider.value == 0)
+        {
+            Debug.Log("Base Daño");
+            bonusStats = 5;
+        }
 
-            Debug.Log("The ray hit the player");
-    }*/
+        if (virusSlider.value > 0 && virusSlider.value < 25)
+        {
+            Debug.Log("10 Daño");
+            bonusStats = 10;
+        }
+
+        if (virusSlider.value >= 25 && virusSlider.value < 50)
+        {
+            Debug.Log("15 Daño");
+            bonusStats = 15;
+        }
+        
+        if (virusSlider.value >= 50 && virusSlider.value < 75)
+        {
+            Debug.Log("20 Daño");
+            bonusStats = 20;
+        }
+
+        if (virusSlider.value >= 75 && virusSlider.value < 100)
+        {
+            Debug.Log("25 Daño");
+            bonusStats = 25;
+        }
+
+        if (virusSlider.value == 100)
+        {
+            Debug.Log("50 Daño");
+            bonusStats = 50;
+        }
+    }
 }
