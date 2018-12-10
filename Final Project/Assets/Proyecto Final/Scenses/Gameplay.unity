@@ -11538,6 +11538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5a95acafcaa09d4ba11275dfe2ca2e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOver: {fileID: 1145675683}
   virusSlider: {fileID: 111253184}
   healthSlider: {fileID: 2119577497}
 --- !u!65 &203104939
