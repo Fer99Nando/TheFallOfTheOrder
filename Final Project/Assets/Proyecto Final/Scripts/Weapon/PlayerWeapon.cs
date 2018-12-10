@@ -11,6 +11,7 @@ public class PlayerWeapon : MonoBehaviour
     //PlayerHealth virus;
 
     public Slider virusSlider;
+    public Slider healthSlider;
 
     void Start()
     {
@@ -71,6 +72,11 @@ public class PlayerWeapon : MonoBehaviour
         {
             Debug.Log("50 Daño");
             bonusStats = 50;
+
+            if (healthSlider.value > 0)
+            {
+                healthSlider.value-= Time.deltaTime;
+            }
         }
     }
 }
