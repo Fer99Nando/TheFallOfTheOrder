@@ -70,9 +70,6 @@ public class EnemyBehaviour : MonoBehaviour
             case EnemyState.Attack:
                 ActionUpdate();
                 break;
-            /*case EnemyState.Dead:
-                //DeadUpdate();
-                break;*/
             default:
                 break;
         }
@@ -129,6 +126,7 @@ public class EnemyBehaviour : MonoBehaviour
 
         if (distanceFromTarget > chaseRange)
         {
+            anim.SetBool("Chase", true);
             timeToPatrol += Time.deltaTime;
             if (timeToPatrol >= 3)
             {
@@ -148,6 +146,7 @@ public class EnemyBehaviour : MonoBehaviour
 
         if (distanceFromTarget < attackRange)
         {
+            anim.SetBool("Chase", false);
             SetAction();
             return;
         }
@@ -160,36 +159,25 @@ public class EnemyBehaviour : MonoBehaviour
 
         if (distanceFromTarget < attackRange)
         {
-            
             Debug.Log("ATTACK");
             agent.isStopped = true;
             anim.SetBool("Action", true);
-            //SetDamage();
+            idleTime = coolDownAttack; // Esto es si quiero que tenga un time para quese  enfrie y poderle atacar
+
+            SetIdle();
             return;
-            //agent.Stop(); // 5.5 // agent.isStopped = true; // 5.6 PREGUNTAR A ALEX
 
-            // Recibir o hacer daño del player?
-            //targetTransform.GetComponent<PlayerManager>().SetDamage(); // preguntar esto Alex
-
-            //idleTime = coolDownAttack; // Esto es si quiero que tenga un time para quese  enfrie y poderle atacar
-            
-            //SetIdle();
         }
         else
         {
             Debug.Log("Salio Del Range");
             anim.SetBool("Action", false);
+            agent.isStopped = false;
             SetChase();
             return;
         }
     }
 
-    void DeadUpdate()
-    {
-        // Quieto
-
-        // Animacion de la muerte
-    }
     #endregion
 
     #region Sets
@@ -229,8 +217,6 @@ public class EnemyBehaviour : MonoBehaviour
 
     void SetAction()
     {
-        // Animacion de atacar
-
         // Sonidos de Ataque si los tiene
 
         state = EnemyState.Attack;
@@ -261,38 +247,3 @@ public class EnemyBehaviour : MonoBehaviour
         //anim.SetBool("PhaseTwo", true);
     }
 }
-
-    /*void SetDead()
-    {
-        // Animacion de muerte
-
-        agent.isStopped = true;
-        state = EnemyState.Dead;
-
-        // Sonidos de muerte si los tiene
-        // Hacer un if de si la animacion a terminado llamar al destroy
-        
-    }*/
-
-   /* #region PublicFunctions
-
-    public void SetDamage()
-    {
-        if (state == EnemyState.Dead) return;   // Si el estado es muerto, sale de esta funcion
-
-        if (playerHealth.currentHp > 0)
-        {
-            playerHealth.TakeDamage (damage);
-                SetIdle();
-                return;
-        }
-
-        if(life <= 0)
-        {
-            SetDead();
-            return;
-        }
-    }
-
-    #endregion*/
-

@@ -120,7 +120,6 @@ public class BossBehaviour : MonoBehaviour
     {
         Debug.Log("Te Persigo");
         // animacion de giro hacia el personaje
-        anim.SetBool("Chase", true);
 
         agent.SetDestination(targetTransform.position);
 
@@ -129,6 +128,7 @@ public class BossBehaviour : MonoBehaviour
             timeToPatrol += Time.deltaTime;
             if (timeToPatrol >= 3)
             {
+                anim.SetBool("Chase", false);
                 SetPatrol();
                 timeToPatrol = 0;
                 return;
@@ -136,15 +136,17 @@ public class BossBehaviour : MonoBehaviour
         }
         else
         {
-            if (distanceFromTarget > attackRange)
+            if (distanceFromTarget >= attackRange && distanceFromTarget < chaseRange)
 
             {
+                anim.SetBool("Chase", true);
                 agent.SetDestination(targetTransform.position);
             }
         }
 
         if (distanceFromTarget < attackRange)
         {
+            anim.SetBool("Chase", false);
             SetAction();
             return;
         }

@@ -17722,7 +17722,7 @@ Animator:
   m_GameObject: {fileID: 424787541}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4e507bf213bf6544fa68a98d1348c001, type: 2}
+  m_Controller: {fileID: 9100000, guid: 6a1bc4212df8e894f8b885f8ddaadb4b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -48999,7 +48999,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000061035156, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 637.8462, y: 358.1858}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1439944172
@@ -71013,7 +71013,7 @@ Animator:
   m_GameObject: {fileID: 2136159994}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4e507bf213bf6544fa68a98d1348c001, type: 2}
+  m_Controller: {fileID: 9100000, guid: c82e9ccfd6d7c664ba008ef117793f77, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
