@@ -11,6 +11,7 @@ public class BossHealth : MonoBehaviour
     public Slider healthSlider;
 
     public GameObject victory;
+    public GameObject lifeDeath;
 
     // Sonido muerte
 
@@ -24,9 +25,11 @@ public class BossHealth : MonoBehaviour
 
     void Awake()
     {
+        lifeDeath.SetActive(true);
         anim = GetComponent<Animator>();
         enemyBehaviour = GetComponent<EnemyBehaviour>();
         currentHp = startingHp;
+        anim.SetBool("Death", false);
     }
 
     private void Start()
@@ -52,8 +55,15 @@ public class BossHealth : MonoBehaviour
     void Death()
     {
         isDead = true;
+        lifeDeath.SetActive(false);
+        StartCoroutine(CoDeath());
+    }
 
-        // Animacion de muerte;
+    IEnumerator CoDeath()
+    {
+
+        anim.SetBool("Death", true);
+        yield return new WaitForSeconds (1.0f);
         Destroy(gameObject);
         victory.SetActive(true);
         Time.timeScale = 0;
