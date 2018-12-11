@@ -27,14 +27,19 @@ public class PlayerWeapon : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
 	{
-		Debug.Log("Toca");
 		if (other.tag == "Enemy")
 		{
             Debug.Log("enemy atravesado");
             EnemyHealth enemy = other.GetComponent<EnemyHealth>();
 			enemy.TakeDamage (bonusStats);
-		}
-	}
+        }
+
+        if (other.tag == "Boss")
+        {
+            BossHealth boss = other.GetComponent<BossHealth>();
+            boss.TakeDamage(bonusStats);
+        }
+    }
 
     public void DamageVirus()
     {

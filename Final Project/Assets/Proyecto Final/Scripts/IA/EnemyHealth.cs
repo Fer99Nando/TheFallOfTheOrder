@@ -46,6 +46,6 @@ public class EnemyHealth : MonoBehaviour
         isDead = true;
 
         // Animacion de muerte;
-        Destroy(gameObject);   
+        Destroy(gameObject);
     }
 }

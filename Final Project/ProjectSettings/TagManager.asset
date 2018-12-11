@@ -9,6 +9,7 @@ TagManager:
   - Damage
   - Wall
   - Weapon
+  - Boss
   layers:
   - Default
   - TransparentFX
