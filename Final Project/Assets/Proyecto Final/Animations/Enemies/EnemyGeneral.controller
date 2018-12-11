@@ -20,12 +20,15 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
+<<<<<<< HEAD
   - m_Name: Death
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
+=======
+>>>>>>> parent of 60c71a1... animacion de muerte y canvas vida desaparece
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -52,9 +55,6 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: Action
     m_EventTreshold: 0
-  - m_ConditionMode: 2
-    m_ConditionEvent: Death
-    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102832774347522316}
   m_Solo: 0
@@ -69,6 +69,7 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+<<<<<<< HEAD
 --- !u!1101 &1101598661242541530
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -117,6 +118,8 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+=======
+>>>>>>> parent of 60c71a1... animacion de muerte y canvas vida desaparece
 --- !u!1101 &1101785857072567926
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -129,9 +132,6 @@ AnimatorStateTransition:
     m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: Action
-    m_EventTreshold: 0
-  - m_ConditionMode: 2
-    m_ConditionEvent: Death
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102096032851431018}
@@ -160,9 +160,6 @@ AnimatorStateTransition:
   - m_ConditionMode: 2
     m_ConditionEvent: Action
     m_EventTreshold: 0
-  - m_ConditionMode: 2
-    m_ConditionEvent: Death
-    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102096032851431018}
   m_Solo: 0
@@ -177,6 +174,7 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+<<<<<<< HEAD
 --- !u!1101 &1101886573286184948
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -201,6 +199,8 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+=======
+>>>>>>> parent of 60c71a1... animacion de muerte y canvas vida desaparece
 --- !u!1102 &1102096032851431018
 AnimatorState:
   serializedVersion: 5
@@ -212,7 +212,10 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101224977912513314}
+<<<<<<< HEAD
   - {fileID: 1101886573286184948}
+=======
+>>>>>>> parent of 60c71a1... animacion de muerte y canvas vida desaparece
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -239,7 +242,10 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101785857072567926}
+<<<<<<< HEAD
   - {fileID: 1101651121722161892}
+=======
+>>>>>>> parent of 60c71a1... animacion de muerte y canvas vida desaparece
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -266,7 +272,10 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101808014433539120}
+<<<<<<< HEAD
   - {fileID: 1101598661242541530}
+=======
+>>>>>>> parent of 60c71a1... animacion de muerte y canvas vida desaparece
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -277,31 +286,6 @@ AnimatorState:
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
   m_Motion: {fileID: 7400000, guid: 583926b6e15619d4e81b721b6a7e462a, type: 2}
-  m_Tag: 
-  m_SpeedParameter: 
-  m_MirrorParameter: 
-  m_CycleOffsetParameter: 
-  m_TimeParameter: 
---- !u!1102 &1102899308552095822
-AnimatorState:
-  serializedVersion: 5
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Death
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_SpeedParameterActive: 0
-  m_MirrorParameterActive: 0
-  m_CycleOffsetParameterActive: 0
-  m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 060d02ee1cef29c439cde4bb72e0baa0, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -324,9 +308,12 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: 1102832774347522316}
     m_Position: {x: 36, y: 348, z: 0}
+<<<<<<< HEAD
   - serializedVersion: 1
     m_State: {fileID: 1102899308552095822}
     m_Position: {x: 324, y: 276, z: 0}
+=======
+>>>>>>> parent of 60c71a1... animacion de muerte y canvas vida desaparece
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []

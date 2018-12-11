@@ -44,13 +44,8 @@ public class EnemyHealth : MonoBehaviour
     void Death()
     {
         isDead = true;
-        StartCoroutine(CoDeath());
-    }
 
-    IEnumerator CoDeath()
-    {
-        anim.SetBool("Death", true);
-        yield return new WaitForSeconds (1.0f);
+        // Animacion de muerte;
         Destroy(gameObject);
     }
 }
