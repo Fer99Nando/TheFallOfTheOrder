@@ -17712,7 +17712,6 @@ MonoBehaviour:
   patrolSpeed: 2
   idleTime: 0
   coolDownAttack: 1
-  life: 100
   anim: {fileID: 424787547}
 --- !u!95 &424787547
 Animator:
@@ -17777,7 +17776,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 126
@@ -58422,7 +58421,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7526806}
-        m_MethodName: MenuInicioScene
+        m_MethodName: MenuPrincipalScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -70990,7 +70989,6 @@ MonoBehaviour:
   patrolSpeed: 2
   idleTime: 0
   coolDownAttack: 1
-  life: 100
   anim: {fileID: 2136159999}
 --- !u!54 &2136159998
 Rigidbody:
