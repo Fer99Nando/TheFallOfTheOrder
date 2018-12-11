@@ -5,6 +5,7 @@ using UnityEngine;
 public class AudioFoots : MonoBehaviour
 {
     public AudioSource footStepRight;
+    public ParticleSystem dust;
 
     private void OnTriggerEnter(Collider col)
     {
@@ -12,6 +13,7 @@ public class AudioFoots : MonoBehaviour
         {
             Debug.Log("TocoSuelo");
             footStepRight.Play();
+            dust.Emit(1);
         }
     }
 
