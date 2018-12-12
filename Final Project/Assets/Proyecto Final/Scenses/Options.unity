@@ -268,6 +268,7 @@ GameObject:
   - component: {fileID: 106770272}
   - component: {fileID: 106770271}
   - component: {fileID: 106770275}
+  - component: {fileID: 106770276}
   m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
@@ -345,6 +346,7 @@ RectTransform:
   - {fileID: 1225469178}
   - {fileID: 73665255}
   - {fileID: 1380102043}
+  - {fileID: 1642472412}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -366,6 +368,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: 124b634313c120648a88135629fc133f, type: 2}
   resolutionsDropsown: {fileID: 1799230424}
+--- !u!95 &106770276
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 106770270}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2d51b2346b739564d87d7857ca41b3a3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &141436637
 GameObject:
   m_ObjectHideFlags: 0
@@ -3091,7 +3111,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 124b634313c120648a88135629fc133f,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 9b957618930593c4d87acd159485cc7c, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 5dbb158f34dd06443b26d5a5dbe2b2f1, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -3704,6 +3724,75 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1609634405}
   m_CullTransparentMesh: 0
+--- !u!1 &1642472409
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1642472412}
+  - component: {fileID: 1642472411}
+  - component: {fileID: 1642472410}
+  m_Layer: 5
+  m_Name: Fade
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1642472410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1642472409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1642472411
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1642472409}
+  m_CullTransparentMesh: 0
+--- !u!224 &1642472412
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1642472409}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 106770274}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 10.400024, y: 0}
+  m_SizeDelta: {x: 2020.1, y: 1171.4}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1700007960
 GameObject:
   m_ObjectHideFlags: 0
@@ -4491,6 +4580,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd43af7bff088c145975654bc930ca0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fade: {fileID: 0}
-  fadeLayer: {fileID: 0}
-  anim: {fileID: 0}
+  fade: {fileID: 106770270}
+  fadeLayer: {fileID: 1642472409}
+  anim: {fileID: 106770276}
