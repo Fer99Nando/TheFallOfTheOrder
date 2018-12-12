@@ -111,15 +111,6 @@ public class PlayerBehaviour : MonoBehaviour
         this.inputH = Input.GetAxis("Horizontal");
         //this.jumpInput = Input.GetAxis("Jump");
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            dodgeTime++;
-            if (dodgeTime >= 0 && dodgeTime < 3)
-            {
-                this.moveDirection.z = jumpSpeed;
-            }
-        }
-
         if (this.inputV != 0 || this.inputH != 0 || this.jumpInput != 0)
         {
             return true;
@@ -132,7 +123,7 @@ public class PlayerBehaviour : MonoBehaviour
     {
         if (Grounded()) // Si el jugador esta en el suelo se puede mover y saltar
         {
-            this.gravity = 0;
+            this.gravity = 1;
 
             if (this.inputV == 0 && this.inputH == 0) // QUIETO
             {
@@ -190,7 +181,7 @@ public class PlayerBehaviour : MonoBehaviour
 
         else // EN EL ARIE
         {
-            this.gravity = 25.0f;
+            this.gravity = 2.0f;
 
             if ((this.controller.collisionFlags & CollisionFlags.Above) != 0) //Cuando choque la cabeza contra algo que rapidamente cambie a zero el salto y comience a caer
             {
