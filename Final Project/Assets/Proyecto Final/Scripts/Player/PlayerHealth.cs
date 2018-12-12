@@ -138,6 +138,7 @@ public class PlayerHealth : MonoBehaviour
 			}
 		}
 	}
+
     public void Death()
 	{
 		isDead = true;

@@ -8,16 +8,18 @@ public class PlayerWeapon : MonoBehaviour
 	//public int damage;
     private int bonusStats;
 
-    PlayerHealth death;
+    public GameObject gameOver;
+
+    PlayerBehaviour playerControl;
 
     public Slider virusSlider;
     public Slider healthSlider;
 
-    void Start()
+    void Awake()
     {
-        death = GetComponent<PlayerHealth>();
-        //damage = bonusStats;
+        playerControl = GetComponent<PlayerBehaviour>();
     }
+
     void Update()
     {
         DamageVirus();
@@ -25,14 +27,19 @@ public class PlayerWeapon : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
 	{
-		Debug.Log("Toca");
 		if (other.tag == "Enemy")
 		{
             Debug.Log("enemy atravesado");
             EnemyHealth enemy = other.GetComponent<EnemyHealth>();
 			enemy.TakeDamage (bonusStats);
-		}
-	}
+        }
+
+        if (other.tag == "Boss")
+        {
+            BossHealth boss = other.GetComponent<BossHealth>();
+            boss.TakeDamage(bonusStats);
+        }
+    }
 
     public void DamageVirus()
     {
@@ -76,9 +83,26 @@ public class PlayerWeapon : MonoBehaviour
             if (healthSlider.value > 0)
             {
                 healthSlider.value -= Time.deltaTime;
+                return;
             }
-            
-            if(healthSlider.value <= 0) death.Death();
+
+            if (healthSlider.value <= 0)
+            {
+                healthSlider.value = 0;
+                Death();
+            }
         }
     }
+
+    public void Death()
+    {
+        // Animacion de muerte;
+        gameOver.SetActive(true);
+        Cursor.visible = true;
+        Destroy(gameObject);
+        //playerControl.enabled = false;
+        
+        
+    }
+
 }

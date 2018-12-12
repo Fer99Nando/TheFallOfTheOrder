@@ -101,6 +101,11 @@ public class PauseMenu : MonoBehaviour
 		SceneManager.LoadScene ("Menu_Principal");
 	}
 
+    public void GameplayScene()
+    {
+        SceneManager.LoadScene("Gameplay");
+    }
+
     public void MenuInicioScene()
     {
         SceneManager.LoadScene("Menu_Inicio");
@@ -131,5 +136,4 @@ public class PauseMenu : MonoBehaviour
         Resolution resolution = resolutions[resolutionIndex];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
     }
-
 }

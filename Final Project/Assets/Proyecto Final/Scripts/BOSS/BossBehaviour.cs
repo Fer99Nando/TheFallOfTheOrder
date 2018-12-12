@@ -38,10 +38,6 @@ public class BossBehaviour : MonoBehaviour
 
     private bool canAttack = false;     // El ataque del enemigo desactivado
 
-    [Header("Properties")]
-
-    public int life = 100;          // Vida del Enemy
-
     [Header("Animation")]
 
     public Animator anim;           // Para poder poner Animaciones
@@ -58,8 +54,6 @@ public class BossBehaviour : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        
-
         switch (state)
         {
             case EnemyState.Idle:
@@ -75,9 +69,6 @@ public class BossBehaviour : MonoBehaviour
                 Debug.Log("PUPA");
                 ActionUpdate();
                 break;
-            /*case EnemyState.Dead:
-                //DeadUpdate();
-                break;*/
             default:
                 break;
         }
@@ -129,7 +120,6 @@ public class BossBehaviour : MonoBehaviour
     {
         Debug.Log("Te Persigo");
         // animacion de giro hacia el personaje
-        anim.SetBool("Chase", true);
 
         agent.SetDestination(targetTransform.position);
 
@@ -138,6 +128,7 @@ public class BossBehaviour : MonoBehaviour
             timeToPatrol += Time.deltaTime;
             if (timeToPatrol >= 3)
             {
+                anim.SetBool("Chase", false);
                 SetPatrol();
                 timeToPatrol = 0;
                 return;
@@ -145,15 +136,17 @@ public class BossBehaviour : MonoBehaviour
         }
         else
         {
-            if (distanceFromTarget > attackRange)
+            if (distanceFromTarget >= attackRange && distanceFromTarget < chaseRange)
 
             {
+                anim.SetBool("Chase", true);
                 agent.SetDestination(targetTransform.position);
             }
         }
 
         if (distanceFromTarget < attackRange)
         {
+            anim.SetBool("Chase", false);
             SetAction();
             return;
         }
@@ -218,7 +211,7 @@ public class BossBehaviour : MonoBehaviour
 
         state = EnemyState.Patrol;   // El estado pasa a ser Patrol
 
-        agent.SetDestination(points[pathIndex].position);
+        agent.SetDestination(points[pathIndex].transform.position);
 
         timeCounter = 0;
     }
@@ -262,38 +255,4 @@ public class BossBehaviour : MonoBehaviour
         Destroy(this.gameObject);
     }
 }
-
-    /*void SetDead()
-    {
-        // Animacion de muerte
-
-        agent.isStopped = true;
-        state = EnemyState.Dead;
-
-        // Sonidos de muerte si los tiene
-        // Hacer un if de si la animacion a terminado llamar al destroy
-        
-    }*/
-
-   /* #region PublicFunctions
-
-    public void SetDamage()
-    {
-        if (state == EnemyState.Dead) return;   // Si el estado es muerto, sale de esta funcion
-
-        if (playerHealth.currentHp > 0)
-        {
-            playerHealth.TakeDamage (damage);
-                SetIdle();
-                return;
-        }
-
-        if(life <= 0)
-        {
-            SetDead();
-            return;
-        }
-    }
-
-    #endregion*/
 

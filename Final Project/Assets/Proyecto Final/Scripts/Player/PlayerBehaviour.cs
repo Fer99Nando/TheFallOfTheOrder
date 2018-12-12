@@ -21,6 +21,7 @@ public class PlayerBehaviour : MonoBehaviour
     private float inputH;                   // Tecla de avance lateral
     private float jumpInput;
     private float attackTime;
+    private float dodgeTime;
 
     private bool attackOne;
     private bool canMove;
@@ -108,7 +109,16 @@ public class PlayerBehaviour : MonoBehaviour
     {
         this.inputV = Input.GetAxis("Vertical");
         this.inputH = Input.GetAxis("Horizontal");
-        this.jumpInput = Input.GetAxis("Jump");
+        //this.jumpInput = Input.GetAxis("Jump");
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            dodgeTime++;
+            if (dodgeTime >= 0 && dodgeTime < 3)
+            {
+                this.moveDirection.z = jumpSpeed;
+            }
+        }
 
         if (this.inputV != 0 || this.inputH != 0 || this.jumpInput != 0)
         {
@@ -171,10 +181,11 @@ public class PlayerBehaviour : MonoBehaviour
 
             this.moveDirection = transform.TransformDirection(this.moveDirection); // Transformamos la direccion de loca a world space
 
-            if (this.jumpInput > 0) // SALTA
+           /* if (this.jumpInput > 0) // SALTA
             {
                 this.moveDirection.y = this.jumpSpeed;
-            }
+            }*/
+
         }
 
         else // EN EL ARIE
