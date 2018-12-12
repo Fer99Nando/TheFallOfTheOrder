@@ -24,7 +24,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     private bool attackOne;
     private bool canMove;
-
+    private bool godMode;
     public Animator anim;
     public AnimationClip attackAnim;
 
@@ -34,6 +34,7 @@ public class PlayerBehaviour : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        godMode = false;
         attackTime = attackAnim.length;
         attackTime *= 0.3f;
 
@@ -53,15 +54,25 @@ public class PlayerBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.F10))
+        {
+            if(godMode){
+                this.controller.enabled = true;
+                godMode = false;
+            }else if(!godMode){
+                this.controller.enabled = false;
+                godMode = true;
+            }
+        }
+
+        if(godMode){
+            GodMode();
+        }
+
         if (Input.GetButtonDown("Fire1"))
         {
             StartCoroutine(Attack());
         }
-
-        /*if(Input.GetKey("Shift"))
-        {
-
-        }*/
 
         if (canMove)
         {
@@ -187,5 +198,18 @@ public class PlayerBehaviour : MonoBehaviour
     private bool Grounded()
     {
         return Physics.Raycast(transform.position + this.controller.center, Vector3.down, this.controller.bounds.extents.y + 0.001f);
+    }
+
+    public void GodMode()
+    {
+        float movementH = Input.GetAxis("Horizontal");
+        float movementV = Input.GetAxis("Vertical");
+        if(Input.GetKey(KeyCode.Space)){
+            transform.Translate(Vector3.up* 0.2f, Space.Self);
+        }
+        if(Input.GetKey(KeyCode.LeftShift)){
+            transform.Translate(-Vector3.up * 0.2f, Space.Self);
+        }
+        transform.Translate(new Vector3(movementH* 0.2f, 0,movementV* 0.2f), Space.Self);
     }
 }

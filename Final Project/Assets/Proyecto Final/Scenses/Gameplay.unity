@@ -66076,7 +66076,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lookAt: {fileID: 126777065}
-  distance: 10
+  distance: 5
   cameraMask:
     serializedVersion: 2
     m_Bits: 1287
