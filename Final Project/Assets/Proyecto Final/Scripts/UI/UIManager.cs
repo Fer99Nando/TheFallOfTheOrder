@@ -24,7 +24,8 @@ public class UIManager : MonoBehaviour
 	}
 	public void MenuPrincipalScene ()
 	{
-		SceneManager.LoadScene ("Menu_Principal");
+        StartCoroutine(Fading());
+        SceneManager.LoadScene ("Menu_Principal");
 	}
 
 	public void ButtonExitToMenu ()
