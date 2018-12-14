@@ -6,6 +6,9 @@ using UnityEngine.UI;
 public class PlayerWeapon : MonoBehaviour 
 {
 	//public int damage;
+    public Material[] mat;
+    Renderer rend;
+
     private int bonusStats;
 
     public GameObject gameOver;
@@ -20,6 +23,12 @@ public class PlayerWeapon : MonoBehaviour
         playerControl = GetComponent<PlayerBehaviour>();
     }
 
+    void Start()
+    {
+        rend = GetComponent<Renderer>();
+        rend.enabled = true;
+        rend.sharedMaterial = mat[0];
+    }
     void Update()
     {
         DamageVirus();
@@ -30,15 +39,19 @@ public class PlayerWeapon : MonoBehaviour
 		if (other.tag == "Enemy")
 		{
             Debug.Log("enemy atravesado");
+            rend.sharedMaterial = mat[1];
             EnemyHealth enemy = other.GetComponent<EnemyHealth>();
 			enemy.TakeDamage (bonusStats);
         }
+        else rend.sharedMaterial = mat[0];
 
         if (other.tag == "Boss")
         {
+            rend.sharedMaterial = mat[1];
             BossHealth boss = other.GetComponent<BossHealth>();
             boss.TakeDamage(bonusStats);
         }
+        else rend.sharedMaterial = mat[0];
     }
 
     public void DamageVirus()

@@ -19,7 +19,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     private float inputV;                   // Tecla de avance recto
     private float inputH;                   // Tecla de avance lateral
-    private float jumpInput;
+    //private float jumpInput;
     private float attackTime;
     private float dodgeTime;
 
@@ -37,7 +37,7 @@ public class PlayerBehaviour : MonoBehaviour
     {
         godMode = false;
         attackTime = attackAnim.length;
-        attackTime *= 0.3f;
+        attackTime *= 0.1f;
 
         anim = GetComponent<Animator>();  
 
@@ -111,7 +111,7 @@ public class PlayerBehaviour : MonoBehaviour
         this.inputH = Input.GetAxis("Horizontal");
         //this.jumpInput = Input.GetAxis("Jump");
 
-        if (this.inputV != 0 || this.inputH != 0 || this.jumpInput != 0)
+        if (this.inputV != 0 || this.inputH != 0)
         {
             return true;
         }

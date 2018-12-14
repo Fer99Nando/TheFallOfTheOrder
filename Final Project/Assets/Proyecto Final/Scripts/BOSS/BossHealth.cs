@@ -14,7 +14,7 @@ public class BossHealth : MonoBehaviour
 
     // Sonido muerte
 
-    Animator anim;
+    //Animator anim;
 
     // Sonidos
 
@@ -24,7 +24,7 @@ public class BossHealth : MonoBehaviour
 
     void Awake()
     {
-        anim = GetComponent<Animator>();
+        //anim = GetComponent<Animator>();
         enemyBehaviour = GetComponent<EnemyBehaviour>();
         currentHp = startingHp;
     }

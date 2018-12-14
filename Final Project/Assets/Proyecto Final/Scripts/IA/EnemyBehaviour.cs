@@ -36,7 +36,7 @@ public class EnemyBehaviour : MonoBehaviour
 
     [Header("Stats")]
 
-    private bool canAttack = false;     // El ataque del enemigo desactivado
+    //private bool canAttack = false;     // El ataque del enemigo desactivado
 
     [Header("Animation")]
 

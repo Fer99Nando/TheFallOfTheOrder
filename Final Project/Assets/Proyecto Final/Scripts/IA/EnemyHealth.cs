@@ -16,14 +16,11 @@ public class EnemyHealth : MonoBehaviour
 
     // Sonidos
 
-    EnemyBehaviour enemyBehaviour;
-
     bool isDead;
 
     void Awake()
     {
         anim = GetComponent<Animator>();
-        enemyBehaviour = GetComponent<EnemyBehaviour>();
         currentHp = startingHp;
     }
 
