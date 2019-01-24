@@ -20,9 +20,10 @@ public class PlayerHealth : MonoBehaviour
 	private float toxicTime;
 	private float timeCount;
 
-	[Header("Bars")]
-	public Slider healthSlider;
-	public Slider virusSlider;
+    [Header("Bars")]
+    public Image healthSlider;
+    //public Slider healthSlider;
+    public Slider virusSlider;
 
     // Activamos el gameobject GameOver
     public GameObject gameOver;
@@ -68,7 +69,8 @@ public class PlayerHealth : MonoBehaviour
         damage = amount;
 		currentHp -= amount;
 
-		healthSlider.value = currentHp;
+
+		//healthSlider.value = currentHp;
 
 		// Sonido asignado del jugador
 
