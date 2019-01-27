@@ -5,10 +5,6 @@ using UnityEngine.UI;
 
 public class PlayerWeapon : MonoBehaviour 
 {
-	//public int damage;
-    public Material[] mat;
-    Renderer rend;
-
     private int bonusStats;
 
     public GameObject gameOver;
@@ -16,7 +12,7 @@ public class PlayerWeapon : MonoBehaviour
     PlayerBehaviour playerControl;
 
     public Slider virusSlider;
-    public Slider healthSlider;
+    //public Image healthSlider;
 
     void Awake()
     {
@@ -25,13 +21,10 @@ public class PlayerWeapon : MonoBehaviour
 
     void Start()
     {
-        rend = GetComponent<Renderer>();
-        rend.enabled = true;
-        rend.sharedMaterial = mat[0];
     }
     void Update()
     {
-        DamageVirus();
+        //DamageVirus();
     }
 
     void OnTriggerEnter(Collider other)
@@ -39,22 +32,18 @@ public class PlayerWeapon : MonoBehaviour
 		if (other.tag == "Enemy")
 		{
             Debug.Log("enemy atravesado");
-            rend.sharedMaterial = mat[1];
             EnemyHealth enemy = other.GetComponent<EnemyHealth>();
 			enemy.TakeDamage (bonusStats);
         }
-        else rend.sharedMaterial = mat[0];
 
         if (other.tag == "Boss")
         {
-            rend.sharedMaterial = mat[1];
             BossHealth boss = other.GetComponent<BossHealth>();
             boss.TakeDamage(bonusStats);
         }
-        else rend.sharedMaterial = mat[0];
     }
 
-    public void DamageVirus()
+    /*public void DamageVirus()
     {
         Debug.Log("Sube Daño");
         //if (virus.TakeVirus());
@@ -93,19 +82,19 @@ public class PlayerWeapon : MonoBehaviour
             Debug.Log("50 Daño");
             bonusStats = 50;
 
-            if (healthSlider.value > 0)
+            if (healthSlider.fillAmount > 0)
             {
-                healthSlider.value -= Time.deltaTime;
+                healthSlider.fillAmount -= Time.deltaTime/10;
                 return;
             }
 
-            if (healthSlider.value <= 0)
+            if (healthSlider.fillAmount <= 0)
             {
-                healthSlider.value = 0;
+                healthSlider.fillAmount = 0;
                 Death();
             }
         }
-    }
+    }*/
 
     public void Death()
     {
