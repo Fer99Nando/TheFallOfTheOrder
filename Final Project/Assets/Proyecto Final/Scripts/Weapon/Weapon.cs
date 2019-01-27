@@ -6,10 +6,7 @@ using UnityEngine.AI;
 public class Weapon : MonoBehaviour {
 
 	private PlayerHealth playerHealth;
-	private PlayerHealth virusHealth;
-
-	public int damage = 10;
-	public int vDamage = 5;
+	//private PlayerHealth virusHealth;
 
 	// Use this for initialization
 	[SerializeField] private Transform targetTransform;
@@ -18,20 +15,15 @@ public class Weapon : MonoBehaviour {
 		targetTransform = GameObject.FindGameObjectWithTag("Player").transform;
 
         playerHealth = targetTransform.GetComponent<PlayerHealth>();
-		virusHealth = targetTransform.GetComponent<PlayerHealth>();
+		//virusHealth = targetTransform.GetComponent<PlayerHealth>();
 	}
 	
-	// Update is called once per frame
-	void Update () 
-	{
-	}
-
 	private void OnTriggerEnter(Collider other)
 	{
 		if (other.tag == "Player")
 		{
-			playerHealth.TakeDamage (damage);
-			virusHealth.TakeVirus(vDamage);
+            playerHealth.currentHp -= 10f;
+			//virusHealth.TakeVirus(vDamage);
 					
 		}
 	}
