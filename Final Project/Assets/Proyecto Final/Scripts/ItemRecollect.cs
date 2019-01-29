@@ -5,31 +5,29 @@ using UnityEngine.UI;
 
 public class ItemRecollect : MonoBehaviour
 {
-    public GameObject lifePot;
-    // Start is called before the first frame update
-    void Start()
-    {
-        lifePot.SetActive(false);
-    }
+    public GameObject LifePot;
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        LifePot.SetActive(false);
     }
-
     private void OnTriggerEnter(Collider col)
     {
         if (col.tag == "Player")
         {
             Debug.Log("Aaa, me tocaste");
 
-            if (lifePot == false)
-            {
-                lifePot.SetActive(true);
-            }
+            Recollection();
 
             Destroy(gameObject);
+        }
+    }
+
+    public void Recollection()
+    {
+        if (LifePot == false)
+        {
+            LifePot.SetActive(true);
         }
     }
 }
