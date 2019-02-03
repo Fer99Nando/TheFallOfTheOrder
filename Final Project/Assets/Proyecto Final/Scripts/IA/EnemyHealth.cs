@@ -26,6 +26,7 @@ public class EnemyHealth : MonoBehaviour
 
     public void TakeDamage(int amount)
     {
+        
         currentHp -= amount;
 
         healthSlider.value = currentHp;

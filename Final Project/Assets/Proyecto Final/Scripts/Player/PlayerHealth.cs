@@ -6,22 +6,22 @@ public class PlayerHealth : MonoBehaviour
 {
 	[Header("Life")]
 	public float startingHp;
-	//public int startingV;
+	public float startingV;
 	
 	[Header("Life InGame")]
 	public float currentHp;
-	//public int currentV;
+	public float currentV;
 
 	[Header("Damage")]
 	//private int vDamage;
 
 	[Header("Times")] 
-	//private float toxicTime;
+	private float toxicTime;
 	private float timeCount;
 
     [Header("Bars")]
     public Image healthSlider;
-    //public Image virusSlider;
+    public Image virusSlider;
 
     //public Slider virusSlider;
 
@@ -39,7 +39,7 @@ public class PlayerHealth : MonoBehaviour
 
 	bool isDead;
 	bool damaged;
-	//bool intoxicate = false;
+	bool intoxicate = false;
 
 
 	void Awake()
@@ -48,9 +48,9 @@ public class PlayerHealth : MonoBehaviour
 		playerControl = GetComponent<PlayerBehaviour>();
 		currentHp = startingHp;
         healthSlider.fillAmount = currentHp/startingHp;
-		//currentV = startingV;
+		currentV = startingV;
         //virusSlider.value = startingV;
-        //virusSlider.fillAmount = currentV / startingV;
+        virusSlider.fillAmount = 0;
         isDead = false;
 	}
 	
@@ -59,12 +59,12 @@ public class PlayerHealth : MonoBehaviour
 	{
         TakeDamage();
 
-        /*if(intoxicate)
+        if(intoxicate)
 		{
 			timeCount += Time.deltaTime;
 			toxicTime += Time.deltaTime;
 			Virus();
-		}*/
+		}
     }
 
 	void TakeDamage ()
@@ -77,16 +77,15 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-		/*public void TakeVirus (int vAmount)
+	public void TakeVirus ()
 	{
-		
-		intoxicate = true;
+        float vDamage;
+        vDamage = 10;
+        currentV += vDamage;
+        intoxicate = true;
+        Debug.Log("Me sube el virusOOOOOOOOOOOOO");
 
-        vDamage = vAmount;
-		currentV += vAmount;
-
-        //virusSlider.fillAmount = currentV / 100;
-		//virusSlider.value = currentV;
+        virusSlider.fillAmount = currentV / 100;
 
 		// Sonido asignado del jugador
 
@@ -94,9 +93,9 @@ public class PlayerHealth : MonoBehaviour
 		{
 			return;
 		}
-	}*
+	}
 
-	/*void Virus()
+	void Virus()
 	{
 		if (currentHp > 0)
 		{
@@ -107,7 +106,6 @@ public class PlayerHealth : MonoBehaviour
 				currentV += 20;
 
                 virusSlider.fillAmount = currentV / 100;
-				//virusSlider.value = currentV;
 				
 				timeCount = 0;
 			}
@@ -119,7 +117,7 @@ public class PlayerHealth : MonoBehaviour
 					toxicTime = 0;
 			}
 		}
-	}*/
+	}
 
     public void Death()
 	{

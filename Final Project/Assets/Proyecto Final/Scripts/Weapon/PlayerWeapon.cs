@@ -9,22 +9,17 @@ public class PlayerWeapon : MonoBehaviour
 
     public GameObject gameOver;
 
-    PlayerBehaviour playerControl;
+    PlayerHealth playerHealth;
 
-    public Slider virusSlider;
-    //public Image healthSlider;
-
-    void Awake()
-    {
-        playerControl = GetComponent<PlayerBehaviour>();
-    }
+    public Image virusSlider;
+    public Image healthSlider;
 
     void Start()
     {
     }
     void Update()
     {
-        //DamageVirus();
+        DamageVirus();
     }
 
     void OnTriggerEnter(Collider other)
@@ -43,41 +38,41 @@ public class PlayerWeapon : MonoBehaviour
         }
     }
 
-    /*public void DamageVirus()
+    public void DamageVirus()
     {
         Debug.Log("Sube Daño");
-        //if (virus.TakeVirus());
-        if (virusSlider.value == 0)
+
+        if (virusSlider.fillAmount == 0)
         {
             Debug.Log("Base Daño");
             bonusStats = 5;
         }
 
-        if (virusSlider.value > 0 && virusSlider.value < 25)
+        if (virusSlider.fillAmount > 0 && virusSlider.fillAmount < 25 / 100)
         {
             Debug.Log("10 Daño");
             bonusStats = 10;
         }
 
-        if (virusSlider.value >= 25 && virusSlider.value < 50)
+        if (virusSlider.fillAmount >= 25 / 100 && virusSlider.fillAmount < 50 / 100)
         {
             Debug.Log("15 Daño");
             bonusStats = 15;
         }
         
-        if (virusSlider.value >= 50 && virusSlider.value < 75)
+        if (virusSlider.fillAmount >= 50 / 100 && virusSlider.fillAmount < 75 / 100)
         {
             Debug.Log("20 Daño");
             bonusStats = 20;
         }
 
-        if (virusSlider.value >= 75 && virusSlider.value < 100)
+        if (virusSlider.fillAmount >= 75 / 100 && virusSlider.fillAmount < 1)
         {
             Debug.Log("25 Daño");
             bonusStats = 25;
         }
 
-        if (virusSlider.value == 100)
+        if (virusSlider.fillAmount == 100/100)
         {
             Debug.Log("50 Daño");
             bonusStats = 50;
@@ -94,7 +89,7 @@ public class PlayerWeapon : MonoBehaviour
                 Death();
             }
         }
-    }*/
+    }
 
     public void Death()
     {

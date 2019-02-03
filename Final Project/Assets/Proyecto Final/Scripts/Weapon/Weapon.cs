@@ -6,7 +6,6 @@ using UnityEngine.AI;
 public class Weapon : MonoBehaviour {
 
 	private PlayerHealth playerHealth;
-	//private PlayerHealth virusHealth;
 
 	// Use this for initialization
 	[SerializeField] private Transform targetTransform;
@@ -15,7 +14,6 @@ public class Weapon : MonoBehaviour {
 		targetTransform = GameObject.FindGameObjectWithTag("Player").transform;
 
         playerHealth = targetTransform.GetComponent<PlayerHealth>();
-		//virusHealth = targetTransform.GetComponent<PlayerHealth>();
 	}
 	
 	private void OnTriggerEnter(Collider other)
@@ -23,8 +21,8 @@ public class Weapon : MonoBehaviour {
 		if (other.tag == "Player")
 		{
             playerHealth.currentHp -= 10f;
-			//virusHealth.TakeVirus(vDamage);
-					
+
+            playerHealth.TakeVirus();
 		}
 	}
 }
