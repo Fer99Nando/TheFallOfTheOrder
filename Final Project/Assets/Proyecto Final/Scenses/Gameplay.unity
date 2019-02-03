@@ -23889,7 +23889,6 @@ GameObject:
   m_Component:
   - component: {fileID: 790192171}
   - component: {fileID: 790192173}
-  - component: {fileID: 790192172}
   m_Layer: 0
   m_Name: Poti
   m_TagString: Untagged
@@ -23912,19 +23911,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &790192172
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 790192170}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23881e71225db684fab524a9bb180415, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LifePot: {fileID: 1716605556}
 --- !u!114 &790192173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36940,6 +36926,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 165805359971070611, guid: e849a497a16743740b27a2e24f489314,
+        type: 3}
+      propertyPath: LifePot
+      value: 
+      objectReference: {fileID: 1716605556}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e849a497a16743740b27a2e24f489314, type: 3}
 --- !u!1 &1323450001
