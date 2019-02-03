@@ -25,9 +25,6 @@ public class ItemRecollect : MonoBehaviour
 
     public void Recollection()
     {
-        if (LifePot == false)
-        {
             LifePot.SetActive(true);
-        }
     }
 }

@@ -87,6 +87,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4810405203295112}
   - component: {fileID: 705374470}
+  - component: {fileID: 165805359971070611}
   m_Layer: 0
   m_Name: PocionVida
   m_TagString: Untagged
@@ -123,6 +124,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.22530746, y: 0.44276905, z: 0.23577923}
   m_Center: {x: 0.005941391, y: 0.22433281, z: -0.011607975}
+--- !u!114 &165805359971070611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015050803175846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23881e71225db684fab524a9bb180415, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LifePot: {fileID: 0}
 --- !u!1 &1203902869555926
 GameObject:
   m_ObjectHideFlags: 0

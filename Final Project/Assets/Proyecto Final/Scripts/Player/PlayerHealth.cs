@@ -119,6 +119,11 @@ public class PlayerHealth : MonoBehaviour
 		}
 	}
 
+    public void PotionHelath ()
+    {
+        currentHp += 20;
+    }
+
     public void Death()
 	{
 		isDead = true;
@@ -128,5 +133,22 @@ public class PlayerHealth : MonoBehaviour
 		playerControl.enabled = false;
         gameOver.SetActive(true);
         Cursor.visible = true;
+    }
+
+    public void MaximusPower()
+    {
+        Debug.Log("OJO QUE ME QUEDO SIN VIDA");
+
+        if (healthSlider.fillAmount > 0)
+        {
+            healthSlider.fillAmount -= Time.deltaTime / 10 ;
+            return;
+        }
+
+        if (healthSlider.fillAmount <= 0)
+        {
+            healthSlider.fillAmount = 0;
+            Death();
+        }
     }
 }

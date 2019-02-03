@@ -16,6 +16,7 @@ public class PlayerWeapon : MonoBehaviour
 
     void Start()
     {
+        playerHealth = GetComponent<PlayerHealth>();
     }
     void Update()
     {
@@ -72,22 +73,12 @@ public class PlayerWeapon : MonoBehaviour
             bonusStats = 25;
         }
 
-        if (virusSlider.fillAmount == 100/100)
+        if (virusSlider.fillAmount >= 1)
         {
             Debug.Log("50 Daño");
             bonusStats = 50;
 
-            if (healthSlider.fillAmount > 0)
-            {
-                healthSlider.fillAmount -= Time.deltaTime/10;
-                return;
-            }
-
-            if (healthSlider.fillAmount <= 0)
-            {
-                healthSlider.fillAmount = 0;
-                Death();
-            }
+            playerHealth.MaximusPower();
         }
     }
 

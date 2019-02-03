@@ -29,6 +29,8 @@ public class PlayerBehaviour : MonoBehaviour
     public Animator anim;
     public AnimationClip attackAnim;
 
+    PlayerHealth playerHealth;
+
     //public AudioSource
     //public AudioSource
 
@@ -42,6 +44,7 @@ public class PlayerBehaviour : MonoBehaviour
         anim = GetComponent<Animator>();  
 
         this.controller = GetComponent<CharacterController>();
+        playerHealth = GetComponent<PlayerHealth>();
 
         canMove = true;
 
@@ -64,6 +67,11 @@ public class PlayerBehaviour : MonoBehaviour
                 this.controller.enabled = false;
                 godMode = true;
             }
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            playerHealth.PotionHelath();
         }
 
         if(godMode){
