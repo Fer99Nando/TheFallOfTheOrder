@@ -7,8 +7,12 @@ public class ItemRecollect : MonoBehaviour
 {
     public GameObject LifePot;
 
+    PlayerHealth playerHealth;
+
     private void Start()
     {
+        playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
+
         LifePot.SetActive(false);
     }
     private void OnTriggerEnter(Collider col)
@@ -25,6 +29,9 @@ public class ItemRecollect : MonoBehaviour
 
     public void Recollection()
     {
-            LifePot.SetActive(true);
+        playerHealth.canHeal = true;
+        LifePot.SetActive(true);
     }
+    
+
 }

@@ -40,6 +40,7 @@ public class PlayerHealth : MonoBehaviour
 	bool isDead;
 	bool damaged;
 	bool intoxicate = false;
+    public bool canHeal;
 
 
 	void Awake()
@@ -121,7 +122,11 @@ public class PlayerHealth : MonoBehaviour
 
     public void PotionHelath ()
     {
-        currentHp += 20;
+        if (canHeal)
+        {
+            currentHp += 20;
+            canHeal = false;
+        }
     }
 
     public void Death()
