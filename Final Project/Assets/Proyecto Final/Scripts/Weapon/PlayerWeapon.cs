@@ -16,7 +16,7 @@ public class PlayerWeapon : MonoBehaviour
 
     void Start()
     {
-        playerHealth = GetComponent<PlayerHealth>();
+        playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
     }
     void Update()
     {
@@ -84,7 +84,7 @@ public class PlayerWeapon : MonoBehaviour
 
     public void Death()
     {
-        // Animacion de muerte;
+    // Animacion de muerte;
         gameOver.SetActive(true);
         Cursor.visible = true;
         Destroy(gameObject);
@@ -92,5 +92,4 @@ public class PlayerWeapon : MonoBehaviour
         
         
     }
-
 }

@@ -129,6 +129,21 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
+    public void MaximusPower()
+    {
+        if (currentHp > 0)
+        {
+            Debug.Log("OJO QUE ME QUEDO SIN VIDA");
+            currentHp -= Time.deltaTime;
+
+            healthSlider.fillAmount = currentHp / startingHp;
+        }
+        else
+        {
+            Death();
+        }
+    }
+
     public void Death()
 	{
 		isDead = true;
@@ -140,20 +155,5 @@ public class PlayerHealth : MonoBehaviour
         Cursor.visible = true;
     }
 
-    public void MaximusPower()
-    {
-        Debug.Log("OJO QUE ME QUEDO SIN VIDA");
 
-        if (healthSlider.fillAmount > 0)
-        {
-            healthSlider.fillAmount -= Time.deltaTime / 10 ;
-            return;
-        }
-
-        if (healthSlider.fillAmount <= 0)
-        {
-            healthSlider.fillAmount = 0;
-            Death();
-        }
-    }
 }
