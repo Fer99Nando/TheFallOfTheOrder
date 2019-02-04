@@ -49,25 +49,25 @@ public class PlayerWeapon : MonoBehaviour
             bonusStats = 5;
         }
 
-        if (virusSlider.fillAmount > 0 && virusSlider.fillAmount < 25 / 100)
+        else if (virusSlider.fillAmount > 0 && virusSlider.fillAmount < 0.25f)
         {
             Debug.Log("10 Daño");
             bonusStats = 10;
         }
 
-        if (virusSlider.fillAmount >= 25 / 100 && virusSlider.fillAmount < 50 / 100)
+        if (virusSlider.fillAmount >= 0.25f && virusSlider.fillAmount < 0.5f)
         {
             Debug.Log("15 Daño");
             bonusStats = 15;
         }
         
-        if (virusSlider.fillAmount >= 50 / 100 && virusSlider.fillAmount < 75 / 100)
+        if (virusSlider.fillAmount >= 0.5f && virusSlider.fillAmount < 0.75f)
         {
             Debug.Log("20 Daño");
             bonusStats = 20;
         }
 
-        if (virusSlider.fillAmount >= 75 / 100 && virusSlider.fillAmount < 1)
+        if (virusSlider.fillAmount >= 0.75f && virusSlider.fillAmount < 1f)
         {
             Debug.Log("25 Daño");
             bonusStats = 25;
