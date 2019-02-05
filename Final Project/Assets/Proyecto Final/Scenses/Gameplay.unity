@@ -1090,11 +1090,11 @@ GameObject:
   - component: {fileID: 40014853}
   m_Layer: 0
   m_Name: LifePot (1)
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &40014852
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7256,11 +7256,11 @@ GameObject:
   - component: {fileID: 242936927}
   m_Layer: 0
   m_Name: LifePot (2)
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &242936926
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7317,6 +7317,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 242936925}
   m_CullTransparentMesh: 0
+--- !u!1 &243243731
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 243243733}
+  - component: {fileID: 243243732}
+  m_Layer: 0
+  m_Name: Inventory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &243243732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 243243731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db6b362834d566244a1943702cd3860f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!4 &243243733
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 243243731}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 31.467438, y: 21.729698, z: 9.285156}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &243486534
 GameObject:
   m_ObjectHideFlags: 0
@@ -48599,7 +48646,7 @@ GameObject:
   - component: {fileID: 1716605559}
   m_Layer: 0
   m_Name: LifePot
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48620,8 +48667,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -65.1, y: 51.6}
-  m_SizeDelta: {x: 49.74, y: 49.74}
+  m_AnchoredPosition: {x: -49.5, y: 39.5}
+  m_SizeDelta: {x: 36.97, y: 36.97}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1716605559
 MonoBehaviour:
@@ -50873,8 +50920,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -28.8, y: 32.5}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -18.7, y: 22.4}
+  m_SizeDelta: {x: 75.14, y: 75.14}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1803860408
 MonoBehaviour:
