@@ -88,7 +88,6 @@ GameObject:
   - component: {fileID: 4810405203295112}
   - component: {fileID: 705374470}
   - component: {fileID: 1589291286}
-  - component: {fileID: 1589291287}
   m_Layer: 0
   m_Name: PocionVida
   m_TagString: Untagged
@@ -137,24 +136,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd8b21e3d50fcd14b824300feec90f1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1589291287
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1015050803175846}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f916d97284aa43847944f0dbd5e55bff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventory: []
-  items: []
-  spritePot:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!1 &1203902869555926
 GameObject:
   m_ObjectHideFlags: 0

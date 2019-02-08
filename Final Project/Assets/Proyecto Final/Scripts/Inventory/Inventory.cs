@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
-    public Image[] inventory;
+    //public Image[] inventory;
     public Sprite[] items;
     public GameObject[] spritePot;
 
@@ -32,33 +32,51 @@ public class Inventory : MonoBehaviour
             }
 
         }*/
+        if(Input.GetKeyDown(KeyCode.Alpha1)){
+            UsePotion(0);
+        }
     }
 
-    public void ItemsVida()
+    void UsePotion(int pot){
+        spritePot[pot].SetActive(false);
+        if(inventoryAmount <= 1){
+            inventoryAmount = 0;
+        }else{
+            MovePotions(pot);
+        }
+    }
+
+    void MovePotions(int pot){
+        //spritePot[pot+1]
+    }
+
+    public void ItemsVida(int potion)
     {
         inventoryAmount += 1;
-
+        Debug.Log(inventoryAmount);
         if ( inventoryAmount == 0)
         {
             spritePot[0].SetActive(false);
             spritePot[1].SetActive(false);
             spritePot[2].SetActive(false);
         }
-        if( inventoryAmount == 1)
+        else if( inventoryAmount == 1)
         {
             spritePot[0].SetActive(true);
-            items.
+            spritePot[0].GetComponent<Image>().sprite = items[potion];
 
         }
-        if (inventoryAmount == 2)
+        else if (inventoryAmount == 2)
         {
             spritePot[1].SetActive(true);
+            spritePot[1].GetComponent<Image>().sprite = items[potion];
         }
-        if (inventoryAmount == 3)
+        else if (inventoryAmount == 3)
         {
             spritePot[2].SetActive(true);
+            spritePot[2].GetComponent<Image>().sprite = items[potion];
         }
-        else
+        else if (inventoryAmount > 3)
         {
             Debug.Log("MAX ITEMS");
         }
