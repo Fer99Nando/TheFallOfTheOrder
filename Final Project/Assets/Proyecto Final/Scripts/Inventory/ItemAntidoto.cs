@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Item3D : MonoBehaviour
+public class ItemAntidoto : MonoBehaviour
 {
     Inventory inventory;
 
@@ -17,7 +17,7 @@ public class Item3D : MonoBehaviour
         {
             Debug.Log("Aaa, me tocaste");
 
-            inventory.ItemsAmount();
+            inventory.ItemsAntidoto();
             Destroy(this.gameObject);
         }
     }

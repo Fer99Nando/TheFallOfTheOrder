@@ -30,14 +30,41 @@ public class Inventory : MonoBehaviour
 
                 ItemsAmount();
             }
-            else
-            {
-                Debug.Log("MAX ITEMS");
-            }
+
         }*/
     }
 
-    public void ItemsAmount()
+    public void ItemsVida()
+    {
+        inventoryAmount += 1;
+
+        if ( inventoryAmount == 0)
+        {
+            spritePot[0].SetActive(false);
+            spritePot[1].SetActive(false);
+            spritePot[2].SetActive(false);
+        }
+        if( inventoryAmount == 1)
+        {
+            spritePot[0].SetActive(true);
+            items.
+
+        }
+        if (inventoryAmount == 2)
+        {
+            spritePot[1].SetActive(true);
+        }
+        if (inventoryAmount == 3)
+        {
+            spritePot[2].SetActive(true);
+        }
+        else
+        {
+            Debug.Log("MAX ITEMS");
+        }
+    }
+
+    public void ItemsAntidoto()
     {
         inventoryAmount += 1;
 
@@ -59,6 +86,39 @@ public class Inventory : MonoBehaviour
         if (inventoryAmount == 3)
         {
             spritePot[2].SetActive(true);
+        }
+        else
+        {
+            Debug.Log("MAX ITEMS");
+        }
+    }
+
+    public void ItemsBoth()
+    {
+        inventoryAmount += 1;
+
+        if ( inventoryAmount == 0)
+        {
+            spritePot[0].SetActive(false);
+            spritePot[1].SetActive(false);
+            spritePot[2].SetActive(false);
+        }
+        if( inventoryAmount == 1)
+        {
+            spritePot[0].SetActive(true);
+
+        }
+        if (inventoryAmount == 2)
+        {
+            spritePot[1].SetActive(true);
+        }
+        if (inventoryAmount == 3)
+        {
+            spritePot[2].SetActive(true);
+        }
+        else
+        {
+            Debug.Log("MAX ITEMS");
         }
     }
 }
