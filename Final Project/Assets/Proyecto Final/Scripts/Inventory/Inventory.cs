@@ -5,19 +5,23 @@ using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
+    PlayerHealth playerHealth;
+
     //public Image[] inventory;
-    public Sprite[] items;
-    public GameObject[] spritePot;
+    public Sprite[] spriteItems;
+    public GameObject[] slotPot;
+    public GameObject[] potScene;
 
     private int inventoryAmount;
 
     // Start is called before the first frame update
     void Start()
     {
+        playerHealth = GetComponent<PlayerHealth>();
         inventoryAmount = 0;
-        spritePot[0].SetActive(false);
-        spritePot[1].SetActive(false);
-        spritePot[2].SetActive(false);
+        slotPot[0].SetActive(false);
+        slotPot[1].SetActive(false);
+        slotPot[2].SetActive(false);
     }
 
     // Update is called once per frame
@@ -32,21 +36,29 @@ public class Inventory : MonoBehaviour
             }
 
         }*/
-        if(Input.GetKeyDown(KeyCode.Alpha1)){
-            UsePotion(0);
+        if(Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            UsePotion();
         }
     }
 
-    void UsePotion(int pot){
-        spritePot[pot].SetActive(false);
-        if(inventoryAmount <= 1){
-            inventoryAmount = 0;
-        }else{
+    void UsePotion()
+    {
+        //spritePot[pot].SetActive(false);
+        if(inventoryAmount >= 1 && spriteItems[0] == slotPot[0])
+        {
+            inventoryAmount -= 1;
+            playerHealth.PotionHelath();
+            slotPot[0].SetActive(false);
+        }
+        /*else
+        {
             MovePotions(pot);
-        }
+        }*/
     }
 
-    void MovePotions(int pot){
+    void MovePotions(int pot)
+    {
         //spritePot[pot+1]
     }
 
@@ -56,85 +68,27 @@ public class Inventory : MonoBehaviour
         Debug.Log(inventoryAmount);
         if ( inventoryAmount == 0)
         {
-            spritePot[0].SetActive(false);
-            spritePot[1].SetActive(false);
-            spritePot[2].SetActive(false);
+            slotPot[0].SetActive(false);
+            slotPot[1].SetActive(false);
+            slotPot[2].SetActive(false);
         }
-        else if( inventoryAmount == 1)
+        else if( inventoryAmount == 1 )
         {
-            spritePot[0].SetActive(true);
-            spritePot[0].GetComponent<Image>().sprite = items[potion];
+            slotPot[0].SetActive(true);
+            slotPot[0].GetComponent<Image>().sprite = spriteItems[potion];
 
         }
         else if (inventoryAmount == 2)
         {
-            spritePot[1].SetActive(true);
-            spritePot[1].GetComponent<Image>().sprite = items[potion];
+            slotPot[1].SetActive(true);
+            slotPot[1].GetComponent<Image>().sprite = spriteItems[potion];
         }
         else if (inventoryAmount == 3)
         {
-            spritePot[2].SetActive(true);
-            spritePot[2].GetComponent<Image>().sprite = items[potion];
+            slotPot[2].SetActive(true);
+            slotPot[2].GetComponent<Image>().sprite = spriteItems[potion];
         }
         else if (inventoryAmount > 3)
-        {
-            Debug.Log("MAX ITEMS");
-        }
-    }
-
-    public void ItemsAntidoto()
-    {
-        inventoryAmount += 1;
-
-        if ( inventoryAmount == 0)
-        {
-            spritePot[0].SetActive(false);
-            spritePot[1].SetActive(false);
-            spritePot[2].SetActive(false);
-        }
-        if( inventoryAmount == 1)
-        {
-            spritePot[0].SetActive(true);
-
-        }
-        if (inventoryAmount == 2)
-        {
-            spritePot[1].SetActive(true);
-        }
-        if (inventoryAmount == 3)
-        {
-            spritePot[2].SetActive(true);
-        }
-        else
-        {
-            Debug.Log("MAX ITEMS");
-        }
-    }
-
-    public void ItemsBoth()
-    {
-        inventoryAmount += 1;
-
-        if ( inventoryAmount == 0)
-        {
-            spritePot[0].SetActive(false);
-            spritePot[1].SetActive(false);
-            spritePot[2].SetActive(false);
-        }
-        if( inventoryAmount == 1)
-        {
-            spritePot[0].SetActive(true);
-
-        }
-        if (inventoryAmount == 2)
-        {
-            spritePot[1].SetActive(true);
-        }
-        if (inventoryAmount == 3)
-        {
-            spritePot[2].SetActive(true);
-        }
-        else
         {
             Debug.Log("MAX ITEMS");
         }

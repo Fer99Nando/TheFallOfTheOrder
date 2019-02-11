@@ -53,7 +53,9 @@ public class PlayerHealth : MonoBehaviour
         //virusSlider.value = startingV;
         virusSlider.fillAmount = 0;
         isDead = false;
-	}
+        canHeal = false;
+
+    }
 	
 	// Update is called once per frame
 	void Update () 
@@ -122,11 +124,8 @@ public class PlayerHealth : MonoBehaviour
 
     public void PotionHelath ()
     {
-        if (canHeal)
-        {
             currentHp += 20;
             canHeal = false;
-        }
     }
 
     public void MaximusPower()
