@@ -4,16 +4,15 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour 
 {
-	[Header("Life")]
+    private float maxVirus = 100;
+
+    [Header("Life")]
 	public float startingHp;
 	public float startingV;
 	
 	[Header("Life InGame")]
 	public float currentHp;
 	public float currentV;
-
-	[Header("Damage")]
-	//private int vDamage;
 
 	[Header("Times")] 
 	private float toxicTime;
@@ -22,8 +21,6 @@ public class PlayerHealth : MonoBehaviour
     [Header("Bars")]
     public Image healthSlider;
     public Image virusSlider;
-
-    //public Slider virusSlider;
 
     // Activamos el gameobject GameOver
     public GameObject gameOver;
@@ -40,8 +37,6 @@ public class PlayerHealth : MonoBehaviour
 	bool isDead;
 	bool damaged;
 	bool intoxicate = false;
-    public bool canHeal;
-
 
 	void Awake()
 	{
@@ -53,14 +48,25 @@ public class PlayerHealth : MonoBehaviour
         //virusSlider.value = startingV;
         virusSlider.fillAmount = 0;
         isDead = false;
-        canHeal = false;
-
     }
 	
 	// Update is called once per frame
 	void Update () 
 	{
         TakeDamage();
+
+        if (currentHp > 100)
+        {
+            currentHp = startingHp;
+        }
+        if (currentV > 100)
+        {
+            currentV = maxVirus;
+        }
+        if (currentV < 0)
+        {
+            currentV = startingV;
+        }
 
         if(intoxicate)
 		{
@@ -106,15 +112,14 @@ public class PlayerHealth : MonoBehaviour
 			if (timeCount >= 3f)
 			{
 				Debug.Log("Me sube el Virus");
-				currentV += 20;
+				currentV += 10;
 
                 virusSlider.fillAmount = currentV / 100;
 				
 				timeCount = 0;
+                return;
 			}
-
-			toxicTime += Time.deltaTime;
-			if (toxicTime >= 7)
+			if (toxicTime >= 8)
 			{
 					intoxicate = false;
 					toxicTime = 0;
@@ -124,8 +129,20 @@ public class PlayerHealth : MonoBehaviour
 
     public void PotionHelath ()
     {
-            currentHp += 20;
-            canHeal = false;
+        currentHp += 20;
+    }
+
+    public void PotionAntidoto ()
+    {
+        currentV -= 20;
+        virusSlider.fillAmount = currentV / 100;
+    }
+
+    public void PotionAllInOne ()
+    {
+        currentHp += 20;
+        currentV -= 20;
+        virusSlider.fillAmount = currentV / 100;
     }
 
     public void MaximusPower()

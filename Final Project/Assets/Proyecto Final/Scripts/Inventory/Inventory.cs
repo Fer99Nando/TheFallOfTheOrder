@@ -10,7 +10,8 @@ public class Inventory : MonoBehaviour
     //public Image[] inventory;
     public Sprite[] spriteItems;
     public GameObject[] slotPot;
-    public GameObject[] potScene;
+    public int[] slotType = { 3, 3, 3};
+
 
     private int inventoryAmount;
 
@@ -27,70 +28,105 @@ public class Inventory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*if (Input.GetKeyDown(KeyCode.E))
-        {
-            if (inventoryAmount < 3)
-            {
-
-                ItemsAmount();
-            }
-
-        }*/
         if(Input.GetKeyDown(KeyCode.Alpha1))
         {
-            UsePotion();
+            UsePotion(0);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            UsePotion(1);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            UsePotion(2);
         }
     }
 
-    void UsePotion()
+    void UsePotion(int slot)
     {
-        //spritePot[pot].SetActive(false);
-        if(inventoryAmount >= 1 && spriteItems[0] == slotPot[0])
+        if(inventoryAmount >= 1)
         {
             inventoryAmount -= 1;
-            playerHealth.PotionHelath();
-            slotPot[0].SetActive(false);
-        }
-        /*else
-        {
-            MovePotions(pot);
-        }*/
-    }
+            if (slotType[slot] == 0)
+            {
+                Debug.Log("health");
+                playerHealth.PotionHelath();
+            }
+            if (slotType[slot] == 1)
+            {
+                Debug.Log("antidoto");
+                playerHealth.PotionAntidoto();
+            }
+            if (slotType[slot] == 2)
+            {
+                Debug.Log("toditoenuno");
+                playerHealth.PotionAllInOne();
+            }
 
-    void MovePotions(int pot)
-    {
-        //spritePot[pot+1]
+            slotPot[slot].SetActive(false);
+            slotType[slot] = 3;
+        }
+
     }
 
     public void ItemsVida(int potion)
     {
-        inventoryAmount += 1;
-        Debug.Log(inventoryAmount);
-        if ( inventoryAmount == 0)
+        if (inventoryAmount < 3)
         {
-            slotPot[0].SetActive(false);
-            slotPot[1].SetActive(false);
-            slotPot[2].SetActive(false);
+            inventoryAmount += 1;
         }
-        else if( inventoryAmount == 1 )
+        else
+        {
+            Debug.Log("MAX ITEMS");
+        }
+
+        for (int i = 0; i < slotType.Length; i ++)
+        {
+            if (slotType[i] == 3)
+            {
+                slotPot[i].SetActive(true);
+                slotPot[i].GetComponent<Image>().sprite = spriteItems[potion];
+                DetectPotion(potion, i);
+                i = 3;
+            }
+        }
+
+        Debug.Log(inventoryAmount);
+        /*
+        if( inventoryAmount == 1 )
         {
             slotPot[0].SetActive(true);
             slotPot[0].GetComponent<Image>().sprite = spriteItems[potion];
-
+            DetectPotion(potion, 0);
         }
         else if (inventoryAmount == 2)
         {
             slotPot[1].SetActive(true);
             slotPot[1].GetComponent<Image>().sprite = spriteItems[potion];
+            DetectPotion(potion, 1);
         }
         else if (inventoryAmount == 3)
         {
             slotPot[2].SetActive(true);
             slotPot[2].GetComponent<Image>().sprite = spriteItems[potion];
+            DetectPotion(potion, 2);
         }
-        else if (inventoryAmount > 3)
+        */
+    }
+
+    void DetectPotion(int pot, int pos)
+    {
+        switch (pot)
         {
-            Debug.Log("MAX ITEMS");
+            case 0:
+                slotType[pos] = pot;
+                break;
+            case 1:
+                slotType[pos] = pot;
+                break;
+            case 2:
+                slotType[pos] = pot;
+                break;
         }
     }
 }

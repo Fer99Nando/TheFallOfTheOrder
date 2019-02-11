@@ -69,11 +69,6 @@ public class PlayerBehaviour : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            playerHealth.PotionHelath();
-        }
-
         if(godMode){
             GodMode();
         }
