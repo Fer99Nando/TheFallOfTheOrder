@@ -13,7 +13,6 @@ public class EnemyPrueba : MonoBehaviour
 
     private Vector3 targetPosition;
     private GameObject player;
-    public float rotationSpeed;
 
     [Header("Paths")]
 
@@ -30,7 +29,7 @@ public class EnemyPrueba : MonoBehaviour
 
     [Header("Timers")]
 
-    public float idleTime = 1;      // IDLE
+    public float idleTime;      // IDLE
     private float timeCounter = 0;  // Contador de tiempo
     private float timeToPatrol = 0; // Contador para pasar a patrol desde chase
 
@@ -56,10 +55,6 @@ public class EnemyPrueba : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        targetPosition = player.transform.position - transform.position;
-        Quaternion newRotation = Quaternion.LookRotation(targetPosition);
-        transform.rotation = Quaternion.Lerp(transform.rotation, newRotation, rotationSpeed * 0.005f);
-
         switch (state)
         {
             case EnemyState.Idle:
@@ -168,7 +163,6 @@ public class EnemyPrueba : MonoBehaviour
             anim.SetBool("Action", true);
             idleTime = coolDownAttack; // Esto es si quiero que tenga un time para quese  enfrie y poderle atacar
 
-            SetIdle();
             return;
 
         }
@@ -222,7 +216,7 @@ public class EnemyPrueba : MonoBehaviour
     void SetAction()
     {
         // Sonidos de Ataque si los tiene
-
+        agent.stoppingDistance = 1;
         state = EnemyState.Attack;
     }
 

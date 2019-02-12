@@ -11202,18 +11202,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 0
-  rotationSpeed: 0
   points:
   - {fileID: 2027044517}
   - {fileID: 404623133}
   pathIndex: 0
   chaseRange: 15
-  attackRange: 2
+  attackRange: 3
   distanceFromTarget: Infinity
   chaseSpeed: 4
   patrolSpeed: 2
-  idleTime: 1
-  coolDownAttack: 0
+  idleTime: 0
+  coolDownAttack: 1
   anim: {fileID: 397845236}
 --- !u!114 &397845234
 MonoBehaviour:
