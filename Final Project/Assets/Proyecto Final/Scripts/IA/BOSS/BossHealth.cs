@@ -8,7 +8,8 @@ public class BossHealth : MonoBehaviour
 
     public int currentHp;
 
-    public Slider healthSlider;
+    //public Slider healthSlider;
+    public Image healthSlider;
 
     public GameObject victory;
 
@@ -18,15 +19,16 @@ public class BossHealth : MonoBehaviour
 
     // Sonidos
 
-    EnemyBehaviour enemyBehaviour;
+    EnemyPrueba enemyBehaviour;
 
     bool isDead;
 
     void Awake()
     {
         //anim = GetComponent<Animator>();
-        enemyBehaviour = GetComponent<EnemyBehaviour>();
+        enemyBehaviour = GetComponent<EnemyPrueba>();
         currentHp = startingHp;
+        healthSlider.fillAmount = currentHp / startingHp;
     }
 
     private void Start()
@@ -39,7 +41,8 @@ public class BossHealth : MonoBehaviour
     {
         currentHp -= amount;
 
-        healthSlider.value = currentHp;
+        healthSlider.fillAmount = currentHp / startingHp;
+        //healthSlider.value = currentHp;
 
         // Sonido asignado del jugador
 

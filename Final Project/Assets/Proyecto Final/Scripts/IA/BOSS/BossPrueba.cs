@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemyBehaviour : MonoBehaviour
+public class BossPrueba : MonoBehaviour
 {
-
     private enum EnemyState { Idle, Patrol, Chase, Attack, Dead }
     [SerializeField] private EnemyState state;
 
     private NavMeshAgent agent;
 
-    [SerializeField] private Transform targetTransform;
+    private Vector3 targetPosition;
+    private GameObject player;
 
     [Header("Paths")]
 
@@ -28,7 +28,7 @@ public class EnemyBehaviour : MonoBehaviour
 
     [Header("Timers")]
 
-    public float idleTime = 1;      // IDLE
+    public float idleTime;      // IDLE
     private float timeCounter = 0;  // Contador de tiempo
     private float timeToPatrol = 0; // Contador para pasar a patrol desde chase
 
@@ -48,14 +48,13 @@ public class EnemyBehaviour : MonoBehaviour
 
         anim = GetComponent<Animator>();        // Llamamos a las animaciones
 
-        targetTransform = GameObject.FindGameObjectWithTag("Player").transform;
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
-	// Update is called once per frame
-	void Update ()
-    {
-        
 
+    // Update is called once per frame
+    void Update()
+    {
         switch (state)
         {
             case EnemyState.Idle:
@@ -112,7 +111,7 @@ public class EnemyBehaviour : MonoBehaviour
 
             SetIdle();  // Si queremos que se pare cuando llegue a un punto
         }
-        
+
         // Aqui va el rugido de los monstruos cada x tiempo
         // if (timeCounter >= roarTime)
     }
@@ -122,7 +121,7 @@ public class EnemyBehaviour : MonoBehaviour
         // animacion de giro hacia el personaje
         anim.SetBool("Chase", true);
 
-        agent.SetDestination(targetTransform.position);
+        agent.SetDestination(player.transform.position);
 
         if (distanceFromTarget > chaseRange)
         {
@@ -140,7 +139,7 @@ public class EnemyBehaviour : MonoBehaviour
             if (distanceFromTarget > attackRange)
 
             {
-                agent.SetDestination(targetTransform.position);
+                agent.SetDestination(player.transform.position);
             }
         }
 
@@ -155,7 +154,7 @@ public class EnemyBehaviour : MonoBehaviour
     void ActionUpdate()
     {
         Debug.Log("CASI DAÑO");
-        agent.SetDestination(targetTransform.position); 
+        agent.SetDestination(player.transform.position);
 
         if (distanceFromTarget < attackRange)
         {
@@ -164,7 +163,6 @@ public class EnemyBehaviour : MonoBehaviour
             anim.SetBool("Action", true);
             idleTime = coolDownAttack; // Esto es si quiero que tenga un time para quese  enfrie y poderle atacar
 
-            SetIdle();
             return;
 
         }
@@ -208,7 +206,7 @@ public class EnemyBehaviour : MonoBehaviour
     void SetChase()
     {
         // Animacion de caminar
-        
+
 
         agent.speed = chaseSpeed;   // La velocidad del enemigo pasa a ser igual que la de modo persecucion
 
@@ -218,15 +216,15 @@ public class EnemyBehaviour : MonoBehaviour
     void SetAction()
     {
         // Sonidos de Ataque si los tiene
-
+        agent.stoppingDistance = 1;
         state = EnemyState.Attack;
     }
 
     #endregion
-    
+
     float GetDistanceFromTarget()       // Calcula la distancia con el player
     {
-        return Vector3.Distance(targetTransform.position, transform.position);
+        return Vector3.Distance(player.transform.position, transform.position);
     }
 
     private void OnDrawGizmos()
