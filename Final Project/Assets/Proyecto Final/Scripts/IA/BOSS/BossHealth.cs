@@ -4,9 +4,9 @@ using UnityEngine.UI;
 
 public class BossHealth : MonoBehaviour
 { 
-    public int startingHp;
+    public float startingHp;
 
-    public int currentHp;
+    public float currentHp;
 
     //public Slider healthSlider;
     public Image healthSlider;
@@ -37,10 +37,13 @@ public class BossHealth : MonoBehaviour
         Cursor.visible = false;
     }
 
-    public void TakeDamage(int amount)
+    private void Update()
     {
-        currentHp -= amount;
+        TakeDamage();
+    }
 
+    public void TakeDamage()
+    {
         healthSlider.fillAmount = currentHp / startingHp;
         //healthSlider.value = currentHp;
 

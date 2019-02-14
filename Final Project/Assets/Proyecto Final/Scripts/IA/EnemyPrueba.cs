@@ -239,9 +239,4 @@ public class EnemyPrueba : MonoBehaviour
     {
         Destroy(this.gameObject);
     }
-
-    public void BossPhase()
-    {
-        //anim.SetBool("PhaseTwo", true);
-    }
 }

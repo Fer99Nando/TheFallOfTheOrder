@@ -92,26 +92,6 @@ public class Inventory : MonoBehaviour
         }
 
         Debug.Log(inventoryAmount);
-        /*
-        if( inventoryAmount == 1 )
-        {
-            slotPot[0].SetActive(true);
-            slotPot[0].GetComponent<Image>().sprite = spriteItems[potion];
-            DetectPotion(potion, 0);
-        }
-        else if (inventoryAmount == 2)
-        {
-            slotPot[1].SetActive(true);
-            slotPot[1].GetComponent<Image>().sprite = spriteItems[potion];
-            DetectPotion(potion, 1);
-        }
-        else if (inventoryAmount == 3)
-        {
-            slotPot[2].SetActive(true);
-            slotPot[2].GetComponent<Image>().sprite = spriteItems[potion];
-            DetectPotion(potion, 2);
-        }
-        */
     }
 
     void DetectPotion(int pot, int pos)

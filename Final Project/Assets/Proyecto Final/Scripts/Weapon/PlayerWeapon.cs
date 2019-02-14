@@ -34,8 +34,9 @@ public class PlayerWeapon : MonoBehaviour
 
         if (other.tag == "Boss")
         {
+            Debug.Log("BOSS atravesado");
             BossHealth boss = other.GetComponent<BossHealth>();
-            boss.TakeDamage(bonusStats);
+            boss.currentHp -= bonusStats;
         }
     }
 

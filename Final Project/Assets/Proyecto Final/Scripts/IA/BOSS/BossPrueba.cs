@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class BossPrueba : MonoBehaviour
 {
-    private enum EnemyState { Idle, Patrol, Chase, Attack, Dead }
+    private enum EnemyState { Parado, Idle, Chase, Attack, Dead }
     [SerializeField] private EnemyState state;
 
     private NavMeshAgent agent;
@@ -29,7 +29,7 @@ public class BossPrueba : MonoBehaviour
     [Header("Timers")]
 
     public float idleTime;      // IDLE
-    private float timeCounter = 0;  // Contador de tiempo
+    public float timeCounter = 0;  // Contador de tiempo
     private float timeToPatrol = 0; // Contador para pasar a patrol desde chase
 
     public float coolDownAttack = 0;   // Enfriamineto despues de atacar
@@ -57,11 +57,10 @@ public class BossPrueba : MonoBehaviour
     {
         switch (state)
         {
+            case EnemyState.Parado:
+                break;
             case EnemyState.Idle:
                 IdleUpdate();
-                break;
-            case EnemyState.Patrol:
-                PatrolUpdate();
                 break;
             case EnemyState.Chase:
                 ChaseUpdate();
@@ -84,36 +83,15 @@ public class BossPrueba : MonoBehaviour
 
     void IdleUpdate()
     {
-        // El personaje este quieto
-        if (timeCounter >= idleTime)
-        {
-            SetPatrol();
-        }
-        else timeCounter += Time.deltaTime;
-    }
+        timeCounter += Time.deltaTime;
 
-    void PatrolUpdate()
-    {
-        if (distanceFromTarget < chaseRange)
+        if (timeCounter >= 5)
         {
-            SetChase();
+            state = EnemyState.Chase;
+            timeCounter = 0;
+
             return;
         }
-
-        if (agent.remainingDistance <= agent.stoppingDistance)  // Por si acaso Que explique alex
-        {
-            pathIndex++;
-
-            if (pathIndex >= points.Length)
-            {
-                pathIndex = 0;
-            }
-
-            SetIdle();  // Si queremos que se pare cuando llegue a un punto
-        }
-
-        // Aqui va el rugido de los monstruos cada x tiempo
-        // if (timeCounter >= roarTime)
     }
 
     void ChaseUpdate()
@@ -123,24 +101,10 @@ public class BossPrueba : MonoBehaviour
 
         agent.SetDestination(player.transform.position);
 
-        if (distanceFromTarget > chaseRange)
-        {
-            anim.SetBool("Chase", true);
-            timeToPatrol += Time.deltaTime;
-            if (timeToPatrol >= 3)
-            {
-                SetPatrol();
-                timeToPatrol = 0;
-                return;
-            }
-        }
-        else
-        {
-            if (distanceFromTarget > attackRange)
+        if (distanceFromTarget > attackRange)
 
-            {
-                agent.SetDestination(player.transform.position);
-            }
+        {
+            agent.SetDestination(player.transform.position);
         }
 
         if (distanceFromTarget < attackRange)
@@ -183,27 +147,9 @@ public class BossPrueba : MonoBehaviour
     void SetIdle()
     {
         state = EnemyState.Idle;
-
-        timeCounter = 0;
     }
 
-    void SetPatrol()
-    {
-        agent.isStopped = false;
-        //agent.Resume();
-
-        // Animacion de caminar
-
-        agent.speed = patrolSpeed;   // La velocidad del enemigo pasa a ser igual que la de modo Patrol
-
-        state = EnemyState.Patrol;   // El estado pasa a ser Patrol
-
-        agent.SetDestination(points[pathIndex].position);
-
-        timeCounter = 0;
-    }
-
-    void SetChase()
+    public void SetChase()
     {
         // Animacion de caminar
 
@@ -229,15 +175,13 @@ public class BossPrueba : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, chaseRange);
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, attackRange);
     }
 
-    public void OnDestroy()
+    public void BecomeBoss()
     {
-        Destroy(this.gameObject);
+        SetIdle();
     }
 
     public void BossPhase()
