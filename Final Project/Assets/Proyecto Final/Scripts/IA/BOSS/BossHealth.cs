@@ -19,14 +19,17 @@ public class BossHealth : MonoBehaviour
 
     // Sonidos
 
-    EnemyPrueba enemyBehaviour;
+    BossPrueba bossBehaviour;
 
     bool isDead;
+    bool segundaFase;
 
     void Awake()
     {
+        segundaFase = true;
+
+        bossBehaviour.GetComponent<BossPrueba>();
         //anim = GetComponent<Animator>();
-        enemyBehaviour = GetComponent<EnemyPrueba>();
         currentHp = startingHp;
         healthSlider.fillAmount = currentHp / startingHp;
     }
@@ -45,11 +48,16 @@ public class BossHealth : MonoBehaviour
     public void TakeDamage()
     {
         healthSlider.fillAmount = currentHp / startingHp;
-        //healthSlider.value = currentHp;
 
         // Sonido asignado del jugador
 
-        if (currentHp <= 0 && !isDead)
+        if (currentHp <= 0 && !isDead && segundaFase == true)
+        {
+            segundaFase = false;
+            bossBehaviour.ChangePhase();
+            
+        }
+        else if (currentHp <= 0 && !isDead && segundaFase == false)
         {
             Death();
         }

@@ -5,11 +5,13 @@ using UnityEngine.UI;
 
 public class DetectorBoss : MonoBehaviour
 {
+    BossPrueba bossStart;
     public GameObject vidaBoss;
 
     private void Awake()
     {
         vidaBoss.SetActive (false);
+        bossStart = GameObject.FindGameObjectWithTag("Boss").GetComponent<BossPrueba>();
     }
 
     public void OnTriggerEnter(Collider col)
@@ -17,8 +19,8 @@ public class DetectorBoss : MonoBehaviour
         if (col.tag == ("Player"))
         {
             vidaBoss.SetActive(true);
-            BossPrueba bossStart = col.GetComponent<BossPrueba>();
-            bossStart.BecomeBoss();
+            
+            bossStart.SetIdle();
         }
     }
 }

@@ -8,6 +8,9 @@ public class BossPrueba : MonoBehaviour
     private enum EnemyState { Parado, Idle, Chase, Attack, Dead }
     [SerializeField] private EnemyState state;
 
+    private enum BossPhase { PhaseOne, PhaseTwo, Dead }
+    [SerializeField] private BossPhase phase;
+
     private NavMeshAgent agent;
 
     private Vector3 targetPosition;
@@ -55,21 +58,42 @@ public class BossPrueba : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        switch (state)
+        switch (phase)
         {
-            case EnemyState.Parado:
-                break;
-            case EnemyState.Idle:
-                IdleUpdate();
-                break;
-            case EnemyState.Chase:
-                ChaseUpdate();
-                break;
-            case EnemyState.Attack:
-                ActionUpdate();
-                break;
-            default:
-                break;
+            case BossPhase.PhaseOne:
+            switch (state)
+            {
+                case EnemyState.Parado:
+                    break;
+                case EnemyState.Idle:
+                    IdleUpdate();
+                    break;
+                case EnemyState.Chase:
+                    ChaseUpdate();
+                    break;
+                case EnemyState.Attack:
+                    ActionUpdate();
+                    break;
+                default:
+                    break;
+            }
+            break;
+            case BossPhase.PhaseTwo:
+                Debug.Log("O DIOOMIITO SE TRANSFORMA");
+                //anim.SetBool("PhaseTwo", true);
+                switch (state)
+                {
+                    case EnemyState.Chase:
+                        ChaseUpdateTwo();
+                        break;
+                    case EnemyState.Attack:
+                        ActionUpdateTwo();
+                        break;
+                    default:
+                        break;
+                }
+            break;
+
         }
 
     }
@@ -83,15 +107,10 @@ public class BossPrueba : MonoBehaviour
 
     void IdleUpdate()
     {
-        timeCounter += Time.deltaTime;
-
-        if (timeCounter >= 5)
-        {
             state = EnemyState.Chase;
             timeCounter = 0;
 
             return;
-        }
     }
 
     void ChaseUpdate()
@@ -144,7 +163,7 @@ public class BossPrueba : MonoBehaviour
 
     #region Sets
 
-    void SetIdle()
+    public void SetIdle()
     {
         state = EnemyState.Idle;
     }
@@ -168,6 +187,59 @@ public class BossPrueba : MonoBehaviour
 
     #endregion
 
+    #region PhaseTwo
+
+    public void ChangePhase()
+    {
+        phase = BossPhase.PhaseTwo;
+    }
+    
+        void ChaseUpdateTwo()
+    {
+        // animacion de giro hacia el personaje
+        anim.SetBool("Chase", true);
+
+        agent.SetDestination(player.transform.position);
+
+        if (distanceFromTarget > attackRange)
+
+        {
+            agent.SetDestination(player.transform.position);
+        }
+
+        if (distanceFromTarget < attackRange)
+        {
+            anim.SetBool("Chase", false);
+            SetAction();
+            return;
+        }
+    }
+
+    void ActionUpdateTwo()
+    {
+        Debug.Log("CASI DAÑO");
+        agent.SetDestination(player.transform.position);
+
+        if (distanceFromTarget < attackRange)
+        {
+            Debug.Log("ME CAGO EN TOOO");
+            agent.isStopped = true;
+            anim.SetBool("Action", true);
+            idleTime = coolDownAttack; // Esto es si quiero que tenga un time para quese  enfrie y poderle atacar
+
+            return;
+
+        }
+        else
+        {
+            Debug.Log("Salio Del Range");
+            anim.SetBool("Action", false);
+            agent.isStopped = false;
+            SetChase();
+            return;
+        }
+    }
+    #endregion
     float GetDistanceFromTarget()       // Calcula la distancia con el player
     {
         return Vector3.Distance(player.transform.position, transform.position);
@@ -177,15 +249,5 @@ public class BossPrueba : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, attackRange);
-    }
-
-    public void BecomeBoss()
-    {
-        SetIdle();
-    }
-
-    public void BossPhase()
-    {
-        //anim.SetBool("PhaseTwo", true);
     }
 }
