@@ -18,7 +18,11 @@ public class BossPrueba : MonoBehaviour
 
     private Vector3 targetPosition;
     private GameObject player;
+
+    public int bonusEnemyStats;
+
     CharacterController controller;
+
 
     [Header("Paths")]
 
@@ -49,6 +53,7 @@ public class BossPrueba : MonoBehaviour
 
     private void Awake()
     {
+        bonusEnemyStats = 10;
         agent = GetComponent<NavMeshAgent>();
         controller = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();        // Llamamos a las animaciones
@@ -220,6 +225,7 @@ public class BossPrueba : MonoBehaviour
     }
     public void ChangePhase()
     {
+        bonusEnemyStats = 30;
         phase = BossPhase.PhaseTwo;
         stateTwo = BossPhaseTwo.Transformation;
     }

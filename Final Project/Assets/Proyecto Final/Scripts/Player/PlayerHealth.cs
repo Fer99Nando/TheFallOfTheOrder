@@ -24,6 +24,7 @@ public class PlayerHealth : MonoBehaviour
 
     // Activamos el gameobject GameOver
     public GameObject gameOver;
+    public GameObject personajes;
 
     // Sonido muerte
 
@@ -127,6 +128,7 @@ public class PlayerHealth : MonoBehaviour
 		}
 	}
 
+    #region POTIONS
     public void PotionHelath ()
     {
         currentHp += 20;
@@ -144,6 +146,7 @@ public class PlayerHealth : MonoBehaviour
         currentV -= 20;
         virusSlider.fillAmount = currentV / 100;
     }
+    #endregion
 
     public void MaximusPower()
     {
@@ -164,8 +167,8 @@ public class PlayerHealth : MonoBehaviour
 	{
 		isDead = true;
 
-		// Animacion de muerte;
-
+        // Animacion de muerte;
+        Destroy(personajes);
 		playerControl.enabled = false;
         gameOver.SetActive(true);
         Cursor.visible = true;

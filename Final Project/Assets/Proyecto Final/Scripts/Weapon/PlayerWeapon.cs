@@ -47,13 +47,13 @@ public class PlayerWeapon : MonoBehaviour
         if (virusSlider.fillAmount == 0)
         {
             Debug.Log("Base Daño");
-            bonusStats = 100;
+            bonusStats = 50;
         }
 
         else if (virusSlider.fillAmount > 0 && virusSlider.fillAmount < 0.25f)
         {
             Debug.Log("10 Daño");
-            bonusStats = 150;
+            bonusStats = 100;
         }
 
         if (virusSlider.fillAmount >= 0.25f && virusSlider.fillAmount < 0.5f)

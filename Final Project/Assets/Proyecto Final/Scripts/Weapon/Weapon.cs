@@ -6,21 +6,20 @@ using UnityEngine.AI;
 public class Weapon : MonoBehaviour {
 
 	private PlayerHealth playerHealth;
+    BossPrueba bossprueba;
 
-	// Use this for initialization
-	[SerializeField] private Transform targetTransform;
 	void Start () 
 	{
-		targetTransform = GameObject.FindGameObjectWithTag("Player").transform;
+        bossprueba = GameObject.FindGameObjectWithTag("Boss").GetComponent<BossPrueba>(); ;
 
-        playerHealth = targetTransform.GetComponent<PlayerHealth>();
+        playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
 	}
 	
 	private void OnTriggerEnter(Collider other)
 	{
 		if (other.tag == "Player")
 		{
-            playerHealth.currentHp -= 10f;
+            playerHealth.currentHp -= bossprueba.bonusEnemyStats;
 
             playerHealth.TakeVirus();
 		}
