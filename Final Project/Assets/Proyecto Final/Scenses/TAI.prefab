@@ -124,9 +124,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteItems:
-  - {fileID: 21300000, guid: 7c55aed9d5248a2419042034cecbff55, type: 3}
-  - {fileID: 21300000, guid: a9d934b37fe11ca459b2810b1611f51e, type: 3}
-  - {fileID: 21300000, guid: f97aa30b668801e49a58351388391173, type: 3}
+  - {fileID: 21300000, guid: 1888c80042c75eb4fa6dfcd667d73b67, type: 3}
+  - {fileID: 21300000, guid: 3a6dc4189b22fe545933a223befb9e58, type: 3}
+  - {fileID: 21300000, guid: 9846c582836b4a34d8aa677ff94ea7fa, type: 3}
   slotPot:
   - {fileID: 0}
   - {fileID: 0}

@@ -86,7 +86,6 @@ public class BossPrueba : MonoBehaviour
             }
             break;
             case BossPhase.PhaseTwo:
-                Debug.Log("FASE 2 OOUUUU");
                 switch (stateTwo)
                 {
                     case BossPhaseTwo.Transformation:
@@ -218,6 +217,7 @@ public class BossPrueba : MonoBehaviour
     {
         Debug.Log("Animacion terminada");
 
+        attackRange = 4;
         controller.enabled = true;
         anim.SetBool("Action", false);
         anim.SetBool("Chase", false);
