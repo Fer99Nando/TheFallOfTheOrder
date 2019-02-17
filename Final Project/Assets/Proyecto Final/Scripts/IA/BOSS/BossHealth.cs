@@ -8,10 +8,11 @@ public class BossHealth : MonoBehaviour
 
     public float currentHp;
 
-    //public Slider healthSlider;
     public Image healthSlider;
 
     public GameObject victory;
+
+    CharacterController controller;
 
     int phase;
 
@@ -31,6 +32,7 @@ public class BossHealth : MonoBehaviour
         segundaFase = true;
 
         bossBehaviour = GetComponent<BossPrueba>();
+        controller = GetComponent<CharacterController>();
         //anim = GetComponent<Animator>();
         currentHp = startingHp;
         healthSlider.fillAmount = currentHp / startingHp;
@@ -70,9 +72,9 @@ public class BossHealth : MonoBehaviour
     {
         if (currentHp <= 0 && !isDead && segundaFase == true)
         {
+            controller.enabled = false;
             bossBehaviour.ChangePhase();
             currentHp += startingHp;
-            healthSlider.fillAmount = currentHp / startingHp;
 
             segundaFase = false;
 

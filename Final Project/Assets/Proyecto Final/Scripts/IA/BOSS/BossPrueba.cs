@@ -18,9 +18,6 @@ public class BossPrueba : MonoBehaviour
 
     private Vector3 targetPosition;
     private GameObject player;
-
-    [Header("Fase2")]
-
     CharacterController controller;
 
     [Header("Paths")]
@@ -90,10 +87,8 @@ public class BossPrueba : MonoBehaviour
                     case BossPhaseTwo.Transformation:
                         Debug.Log("O DIOOMIITO SE TRANSFORMA");
                         anim.SetBool("PhaseTwo", true);
-                        controller.enabled = false;
                         break;
                     case BossPhaseTwo.ChaseTwo:
-                        controller.enabled = true;
                         anim.SetBool("PhaseTwo", false);
                         ChaseUpdateTwo();
                         break;
@@ -217,6 +212,8 @@ public class BossPrueba : MonoBehaviour
     public void AnimacionTerminada()
     {
         Debug.Log("Animacion terminada");
+
+        controller.enabled = true;
         anim.SetBool("Action", false);
         anim.SetBool("Chase", false);
         stateTwo = BossPhaseTwo.ChaseTwo;
