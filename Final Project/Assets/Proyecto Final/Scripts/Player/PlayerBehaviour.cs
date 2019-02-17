@@ -39,7 +39,7 @@ public class PlayerBehaviour : MonoBehaviour
     {
         godMode = false;
         attackTime = attackAnim.length;
-        attackTime *= 0.1f;
+        attackTime *= 0.9f;
 
         anim = GetComponent<Animator>();  
 
@@ -102,8 +102,9 @@ public class PlayerBehaviour : MonoBehaviour
         anim.SetBool("Walk", false);
         anim.SetBool("Attack", true);
         yield return new WaitForSeconds(attackTime);
-        canMove = true;
         anim.SetBool("Attack", false);
+        canMove = true;
+        
     }
     #endregion 
 

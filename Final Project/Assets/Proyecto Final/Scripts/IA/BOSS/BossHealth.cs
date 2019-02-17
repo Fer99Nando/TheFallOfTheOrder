@@ -74,10 +74,9 @@ public class BossHealth : MonoBehaviour
         {
             controller.enabled = false;
             bossBehaviour.ChangePhase();
-            currentHp += startingHp;
 
             segundaFase = false;
-
+            currentHp = startingHp;
             phase = 1;
 
         }
@@ -85,6 +84,8 @@ public class BossHealth : MonoBehaviour
 
     void PhaseTwo()
     {
+        
+
         if (currentHp <= 0 && !isDead && segundaFase == false)
         {
             isDead = true;
