@@ -47,37 +47,37 @@ public class PlayerWeapon : MonoBehaviour
         if (virusSlider.fillAmount == 0)
         {
             Debug.Log("Base Daño");
-            bonusStats = 5;
+            bonusStats = 100;
         }
 
         else if (virusSlider.fillAmount > 0 && virusSlider.fillAmount < 0.25f)
         {
             Debug.Log("10 Daño");
-            bonusStats = 10;
+            bonusStats = 150;
         }
 
         if (virusSlider.fillAmount >= 0.25f && virusSlider.fillAmount < 0.5f)
         {
             Debug.Log("15 Daño");
-            bonusStats = 15;
+            bonusStats = 150;
         }
         
         if (virusSlider.fillAmount >= 0.5f && virusSlider.fillAmount < 0.75f)
         {
             Debug.Log("20 Daño");
-            bonusStats = 20;
+            bonusStats = 200;
         }
 
         if (virusSlider.fillAmount >= 0.75f && virusSlider.fillAmount < 1f)
         {
             Debug.Log("25 Daño");
-            bonusStats = 25;
+            bonusStats = 250;
         }
 
         if (virusSlider.fillAmount >= 1)
         {
             Debug.Log("50 Daño");
-            bonusStats = 50;
+            bonusStats = 500;
 
             playerHealth.MaximusPower();
         }

@@ -5,8 +5,11 @@ using UnityEngine.AI;
 
 public class BossPrueba : MonoBehaviour
 {
-    private enum EnemyState { Parado, Idle, Chase, Attack, Dead }
+    private enum EnemyState {Parado, Idle, Chase, Attack }
     [SerializeField] private EnemyState state;
+
+    private enum BossPhaseTwo { Transformation, ChaseTwo, AttackTwo, Dead }
+    [SerializeField] private BossPhaseTwo stateTwo;
 
     private enum BossPhase { PhaseOne, PhaseTwo, Dead }
     [SerializeField] private BossPhase phase;
@@ -16,11 +19,14 @@ public class BossPrueba : MonoBehaviour
     private Vector3 targetPosition;
     private GameObject player;
 
+    [Header("Fase2")]
+
+    CharacterController controller;
+
     [Header("Paths")]
 
     public Transform[] points;
-    public int pathIndex = 0;
-    public float chaseRange;        // Rango de Persecucion
+    public int pathIndex = 0;      // Rango de Persecucion
     public float attackRange;       // Rango de Ataque
     [SerializeField] private float distanceFromTarget = Mathf.Infinity;     // Distancia del target que puede ser hasta infinito
 
@@ -33,7 +39,6 @@ public class BossPrueba : MonoBehaviour
 
     public float idleTime;      // IDLE
     public float timeCounter = 0;  // Contador de tiempo
-    private float timeToPatrol = 0; // Contador para pasar a patrol desde chase
 
     public float coolDownAttack = 0;   // Enfriamineto despues de atacar
 
@@ -48,7 +53,7 @@ public class BossPrueba : MonoBehaviour
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
-
+        controller = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();        // Llamamos a las animaciones
 
         player = GameObject.FindGameObjectWithTag("Player");
@@ -79,14 +84,20 @@ public class BossPrueba : MonoBehaviour
             }
             break;
             case BossPhase.PhaseTwo:
-                Debug.Log("O DIOOMIITO SE TRANSFORMA");
-                //anim.SetBool("PhaseTwo", true);
-                switch (state)
+                Debug.Log("FASE 2 OOUUUU");
+                switch (stateTwo)
                 {
-                    case EnemyState.Chase:
+                    case BossPhaseTwo.Transformation:
+                        Debug.Log("O DIOOMIITO SE TRANSFORMA");
+                        anim.SetBool("PhaseTwo", true);
+                        controller.enabled = false;
+                        break;
+                    case BossPhaseTwo.ChaseTwo:
+                        controller.enabled = true;
+                        anim.SetBool("PhaseTwo", false);
                         ChaseUpdateTwo();
                         break;
-                    case EnemyState.Attack:
+                    case BossPhaseTwo.AttackTwo:
                         ActionUpdateTwo();
                         break;
                     default:
@@ -118,10 +129,7 @@ public class BossPrueba : MonoBehaviour
         // animacion de giro hacia el personaje
         anim.SetBool("Chase", true);
 
-        agent.SetDestination(player.transform.position);
-
         if (distanceFromTarget > attackRange)
-
         {
             agent.SetDestination(player.transform.position);
         }
@@ -172,44 +180,63 @@ public class BossPrueba : MonoBehaviour
     {
         // Animacion de caminar
 
+        if ( phase == BossPhase.PhaseOne)
+        {
+            agent.speed = chaseSpeed;   // La velocidad del enemigo pasa a ser igual que la de modo persecucion
 
-        agent.speed = chaseSpeed;   // La velocidad del enemigo pasa a ser igual que la de modo persecucion
+            state = EnemyState.Chase;   // El estado pasa a ser persecucion
+        }
+        else
+        {
+            agent.speed = chaseSpeed;   // La velocidad del enemigo pasa a ser igual que la de modo persecucion
 
-        state = EnemyState.Chase;   // El estado pasa a ser persecucion
+            stateTwo = BossPhaseTwo.ChaseTwo;   // El estado pasa a ser persecucion
+        }
+
     }
 
     void SetAction()
     {
-        // Sonidos de Ataque si los tiene
-        agent.stoppingDistance = 1;
-        state = EnemyState.Attack;
+        if (phase == BossPhase.PhaseOne)
+        {
+            // Sonidos de Ataque si los tiene
+            agent.stoppingDistance = 1;
+            state = EnemyState.Attack;
+        }
+        else
+        {
+            // Sonidos de Ataque si los tiene
+            agent.stoppingDistance = 1;
+            stateTwo = BossPhaseTwo.AttackTwo;
+        }
     }
 
     #endregion
 
     #region PhaseTwo
-
+    public void AnimacionTerminada()
+    {
+        Debug.Log("Animacion terminada");
+        anim.SetBool("Action", false);
+        anim.SetBool("Chase", false);
+        stateTwo = BossPhaseTwo.ChaseTwo;
+    }
     public void ChangePhase()
     {
         phase = BossPhase.PhaseTwo;
+        stateTwo = BossPhaseTwo.Transformation;
     }
     
-        void ChaseUpdateTwo()
+    void ChaseUpdateTwo()
     {
         // animacion de giro hacia el personaje
-        anim.SetBool("Chase", true);
-
+        anim.SetBool("Chase2", true);
+        agent.isStopped = false;
         agent.SetDestination(player.transform.position);
-
-        if (distanceFromTarget > attackRange)
-
-        {
-            agent.SetDestination(player.transform.position);
-        }
 
         if (distanceFromTarget < attackRange)
         {
-            anim.SetBool("Chase", false);
+            anim.SetBool("Chase2", false);
             SetAction();
             return;
         }
@@ -217,23 +244,21 @@ public class BossPrueba : MonoBehaviour
 
     void ActionUpdateTwo()
     {
-        Debug.Log("CASI DAÑO");
-        agent.SetDestination(player.transform.position);
+        Debug.Log("TORTON Y AL SUELO");
 
         if (distanceFromTarget < attackRange)
         {
             Debug.Log("ME CAGO EN TOOO");
             agent.isStopped = true;
-            anim.SetBool("Action", true);
+            anim.SetBool("Action2", true);
             idleTime = coolDownAttack; // Esto es si quiero que tenga un time para quese  enfrie y poderle atacar
 
             return;
-
         }
-        else
+        else if (distanceFromTarget > attackRange)
         {
             Debug.Log("Salio Del Range");
-            anim.SetBool("Action", false);
+            anim.SetBool("Action2", false);
             agent.isStopped = false;
             SetChase();
             return;

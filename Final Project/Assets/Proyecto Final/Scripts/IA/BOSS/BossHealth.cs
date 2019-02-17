@@ -13,6 +13,8 @@ public class BossHealth : MonoBehaviour
 
     public GameObject victory;
 
+    int phase;
+
     // Sonido muerte
 
     //Animator anim;
@@ -28,7 +30,7 @@ public class BossHealth : MonoBehaviour
     {
         segundaFase = true;
 
-        bossBehaviour.GetComponent<BossPrueba>();
+        bossBehaviour = GetComponent<BossPrueba>();
         //anim = GetComponent<Animator>();
         currentHp = startingHp;
         healthSlider.fillAmount = currentHp / startingHp;
@@ -42,31 +44,57 @@ public class BossHealth : MonoBehaviour
 
     private void Update()
     {
+        switch (phase)
+        {
+            case 0:
+                PhaseOne();
+                break;
+            case 1:
+                PhaseTwo();
+                break;
+            default:
+                break;
+        }
+
         TakeDamage();
+
+
     }
 
     public void TakeDamage()
     {
         healthSlider.fillAmount = currentHp / startingHp;
+    }
 
-        // Sonido asignado del jugador
-
+    void PhaseOne()
+    {
         if (currentHp <= 0 && !isDead && segundaFase == true)
         {
-            segundaFase = false;
             bossBehaviour.ChangePhase();
-            
+            currentHp += startingHp;
+            healthSlider.fillAmount = currentHp / startingHp;
+
+            segundaFase = false;
+
+            phase = 1;
+
         }
-        else if (currentHp <= 0 && !isDead && segundaFase == false)
+    }
+
+    void PhaseTwo()
+    {
+        if (currentHp <= 0 && !isDead && segundaFase == false)
         {
-            Death();
+            isDead = true;
+            if (isDead)
+            {
+                Death();
+            }
         }
     }
 
     void Death()
     {
-        isDead = true;
-
         // Animacion de muerte;
         Destroy(gameObject);
         victory.SetActive(true);
