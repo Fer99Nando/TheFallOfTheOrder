@@ -14,6 +14,9 @@ public class BossHealth : MonoBehaviour
 
     CharacterController controller;
 
+    public Material mat1;
+    public Material mat2;
+
     int phase;
 
     // Sonido muerte
@@ -94,6 +97,15 @@ public class BossHealth : MonoBehaviour
                 Death();
             }
         }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "PlayerWeapon")
+        {
+            transform.GetComponent<MeshRenderer>().material = mat2;
+        }
+        else transform.GetComponent<MeshRenderer>().material = mat1;
     }
 
     void Death()

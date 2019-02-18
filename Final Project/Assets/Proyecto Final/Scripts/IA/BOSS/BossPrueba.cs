@@ -25,6 +25,9 @@ public class BossPrueba : MonoBehaviour
 
 
     [Header("Paths")]
+    public Material mat1;
+
+    [Header("Paths")]
 
     public Transform[] points;
     public int pathIndex = 0;      // Rango de Persecucion
@@ -93,7 +96,8 @@ public class BossPrueba : MonoBehaviour
                         anim.SetBool("PhaseTwo", true);
                         break;
                     case BossPhaseTwo.ChaseTwo:
-                        anim.SetBool("PhaseTwo", false);
+                        transform.GetComponent<MeshRenderer>().material = mat1;
+                        anim.SetBool("PhaseTwo", false); 
                         ChaseUpdateTwo();
                         break;
                     case BossPhaseTwo.AttackTwo:

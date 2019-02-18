@@ -10,6 +10,9 @@ public class EnemyHealth : MonoBehaviour
 
     public Slider healthSlider;
 
+    public Material mat1;
+    public Material mat2;
+
     // Sonido muerte
 
     Animator anim;
@@ -39,7 +42,16 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
-    void Death()
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "PlayerWeapon")
+        {
+            transform.GetComponent<MeshRenderer>().material = mat2;
+        }
+        else transform.GetComponent<MeshRenderer>().material = mat1;
+    }
+
+        void Death()
     {
         isDead = true;
 

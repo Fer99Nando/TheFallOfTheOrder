@@ -6,6 +6,10 @@ public class PlayerHealth : MonoBehaviour
 {
     private float maxVirus = 100;
 
+    /*[Header("Material")]
+    public Material mat1;
+    public Material mat2;*/
+
     [Header("Life")]
 	public float startingHp;
 	public float startingV;
@@ -82,7 +86,6 @@ public class PlayerHealth : MonoBehaviour
         healthSlider.fillAmount = currentHp / startingHp;
         if (currentHp <= 0 && !isDead)
         {
-
             Death();
         }
     }
@@ -162,6 +165,15 @@ public class PlayerHealth : MonoBehaviour
             Death();
         }
     }
+
+   /* private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Weapon")
+        {
+            transform.GetComponent<MeshRenderer>().material = mat2;
+        }
+        else transform.GetComponent<MeshRenderer>().material = mat1;
+    }*/
 
     public void Death()
 	{

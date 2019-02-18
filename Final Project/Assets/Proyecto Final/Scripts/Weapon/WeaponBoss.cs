@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Weapon : MonoBehaviour {
+public class WeaponBoss : MonoBehaviour {
 
 	private PlayerHealth playerHealth;
     BossPrueba bossprueba;
@@ -20,8 +20,6 @@ public class Weapon : MonoBehaviour {
         if (other.tag == "Player")
         {
             playerHealth.currentHp -= bossprueba.bonusEnemyStats;
-
-            playerHealth.TakeVirus();
         }
 	}
 }
