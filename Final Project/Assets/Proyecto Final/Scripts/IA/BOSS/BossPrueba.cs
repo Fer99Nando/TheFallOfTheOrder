@@ -89,6 +89,7 @@ public class BossPrueba : MonoBehaviour
             }
             break;
             case BossPhase.PhaseTwo:
+                transform.GetComponent<MeshRenderer>().material = mat1;
                 switch (stateTwo)
                 {
                     case BossPhaseTwo.Transformation:
@@ -96,7 +97,7 @@ public class BossPrueba : MonoBehaviour
                         anim.SetBool("PhaseTwo", true);
                         break;
                     case BossPhaseTwo.ChaseTwo:
-                        transform.GetComponent<MeshRenderer>().material = mat1;
+                        
                         anim.SetBool("PhaseTwo", false); 
                         ChaseUpdateTwo();
                         break;

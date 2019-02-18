@@ -31,7 +31,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     PlayerHealth playerHealth;
 
-    //public AudioSource
+    public AudioSource footSteps;
     //public AudioSource
 
     // Use this for initialization
@@ -83,12 +83,14 @@ public class PlayerBehaviour : MonoBehaviour
             if (GetInput())
             {
                 anim.SetBool("Walk", true);
+                footSteps.Play();
 
                 Rotate();
             }
             else
             {
                 anim.SetBool("Walk", false);
+                footSteps.Stop();
             }
 
             Move();
