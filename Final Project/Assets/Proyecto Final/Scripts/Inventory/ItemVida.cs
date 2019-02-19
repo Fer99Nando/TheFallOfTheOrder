@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ItemVida : MonoBehaviour
 {
-    
+    public GameObject pot;
     public int potion;
 
     private void OnTriggerEnter(Collider col)
@@ -14,7 +14,7 @@ public class ItemVida : MonoBehaviour
             Debug.Log("Aaa, me tocaste");
             Inventory inventory = col.gameObject.GetComponent<Inventory>();
             inventory.ItemsVida(potion);
-            Destroy(this.gameObject);
+            Destroy(pot);
         }
     }
 }
