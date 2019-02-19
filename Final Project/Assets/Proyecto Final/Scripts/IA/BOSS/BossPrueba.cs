@@ -18,10 +18,13 @@ public class BossPrueba : MonoBehaviour
 
     private Vector3 targetPosition;
     private GameObject player;
-
+    
     public int bonusEnemyStats;
 
     CharacterController controller;
+
+    //public ParticleSystem bossTransformation;
+    public GameObject bossTransformation;
 
 
     [Header("Paths")]
@@ -56,6 +59,7 @@ public class BossPrueba : MonoBehaviour
 
     private void Awake()
     {
+        bossTransformation.SetActive(false);
         bonusEnemyStats = 10;
         agent = GetComponent<NavMeshAgent>();
         controller = GetComponent<CharacterController>();
@@ -95,10 +99,14 @@ public class BossPrueba : MonoBehaviour
                     case BossPhaseTwo.Transformation:
                         Debug.Log("O DIOOMIITO SE TRANSFORMA");
                         anim.SetBool("PhaseTwo", true);
+                        //bossTransformation.Play();
+                        bossTransformation.SetActive(true);
                         break;
                     case BossPhaseTwo.ChaseTwo:
                         
-                        anim.SetBool("PhaseTwo", false); 
+                        anim.SetBool("PhaseTwo", false);
+                        bossTransformation.SetActive(false);
+                        //bossTransformation.Stop();
                         ChaseUpdateTwo();
                         break;
                     case BossPhaseTwo.AttackTwo:

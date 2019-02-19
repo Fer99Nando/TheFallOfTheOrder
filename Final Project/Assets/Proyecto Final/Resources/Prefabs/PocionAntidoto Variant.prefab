@@ -59,5 +59,21 @@ PrefabInstance:
       propertyPath: potion
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 705374470, guid: e849a497a16743740b27a2e24f489314, type: 3}
+      propertyPath: m_Size.x
+      value: 0.43643665
+      objectReference: {fileID: 0}
+    - target: {fileID: 705374470, guid: e849a497a16743740b27a2e24f489314, type: 3}
+      propertyPath: m_Size.z
+      value: 0.48254174
+      objectReference: {fileID: 0}
+    - target: {fileID: 705374470, guid: e849a497a16743740b27a2e24f489314, type: 3}
+      propertyPath: m_Center.x
+      value: 0.011547565
+      objectReference: {fileID: 0}
+    - target: {fileID: 705374470, guid: e849a497a16743740b27a2e24f489314, type: 3}
+      propertyPath: m_Center.z
+      value: -0.008880883
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e849a497a16743740b27a2e24f489314, type: 3}

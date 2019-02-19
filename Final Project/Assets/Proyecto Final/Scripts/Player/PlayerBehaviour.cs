@@ -39,7 +39,7 @@ public class PlayerBehaviour : MonoBehaviour
     {
         godMode = false;
         attackTime = attackAnim.length;
-        attackTime *= 0.9f;
+        attackTime *= 0.95f;
 
         anim = GetComponent<Animator>();  
 
@@ -83,14 +83,14 @@ public class PlayerBehaviour : MonoBehaviour
             if (GetInput())
             {
                 anim.SetBool("Walk", true);
-                footSteps.Play();
+               // footSteps.Play();
 
                 Rotate();
             }
             else
             {
                 anim.SetBool("Walk", false);
-                footSteps.Stop();
+               // footSteps.Stop();
             }
 
             Move();

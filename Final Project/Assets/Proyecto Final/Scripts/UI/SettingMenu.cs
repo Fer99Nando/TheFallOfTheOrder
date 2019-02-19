@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class SettingMenu : MonoBehaviour
 {
-    public Slider volumeSlider;
+    //public Slider volumeSlider;
     public AudioMixer audioMixer;
 
     public Dropdown resolutionsDropsown;
@@ -48,7 +48,7 @@ public class SettingMenu : MonoBehaviour
 
     public void SetVolume ( float volume)
     {
-        volume = volumeSlider.value;
+        //volume = volumeSlider.value;
 
         audioMixer.SetFloat("volume", volume);
     }
