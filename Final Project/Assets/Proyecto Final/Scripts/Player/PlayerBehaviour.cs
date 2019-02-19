@@ -68,8 +68,12 @@ public class PlayerBehaviour : MonoBehaviour
                 godMode = true;
             }
         }
+        if (inputH != 0 || inputV != 0)
+        {
+            footSteps.Play();
+        } else footSteps.Stop();
 
-        if(godMode){
+        if (godMode){
             GodMode();
         }
 
@@ -83,14 +87,12 @@ public class PlayerBehaviour : MonoBehaviour
             if (GetInput())
             {
                 anim.SetBool("Walk", true);
-               // footSteps.Play();
 
                 Rotate();
             }
             else
             {
                 anim.SetBool("Walk", false);
-               // footSteps.Stop();
             }
 
             Move();
@@ -112,13 +114,13 @@ public class PlayerBehaviour : MonoBehaviour
 
     // Escucha todas las teclas que controlan al jugador
     private bool GetInput()
-    {
+    {        
         this.inputV = Input.GetAxis("Vertical");
         this.inputH = Input.GetAxis("Horizontal");
-        //this.jumpInput = Input.GetAxis("Jump");
 
         if (this.inputV != 0 || this.inputH != 0)
         {
+            footSteps.Stop();
             return true;
         }
         return false;
@@ -177,12 +179,6 @@ public class PlayerBehaviour : MonoBehaviour
             }
 
             this.moveDirection = transform.TransformDirection(this.moveDirection); // Transformamos la direccion de loca a world space
-
-           /* if (this.jumpInput > 0) // SALTA
-            {
-                this.moveDirection.y = this.jumpSpeed;
-            }*/
-
         }
 
         else // EN EL ARIE
@@ -215,9 +211,12 @@ public class PlayerBehaviour : MonoBehaviour
         if(Input.GetKey(KeyCode.Space)){
             transform.Translate(Vector3.up* 0.2f, Space.Self);
         }
-        if(Input.GetKey(KeyCode.LeftShift)){
+        if(Input.GetKey(KeyCode.LeftShift))
+        {
             transform.Translate(-Vector3.up * 0.2f, Space.Self);
         }
         transform.Translate(new Vector3(movementH* 0.2f, 0,movementV* 0.2f), Space.Self);
     }
+
+
 }
