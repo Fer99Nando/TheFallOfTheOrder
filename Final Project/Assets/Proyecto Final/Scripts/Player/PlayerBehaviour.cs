@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerBehaviour : MonoBehaviour
 {
     private CharacterController controller;
+    PlayerWeapon playerWeapon;
 
     public Transform lookAt;
 
@@ -12,7 +13,6 @@ public class PlayerBehaviour : MonoBehaviour
     private float diagonalForwardSpeed;     // Velocidad de avance en cada eje cuando avanza diagonalmente
     private float backSpeed;                // Velocidad de retroceso
     private float diagonalBackSpeed;        // Velocidad de retroceso en cada eje cuando retrocede diagonalmente
-    public float jumpSpeed;                 // Velocidad de salto
     public float gravity;                   // Gravedad
 
     private Vector3 moveDirection;          // Vector de la direccion
@@ -24,7 +24,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     private bool dodgeTime;
     private bool attackOne;
-    private bool canMove;
+    public  bool canMove;
     private bool godMode;
     public Animator anim;
     public AnimationClip attackAnim;
@@ -40,12 +40,13 @@ public class PlayerBehaviour : MonoBehaviour
         dodgeTime = false;
         godMode = false;
         attackTime = attackAnim.length;
-        attackTime *= 0.8f;
+        attackTime *= 0.5f;
 
         anim = GetComponent<Animator>();  
 
         this.controller = GetComponent<CharacterController>();
         playerHealth = GetComponent<PlayerHealth>();
+        playerWeapon = GameObject.FindGameObjectWithTag("PlayerWeapon").GetComponent<PlayerWeapon>();
 
         canMove = true;
 
@@ -85,11 +86,11 @@ public class PlayerBehaviour : MonoBehaviour
 
         if (Input.GetButtonDown("Dodge"))
         {
+            canMove = false;
             dodgeTime = true;
             anim.SetBool("Walk", false);
             anim.SetBool("Dodge", true);
         } 
-        else anim.SetBool("Dodge", false);
 
         if (canMove)
         {
@@ -105,13 +106,22 @@ public class PlayerBehaviour : MonoBehaviour
         }
     }
 
+    public void DodgeAcabado()
+    {
+        anim.SetBool("Dodge", false);
+        canMove = true;
+    }
+
     #region Coroutines
     IEnumerator Attack()
     {
+
         canMove = false;
         anim.SetBool("Walk", false);
         anim.SetBool("Attack", true);
+        playerWeapon.BoxEnabled();
         yield return new WaitForSeconds(attackTime);
+        playerWeapon.BoxDisabled();
         anim.SetBool("Attack", false);
         canMove = true;
         

@@ -14,10 +14,13 @@ public class PlayerWeapon : MonoBehaviour
     public Image virusSlider;
     public Image healthSlider;
     public ParticleSystem virusEffect;
+    BoxCollider boxCol;
 
     void Start()
     {
         playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
+        boxCol = GetComponent<BoxCollider>();
+        boxCol.enabled = false;
     }
     void Update()
     {
@@ -31,6 +34,7 @@ public class PlayerWeapon : MonoBehaviour
             Debug.Log("enemy atravesado");
             EnemyHealth enemy = other.GetComponent<EnemyHealth>();
 			enemy.TakeDamage (bonusStats);
+            boxCol.enabled = false;
         }
 
         if (other.tag == "Boss")
@@ -38,6 +42,7 @@ public class PlayerWeapon : MonoBehaviour
             Debug.Log("BOSS atravesado");
             BossHealth boss = other.GetComponent<BossHealth>();
             boss.currentHp -= bonusStats;
+            boxCol.enabled = false;
         }
     }
 
@@ -83,6 +88,16 @@ public class PlayerWeapon : MonoBehaviour
 
             playerHealth.MaximusPower();
         } else virusEffect.Stop();
+    }
+
+    public void BoxEnabled()
+    {
+        boxCol.enabled = true;
+    }
+
+    public void BoxDisabled()
+    {
+        boxCol.enabled = false;
     }
 
     public void Death()

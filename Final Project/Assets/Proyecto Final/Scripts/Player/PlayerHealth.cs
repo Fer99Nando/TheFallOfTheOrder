@@ -165,26 +165,21 @@ public class PlayerHealth : MonoBehaviour
             Death();
         }
     }
-
-   /* private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "Weapon")
-        {
-            transform.GetComponent<MeshRenderer>().material = mat2;
-        }
-        else transform.GetComponent<MeshRenderer>().material = mat1;
-    }*/
-
     public void Death()
-	{
-		isDead = true;
+    {
+        isDead = true;
+        anim.SetBool("Died", true);
+       //playerControl.enabled = false;
+    }
 
-        // Animacion de muerte;
+    public void DieAcabado()
+    {
         Destroy(personajes);
-		playerControl.enabled = false;
         gameOver.SetActive(true);
         Cursor.visible = true;
     }
+
+
 
 
 }

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 59f962df31b742845912202e58876e8d
+guid: 518e20eba5c34284a938b62ec8d4708c
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -31,81 +31,71 @@ ModelImporter:
     100050: cluster6Handle
     100052: cluster7Handle
     100054: cluster8Handle
-    100056: CRV_elbow_L
-    100058: CRV_elbow_R
-    100060: CRV_knee_L
-    100062: CRV_knee_R
-    100064: GRP_CC
-    100066: GRP_CC_wrist_L
-    100068: GRP_CC_wrist_R
-    100070: GRP_CLs
-    100072: GRP_CRV
-    100074: GRP_fingers_L
-    100076: GRP_IK
-    100078: GRP_invisible
-    100080: GRP_Joins
-    100082: GRP_visible
-    100084: IK_arm_L
-    100086: IK_arm_R
-    100088: IK_leg_L
-    100090: IK_leg_R
-    100092: J_ankle_L
-    100094: J_ankle_R
-    100096: J_chest
-    100098: J_clavicle_L
-    100100: J_clavicle_R
-    100102: J_COG
-    100104: J_elbow_L
-    100106: J_elbow_R
-    100108: J_hand_L
-    100110: J_hand_R
-    100112: J_head
-    100114: J_hip
-    100116: J_index01_L
-    100118: J_index01_R
-    100120: J_index02_L
-    100122: J_index02_R
-    100124: J_index03_L
-    100126: J_index03_R
-    100128: J_instep_L
-    100130: J_instep_R
-    100132: J_knee_L
-    100134: J_knee_R
-    100136: J_leg_L
-    100138: J_leg_R
-    100140: J_lit01_L
-    100142: J_lit01_R
-    100144: J_lit02_L
-    100146: J_lit02_R
-    100148: J_lit03_L
-    100150: J_lit03_R
-    100152: J_lumbar
-    100154: J_middle01_L
-    100156: J_middle01_R
-    100158: J_middle02_L
-    100160: J_middle03_L
-    100162: J_midle02_R
-    100164: J_midle03_R
-    100166: J_neck
-    100168: J_ring01_L
-    100170: J_ring01_R
-    100172: J_ring02_L
-    100174: J_ring02_R
-    100176: J_ring03_L
-    100178: J_ring03_R
-    100180: J_shoulder_L
-    100182: J_shoulder_R
-    100184: J_thumb01_L
-    100186: J_thumb01_R
-    100188: J_thumb02_L
-    100190: J_thumb02_R
-    100192: J_toe_L
-    100194: J_toe_R
-    100196: J_wrist_L
-    100198: J_wrist_R
-    100200: JE_thumb03_L
-    100202: JE_thumb03_R
-    100204: Tai:polySurface1
+    100056: GRP_CC
+    100058: GRP_CC_wrist_L
+    100060: GRP_CC_wrist_R
+    100062: GRP_CLs
+    100064: GRP_fingers_L
+    100066: GRP_invisible
+    100068: GRP_Joins
+    100070: GRP_visible
+    100072: J_ankle_L
+    100074: J_ankle_R
+    100076: J_chest
+    100078: J_clavicle_L
+    100080: J_clavicle_R
+    100082: J_COG
+    100084: J_elbow_L
+    100086: J_elbow_R
+    100088: J_hand_L
+    100090: J_hand_R
+    100092: J_head
+    100094: J_hip
+    100096: J_index01_L
+    100098: J_index01_R
+    100100: J_index02_L
+    100102: J_index02_R
+    100104: J_index03_L
+    100106: J_index03_R
+    100108: J_instep_L
+    100110: J_instep_R
+    100112: J_knee_L
+    100114: J_knee_R
+    100116: J_leg_L
+    100118: J_leg_R
+    100120: J_lit01_L
+    100122: J_lit01_R
+    100124: J_lit02_L
+    100126: J_lit02_R
+    100128: J_lit03_L
+    100130: J_lit03_R
+    100132: J_lumbar
+    100134: J_middle01_L
+    100136: J_middle01_R
+    100138: J_middle02_L
+    100140: J_middle03_L
+    100142: J_midle02_R
+    100144: J_midle03_R
+    100146: J_neck
+    100148: J_ring01_L
+    100150: J_ring01_R
+    100152: J_ring02_L
+    100154: J_ring02_R
+    100156: J_ring03_L
+    100158: J_ring03_R
+    100160: J_shoulder_L
+    100162: J_shoulder_R
+    100164: J_thumb01_L
+    100166: J_thumb01_R
+    100168: J_thumb02_L
+    100170: J_thumb02_R
+    100172: J_toe_L
+    100174: J_toe_R
+    100176: J_wrist_L
+    100178: J_wrist_R
+    100180: JE_thumb03_L
+    100182: JE_thumb03_R
+    100184: Tai:polySurface1
     400000: //RootNode
     400002: ArmaTai:polySurface1
     400004: CC_chest
@@ -134,88 +124,78 @@ ModelImporter:
     400050: cluster6Handle
     400052: cluster7Handle
     400054: cluster8Handle
-    400056: CRV_elbow_L
-    400058: CRV_elbow_R
-    400060: CRV_knee_L
-    400062: CRV_knee_R
-    400064: GRP_CC
-    400066: GRP_CC_wrist_L
-    400068: GRP_CC_wrist_R
-    400070: GRP_CLs
-    400072: GRP_CRV
-    400074: GRP_fingers_L
-    400076: GRP_IK
-    400078: GRP_invisible
-    400080: GRP_Joins
-    400082: GRP_visible
-    400084: IK_arm_L
-    400086: IK_arm_R
-    400088: IK_leg_L
-    400090: IK_leg_R
-    400092: J_ankle_L
-    400094: J_ankle_R
-    400096: J_chest
-    400098: J_clavicle_L
-    400100: J_clavicle_R
-    400102: J_COG
-    400104: J_elbow_L
-    400106: J_elbow_R
-    400108: J_hand_L
-    400110: J_hand_R
-    400112: J_head
-    400114: J_hip
-    400116: J_index01_L
-    400118: J_index01_R
-    400120: J_index02_L
-    400122: J_index02_R
-    400124: J_index03_L
-    400126: J_index03_R
-    400128: J_instep_L
-    400130: J_instep_R
-    400132: J_knee_L
-    400134: J_knee_R
-    400136: J_leg_L
-    400138: J_leg_R
-    400140: J_lit01_L
-    400142: J_lit01_R
-    400144: J_lit02_L
-    400146: J_lit02_R
-    400148: J_lit03_L
-    400150: J_lit03_R
-    400152: J_lumbar
-    400154: J_middle01_L
-    400156: J_middle01_R
-    400158: J_middle02_L
-    400160: J_middle03_L
-    400162: J_midle02_R
-    400164: J_midle03_R
-    400166: J_neck
-    400168: J_ring01_L
-    400170: J_ring01_R
-    400172: J_ring02_L
-    400174: J_ring02_R
-    400176: J_ring03_L
-    400178: J_ring03_R
-    400180: J_shoulder_L
-    400182: J_shoulder_R
-    400184: J_thumb01_L
-    400186: J_thumb01_R
-    400188: J_thumb02_L
-    400190: J_thumb02_R
-    400192: J_toe_L
-    400194: J_toe_R
-    400196: J_wrist_L
-    400198: J_wrist_R
-    400200: JE_thumb03_L
-    400202: JE_thumb03_R
-    400204: Tai:polySurface1
+    400056: GRP_CC
+    400058: GRP_CC_wrist_L
+    400060: GRP_CC_wrist_R
+    400062: GRP_CLs
+    400064: GRP_fingers_L
+    400066: GRP_invisible
+    400068: GRP_Joins
+    400070: GRP_visible
+    400072: J_ankle_L
+    400074: J_ankle_R
+    400076: J_chest
+    400078: J_clavicle_L
+    400080: J_clavicle_R
+    400082: J_COG
+    400084: J_elbow_L
+    400086: J_elbow_R
+    400088: J_hand_L
+    400090: J_hand_R
+    400092: J_head
+    400094: J_hip
+    400096: J_index01_L
+    400098: J_index01_R
+    400100: J_index02_L
+    400102: J_index02_R
+    400104: J_index03_L
+    400106: J_index03_R
+    400108: J_instep_L
+    400110: J_instep_R
+    400112: J_knee_L
+    400114: J_knee_R
+    400116: J_leg_L
+    400118: J_leg_R
+    400120: J_lit01_L
+    400122: J_lit01_R
+    400124: J_lit02_L
+    400126: J_lit02_R
+    400128: J_lit03_L
+    400130: J_lit03_R
+    400132: J_lumbar
+    400134: J_middle01_L
+    400136: J_middle01_R
+    400138: J_middle02_L
+    400140: J_middle03_L
+    400142: J_midle02_R
+    400144: J_midle03_R
+    400146: J_neck
+    400148: J_ring01_L
+    400150: J_ring01_R
+    400152: J_ring02_L
+    400154: J_ring02_R
+    400156: J_ring03_L
+    400158: J_ring03_R
+    400160: J_shoulder_L
+    400162: J_shoulder_R
+    400164: J_thumb01_L
+    400166: J_thumb01_R
+    400168: J_thumb02_L
+    400170: J_thumb02_R
+    400172: J_toe_L
+    400174: J_toe_R
+    400176: J_wrist_L
+    400178: J_wrist_R
+    400180: JE_thumb03_L
+    400182: JE_thumb03_R
+    400184: Tai:polySurface1
     2100000: lambert1
     2100002: ArmaTai_initialShadingGroup1
     2300000: ArmaTai:polySurface1
     3300000: ArmaTai:polySurface1
     4300000: Tai:polySurface1
     4300002: ArmaTai:polySurface1
-    7400000: Idle_001
+    7400000: Die_001
     9500000: //RootNode
     13700000: Tai:polySurface1
     2186277476908879412: ImportLogs
@@ -248,17 +228,17 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Idle_001
+      name: Die_001
       takeName: Take 001
       firstFrame: 1
-      lastFrame: 90
+      lastFrame: 44
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -270,7 +250,14 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.8734177
+        functionName: DieAcabado
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}

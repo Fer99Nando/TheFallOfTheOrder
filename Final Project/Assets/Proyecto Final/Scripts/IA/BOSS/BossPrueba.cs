@@ -22,6 +22,7 @@ public class BossPrueba : MonoBehaviour
     public int bonusEnemyStats;
 
     CharacterController controller;
+    WeaponBoss playerWeapon;
 
     //public ParticleSystem bossTransformation;
     //public GameObject bossTransformation;
@@ -66,6 +67,7 @@ public class BossPrueba : MonoBehaviour
         anim = GetComponent<Animator>();        // Llamamos a las animaciones
 
         player = GameObject.FindGameObjectWithTag("Player");
+        playerWeapon = GameObject.FindGameObjectWithTag("Weapon").GetComponent<WeaponBoss>();
     }
 
 
@@ -156,7 +158,6 @@ public class BossPrueba : MonoBehaviour
 
     void ActionUpdate()
     {
-        Debug.Log("CASI DAÑO");
         agent.SetDestination(player.transform.position);
 
         if (distanceFromTarget < attackRange)
@@ -279,6 +280,16 @@ public class BossPrueba : MonoBehaviour
             SetChase();
             return;
         }
+    }
+
+    public void ComienzoAtaque()
+    {
+        playerWeapon.BoxEnabled();
+    }
+
+    public void FinalAtaque()
+    {
+        playerWeapon.BoxDisabled();
     }
     #endregion
     float GetDistanceFromTarget()       // Calcula la distancia con el player
