@@ -12,6 +12,7 @@ TagManager:
   - Boss
   - Item
   - PlayerWeapon
+  - BossMesh
   layers:
   - Default
   - TransparentFX

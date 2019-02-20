@@ -93,7 +93,7 @@ public class BossPrueba : MonoBehaviour
             }
             break;
             case BossPhase.PhaseTwo:
-                transform.GetComponent<MeshRenderer>().material = mat1;
+                transform.GetComponentInChildren<SkinnedMeshRenderer>().material = mat1;
                 switch (stateTwo)
                 {
                     case BossPhaseTwo.Transformation:
@@ -212,13 +212,13 @@ public class BossPrueba : MonoBehaviour
         if (phase == BossPhase.PhaseOne)
         {
             // Sonidos de Ataque si los tiene
-            agent.stoppingDistance = 1;
+            agent.stoppingDistance = 2;
             state = EnemyState.Attack;
         }
         else
         {
             // Sonidos de Ataque si los tiene
-            agent.stoppingDistance = 1;
+            agent.stoppingDistance = 2;
             stateTwo = BossPhaseTwo.AttackTwo;
         }
     }

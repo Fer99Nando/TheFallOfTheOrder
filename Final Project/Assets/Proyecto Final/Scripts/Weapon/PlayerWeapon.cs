@@ -48,7 +48,7 @@ public class PlayerWeapon : MonoBehaviour
         if (virusSlider.fillAmount == 0)
         {
             Debug.Log("Base Daño");
-            bonusStats = 50;
+            bonusStats = 5;
         }
 
         else if (virusSlider.fillAmount > 0 && virusSlider.fillAmount < 0.25f)

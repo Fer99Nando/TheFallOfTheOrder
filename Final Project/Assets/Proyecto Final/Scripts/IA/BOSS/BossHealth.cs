@@ -103,9 +103,9 @@ public class BossHealth : MonoBehaviour
     {
         if (other.tag == "PlayerWeapon")
         {
-            transform.GetComponent<MeshRenderer>().material = mat2;
+            transform.GetComponentInChildren<SkinnedMeshRenderer>().material = mat2;
         }
-        else transform.GetComponent<MeshRenderer>().material = mat1;
+        else transform.GetComponentInChildren<SkinnedMeshRenderer>().material = mat1;
     }
 
     void Death()
