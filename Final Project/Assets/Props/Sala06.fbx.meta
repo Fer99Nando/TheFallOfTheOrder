@@ -1,0 +1,1871 @@
+fileFormatVersion: 2
+guid: ef7a80ff64deddf4a8460f54750d7514
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Nivel5:Antorcha
+    100002: Nivel5:Antorcha 1
+    100004: Nivel5:Antorcha 2
+    100006: Nivel5:Antorcha 3
+    100008: Nivel5:Antorcha1
+    100010: Nivel5:Antorcha2
+    100012: Nivel5:AntorchasIz
+    100014: Nivel5:ArcoPuerta
+    100016: Nivel5:ArcoPuerta1
+    100018: Nivel5:BarrotesLateralesCelda
+    100020: Nivel5:BarrotesLateralesCelda 1
+    100022: Nivel5:BarrotesLateralesCelda 2
+    100024: Nivel5:BarrotesLateralesCelda 3
+    100026: Nivel5:BarrotesLateralesCelda 4
+    100028: Nivel5:BarrotesPuerta
+    100030: Nivel5:BarrotesPuerta 1
+    100032: Nivel5:BarrotesPuerta 2
+    100034: Nivel5:BarrotesPuerta 3
+    100036: Nivel5:BarrotesPuertaCelda
+    100038: Nivel5:BarrotesPuertaCelda 1
+    100040: Nivel5:BarrotesPuertaCelda 2
+    100042: Nivel5:BarrotesPuertaCelda 3
+    100044: Nivel5:Celda01
+    100046: Nivel5:Celda02
+    100048: Nivel5:Celda03
+    100050: Nivel5:Celda04
+    100052: Nivel5:Celda05
+    100054: Nivel5:CeldasIz
+    100056: Nivel5:group1
+    100058: Nivel5:group1 1
+    100060: Nivel5:group1 2
+    100062: Nivel5:group3
+    100064: Nivel5:group3 1
+    100066: Nivel5:group3 2
+    100068: Nivel5:group3 3
+    100070: Nivel5:group3 4
+    100072: Nivel5:group5
+    100074: Nivel5:group5 1
+    100076: Nivel5:group5 2
+    100078: Nivel5:group5 3
+    100080: Nivel5:group6
+    100082: Nivel5:group6 1
+    100084: Nivel5:group6 2
+    100086: Nivel5:group6 3
+    100088: Nivel5:group8
+    100090: Nivel5:group8 1
+    100092: Nivel5:group8 2
+    100094: Nivel5:group8 3
+    100096: Nivel5:ParedesCeldasIz
+    100098: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+    100100: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      1
+    100102: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      2
+    100104: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      3
+    100106: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+    100108: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      1
+    100110: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      2
+    100112: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      3
+    100114: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+    100116: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      1
+    100118: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      2
+    100120: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      3
+    100122: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+    100124: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      1
+    100126: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      2
+    100128: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      3
+    100130: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+    100132: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      1
+    100134: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      2
+    100136: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      3
+    100138: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+    100140: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      1
+    100142: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      2
+    100144: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      3
+    100146: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+    100148: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2 1
+    100150: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2 2
+    100152: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2 3
+    100154: Nivel5:pasted__pasted__pasted__pasted__pasted__pCylinder2
+    100156: Nivel5:pasted__pasted__pasted__pasted__pasted__pCylinder2 1
+    100158: Nivel5:pasted__pasted__pasted__pasted__pasted__pCylinder2 2
+    100160: Nivel5:pasted__pasted__pasted__pasted__pasted__pCylinder2 3
+    100162: Nivel5:pasted__pasted__pasted__pasted__pCylinder2
+    100164: Nivel5:pasted__pasted__pasted__pasted__pCylinder2 1
+    100166: Nivel5:pasted__pasted__pasted__pasted__pCylinder2 2
+    100168: Nivel5:pasted__pasted__pasted__pasted__pCylinder2 3
+    100170: Nivel5:pasted__pasted__pasted__pCylinder2
+    100172: Nivel5:pasted__pasted__pasted__pCylinder2 1
+    100174: Nivel5:pasted__pasted__pasted__pCylinder2 2
+    100176: Nivel5:pasted__pasted__pasted__pCylinder2 3
+    100178: Nivel5:pasted__pasted__pasted__pCylinder3
+    100180: Nivel5:pasted__pasted__pasted__pCylinder3 1
+    100182: Nivel5:pasted__pasted__pasted__pCylinder3 2
+    100184: Nivel5:pasted__pasted__pasted__pCylinder3 3
+    100186: Nivel5:pasted__pasted__pCube20
+    100188: Nivel5:pasted__pasted__pCube20 1
+    100190: Nivel5:pasted__pasted__pCube20 2
+    100192: Nivel5:pasted__pasted__pCube20 3
+    100194: Nivel5:pasted__pasted__pCylinder2
+    100196: Nivel5:pasted__pasted__pCylinder2 1
+    100198: Nivel5:pasted__pasted__pCylinder2 2
+    100200: Nivel5:pasted__pasted__pCylinder2 3
+    100202: Nivel5:pasted__pCube19
+    100204: Nivel5:pasted__pCube19 1
+    100206: Nivel5:pasted__pCube19 2
+    100208: Nivel5:pasted__pCube19 3
+    100210: Nivel5:pasted__pCube20
+    100212: Nivel5:pasted__pCube20 1
+    100214: Nivel5:pasted__pCube20 2
+    100216: Nivel5:pasted__pCube20 3
+    100218: Nivel5:pasted__pCube20 4
+    100220: Nivel5:pasted__pCube20 5
+    100222: Nivel5:pasted__pCube20 6
+    100224: Nivel5:pasted__pCube20 7
+    100226: Nivel5:pasted__pCube21
+    100228: Nivel5:pasted__pCube21 1
+    100230: Nivel5:pasted__pCube21 2
+    100232: Nivel5:pasted__pCube21 3
+    100234: Nivel5:pasted__pCube22
+    100236: Nivel5:pasted__pCube22 1
+    100238: Nivel5:pasted__pCube22 2
+    100240: Nivel5:pasted__pCube22 3
+    100242: Nivel5:pasted__pCube23
+    100244: Nivel5:pasted__pCube23 1
+    100246: Nivel5:pasted__pCube23 2
+    100248: Nivel5:pasted__pCube23 3
+    100250: Nivel5:pasted__pCylinder10
+    100252: Nivel5:pasted__pCylinder10 1
+    100254: Nivel5:pasted__pCylinder10 2
+    100256: Nivel5:pasted__pCylinder10 3
+    100258: Nivel5:pasted__pCylinder10 4
+    100260: Nivel5:pasted__pCylinder11
+    100262: Nivel5:pasted__pCylinder11 1
+    100264: Nivel5:pasted__pCylinder11 2
+    100266: Nivel5:pasted__pCylinder11 3
+    100268: Nivel5:pasted__pCylinder11 4
+    100270: Nivel5:pasted__pCylinder12
+    100272: Nivel5:pasted__pCylinder12 1
+    100274: Nivel5:pasted__pCylinder12 2
+    100276: Nivel5:pasted__pCylinder12 3
+    100278: Nivel5:pasted__pCylinder12 4
+    100280: Nivel5:pasted__pCylinder13
+    100282: Nivel5:pasted__pCylinder13 1
+    100284: Nivel5:pasted__pCylinder13 2
+    100286: Nivel5:pasted__pCylinder13 3
+    100288: Nivel5:pasted__pCylinder13 4
+    100290: Nivel5:pasted__pCylinder14
+    100292: Nivel5:pasted__pCylinder14 1
+    100294: Nivel5:pasted__pCylinder14 2
+    100296: Nivel5:pasted__pCylinder14 3
+    100298: Nivel5:pasted__pCylinder14 4
+    100300: Nivel5:pasted__pCylinder15
+    100302: Nivel5:pasted__pCylinder15 1
+    100304: Nivel5:pasted__pCylinder15 2
+    100306: Nivel5:pasted__pCylinder15 3
+    100308: Nivel5:pasted__pCylinder15 4
+    100310: Nivel5:pasted__pCylinder16
+    100312: Nivel5:pasted__pCylinder16 1
+    100314: Nivel5:pasted__pCylinder16 2
+    100316: Nivel5:pasted__pCylinder16 3
+    100318: Nivel5:pasted__pCylinder16 4
+    100320: Nivel5:pasted__pCylinder17
+    100322: Nivel5:pasted__pCylinder17 1
+    100324: Nivel5:pasted__pCylinder17 2
+    100326: Nivel5:pasted__pCylinder17 3
+    100328: Nivel5:pasted__pCylinder17 4
+    100330: Nivel5:pasted__pCylinder18
+    100332: Nivel5:pasted__pCylinder18 1
+    100334: Nivel5:pasted__pCylinder18 2
+    100336: Nivel5:pasted__pCylinder18 3
+    100338: Nivel5:pasted__pCylinder18 4
+    100340: Nivel5:pasted__pCylinder19
+    100342: Nivel5:pasted__pCylinder19 1
+    100344: Nivel5:pasted__pCylinder19 2
+    100346: Nivel5:pasted__pCylinder19 3
+    100348: Nivel5:pasted__pCylinder19 4
+    100350: Nivel5:pasted__pCylinder2
+    100352: Nivel5:pasted__pCylinder2 1
+    100354: Nivel5:pasted__pCylinder2 2
+    100356: Nivel5:pasted__pCylinder2 3
+    100358: Nivel5:pasted__pCylinder2 4
+    100360: Nivel5:pasted__pCylinder2 5
+    100362: Nivel5:pasted__pCylinder2 6
+    100364: Nivel5:pasted__pCylinder2 7
+    100366: Nivel5:pasted__pCylinder2 8
+    100368: Nivel5:pasted__pCylinder20
+    100370: Nivel5:pasted__pCylinder20 1
+    100372: Nivel5:pasted__pCylinder20 2
+    100374: Nivel5:pasted__pCylinder20 3
+    100376: Nivel5:pasted__pCylinder20 4
+    100378: Nivel5:pasted__pCylinder21
+    100380: Nivel5:pasted__pCylinder21 1
+    100382: Nivel5:pasted__pCylinder21 2
+    100384: Nivel5:pasted__pCylinder21 3
+    100386: Nivel5:pasted__pCylinder21 4
+    100388: Nivel5:pasted__pCylinder22
+    100390: Nivel5:pasted__pCylinder22 1
+    100392: Nivel5:pasted__pCylinder22 2
+    100394: Nivel5:pasted__pCylinder22 3
+    100396: Nivel5:pasted__pCylinder22 4
+    100398: Nivel5:pasted__pCylinder23
+    100400: Nivel5:pasted__pCylinder23 1
+    100402: Nivel5:pasted__pCylinder23 2
+    100404: Nivel5:pasted__pCylinder23 3
+    100406: Nivel5:pasted__pCylinder23 4
+    100408: Nivel5:pasted__pCylinder24
+    100410: Nivel5:pasted__pCylinder24 1
+    100412: Nivel5:pasted__pCylinder24 2
+    100414: Nivel5:pasted__pCylinder24 3
+    100416: Nivel5:pasted__pCylinder24 4
+    100418: Nivel5:pasted__pCylinder25
+    100420: Nivel5:pasted__pCylinder25 1
+    100422: Nivel5:pasted__pCylinder25 2
+    100424: Nivel5:pasted__pCylinder25 3
+    100426: Nivel5:pasted__pCylinder25 4
+    100428: Nivel5:pasted__pCylinder26
+    100430: Nivel5:pasted__pCylinder26 1
+    100432: Nivel5:pasted__pCylinder26 2
+    100434: Nivel5:pasted__pCylinder26 3
+    100436: Nivel5:pasted__pCylinder26 4
+    100438: Nivel5:pasted__pCylinder27
+    100440: Nivel5:pasted__pCylinder27 1
+    100442: Nivel5:pasted__pCylinder27 2
+    100444: Nivel5:pasted__pCylinder27 3
+    100446: Nivel5:pasted__pCylinder27 4
+    100448: Nivel5:pasted__pCylinder28
+    100450: Nivel5:pasted__pCylinder28 1
+    100452: Nivel5:pasted__pCylinder28 2
+    100454: Nivel5:pasted__pCylinder28 3
+    100456: Nivel5:pasted__pCylinder29
+    100458: Nivel5:pasted__pCylinder29 1
+    100460: Nivel5:pasted__pCylinder29 2
+    100462: Nivel5:pasted__pCylinder29 3
+    100464: Nivel5:pasted__pCylinder3
+    100466: Nivel5:pasted__pCylinder3 1
+    100468: Nivel5:pasted__pCylinder3 2
+    100470: Nivel5:pasted__pCylinder3 3
+    100472: Nivel5:pasted__pCylinder3 4
+    100474: Nivel5:pasted__pCylinder30
+    100476: Nivel5:pasted__pCylinder30 1
+    100478: Nivel5:pasted__pCylinder30 2
+    100480: Nivel5:pasted__pCylinder30 3
+    100482: Nivel5:pasted__pCylinder31
+    100484: Nivel5:pasted__pCylinder31 1
+    100486: Nivel5:pasted__pCylinder31 2
+    100488: Nivel5:pasted__pCylinder31 3
+    100490: Nivel5:pasted__pCylinder32
+    100492: Nivel5:pasted__pCylinder32 1
+    100494: Nivel5:pasted__pCylinder32 2
+    100496: Nivel5:pasted__pCylinder32 3
+    100498: Nivel5:pasted__pCylinder33
+    100500: Nivel5:pasted__pCylinder33 1
+    100502: Nivel5:pasted__pCylinder33 2
+    100504: Nivel5:pasted__pCylinder33 3
+    100506: Nivel5:pasted__pCylinder34
+    100508: Nivel5:pasted__pCylinder34 1
+    100510: Nivel5:pasted__pCylinder34 2
+    100512: Nivel5:pasted__pCylinder34 3
+    100514: Nivel5:pasted__pCylinder35
+    100516: Nivel5:pasted__pCylinder35 1
+    100518: Nivel5:pasted__pCylinder35 2
+    100520: Nivel5:pasted__pCylinder35 3
+    100522: Nivel5:pasted__pCylinder36
+    100524: Nivel5:pasted__pCylinder36 1
+    100526: Nivel5:pasted__pCylinder36 2
+    100528: Nivel5:pasted__pCylinder36 3
+    100530: Nivel5:pasted__pCylinder37
+    100532: Nivel5:pasted__pCylinder37 1
+    100534: Nivel5:pasted__pCylinder37 2
+    100536: Nivel5:pasted__pCylinder37 3
+    100538: Nivel5:pasted__pCylinder38
+    100540: Nivel5:pasted__pCylinder38 1
+    100542: Nivel5:pasted__pCylinder38 2
+    100544: Nivel5:pasted__pCylinder38 3
+    100546: Nivel5:pasted__pCylinder4
+    100548: Nivel5:pasted__pCylinder4 1
+    100550: Nivel5:pasted__pCylinder4 2
+    100552: Nivel5:pasted__pCylinder4 3
+    100554: Nivel5:pasted__pCylinder4 4
+    100556: Nivel5:pasted__pCylinder5
+    100558: Nivel5:pasted__pCylinder5 1
+    100560: Nivel5:pasted__pCylinder5 2
+    100562: Nivel5:pasted__pCylinder5 3
+    100564: Nivel5:pasted__pCylinder5 4
+    100566: Nivel5:pasted__pCylinder6
+    100568: Nivel5:pasted__pCylinder6 1
+    100570: Nivel5:pasted__pCylinder6 2
+    100572: Nivel5:pasted__pCylinder6 3
+    100574: Nivel5:pasted__pCylinder6 4
+    100576: Nivel5:pasted__pCylinder7
+    100578: Nivel5:pasted__pCylinder7 1
+    100580: Nivel5:pasted__pCylinder7 2
+    100582: Nivel5:pasted__pCylinder7 3
+    100584: Nivel5:pasted__pCylinder7 4
+    100586: Nivel5:pasted__pCylinder8
+    100588: Nivel5:pasted__pCylinder8 1
+    100590: Nivel5:pasted__pCylinder8 2
+    100592: Nivel5:pasted__pCylinder8 3
+    100594: Nivel5:pasted__pCylinder8 4
+    100596: Nivel5:pasted__pCylinder9
+    100598: Nivel5:pasted__pCylinder9 1
+    100600: Nivel5:pasted__pCylinder9 2
+    100602: Nivel5:pasted__pCylinder9 3
+    100604: Nivel5:pasted__pCylinder9 4
+    100606: Nivel5:pCube13
+    100608: Nivel5:pCube13 1
+    100610: Nivel5:pCube13 2
+    100612: Nivel5:pCube14
+    100614: Nivel5:pCube14 1
+    100616: Nivel5:pCube14 2
+    100618: Nivel5:pCube15
+    100620: Nivel5:pCube15 1
+    100622: Nivel5:pCube15 2
+    100624: Nivel5:pCube16
+    100626: Nivel5:pCube16 1
+    100628: Nivel5:pCube16 2
+    100630: Nivel5:pCube17
+    100632: Nivel5:pCube17 1
+    100634: Nivel5:pCube17 2
+    100636: Nivel5:pCube18
+    100638: Nivel5:pCube19
+    100640: Nivel5:pCube20
+    100642: Nivel5:pCube21
+    100644: Nivel5:pCube21 1
+    100646: Nivel5:pCube21 2
+    100648: Nivel5:pCube21 3
+    100650: Nivel5:pCube22
+    100652: Nivel5:pCube22 1
+    100654: Nivel5:pCube22 2
+    100656: Nivel5:pCube22 3
+    100658: Nivel5:pCube22 4
+    100660: Nivel5:pCube22 5
+    100662: Nivel5:pCube22 6
+    100664: Nivel5:pCube22 7
+    100666: Nivel5:pCube22 8
+    100668: Nivel5:pCube23
+    100670: Nivel5:pCube23 1
+    100672: Nivel5:pCube23 2
+    100674: Nivel5:pCube23 3
+    100676: Nivel5:pCube23 4
+    100678: Nivel5:pCube24
+    100680: Nivel5:pCube24 1
+    100682: Nivel5:pCube24 2
+    100684: Nivel5:pCube24 3
+    100686: Nivel5:pCube44
+    100688: Nivel5:pCube6
+    100690: Nivel5:pCube6 1
+    100692: Nivel5:pCube6 2
+    100694: Nivel5:pCylinder1
+    100696: Nivel5:pCylinder1 1
+    100698: Nivel5:pCylinder1 2
+    100700: Nivel5:pCylinder2
+    100702: Nivel5:pCylinder2 1
+    100704: Nivel5:pCylinder2 2
+    100706: Nivel5:pCylinder2 3
+    100708: Nivel5:pTorus1
+    100710: Nivel5:pTorus1 1
+    100712: Nivel5:pTorus1 2
+    100714: Nivel5:pTorus2
+    100716: Nivel5:pTorus2 1
+    100718: Nivel5:pTorus2 2
+    100720: Nivel5:Puerta
+    100722: Nivel5:Puerta 1
+    100724: Nivel5:Puerta 2
+    100726: Nivel5:Puerta 3
+    100728: Nivel5:Puerta 4
+    100730: Nivel5:PuertaCelda
+    100732: Nivel5:PuertaCelda 1
+    100734: Nivel5:PuertaCelda 2
+    100736: Nivel5:PuertaCelda 3
+    100738: Nivel5:Sala03_Nivel5:pPlane6
+    100740: Nivel5:Soporte
+    100742: Nivel5:Soporte 1
+    100744: Nivel5:Soporte 2
+    100746: Nivel5:Torus
+    100748: Nivel5:Torus 1
+    100750: Nivel5:Torus 2
+    100752: //RootNode
+    400000: Nivel5:Antorcha
+    400002: Nivel5:Antorcha 1
+    400004: Nivel5:Antorcha 2
+    400006: Nivel5:Antorcha 3
+    400008: Nivel5:Antorcha1
+    400010: Nivel5:Antorcha2
+    400012: Nivel5:AntorchasIz
+    400014: Nivel5:ArcoPuerta
+    400016: Nivel5:ArcoPuerta1
+    400018: Nivel5:BarrotesLateralesCelda
+    400020: Nivel5:BarrotesLateralesCelda 1
+    400022: Nivel5:BarrotesLateralesCelda 2
+    400024: Nivel5:BarrotesLateralesCelda 3
+    400026: Nivel5:BarrotesLateralesCelda 4
+    400028: Nivel5:BarrotesPuerta
+    400030: Nivel5:BarrotesPuerta 1
+    400032: Nivel5:BarrotesPuerta 2
+    400034: Nivel5:BarrotesPuerta 3
+    400036: Nivel5:BarrotesPuertaCelda
+    400038: Nivel5:BarrotesPuertaCelda 1
+    400040: Nivel5:BarrotesPuertaCelda 2
+    400042: Nivel5:BarrotesPuertaCelda 3
+    400044: Nivel5:Celda01
+    400046: Nivel5:Celda02
+    400048: Nivel5:Celda03
+    400050: Nivel5:Celda04
+    400052: Nivel5:Celda05
+    400054: Nivel5:CeldasIz
+    400056: Nivel5:group1
+    400058: Nivel5:group1 1
+    400060: Nivel5:group1 2
+    400062: Nivel5:group3
+    400064: Nivel5:group3 1
+    400066: Nivel5:group3 2
+    400068: Nivel5:group3 3
+    400070: Nivel5:group3 4
+    400072: Nivel5:group5
+    400074: Nivel5:group5 1
+    400076: Nivel5:group5 2
+    400078: Nivel5:group5 3
+    400080: Nivel5:group6
+    400082: Nivel5:group6 1
+    400084: Nivel5:group6 2
+    400086: Nivel5:group6 3
+    400088: Nivel5:group8
+    400090: Nivel5:group8 1
+    400092: Nivel5:group8 2
+    400094: Nivel5:group8 3
+    400096: Nivel5:ParedesCeldasIz
+    400098: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+    400100: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      1
+    400102: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      2
+    400104: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      3
+    400106: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+    400108: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      1
+    400110: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      2
+    400112: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      3
+    400114: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+    400116: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      1
+    400118: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      2
+    400120: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      3
+    400122: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+    400124: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      1
+    400126: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      2
+    400128: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      3
+    400130: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+    400132: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      1
+    400134: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      2
+    400136: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      3
+    400138: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+    400140: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      1
+    400142: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      2
+    400144: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      3
+    400146: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+    400148: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2 1
+    400150: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2 2
+    400152: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2 3
+    400154: Nivel5:pasted__pasted__pasted__pasted__pasted__pCylinder2
+    400156: Nivel5:pasted__pasted__pasted__pasted__pasted__pCylinder2 1
+    400158: Nivel5:pasted__pasted__pasted__pasted__pasted__pCylinder2 2
+    400160: Nivel5:pasted__pasted__pasted__pasted__pasted__pCylinder2 3
+    400162: Nivel5:pasted__pasted__pasted__pasted__pCylinder2
+    400164: Nivel5:pasted__pasted__pasted__pasted__pCylinder2 1
+    400166: Nivel5:pasted__pasted__pasted__pasted__pCylinder2 2
+    400168: Nivel5:pasted__pasted__pasted__pasted__pCylinder2 3
+    400170: Nivel5:pasted__pasted__pasted__pCylinder2
+    400172: Nivel5:pasted__pasted__pasted__pCylinder2 1
+    400174: Nivel5:pasted__pasted__pasted__pCylinder2 2
+    400176: Nivel5:pasted__pasted__pasted__pCylinder2 3
+    400178: Nivel5:pasted__pasted__pasted__pCylinder3
+    400180: Nivel5:pasted__pasted__pasted__pCylinder3 1
+    400182: Nivel5:pasted__pasted__pasted__pCylinder3 2
+    400184: Nivel5:pasted__pasted__pasted__pCylinder3 3
+    400186: Nivel5:pasted__pasted__pCube20
+    400188: Nivel5:pasted__pasted__pCube20 1
+    400190: Nivel5:pasted__pasted__pCube20 2
+    400192: Nivel5:pasted__pasted__pCube20 3
+    400194: Nivel5:pasted__pasted__pCylinder2
+    400196: Nivel5:pasted__pasted__pCylinder2 1
+    400198: Nivel5:pasted__pasted__pCylinder2 2
+    400200: Nivel5:pasted__pasted__pCylinder2 3
+    400202: Nivel5:pasted__pCube19
+    400204: Nivel5:pasted__pCube19 1
+    400206: Nivel5:pasted__pCube19 2
+    400208: Nivel5:pasted__pCube19 3
+    400210: Nivel5:pasted__pCube20
+    400212: Nivel5:pasted__pCube20 1
+    400214: Nivel5:pasted__pCube20 2
+    400216: Nivel5:pasted__pCube20 3
+    400218: Nivel5:pasted__pCube20 4
+    400220: Nivel5:pasted__pCube20 5
+    400222: Nivel5:pasted__pCube20 6
+    400224: Nivel5:pasted__pCube20 7
+    400226: Nivel5:pasted__pCube21
+    400228: Nivel5:pasted__pCube21 1
+    400230: Nivel5:pasted__pCube21 2
+    400232: Nivel5:pasted__pCube21 3
+    400234: Nivel5:pasted__pCube22
+    400236: Nivel5:pasted__pCube22 1
+    400238: Nivel5:pasted__pCube22 2
+    400240: Nivel5:pasted__pCube22 3
+    400242: Nivel5:pasted__pCube23
+    400244: Nivel5:pasted__pCube23 1
+    400246: Nivel5:pasted__pCube23 2
+    400248: Nivel5:pasted__pCube23 3
+    400250: Nivel5:pasted__pCylinder10
+    400252: Nivel5:pasted__pCylinder10 1
+    400254: Nivel5:pasted__pCylinder10 2
+    400256: Nivel5:pasted__pCylinder10 3
+    400258: Nivel5:pasted__pCylinder10 4
+    400260: Nivel5:pasted__pCylinder11
+    400262: Nivel5:pasted__pCylinder11 1
+    400264: Nivel5:pasted__pCylinder11 2
+    400266: Nivel5:pasted__pCylinder11 3
+    400268: Nivel5:pasted__pCylinder11 4
+    400270: Nivel5:pasted__pCylinder12
+    400272: Nivel5:pasted__pCylinder12 1
+    400274: Nivel5:pasted__pCylinder12 2
+    400276: Nivel5:pasted__pCylinder12 3
+    400278: Nivel5:pasted__pCylinder12 4
+    400280: Nivel5:pasted__pCylinder13
+    400282: Nivel5:pasted__pCylinder13 1
+    400284: Nivel5:pasted__pCylinder13 2
+    400286: Nivel5:pasted__pCylinder13 3
+    400288: Nivel5:pasted__pCylinder13 4
+    400290: Nivel5:pasted__pCylinder14
+    400292: Nivel5:pasted__pCylinder14 1
+    400294: Nivel5:pasted__pCylinder14 2
+    400296: Nivel5:pasted__pCylinder14 3
+    400298: Nivel5:pasted__pCylinder14 4
+    400300: Nivel5:pasted__pCylinder15
+    400302: Nivel5:pasted__pCylinder15 1
+    400304: Nivel5:pasted__pCylinder15 2
+    400306: Nivel5:pasted__pCylinder15 3
+    400308: Nivel5:pasted__pCylinder15 4
+    400310: Nivel5:pasted__pCylinder16
+    400312: Nivel5:pasted__pCylinder16 1
+    400314: Nivel5:pasted__pCylinder16 2
+    400316: Nivel5:pasted__pCylinder16 3
+    400318: Nivel5:pasted__pCylinder16 4
+    400320: Nivel5:pasted__pCylinder17
+    400322: Nivel5:pasted__pCylinder17 1
+    400324: Nivel5:pasted__pCylinder17 2
+    400326: Nivel5:pasted__pCylinder17 3
+    400328: Nivel5:pasted__pCylinder17 4
+    400330: Nivel5:pasted__pCylinder18
+    400332: Nivel5:pasted__pCylinder18 1
+    400334: Nivel5:pasted__pCylinder18 2
+    400336: Nivel5:pasted__pCylinder18 3
+    400338: Nivel5:pasted__pCylinder18 4
+    400340: Nivel5:pasted__pCylinder19
+    400342: Nivel5:pasted__pCylinder19 1
+    400344: Nivel5:pasted__pCylinder19 2
+    400346: Nivel5:pasted__pCylinder19 3
+    400348: Nivel5:pasted__pCylinder19 4
+    400350: Nivel5:pasted__pCylinder2
+    400352: Nivel5:pasted__pCylinder2 1
+    400354: Nivel5:pasted__pCylinder2 2
+    400356: Nivel5:pasted__pCylinder2 3
+    400358: Nivel5:pasted__pCylinder2 4
+    400360: Nivel5:pasted__pCylinder2 5
+    400362: Nivel5:pasted__pCylinder2 6
+    400364: Nivel5:pasted__pCylinder2 7
+    400366: Nivel5:pasted__pCylinder2 8
+    400368: Nivel5:pasted__pCylinder20
+    400370: Nivel5:pasted__pCylinder20 1
+    400372: Nivel5:pasted__pCylinder20 2
+    400374: Nivel5:pasted__pCylinder20 3
+    400376: Nivel5:pasted__pCylinder20 4
+    400378: Nivel5:pasted__pCylinder21
+    400380: Nivel5:pasted__pCylinder21 1
+    400382: Nivel5:pasted__pCylinder21 2
+    400384: Nivel5:pasted__pCylinder21 3
+    400386: Nivel5:pasted__pCylinder21 4
+    400388: Nivel5:pasted__pCylinder22
+    400390: Nivel5:pasted__pCylinder22 1
+    400392: Nivel5:pasted__pCylinder22 2
+    400394: Nivel5:pasted__pCylinder22 3
+    400396: Nivel5:pasted__pCylinder22 4
+    400398: Nivel5:pasted__pCylinder23
+    400400: Nivel5:pasted__pCylinder23 1
+    400402: Nivel5:pasted__pCylinder23 2
+    400404: Nivel5:pasted__pCylinder23 3
+    400406: Nivel5:pasted__pCylinder23 4
+    400408: Nivel5:pasted__pCylinder24
+    400410: Nivel5:pasted__pCylinder24 1
+    400412: Nivel5:pasted__pCylinder24 2
+    400414: Nivel5:pasted__pCylinder24 3
+    400416: Nivel5:pasted__pCylinder24 4
+    400418: Nivel5:pasted__pCylinder25
+    400420: Nivel5:pasted__pCylinder25 1
+    400422: Nivel5:pasted__pCylinder25 2
+    400424: Nivel5:pasted__pCylinder25 3
+    400426: Nivel5:pasted__pCylinder25 4
+    400428: Nivel5:pasted__pCylinder26
+    400430: Nivel5:pasted__pCylinder26 1
+    400432: Nivel5:pasted__pCylinder26 2
+    400434: Nivel5:pasted__pCylinder26 3
+    400436: Nivel5:pasted__pCylinder26 4
+    400438: Nivel5:pasted__pCylinder27
+    400440: Nivel5:pasted__pCylinder27 1
+    400442: Nivel5:pasted__pCylinder27 2
+    400444: Nivel5:pasted__pCylinder27 3
+    400446: Nivel5:pasted__pCylinder27 4
+    400448: Nivel5:pasted__pCylinder28
+    400450: Nivel5:pasted__pCylinder28 1
+    400452: Nivel5:pasted__pCylinder28 2
+    400454: Nivel5:pasted__pCylinder28 3
+    400456: Nivel5:pasted__pCylinder29
+    400458: Nivel5:pasted__pCylinder29 1
+    400460: Nivel5:pasted__pCylinder29 2
+    400462: Nivel5:pasted__pCylinder29 3
+    400464: Nivel5:pasted__pCylinder3
+    400466: Nivel5:pasted__pCylinder3 1
+    400468: Nivel5:pasted__pCylinder3 2
+    400470: Nivel5:pasted__pCylinder3 3
+    400472: Nivel5:pasted__pCylinder3 4
+    400474: Nivel5:pasted__pCylinder30
+    400476: Nivel5:pasted__pCylinder30 1
+    400478: Nivel5:pasted__pCylinder30 2
+    400480: Nivel5:pasted__pCylinder30 3
+    400482: Nivel5:pasted__pCylinder31
+    400484: Nivel5:pasted__pCylinder31 1
+    400486: Nivel5:pasted__pCylinder31 2
+    400488: Nivel5:pasted__pCylinder31 3
+    400490: Nivel5:pasted__pCylinder32
+    400492: Nivel5:pasted__pCylinder32 1
+    400494: Nivel5:pasted__pCylinder32 2
+    400496: Nivel5:pasted__pCylinder32 3
+    400498: Nivel5:pasted__pCylinder33
+    400500: Nivel5:pasted__pCylinder33 1
+    400502: Nivel5:pasted__pCylinder33 2
+    400504: Nivel5:pasted__pCylinder33 3
+    400506: Nivel5:pasted__pCylinder34
+    400508: Nivel5:pasted__pCylinder34 1
+    400510: Nivel5:pasted__pCylinder34 2
+    400512: Nivel5:pasted__pCylinder34 3
+    400514: Nivel5:pasted__pCylinder35
+    400516: Nivel5:pasted__pCylinder35 1
+    400518: Nivel5:pasted__pCylinder35 2
+    400520: Nivel5:pasted__pCylinder35 3
+    400522: Nivel5:pasted__pCylinder36
+    400524: Nivel5:pasted__pCylinder36 1
+    400526: Nivel5:pasted__pCylinder36 2
+    400528: Nivel5:pasted__pCylinder36 3
+    400530: Nivel5:pasted__pCylinder37
+    400532: Nivel5:pasted__pCylinder37 1
+    400534: Nivel5:pasted__pCylinder37 2
+    400536: Nivel5:pasted__pCylinder37 3
+    400538: Nivel5:pasted__pCylinder38
+    400540: Nivel5:pasted__pCylinder38 1
+    400542: Nivel5:pasted__pCylinder38 2
+    400544: Nivel5:pasted__pCylinder38 3
+    400546: Nivel5:pasted__pCylinder4
+    400548: Nivel5:pasted__pCylinder4 1
+    400550: Nivel5:pasted__pCylinder4 2
+    400552: Nivel5:pasted__pCylinder4 3
+    400554: Nivel5:pasted__pCylinder4 4
+    400556: Nivel5:pasted__pCylinder5
+    400558: Nivel5:pasted__pCylinder5 1
+    400560: Nivel5:pasted__pCylinder5 2
+    400562: Nivel5:pasted__pCylinder5 3
+    400564: Nivel5:pasted__pCylinder5 4
+    400566: Nivel5:pasted__pCylinder6
+    400568: Nivel5:pasted__pCylinder6 1
+    400570: Nivel5:pasted__pCylinder6 2
+    400572: Nivel5:pasted__pCylinder6 3
+    400574: Nivel5:pasted__pCylinder6 4
+    400576: Nivel5:pasted__pCylinder7
+    400578: Nivel5:pasted__pCylinder7 1
+    400580: Nivel5:pasted__pCylinder7 2
+    400582: Nivel5:pasted__pCylinder7 3
+    400584: Nivel5:pasted__pCylinder7 4
+    400586: Nivel5:pasted__pCylinder8
+    400588: Nivel5:pasted__pCylinder8 1
+    400590: Nivel5:pasted__pCylinder8 2
+    400592: Nivel5:pasted__pCylinder8 3
+    400594: Nivel5:pasted__pCylinder8 4
+    400596: Nivel5:pasted__pCylinder9
+    400598: Nivel5:pasted__pCylinder9 1
+    400600: Nivel5:pasted__pCylinder9 2
+    400602: Nivel5:pasted__pCylinder9 3
+    400604: Nivel5:pasted__pCylinder9 4
+    400606: Nivel5:pCube13
+    400608: Nivel5:pCube13 1
+    400610: Nivel5:pCube13 2
+    400612: Nivel5:pCube14
+    400614: Nivel5:pCube14 1
+    400616: Nivel5:pCube14 2
+    400618: Nivel5:pCube15
+    400620: Nivel5:pCube15 1
+    400622: Nivel5:pCube15 2
+    400624: Nivel5:pCube16
+    400626: Nivel5:pCube16 1
+    400628: Nivel5:pCube16 2
+    400630: Nivel5:pCube17
+    400632: Nivel5:pCube17 1
+    400634: Nivel5:pCube17 2
+    400636: Nivel5:pCube18
+    400638: Nivel5:pCube19
+    400640: Nivel5:pCube20
+    400642: Nivel5:pCube21
+    400644: Nivel5:pCube21 1
+    400646: Nivel5:pCube21 2
+    400648: Nivel5:pCube21 3
+    400650: Nivel5:pCube22
+    400652: Nivel5:pCube22 1
+    400654: Nivel5:pCube22 2
+    400656: Nivel5:pCube22 3
+    400658: Nivel5:pCube22 4
+    400660: Nivel5:pCube22 5
+    400662: Nivel5:pCube22 6
+    400664: Nivel5:pCube22 7
+    400666: Nivel5:pCube22 8
+    400668: Nivel5:pCube23
+    400670: Nivel5:pCube23 1
+    400672: Nivel5:pCube23 2
+    400674: Nivel5:pCube23 3
+    400676: Nivel5:pCube23 4
+    400678: Nivel5:pCube24
+    400680: Nivel5:pCube24 1
+    400682: Nivel5:pCube24 2
+    400684: Nivel5:pCube24 3
+    400686: Nivel5:pCube44
+    400688: Nivel5:pCube6
+    400690: Nivel5:pCube6 1
+    400692: Nivel5:pCube6 2
+    400694: Nivel5:pCylinder1
+    400696: Nivel5:pCylinder1 1
+    400698: Nivel5:pCylinder1 2
+    400700: Nivel5:pCylinder2
+    400702: Nivel5:pCylinder2 1
+    400704: Nivel5:pCylinder2 2
+    400706: Nivel5:pCylinder2 3
+    400708: Nivel5:pTorus1
+    400710: Nivel5:pTorus1 1
+    400712: Nivel5:pTorus1 2
+    400714: Nivel5:pTorus2
+    400716: Nivel5:pTorus2 1
+    400718: Nivel5:pTorus2 2
+    400720: Nivel5:Puerta
+    400722: Nivel5:Puerta 1
+    400724: Nivel5:Puerta 2
+    400726: Nivel5:Puerta 3
+    400728: Nivel5:Puerta 4
+    400730: Nivel5:PuertaCelda
+    400732: Nivel5:PuertaCelda 1
+    400734: Nivel5:PuertaCelda 2
+    400736: Nivel5:PuertaCelda 3
+    400738: Nivel5:Sala03_Nivel5:pPlane6
+    400740: Nivel5:Soporte
+    400742: Nivel5:Soporte 1
+    400744: Nivel5:Soporte 2
+    400746: Nivel5:Torus
+    400748: Nivel5:Torus 1
+    400750: Nivel5:Torus 2
+    400752: //RootNode
+    2100000: lambert1
+    2100002: Nivel5_BarrotesCarcel_lambert2
+    2100004: Nivel5_lambert3
+    2300000: Nivel5:ArcoPuerta
+    2300002: Nivel5:ArcoPuerta1
+    2300004: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+    2300006: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      1
+    2300008: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      2
+    2300010: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      3
+    2300012: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+    2300014: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      1
+    2300016: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      2
+    2300018: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      3
+    2300020: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+    2300022: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      1
+    2300024: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      2
+    2300026: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      3
+    2300028: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+    2300030: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      1
+    2300032: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      2
+    2300034: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      3
+    2300036: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+    2300038: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      1
+    2300040: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      2
+    2300042: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      3
+    2300044: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+    2300046: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      1
+    2300048: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      2
+    2300050: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      3
+    2300052: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+    2300054: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2 1
+    2300056: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2 2
+    2300058: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2 3
+    2300060: Nivel5:pasted__pasted__pasted__pasted__pasted__pCylinder2
+    2300062: Nivel5:pasted__pasted__pasted__pasted__pasted__pCylinder2 1
+    2300064: Nivel5:pasted__pasted__pasted__pasted__pasted__pCylinder2 2
+    2300066: Nivel5:pasted__pasted__pasted__pasted__pasted__pCylinder2 3
+    2300068: Nivel5:pasted__pasted__pasted__pasted__pCylinder2
+    2300070: Nivel5:pasted__pasted__pasted__pasted__pCylinder2 1
+    2300072: Nivel5:pasted__pasted__pasted__pasted__pCylinder2 2
+    2300074: Nivel5:pasted__pasted__pasted__pasted__pCylinder2 3
+    2300076: Nivel5:pasted__pasted__pasted__pCylinder2
+    2300078: Nivel5:pasted__pasted__pasted__pCylinder2 1
+    2300080: Nivel5:pasted__pasted__pasted__pCylinder2 2
+    2300082: Nivel5:pasted__pasted__pasted__pCylinder2 3
+    2300084: Nivel5:pasted__pasted__pasted__pCylinder3
+    2300086: Nivel5:pasted__pasted__pasted__pCylinder3 1
+    2300088: Nivel5:pasted__pasted__pasted__pCylinder3 2
+    2300090: Nivel5:pasted__pasted__pasted__pCylinder3 3
+    2300092: Nivel5:pasted__pasted__pCube20
+    2300094: Nivel5:pasted__pasted__pCube20 1
+    2300096: Nivel5:pasted__pasted__pCube20 2
+    2300098: Nivel5:pasted__pasted__pCube20 3
+    2300100: Nivel5:pasted__pasted__pCylinder2
+    2300102: Nivel5:pasted__pasted__pCylinder2 1
+    2300104: Nivel5:pasted__pasted__pCylinder2 2
+    2300106: Nivel5:pasted__pasted__pCylinder2 3
+    2300108: Nivel5:pasted__pCube19
+    2300110: Nivel5:pasted__pCube19 1
+    2300112: Nivel5:pasted__pCube19 2
+    2300114: Nivel5:pasted__pCube19 3
+    2300116: Nivel5:pasted__pCube20
+    2300118: Nivel5:pasted__pCube20 1
+    2300120: Nivel5:pasted__pCube20 2
+    2300122: Nivel5:pasted__pCube20 3
+    2300124: Nivel5:pasted__pCube20 4
+    2300126: Nivel5:pasted__pCube20 5
+    2300128: Nivel5:pasted__pCube20 6
+    2300130: Nivel5:pasted__pCube20 7
+    2300132: Nivel5:pasted__pCube21
+    2300134: Nivel5:pasted__pCube21 1
+    2300136: Nivel5:pasted__pCube21 2
+    2300138: Nivel5:pasted__pCube21 3
+    2300140: Nivel5:pasted__pCube22
+    2300142: Nivel5:pasted__pCube22 1
+    2300144: Nivel5:pasted__pCube22 2
+    2300146: Nivel5:pasted__pCube22 3
+    2300148: Nivel5:pasted__pCube23
+    2300150: Nivel5:pasted__pCube23 1
+    2300152: Nivel5:pasted__pCube23 2
+    2300154: Nivel5:pasted__pCube23 3
+    2300156: Nivel5:pasted__pCylinder10
+    2300158: Nivel5:pasted__pCylinder10 1
+    2300160: Nivel5:pasted__pCylinder10 2
+    2300162: Nivel5:pasted__pCylinder10 3
+    2300164: Nivel5:pasted__pCylinder10 4
+    2300166: Nivel5:pasted__pCylinder11
+    2300168: Nivel5:pasted__pCylinder11 1
+    2300170: Nivel5:pasted__pCylinder11 2
+    2300172: Nivel5:pasted__pCylinder11 3
+    2300174: Nivel5:pasted__pCylinder11 4
+    2300176: Nivel5:pasted__pCylinder12
+    2300178: Nivel5:pasted__pCylinder12 1
+    2300180: Nivel5:pasted__pCylinder12 2
+    2300182: Nivel5:pasted__pCylinder12 3
+    2300184: Nivel5:pasted__pCylinder12 4
+    2300186: Nivel5:pasted__pCylinder13
+    2300188: Nivel5:pasted__pCylinder13 1
+    2300190: Nivel5:pasted__pCylinder13 2
+    2300192: Nivel5:pasted__pCylinder13 3
+    2300194: Nivel5:pasted__pCylinder13 4
+    2300196: Nivel5:pasted__pCylinder14
+    2300198: Nivel5:pasted__pCylinder14 1
+    2300200: Nivel5:pasted__pCylinder14 2
+    2300202: Nivel5:pasted__pCylinder14 3
+    2300204: Nivel5:pasted__pCylinder14 4
+    2300206: Nivel5:pasted__pCylinder15
+    2300208: Nivel5:pasted__pCylinder15 1
+    2300210: Nivel5:pasted__pCylinder15 2
+    2300212: Nivel5:pasted__pCylinder15 3
+    2300214: Nivel5:pasted__pCylinder15 4
+    2300216: Nivel5:pasted__pCylinder16
+    2300218: Nivel5:pasted__pCylinder16 1
+    2300220: Nivel5:pasted__pCylinder16 2
+    2300222: Nivel5:pasted__pCylinder16 3
+    2300224: Nivel5:pasted__pCylinder16 4
+    2300226: Nivel5:pasted__pCylinder17
+    2300228: Nivel5:pasted__pCylinder17 1
+    2300230: Nivel5:pasted__pCylinder17 2
+    2300232: Nivel5:pasted__pCylinder17 3
+    2300234: Nivel5:pasted__pCylinder17 4
+    2300236: Nivel5:pasted__pCylinder18
+    2300238: Nivel5:pasted__pCylinder18 1
+    2300240: Nivel5:pasted__pCylinder18 2
+    2300242: Nivel5:pasted__pCylinder18 3
+    2300244: Nivel5:pasted__pCylinder18 4
+    2300246: Nivel5:pasted__pCylinder19
+    2300248: Nivel5:pasted__pCylinder19 1
+    2300250: Nivel5:pasted__pCylinder19 2
+    2300252: Nivel5:pasted__pCylinder19 3
+    2300254: Nivel5:pasted__pCylinder19 4
+    2300256: Nivel5:pasted__pCylinder2
+    2300258: Nivel5:pasted__pCylinder2 1
+    2300260: Nivel5:pasted__pCylinder2 2
+    2300262: Nivel5:pasted__pCylinder2 3
+    2300264: Nivel5:pasted__pCylinder2 4
+    2300266: Nivel5:pasted__pCylinder2 5
+    2300268: Nivel5:pasted__pCylinder2 6
+    2300270: Nivel5:pasted__pCylinder2 7
+    2300272: Nivel5:pasted__pCylinder2 8
+    2300274: Nivel5:pasted__pCylinder20
+    2300276: Nivel5:pasted__pCylinder20 1
+    2300278: Nivel5:pasted__pCylinder20 2
+    2300280: Nivel5:pasted__pCylinder20 3
+    2300282: Nivel5:pasted__pCylinder20 4
+    2300284: Nivel5:pasted__pCylinder21
+    2300286: Nivel5:pasted__pCylinder21 1
+    2300288: Nivel5:pasted__pCylinder21 2
+    2300290: Nivel5:pasted__pCylinder21 3
+    2300292: Nivel5:pasted__pCylinder21 4
+    2300294: Nivel5:pasted__pCylinder22
+    2300296: Nivel5:pasted__pCylinder22 1
+    2300298: Nivel5:pasted__pCylinder22 2
+    2300300: Nivel5:pasted__pCylinder22 3
+    2300302: Nivel5:pasted__pCylinder22 4
+    2300304: Nivel5:pasted__pCylinder23
+    2300306: Nivel5:pasted__pCylinder23 1
+    2300308: Nivel5:pasted__pCylinder23 2
+    2300310: Nivel5:pasted__pCylinder23 3
+    2300312: Nivel5:pasted__pCylinder23 4
+    2300314: Nivel5:pasted__pCylinder24
+    2300316: Nivel5:pasted__pCylinder24 1
+    2300318: Nivel5:pasted__pCylinder24 2
+    2300320: Nivel5:pasted__pCylinder24 3
+    2300322: Nivel5:pasted__pCylinder24 4
+    2300324: Nivel5:pasted__pCylinder25
+    2300326: Nivel5:pasted__pCylinder25 1
+    2300328: Nivel5:pasted__pCylinder25 2
+    2300330: Nivel5:pasted__pCylinder25 3
+    2300332: Nivel5:pasted__pCylinder25 4
+    2300334: Nivel5:pasted__pCylinder26
+    2300336: Nivel5:pasted__pCylinder26 1
+    2300338: Nivel5:pasted__pCylinder26 2
+    2300340: Nivel5:pasted__pCylinder26 3
+    2300342: Nivel5:pasted__pCylinder26 4
+    2300344: Nivel5:pasted__pCylinder27
+    2300346: Nivel5:pasted__pCylinder27 1
+    2300348: Nivel5:pasted__pCylinder27 2
+    2300350: Nivel5:pasted__pCylinder27 3
+    2300352: Nivel5:pasted__pCylinder27 4
+    2300354: Nivel5:pasted__pCylinder28
+    2300356: Nivel5:pasted__pCylinder28 1
+    2300358: Nivel5:pasted__pCylinder28 2
+    2300360: Nivel5:pasted__pCylinder28 3
+    2300362: Nivel5:pasted__pCylinder29
+    2300364: Nivel5:pasted__pCylinder29 1
+    2300366: Nivel5:pasted__pCylinder29 2
+    2300368: Nivel5:pasted__pCylinder29 3
+    2300370: Nivel5:pasted__pCylinder3
+    2300372: Nivel5:pasted__pCylinder3 1
+    2300374: Nivel5:pasted__pCylinder3 2
+    2300376: Nivel5:pasted__pCylinder3 3
+    2300378: Nivel5:pasted__pCylinder3 4
+    2300380: Nivel5:pasted__pCylinder30
+    2300382: Nivel5:pasted__pCylinder30 1
+    2300384: Nivel5:pasted__pCylinder30 2
+    2300386: Nivel5:pasted__pCylinder30 3
+    2300388: Nivel5:pasted__pCylinder31
+    2300390: Nivel5:pasted__pCylinder31 1
+    2300392: Nivel5:pasted__pCylinder31 2
+    2300394: Nivel5:pasted__pCylinder31 3
+    2300396: Nivel5:pasted__pCylinder32
+    2300398: Nivel5:pasted__pCylinder32 1
+    2300400: Nivel5:pasted__pCylinder32 2
+    2300402: Nivel5:pasted__pCylinder32 3
+    2300404: Nivel5:pasted__pCylinder33
+    2300406: Nivel5:pasted__pCylinder33 1
+    2300408: Nivel5:pasted__pCylinder33 2
+    2300410: Nivel5:pasted__pCylinder33 3
+    2300412: Nivel5:pasted__pCylinder34
+    2300414: Nivel5:pasted__pCylinder34 1
+    2300416: Nivel5:pasted__pCylinder34 2
+    2300418: Nivel5:pasted__pCylinder34 3
+    2300420: Nivel5:pasted__pCylinder35
+    2300422: Nivel5:pasted__pCylinder35 1
+    2300424: Nivel5:pasted__pCylinder35 2
+    2300426: Nivel5:pasted__pCylinder35 3
+    2300428: Nivel5:pasted__pCylinder36
+    2300430: Nivel5:pasted__pCylinder36 1
+    2300432: Nivel5:pasted__pCylinder36 2
+    2300434: Nivel5:pasted__pCylinder36 3
+    2300436: Nivel5:pasted__pCylinder37
+    2300438: Nivel5:pasted__pCylinder37 1
+    2300440: Nivel5:pasted__pCylinder37 2
+    2300442: Nivel5:pasted__pCylinder37 3
+    2300444: Nivel5:pasted__pCylinder38
+    2300446: Nivel5:pasted__pCylinder38 1
+    2300448: Nivel5:pasted__pCylinder38 2
+    2300450: Nivel5:pasted__pCylinder38 3
+    2300452: Nivel5:pasted__pCylinder4
+    2300454: Nivel5:pasted__pCylinder4 1
+    2300456: Nivel5:pasted__pCylinder4 2
+    2300458: Nivel5:pasted__pCylinder4 3
+    2300460: Nivel5:pasted__pCylinder4 4
+    2300462: Nivel5:pasted__pCylinder5
+    2300464: Nivel5:pasted__pCylinder5 1
+    2300466: Nivel5:pasted__pCylinder5 2
+    2300468: Nivel5:pasted__pCylinder5 3
+    2300470: Nivel5:pasted__pCylinder5 4
+    2300472: Nivel5:pasted__pCylinder6
+    2300474: Nivel5:pasted__pCylinder6 1
+    2300476: Nivel5:pasted__pCylinder6 2
+    2300478: Nivel5:pasted__pCylinder6 3
+    2300480: Nivel5:pasted__pCylinder6 4
+    2300482: Nivel5:pasted__pCylinder7
+    2300484: Nivel5:pasted__pCylinder7 1
+    2300486: Nivel5:pasted__pCylinder7 2
+    2300488: Nivel5:pasted__pCylinder7 3
+    2300490: Nivel5:pasted__pCylinder7 4
+    2300492: Nivel5:pasted__pCylinder8
+    2300494: Nivel5:pasted__pCylinder8 1
+    2300496: Nivel5:pasted__pCylinder8 2
+    2300498: Nivel5:pasted__pCylinder8 3
+    2300500: Nivel5:pasted__pCylinder8 4
+    2300502: Nivel5:pasted__pCylinder9
+    2300504: Nivel5:pasted__pCylinder9 1
+    2300506: Nivel5:pasted__pCylinder9 2
+    2300508: Nivel5:pasted__pCylinder9 3
+    2300510: Nivel5:pasted__pCylinder9 4
+    2300512: Nivel5:pCube13
+    2300514: Nivel5:pCube13 1
+    2300516: Nivel5:pCube13 2
+    2300518: Nivel5:pCube14
+    2300520: Nivel5:pCube14 1
+    2300522: Nivel5:pCube14 2
+    2300524: Nivel5:pCube15
+    2300526: Nivel5:pCube15 1
+    2300528: Nivel5:pCube15 2
+    2300530: Nivel5:pCube16
+    2300532: Nivel5:pCube16 1
+    2300534: Nivel5:pCube16 2
+    2300536: Nivel5:pCube17
+    2300538: Nivel5:pCube17 1
+    2300540: Nivel5:pCube17 2
+    2300542: Nivel5:pCube18
+    2300544: Nivel5:pCube19
+    2300546: Nivel5:pCube20
+    2300548: Nivel5:pCube21
+    2300550: Nivel5:pCube21 1
+    2300552: Nivel5:pCube21 2
+    2300554: Nivel5:pCube21 3
+    2300556: Nivel5:pCube22
+    2300558: Nivel5:pCube22 1
+    2300560: Nivel5:pCube22 2
+    2300562: Nivel5:pCube22 3
+    2300564: Nivel5:pCube22 4
+    2300566: Nivel5:pCube22 5
+    2300568: Nivel5:pCube22 6
+    2300570: Nivel5:pCube22 7
+    2300572: Nivel5:pCube22 8
+    2300574: Nivel5:pCube23
+    2300576: Nivel5:pCube23 1
+    2300578: Nivel5:pCube23 2
+    2300580: Nivel5:pCube23 3
+    2300582: Nivel5:pCube23 4
+    2300584: Nivel5:pCube24
+    2300586: Nivel5:pCube24 1
+    2300588: Nivel5:pCube24 2
+    2300590: Nivel5:pCube24 3
+    2300592: Nivel5:pCube44
+    2300594: Nivel5:pCube6
+    2300596: Nivel5:pCube6 1
+    2300598: Nivel5:pCube6 2
+    2300600: Nivel5:pCylinder1
+    2300602: Nivel5:pCylinder1 1
+    2300604: Nivel5:pCylinder1 2
+    2300606: Nivel5:pCylinder2
+    2300608: Nivel5:pCylinder2 1
+    2300610: Nivel5:pCylinder2 2
+    2300612: Nivel5:pCylinder2 3
+    2300614: Nivel5:pTorus1
+    2300616: Nivel5:pTorus1 1
+    2300618: Nivel5:pTorus1 2
+    2300620: Nivel5:pTorus2
+    2300622: Nivel5:pTorus2 1
+    2300624: Nivel5:pTorus2 2
+    2300626: Nivel5:Sala03_Nivel5:pPlane6
+    2300628: Nivel5:Soporte
+    2300630: Nivel5:Soporte 1
+    2300632: Nivel5:Soporte 2
+    3300000: Nivel5:ArcoPuerta
+    3300002: Nivel5:ArcoPuerta1
+    3300004: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+    3300006: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      1
+    3300008: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      2
+    3300010: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      3
+    3300012: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+    3300014: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      1
+    3300016: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      2
+    3300018: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      3
+    3300020: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+    3300022: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      1
+    3300024: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      2
+    3300026: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      3
+    3300028: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+    3300030: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      1
+    3300032: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      2
+    3300034: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      3
+    3300036: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+    3300038: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      1
+    3300040: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      2
+    3300042: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      3
+    3300044: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+    3300046: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      1
+    3300048: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      2
+    3300050: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+      3
+    3300052: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+    3300054: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2 1
+    3300056: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2 2
+    3300058: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2 3
+    3300060: Nivel5:pasted__pasted__pasted__pasted__pasted__pCylinder2
+    3300062: Nivel5:pasted__pasted__pasted__pasted__pasted__pCylinder2 1
+    3300064: Nivel5:pasted__pasted__pasted__pasted__pasted__pCylinder2 2
+    3300066: Nivel5:pasted__pasted__pasted__pasted__pasted__pCylinder2 3
+    3300068: Nivel5:pasted__pasted__pasted__pasted__pCylinder2
+    3300070: Nivel5:pasted__pasted__pasted__pasted__pCylinder2 1
+    3300072: Nivel5:pasted__pasted__pasted__pasted__pCylinder2 2
+    3300074: Nivel5:pasted__pasted__pasted__pasted__pCylinder2 3
+    3300076: Nivel5:pasted__pasted__pasted__pCylinder2
+    3300078: Nivel5:pasted__pasted__pasted__pCylinder2 1
+    3300080: Nivel5:pasted__pasted__pasted__pCylinder2 2
+    3300082: Nivel5:pasted__pasted__pasted__pCylinder2 3
+    3300084: Nivel5:pasted__pasted__pasted__pCylinder3
+    3300086: Nivel5:pasted__pasted__pasted__pCylinder3 1
+    3300088: Nivel5:pasted__pasted__pasted__pCylinder3 2
+    3300090: Nivel5:pasted__pasted__pasted__pCylinder3 3
+    3300092: Nivel5:pasted__pasted__pCube20
+    3300094: Nivel5:pasted__pasted__pCube20 1
+    3300096: Nivel5:pasted__pasted__pCube20 2
+    3300098: Nivel5:pasted__pasted__pCube20 3
+    3300100: Nivel5:pasted__pasted__pCylinder2
+    3300102: Nivel5:pasted__pasted__pCylinder2 1
+    3300104: Nivel5:pasted__pasted__pCylinder2 2
+    3300106: Nivel5:pasted__pasted__pCylinder2 3
+    3300108: Nivel5:pasted__pCube19
+    3300110: Nivel5:pasted__pCube19 1
+    3300112: Nivel5:pasted__pCube19 2
+    3300114: Nivel5:pasted__pCube19 3
+    3300116: Nivel5:pasted__pCube20
+    3300118: Nivel5:pasted__pCube20 1
+    3300120: Nivel5:pasted__pCube20 2
+    3300122: Nivel5:pasted__pCube20 3
+    3300124: Nivel5:pasted__pCube20 4
+    3300126: Nivel5:pasted__pCube20 5
+    3300128: Nivel5:pasted__pCube20 6
+    3300130: Nivel5:pasted__pCube20 7
+    3300132: Nivel5:pasted__pCube21
+    3300134: Nivel5:pasted__pCube21 1
+    3300136: Nivel5:pasted__pCube21 2
+    3300138: Nivel5:pasted__pCube21 3
+    3300140: Nivel5:pasted__pCube22
+    3300142: Nivel5:pasted__pCube22 1
+    3300144: Nivel5:pasted__pCube22 2
+    3300146: Nivel5:pasted__pCube22 3
+    3300148: Nivel5:pasted__pCube23
+    3300150: Nivel5:pasted__pCube23 1
+    3300152: Nivel5:pasted__pCube23 2
+    3300154: Nivel5:pasted__pCube23 3
+    3300156: Nivel5:pasted__pCylinder10
+    3300158: Nivel5:pasted__pCylinder10 1
+    3300160: Nivel5:pasted__pCylinder10 2
+    3300162: Nivel5:pasted__pCylinder10 3
+    3300164: Nivel5:pasted__pCylinder10 4
+    3300166: Nivel5:pasted__pCylinder11
+    3300168: Nivel5:pasted__pCylinder11 1
+    3300170: Nivel5:pasted__pCylinder11 2
+    3300172: Nivel5:pasted__pCylinder11 3
+    3300174: Nivel5:pasted__pCylinder11 4
+    3300176: Nivel5:pasted__pCylinder12
+    3300178: Nivel5:pasted__pCylinder12 1
+    3300180: Nivel5:pasted__pCylinder12 2
+    3300182: Nivel5:pasted__pCylinder12 3
+    3300184: Nivel5:pasted__pCylinder12 4
+    3300186: Nivel5:pasted__pCylinder13
+    3300188: Nivel5:pasted__pCylinder13 1
+    3300190: Nivel5:pasted__pCylinder13 2
+    3300192: Nivel5:pasted__pCylinder13 3
+    3300194: Nivel5:pasted__pCylinder13 4
+    3300196: Nivel5:pasted__pCylinder14
+    3300198: Nivel5:pasted__pCylinder14 1
+    3300200: Nivel5:pasted__pCylinder14 2
+    3300202: Nivel5:pasted__pCylinder14 3
+    3300204: Nivel5:pasted__pCylinder14 4
+    3300206: Nivel5:pasted__pCylinder15
+    3300208: Nivel5:pasted__pCylinder15 1
+    3300210: Nivel5:pasted__pCylinder15 2
+    3300212: Nivel5:pasted__pCylinder15 3
+    3300214: Nivel5:pasted__pCylinder15 4
+    3300216: Nivel5:pasted__pCylinder16
+    3300218: Nivel5:pasted__pCylinder16 1
+    3300220: Nivel5:pasted__pCylinder16 2
+    3300222: Nivel5:pasted__pCylinder16 3
+    3300224: Nivel5:pasted__pCylinder16 4
+    3300226: Nivel5:pasted__pCylinder17
+    3300228: Nivel5:pasted__pCylinder17 1
+    3300230: Nivel5:pasted__pCylinder17 2
+    3300232: Nivel5:pasted__pCylinder17 3
+    3300234: Nivel5:pasted__pCylinder17 4
+    3300236: Nivel5:pasted__pCylinder18
+    3300238: Nivel5:pasted__pCylinder18 1
+    3300240: Nivel5:pasted__pCylinder18 2
+    3300242: Nivel5:pasted__pCylinder18 3
+    3300244: Nivel5:pasted__pCylinder18 4
+    3300246: Nivel5:pasted__pCylinder19
+    3300248: Nivel5:pasted__pCylinder19 1
+    3300250: Nivel5:pasted__pCylinder19 2
+    3300252: Nivel5:pasted__pCylinder19 3
+    3300254: Nivel5:pasted__pCylinder19 4
+    3300256: Nivel5:pasted__pCylinder2
+    3300258: Nivel5:pasted__pCylinder2 1
+    3300260: Nivel5:pasted__pCylinder2 2
+    3300262: Nivel5:pasted__pCylinder2 3
+    3300264: Nivel5:pasted__pCylinder2 4
+    3300266: Nivel5:pasted__pCylinder2 5
+    3300268: Nivel5:pasted__pCylinder2 6
+    3300270: Nivel5:pasted__pCylinder2 7
+    3300272: Nivel5:pasted__pCylinder2 8
+    3300274: Nivel5:pasted__pCylinder20
+    3300276: Nivel5:pasted__pCylinder20 1
+    3300278: Nivel5:pasted__pCylinder20 2
+    3300280: Nivel5:pasted__pCylinder20 3
+    3300282: Nivel5:pasted__pCylinder20 4
+    3300284: Nivel5:pasted__pCylinder21
+    3300286: Nivel5:pasted__pCylinder21 1
+    3300288: Nivel5:pasted__pCylinder21 2
+    3300290: Nivel5:pasted__pCylinder21 3
+    3300292: Nivel5:pasted__pCylinder21 4
+    3300294: Nivel5:pasted__pCylinder22
+    3300296: Nivel5:pasted__pCylinder22 1
+    3300298: Nivel5:pasted__pCylinder22 2
+    3300300: Nivel5:pasted__pCylinder22 3
+    3300302: Nivel5:pasted__pCylinder22 4
+    3300304: Nivel5:pasted__pCylinder23
+    3300306: Nivel5:pasted__pCylinder23 1
+    3300308: Nivel5:pasted__pCylinder23 2
+    3300310: Nivel5:pasted__pCylinder23 3
+    3300312: Nivel5:pasted__pCylinder23 4
+    3300314: Nivel5:pasted__pCylinder24
+    3300316: Nivel5:pasted__pCylinder24 1
+    3300318: Nivel5:pasted__pCylinder24 2
+    3300320: Nivel5:pasted__pCylinder24 3
+    3300322: Nivel5:pasted__pCylinder24 4
+    3300324: Nivel5:pasted__pCylinder25
+    3300326: Nivel5:pasted__pCylinder25 1
+    3300328: Nivel5:pasted__pCylinder25 2
+    3300330: Nivel5:pasted__pCylinder25 3
+    3300332: Nivel5:pasted__pCylinder25 4
+    3300334: Nivel5:pasted__pCylinder26
+    3300336: Nivel5:pasted__pCylinder26 1
+    3300338: Nivel5:pasted__pCylinder26 2
+    3300340: Nivel5:pasted__pCylinder26 3
+    3300342: Nivel5:pasted__pCylinder26 4
+    3300344: Nivel5:pasted__pCylinder27
+    3300346: Nivel5:pasted__pCylinder27 1
+    3300348: Nivel5:pasted__pCylinder27 2
+    3300350: Nivel5:pasted__pCylinder27 3
+    3300352: Nivel5:pasted__pCylinder27 4
+    3300354: Nivel5:pasted__pCylinder28
+    3300356: Nivel5:pasted__pCylinder28 1
+    3300358: Nivel5:pasted__pCylinder28 2
+    3300360: Nivel5:pasted__pCylinder28 3
+    3300362: Nivel5:pasted__pCylinder29
+    3300364: Nivel5:pasted__pCylinder29 1
+    3300366: Nivel5:pasted__pCylinder29 2
+    3300368: Nivel5:pasted__pCylinder29 3
+    3300370: Nivel5:pasted__pCylinder3
+    3300372: Nivel5:pasted__pCylinder3 1
+    3300374: Nivel5:pasted__pCylinder3 2
+    3300376: Nivel5:pasted__pCylinder3 3
+    3300378: Nivel5:pasted__pCylinder3 4
+    3300380: Nivel5:pasted__pCylinder30
+    3300382: Nivel5:pasted__pCylinder30 1
+    3300384: Nivel5:pasted__pCylinder30 2
+    3300386: Nivel5:pasted__pCylinder30 3
+    3300388: Nivel5:pasted__pCylinder31
+    3300390: Nivel5:pasted__pCylinder31 1
+    3300392: Nivel5:pasted__pCylinder31 2
+    3300394: Nivel5:pasted__pCylinder31 3
+    3300396: Nivel5:pasted__pCylinder32
+    3300398: Nivel5:pasted__pCylinder32 1
+    3300400: Nivel5:pasted__pCylinder32 2
+    3300402: Nivel5:pasted__pCylinder32 3
+    3300404: Nivel5:pasted__pCylinder33
+    3300406: Nivel5:pasted__pCylinder33 1
+    3300408: Nivel5:pasted__pCylinder33 2
+    3300410: Nivel5:pasted__pCylinder33 3
+    3300412: Nivel5:pasted__pCylinder34
+    3300414: Nivel5:pasted__pCylinder34 1
+    3300416: Nivel5:pasted__pCylinder34 2
+    3300418: Nivel5:pasted__pCylinder34 3
+    3300420: Nivel5:pasted__pCylinder35
+    3300422: Nivel5:pasted__pCylinder35 1
+    3300424: Nivel5:pasted__pCylinder35 2
+    3300426: Nivel5:pasted__pCylinder35 3
+    3300428: Nivel5:pasted__pCylinder36
+    3300430: Nivel5:pasted__pCylinder36 1
+    3300432: Nivel5:pasted__pCylinder36 2
+    3300434: Nivel5:pasted__pCylinder36 3
+    3300436: Nivel5:pasted__pCylinder37
+    3300438: Nivel5:pasted__pCylinder37 1
+    3300440: Nivel5:pasted__pCylinder37 2
+    3300442: Nivel5:pasted__pCylinder37 3
+    3300444: Nivel5:pasted__pCylinder38
+    3300446: Nivel5:pasted__pCylinder38 1
+    3300448: Nivel5:pasted__pCylinder38 2
+    3300450: Nivel5:pasted__pCylinder38 3
+    3300452: Nivel5:pasted__pCylinder4
+    3300454: Nivel5:pasted__pCylinder4 1
+    3300456: Nivel5:pasted__pCylinder4 2
+    3300458: Nivel5:pasted__pCylinder4 3
+    3300460: Nivel5:pasted__pCylinder4 4
+    3300462: Nivel5:pasted__pCylinder5
+    3300464: Nivel5:pasted__pCylinder5 1
+    3300466: Nivel5:pasted__pCylinder5 2
+    3300468: Nivel5:pasted__pCylinder5 3
+    3300470: Nivel5:pasted__pCylinder5 4
+    3300472: Nivel5:pasted__pCylinder6
+    3300474: Nivel5:pasted__pCylinder6 1
+    3300476: Nivel5:pasted__pCylinder6 2
+    3300478: Nivel5:pasted__pCylinder6 3
+    3300480: Nivel5:pasted__pCylinder6 4
+    3300482: Nivel5:pasted__pCylinder7
+    3300484: Nivel5:pasted__pCylinder7 1
+    3300486: Nivel5:pasted__pCylinder7 2
+    3300488: Nivel5:pasted__pCylinder7 3
+    3300490: Nivel5:pasted__pCylinder7 4
+    3300492: Nivel5:pasted__pCylinder8
+    3300494: Nivel5:pasted__pCylinder8 1
+    3300496: Nivel5:pasted__pCylinder8 2
+    3300498: Nivel5:pasted__pCylinder8 3
+    3300500: Nivel5:pasted__pCylinder8 4
+    3300502: Nivel5:pasted__pCylinder9
+    3300504: Nivel5:pasted__pCylinder9 1
+    3300506: Nivel5:pasted__pCylinder9 2
+    3300508: Nivel5:pasted__pCylinder9 3
+    3300510: Nivel5:pasted__pCylinder9 4
+    3300512: Nivel5:pCube13
+    3300514: Nivel5:pCube13 1
+    3300516: Nivel5:pCube13 2
+    3300518: Nivel5:pCube14
+    3300520: Nivel5:pCube14 1
+    3300522: Nivel5:pCube14 2
+    3300524: Nivel5:pCube15
+    3300526: Nivel5:pCube15 1
+    3300528: Nivel5:pCube15 2
+    3300530: Nivel5:pCube16
+    3300532: Nivel5:pCube16 1
+    3300534: Nivel5:pCube16 2
+    3300536: Nivel5:pCube17
+    3300538: Nivel5:pCube17 1
+    3300540: Nivel5:pCube17 2
+    3300542: Nivel5:pCube18
+    3300544: Nivel5:pCube19
+    3300546: Nivel5:pCube20
+    3300548: Nivel5:pCube21
+    3300550: Nivel5:pCube21 1
+    3300552: Nivel5:pCube21 2
+    3300554: Nivel5:pCube21 3
+    3300556: Nivel5:pCube22
+    3300558: Nivel5:pCube22 1
+    3300560: Nivel5:pCube22 2
+    3300562: Nivel5:pCube22 3
+    3300564: Nivel5:pCube22 4
+    3300566: Nivel5:pCube22 5
+    3300568: Nivel5:pCube22 6
+    3300570: Nivel5:pCube22 7
+    3300572: Nivel5:pCube22 8
+    3300574: Nivel5:pCube23
+    3300576: Nivel5:pCube23 1
+    3300578: Nivel5:pCube23 2
+    3300580: Nivel5:pCube23 3
+    3300582: Nivel5:pCube23 4
+    3300584: Nivel5:pCube24
+    3300586: Nivel5:pCube24 1
+    3300588: Nivel5:pCube24 2
+    3300590: Nivel5:pCube24 3
+    3300592: Nivel5:pCube44
+    3300594: Nivel5:pCube6
+    3300596: Nivel5:pCube6 1
+    3300598: Nivel5:pCube6 2
+    3300600: Nivel5:pCylinder1
+    3300602: Nivel5:pCylinder1 1
+    3300604: Nivel5:pCylinder1 2
+    3300606: Nivel5:pCylinder2
+    3300608: Nivel5:pCylinder2 1
+    3300610: Nivel5:pCylinder2 2
+    3300612: Nivel5:pCylinder2 3
+    3300614: Nivel5:pTorus1
+    3300616: Nivel5:pTorus1 1
+    3300618: Nivel5:pTorus1 2
+    3300620: Nivel5:pTorus2
+    3300622: Nivel5:pTorus2 1
+    3300624: Nivel5:pTorus2 2
+    3300626: Nivel5:Sala03_Nivel5:pPlane6
+    3300628: Nivel5:Soporte
+    3300630: Nivel5:Soporte 1
+    3300632: Nivel5:Soporte 2
+    4300000: Nivel5:pCylinder2
+    4300002: Nivel5:pasted__pCylinder2
+    4300004: Nivel5:pasted__pCube20
+    4300006: Nivel5:pasted__pasted__pCube20
+    4300008: Nivel5:pCube21
+    4300010: Nivel5:pasted__pCube21
+    4300012: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+    4300014: Nivel5:pasted__pasted__pasted__pCylinder2
+    4300016: Nivel5:pasted__pasted__pCylinder2
+    4300018: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+    4300020: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+    4300022: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+    4300024: Nivel5:pasted__pasted__pasted__pasted__pCylinder2
+    4300026: Nivel5:pasted__pasted__pasted__pasted__pasted__pCylinder2
+    4300028: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+    4300030: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+    4300032: Nivel5:pasted__pasted__pasted__pCylinder3
+    4300034: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+    4300036: Nivel5:pCube22
+    4300038: Nivel5:pasted__pCube22
+    4300040: Nivel5:pCube24
+    4300042: Nivel5:pasted__pCube20
+    4300044: Nivel5:pasted__pCylinder2
+    4300046: Nivel5:pasted__pCylinder3
+    4300048: Nivel5:pasted__pCylinder4
+    4300050: Nivel5:pasted__pCylinder5
+    4300052: Nivel5:pasted__pCylinder6
+    4300054: Nivel5:pasted__pCylinder7
+    4300056: Nivel5:pasted__pCylinder8
+    4300058: Nivel5:pasted__pCylinder9
+    4300060: Nivel5:pasted__pCylinder10
+    4300062: Nivel5:pasted__pCylinder11
+    4300064: Nivel5:pasted__pCylinder12
+    4300066: Nivel5:pasted__pCylinder13
+    4300068: Nivel5:pasted__pCylinder14
+    4300070: Nivel5:pasted__pCylinder15
+    4300072: Nivel5:pasted__pCylinder16
+    4300074: Nivel5:pasted__pCylinder17
+    4300076: Nivel5:pasted__pCylinder18
+    4300078: Nivel5:pasted__pCylinder19
+    4300080: Nivel5:pasted__pCylinder20
+    4300082: Nivel5:pasted__pCylinder21
+    4300084: Nivel5:pasted__pCylinder22
+    4300086: Nivel5:pasted__pCylinder23
+    4300088: Nivel5:pasted__pCylinder24
+    4300090: Nivel5:pasted__pCylinder25
+    4300092: Nivel5:pasted__pCylinder26
+    4300094: Nivel5:pasted__pCylinder27
+    4300096: Nivel5:pCube23
+    4300098: Nivel5:pCube22
+    4300100: Nivel5:pasted__pCylinder28
+    4300102: Nivel5:pasted__pCylinder29
+    4300104: Nivel5:pasted__pCylinder30
+    4300106: Nivel5:pasted__pCylinder31
+    4300108: Nivel5:pasted__pCylinder32
+    4300110: Nivel5:pasted__pCylinder33
+    4300112: Nivel5:pasted__pCylinder34
+    4300114: Nivel5:pasted__pCylinder35
+    4300116: Nivel5:pasted__pCylinder36
+    4300118: Nivel5:pasted__pCylinder37
+    4300120: Nivel5:pasted__pCylinder38
+    4300122: Nivel5:pasted__pCube19
+    4300124: Nivel5:pasted__pCube23
+    4300126: Nivel5:pCylinder2
+    4300128: Nivel5:pasted__pCylinder2
+    4300130: Nivel5:pasted__pCube20
+    4300132: Nivel5:pasted__pasted__pCube20
+    4300134: Nivel5:pCube21
+    4300136: Nivel5:pasted__pCube21
+    4300138: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+    4300140: Nivel5:pasted__pasted__pasted__pCylinder2
+    4300142: Nivel5:pasted__pasted__pCylinder2
+    4300144: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+    4300146: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+    4300148: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+    4300150: Nivel5:pasted__pasted__pasted__pasted__pCylinder2
+    4300152: Nivel5:pasted__pasted__pasted__pasted__pasted__pCylinder2
+    4300154: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+    4300156: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+    4300158: Nivel5:pasted__pasted__pasted__pCylinder3
+    4300160: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+    4300162: Nivel5:pCube22
+    4300164: Nivel5:pasted__pCube22
+    4300166: Nivel5:pCube24
+    4300168: Nivel5:pasted__pCube20
+    4300170: Nivel5:pasted__pCylinder2
+    4300172: Nivel5:pasted__pCylinder3
+    4300174: Nivel5:pasted__pCylinder4
+    4300176: Nivel5:pasted__pCylinder5
+    4300178: Nivel5:pasted__pCylinder6
+    4300180: Nivel5:pasted__pCylinder7
+    4300182: Nivel5:pasted__pCylinder8
+    4300184: Nivel5:pasted__pCylinder9
+    4300186: Nivel5:pasted__pCylinder10
+    4300188: Nivel5:pasted__pCylinder11
+    4300190: Nivel5:pasted__pCylinder12
+    4300192: Nivel5:pasted__pCylinder13
+    4300194: Nivel5:pasted__pCylinder14
+    4300196: Nivel5:pasted__pCylinder15
+    4300198: Nivel5:pasted__pCylinder16
+    4300200: Nivel5:pasted__pCylinder17
+    4300202: Nivel5:pasted__pCylinder18
+    4300204: Nivel5:pasted__pCylinder19
+    4300206: Nivel5:pasted__pCylinder20
+    4300208: Nivel5:pasted__pCylinder21
+    4300210: Nivel5:pasted__pCylinder22
+    4300212: Nivel5:pasted__pCylinder23
+    4300214: Nivel5:pasted__pCylinder24
+    4300216: Nivel5:pasted__pCylinder25
+    4300218: Nivel5:pasted__pCylinder26
+    4300220: Nivel5:pasted__pCylinder27
+    4300222: Nivel5:pCube23
+    4300224: Nivel5:pCube22
+    4300226: Nivel5:pasted__pCylinder28
+    4300228: Nivel5:pasted__pCylinder29
+    4300230: Nivel5:pasted__pCylinder30
+    4300232: Nivel5:pasted__pCylinder31
+    4300234: Nivel5:pasted__pCylinder32
+    4300236: Nivel5:pasted__pCylinder33
+    4300238: Nivel5:pasted__pCylinder34
+    4300240: Nivel5:pasted__pCylinder35
+    4300242: Nivel5:pasted__pCylinder36
+    4300244: Nivel5:pasted__pCylinder37
+    4300246: Nivel5:pasted__pCylinder38
+    4300248: Nivel5:pasted__pCube19
+    4300250: Nivel5:pasted__pCube23
+    4300252: Nivel5:pCylinder2
+    4300254: Nivel5:pasted__pCylinder2
+    4300256: Nivel5:pasted__pCube20
+    4300258: Nivel5:pasted__pasted__pCube20
+    4300260: Nivel5:pCube21
+    4300262: Nivel5:pasted__pCube21
+    4300264: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+    4300266: Nivel5:pasted__pasted__pasted__pCylinder2
+    4300268: Nivel5:pasted__pasted__pCylinder2
+    4300270: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+    4300272: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+    4300274: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+    4300276: Nivel5:pasted__pasted__pasted__pasted__pCylinder2
+    4300278: Nivel5:pasted__pasted__pasted__pasted__pasted__pCylinder2
+    4300280: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+    4300282: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+    4300284: Nivel5:pasted__pasted__pasted__pCylinder3
+    4300286: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+    4300288: Nivel5:pCube22
+    4300290: Nivel5:pasted__pCube22
+    4300292: Nivel5:pCube24
+    4300294: Nivel5:pasted__pCube20
+    4300296: Nivel5:pasted__pCylinder2
+    4300298: Nivel5:pasted__pCylinder3
+    4300300: Nivel5:pasted__pCylinder4
+    4300302: Nivel5:pasted__pCylinder5
+    4300304: Nivel5:pasted__pCylinder6
+    4300306: Nivel5:pasted__pCylinder7
+    4300308: Nivel5:pasted__pCylinder8
+    4300310: Nivel5:pasted__pCylinder9
+    4300312: Nivel5:pasted__pCylinder10
+    4300314: Nivel5:pasted__pCylinder11
+    4300316: Nivel5:pasted__pCylinder12
+    4300318: Nivel5:pasted__pCylinder13
+    4300320: Nivel5:pasted__pCylinder14
+    4300322: Nivel5:pasted__pCylinder15
+    4300324: Nivel5:pasted__pCylinder16
+    4300326: Nivel5:pasted__pCylinder17
+    4300328: Nivel5:pasted__pCylinder18
+    4300330: Nivel5:pasted__pCylinder19
+    4300332: Nivel5:pasted__pCylinder20
+    4300334: Nivel5:pasted__pCylinder21
+    4300336: Nivel5:pasted__pCylinder22
+    4300338: Nivel5:pasted__pCylinder23
+    4300340: Nivel5:pasted__pCylinder24
+    4300342: Nivel5:pasted__pCylinder25
+    4300344: Nivel5:pasted__pCylinder26
+    4300346: Nivel5:pasted__pCylinder27
+    4300348: Nivel5:pCube23
+    4300350: Nivel5:pCube22
+    4300352: Nivel5:pasted__pCylinder28
+    4300354: Nivel5:pasted__pCylinder29
+    4300356: Nivel5:pasted__pCylinder30
+    4300358: Nivel5:pasted__pCylinder31
+    4300360: Nivel5:pasted__pCylinder32
+    4300362: Nivel5:pasted__pCylinder33
+    4300364: Nivel5:pasted__pCylinder34
+    4300366: Nivel5:pasted__pCylinder35
+    4300368: Nivel5:pasted__pCylinder36
+    4300370: Nivel5:pasted__pCylinder37
+    4300372: Nivel5:pasted__pCylinder38
+    4300374: Nivel5:pasted__pCube19
+    4300376: Nivel5:pasted__pCube23
+    4300378: Nivel5:pasted__pCylinder2
+    4300380: Nivel5:pasted__pCylinder3
+    4300382: Nivel5:pasted__pCylinder4
+    4300384: Nivel5:pasted__pCylinder5
+    4300386: Nivel5:pasted__pCylinder6
+    4300388: Nivel5:pasted__pCylinder7
+    4300390: Nivel5:pasted__pCylinder8
+    4300392: Nivel5:pasted__pCylinder9
+    4300394: Nivel5:pasted__pCylinder10
+    4300396: Nivel5:pasted__pCylinder11
+    4300398: Nivel5:pasted__pCylinder12
+    4300400: Nivel5:pasted__pCylinder13
+    4300402: Nivel5:pasted__pCylinder14
+    4300404: Nivel5:pasted__pCylinder15
+    4300406: Nivel5:pasted__pCylinder16
+    4300408: Nivel5:pasted__pCylinder17
+    4300410: Nivel5:pasted__pCylinder18
+    4300412: Nivel5:pasted__pCylinder19
+    4300414: Nivel5:pasted__pCylinder20
+    4300416: Nivel5:pasted__pCylinder21
+    4300418: Nivel5:pasted__pCylinder22
+    4300420: Nivel5:pasted__pCylinder23
+    4300422: Nivel5:pasted__pCylinder24
+    4300424: Nivel5:pasted__pCylinder25
+    4300426: Nivel5:pasted__pCylinder26
+    4300428: Nivel5:pasted__pCylinder27
+    4300430: Nivel5:pCube23
+    4300432: Nivel5:pCube22
+    4300434: Nivel5:pCube18
+    4300436: Nivel5:pCube19
+    4300438: Nivel5:pCube20
+    4300440: Nivel5:pCube44
+    4300442: Nivel5:pCylinder1
+    4300444: Nivel5:pCube6
+    4300446: Nivel5:pCube13
+    4300448: Nivel5:pCube14
+    4300450: Nivel5:pCube15
+    4300452: Nivel5:pCube16
+    4300454: Nivel5:pCube17
+    4300456: Nivel5:pTorus1
+    4300458: Nivel5:pTorus2
+    4300460: Nivel5:Soporte
+    4300462: Nivel5:pCylinder1
+    4300464: Nivel5:pCube6
+    4300466: Nivel5:pCube13
+    4300468: Nivel5:pCube14
+    4300470: Nivel5:pCube15
+    4300472: Nivel5:pCube16
+    4300474: Nivel5:pCube17
+    4300476: Nivel5:pTorus1
+    4300478: Nivel5:pTorus2
+    4300480: Nivel5:Soporte
+    4300482: Nivel5:pCylinder1
+    4300484: Nivel5:pCube6
+    4300486: Nivel5:pCube13
+    4300488: Nivel5:pCube14
+    4300490: Nivel5:pCube15
+    4300492: Nivel5:pCube16
+    4300494: Nivel5:pCube17
+    4300496: Nivel5:pTorus1
+    4300498: Nivel5:pTorus2
+    4300500: Nivel5:Soporte
+    4300502: Nivel5:pCylinder2
+    4300504: Nivel5:pasted__pCylinder2
+    4300506: Nivel5:pasted__pCube20
+    4300508: Nivel5:pasted__pasted__pCube20
+    4300510: Nivel5:pCube21
+    4300512: Nivel5:pasted__pCube21
+    4300514: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+    4300516: Nivel5:pasted__pasted__pasted__pCylinder2
+    4300518: Nivel5:pasted__pasted__pCylinder2
+    4300520: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+    4300522: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+    4300524: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+    4300526: Nivel5:pasted__pasted__pasted__pasted__pCylinder2
+    4300528: Nivel5:pasted__pasted__pasted__pasted__pasted__pCylinder2
+    4300530: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+    4300532: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+    4300534: Nivel5:pasted__pasted__pasted__pCylinder3
+    4300536: Nivel5:pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCylinder2
+    4300538: Nivel5:pCube22
+    4300540: Nivel5:pasted__pCube22
+    4300542: Nivel5:pCube24
+    4300544: Nivel5:pasted__pCube20
+    4300546: Nivel5:pasted__pCylinder2
+    4300548: Nivel5:pasted__pCylinder3
+    4300550: Nivel5:pasted__pCylinder4
+    4300552: Nivel5:pasted__pCylinder5
+    4300554: Nivel5:pasted__pCylinder6
+    4300556: Nivel5:pasted__pCylinder7
+    4300558: Nivel5:pasted__pCylinder8
+    4300560: Nivel5:pasted__pCylinder9
+    4300562: Nivel5:pasted__pCylinder10
+    4300564: Nivel5:pasted__pCylinder11
+    4300566: Nivel5:pasted__pCylinder12
+    4300568: Nivel5:pasted__pCylinder13
+    4300570: Nivel5:pasted__pCylinder14
+    4300572: Nivel5:pasted__pCylinder15
+    4300574: Nivel5:pasted__pCylinder16
+    4300576: Nivel5:pasted__pCylinder17
+    4300578: Nivel5:pasted__pCylinder18
+    4300580: Nivel5:pasted__pCylinder19
+    4300582: Nivel5:pasted__pCylinder20
+    4300584: Nivel5:pasted__pCylinder21
+    4300586: Nivel5:pasted__pCylinder22
+    4300588: Nivel5:pasted__pCylinder23
+    4300590: Nivel5:pasted__pCylinder24
+    4300592: Nivel5:pasted__pCylinder25
+    4300594: Nivel5:pasted__pCylinder26
+    4300596: Nivel5:pasted__pCylinder27
+    4300598: Nivel5:pCube23
+    4300600: Nivel5:pCube22
+    4300602: Nivel5:pasted__pCylinder28
+    4300604: Nivel5:pasted__pCylinder29
+    4300606: Nivel5:pasted__pCylinder30
+    4300608: Nivel5:pasted__pCylinder31
+    4300610: Nivel5:pasted__pCylinder32
+    4300612: Nivel5:pasted__pCylinder33
+    4300614: Nivel5:pasted__pCylinder34
+    4300616: Nivel5:pasted__pCylinder35
+    4300618: Nivel5:pasted__pCylinder36
+    4300620: Nivel5:pasted__pCylinder37
+    4300622: Nivel5:pasted__pCylinder38
+    4300624: Nivel5:pasted__pCube19
+    4300626: Nivel5:pasted__pCube23
+    4300628: Nivel5:ArcoPuerta
+    4300630: Nivel5:ArcoPuerta1
+    4300632: Nivel5:Sala03_Nivel5:pPlane6
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
