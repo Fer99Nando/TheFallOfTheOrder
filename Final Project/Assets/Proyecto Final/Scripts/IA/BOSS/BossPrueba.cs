@@ -24,7 +24,7 @@ public class BossPrueba : MonoBehaviour
     CharacterController controller;
 
     //public ParticleSystem bossTransformation;
-    public GameObject bossTransformation;
+    //public GameObject bossTransformation;
 
 
     [Header("Paths")]
@@ -59,7 +59,7 @@ public class BossPrueba : MonoBehaviour
 
     private void Awake()
     {
-        bossTransformation.SetActive(false);
+        //bossTransformation.SetActive(false);
         bonusEnemyStats = 10;
         agent = GetComponent<NavMeshAgent>();
         controller = GetComponent<CharacterController>();
@@ -100,12 +100,12 @@ public class BossPrueba : MonoBehaviour
                         Debug.Log("O DIOOMIITO SE TRANSFORMA");
                         anim.SetBool("PhaseTwo", true);
                         //bossTransformation.Play();
-                        bossTransformation.SetActive(true);
+                        //bossTransformation.SetActive(true);
                         break;
                     case BossPhaseTwo.ChaseTwo:
                         
                         anim.SetBool("PhaseTwo", false);
-                        bossTransformation.SetActive(false);
+                        //bossTransformation.SetActive(false);
                         //bossTransformation.Stop();
                         ChaseUpdateTwo();
                         break;
@@ -212,13 +212,13 @@ public class BossPrueba : MonoBehaviour
         if (phase == BossPhase.PhaseOne)
         {
             // Sonidos de Ataque si los tiene
-            agent.stoppingDistance = 2;
+            agent.stoppingDistance = 3.5f;
             state = EnemyState.Attack;
         }
         else
         {
             // Sonidos de Ataque si los tiene
-            agent.stoppingDistance = 2;
+            agent.stoppingDistance = 3.5f;
             stateTwo = BossPhaseTwo.AttackTwo;
         }
     }
