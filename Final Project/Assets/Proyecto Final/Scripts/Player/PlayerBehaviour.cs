@@ -21,8 +21,8 @@ public class PlayerBehaviour : MonoBehaviour
     private float inputH;                   // Tecla de avance lateral
     //private float jumpInput;
     private float attackTime;
-    private float dodgeTime;
 
+    private bool dodgeTime;
     private bool attackOne;
     private bool canMove;
     private bool godMode;
@@ -37,9 +37,10 @@ public class PlayerBehaviour : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        dodgeTime = false;
         godMode = false;
         attackTime = attackAnim.length;
-        attackTime *= 0.95f;
+        attackTime *= 0.8f;
 
         anim = GetComponent<Animator>();  
 
@@ -82,6 +83,14 @@ public class PlayerBehaviour : MonoBehaviour
             StartCoroutine(Attack());
         }
 
+        if (Input.GetButtonDown("Dodge"))
+        {
+            dodgeTime = true;
+            anim.SetBool("Walk", false);
+            anim.SetBool("Dodge", true);
+        } 
+        else anim.SetBool("Dodge", false);
+
         if (canMove)
         {
             if (GetInput())
@@ -90,10 +99,7 @@ public class PlayerBehaviour : MonoBehaviour
 
                 Rotate();
             }
-            else
-            {
-                anim.SetBool("Walk", false);
-            }
+            else anim.SetBool("Walk", false);
 
             Move();
         }

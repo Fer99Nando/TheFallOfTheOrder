@@ -13,6 +13,7 @@ public class PlayerWeapon : MonoBehaviour
 
     public Image virusSlider;
     public Image healthSlider;
+    public ParticleSystem virusEffect;
 
     void Start()
     {
@@ -78,9 +79,10 @@ public class PlayerWeapon : MonoBehaviour
         {
             Debug.Log("50 Daño");
             bonusStats = 500;
+            virusEffect.Play();
 
             playerHealth.MaximusPower();
-        }
+        } else virusEffect.Stop();
     }
 
     public void Death()
