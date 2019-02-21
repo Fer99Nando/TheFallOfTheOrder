@@ -100,13 +100,11 @@ public class BossPrueba : MonoBehaviour
                 {
                     case BossPhaseTwo.Transformation:
                         Debug.Log("O DIOOMIITO SE TRANSFORMA");
-                        anim.SetBool("PhaseTwo", true);
+                        anim.SetTrigger("PhaseTwo 0");
                         //bossTransformation.Play();
                         //bossTransformation.SetActive(true);
                         break;
                     case BossPhaseTwo.ChaseTwo:
-                        
-                        anim.SetBool("PhaseTwo", false);
                         //bossTransformation.SetActive(false);
                         //bossTransformation.Stop();
                         ChaseUpdateTwo();

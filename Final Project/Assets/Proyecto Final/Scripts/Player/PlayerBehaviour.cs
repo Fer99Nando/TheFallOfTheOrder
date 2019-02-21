@@ -21,10 +21,12 @@ public class PlayerBehaviour : MonoBehaviour
     private float inputH;                   // Tecla de avance lateral
     //private float jumpInput;
     private float attackTime;
+    private float cooldownTime;
 
     private bool dodgeTime;
     private bool attackOne;
     public  bool canMove;
+    public  bool canAttack;
     private bool godMode;
     public Animator anim;
     public AnimationClip attackAnim;
@@ -37,10 +39,11 @@ public class PlayerBehaviour : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        dodgeTime = false;
+        canAttack = false;
+        cooldownTime = 0;
         godMode = false;
         attackTime = attackAnim.length;
-        attackTime *= 0.5f;
+        attackTime *= 0.4f;
 
         anim = GetComponent<Animator>();  
 
@@ -81,15 +84,21 @@ public class PlayerBehaviour : MonoBehaviour
 
         if (Input.GetButtonDown("Fire1"))
         {
-            StartCoroutine(Attack());
+            if (cooldownTime == 0)
+            {
+                canAttack = true;
+                StartCoroutine(Attack());
+            }
+        }
+
+        if (canAttack)
+        {
+            cooldownTime += Time.deltaTime;
         }
 
         if (Input.GetButtonDown("Dodge"))
         {
-            canMove = false;
-            dodgeTime = true;
-            anim.SetBool("Walk", false);
-            anim.SetBool("Dodge", true);
+            StartCoroutine(Dodge());
         } 
 
         if (canMove)
@@ -104,28 +113,40 @@ public class PlayerBehaviour : MonoBehaviour
 
             Move();
         }
+
+        if (cooldownTime >= 1.5f)
+        {
+            canAttack = false;
+            cooldownTime = 0;
+        }
     }
 
     public void DodgeAcabado()
     {
-        anim.SetBool("Dodge", false);
         canMove = true;
     }
 
     #region Coroutines
     IEnumerator Attack()
     {
+            canMove = false;
+            anim.SetBool("Walk", false);
+            anim.SetTrigger("Attack");
+            playerWeapon.BoxEnabled();
+            yield return new WaitForSeconds(attackTime);
+            playerWeapon.BoxDisabled();
+            canMove = true;
+    }
 
+    IEnumerator Dodge()
+    {
         canMove = false;
         anim.SetBool("Walk", false);
-        anim.SetBool("Attack", true);
-        playerWeapon.BoxEnabled();
+        anim.SetTrigger("Dodge");
         yield return new WaitForSeconds(attackTime);
-        playerWeapon.BoxDisabled();
-        anim.SetBool("Attack", false);
-        canMove = true;
-        
+        canMove = true; 
     }
+
     #endregion 
 
     // Escucha todas las teclas que controlan al jugador
