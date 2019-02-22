@@ -33,7 +33,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     PlayerHealth playerHealth;
 
-    public AudioSource footSteps;
+    //public AudioSource footSteps;
     //public AudioSource
 
     // Use this for initialization
@@ -73,10 +73,10 @@ public class PlayerBehaviour : MonoBehaviour
                 godMode = true;
             }
         }
-        if (inputH != 0 || inputV != 0)
+        /*if (inputH != 0 || inputV != 0)
         {
             footSteps.Play();
-        } else footSteps.Stop();
+        } else footSteps.Stop();*/
 
         if (godMode){
             GodMode();
@@ -157,7 +157,7 @@ public class PlayerBehaviour : MonoBehaviour
 
         if (this.inputV != 0 || this.inputH != 0)
         {
-            footSteps.Stop();
+            //footSteps.Stop();
             return true;
         }
         return false;
@@ -220,7 +220,7 @@ public class PlayerBehaviour : MonoBehaviour
 
         else // EN EL ARIE
         {
-            this.gravity = 2.0f;
+            this.gravity = 9.81f;
 
             if ((this.controller.collisionFlags & CollisionFlags.Above) != 0) //Cuando choque la cabeza contra algo que rapidamente cambie a zero el salto y comience a caer
             {
