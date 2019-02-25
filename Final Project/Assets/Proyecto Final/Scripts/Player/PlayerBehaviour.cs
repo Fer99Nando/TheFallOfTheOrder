@@ -141,8 +141,8 @@ public class PlayerBehaviour : MonoBehaviour
     IEnumerator Dodge()
     {
         canMove = false;
-        anim.SetBool("Walk", false);
-        anim.SetTrigger("Dodge");
+        //anim.SetBool("Walk", false);
+        anim.SetTrigger("Dodge 0");
         yield return new WaitForSeconds(attackTime);
         canMove = true; 
     }

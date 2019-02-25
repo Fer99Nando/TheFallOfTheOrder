@@ -58,7 +58,7 @@ public class UIManager : MonoBehaviour
 		Application.Quit ();
 	}
 
-	IEnumerator Fading()
+    IEnumerator Fading()
 	{
 		anim.SetBool("Fade", true);
 		timeCounter = 0;

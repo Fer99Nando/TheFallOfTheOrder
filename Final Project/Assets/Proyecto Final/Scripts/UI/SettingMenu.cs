@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
+using DG.Tweening;
 
 
 public class SettingMenu : MonoBehaviour
