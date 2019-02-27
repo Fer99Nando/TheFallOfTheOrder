@@ -44,7 +44,7 @@ public class PlayerBehaviour : MonoBehaviour
         cooldownTime = 0;
         godMode = false;
         attackTime = attackAnim.length;
-        attackTime *= 0.4f;
+        attackTime *= 0.8f;
 
         anim = GetComponent<Animator>();  
 
@@ -105,7 +105,7 @@ public class PlayerBehaviour : MonoBehaviour
 
         if (dodgeTime)
         {
-            forwardSpeed = 4;
+            forwardSpeed = 6f;
         }
         else
         {
@@ -133,7 +133,7 @@ public class PlayerBehaviour : MonoBehaviour
             Move();
         }
 
-        if (cooldownTime >= 1.5f)
+        if (cooldownTime >= 1f)
         {
             canAttack = false;
             cooldownTime = 0;

@@ -4718,8 +4718,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.0049207727, y: 0.02950766, z: 0.03187764}
-  m_Center: {x: -0.00000010018677, y: 0.018142136, z: -0.046686146}
+  m_Size: {x: 0.0049207797, y: 0.035682812, z: 0.04215371}
+  m_Center: {x: -0.000000111348726, y: 0.018560145, z: -0.044725075}
 --- !u!114 &8935259095188588188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4807,8 +4807,8 @@ CharacterController:
   m_Height: 0.13
   m_Radius: 0.02
   m_SlopeLimit: 20
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.0001
+  m_StepOffset: 0.5
+  m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.007, z: 0.006}
 --- !u!114 &8702489190573897542
@@ -4827,9 +4827,9 @@ MonoBehaviour:
   forwardSpeed: 8
   gravity: 0
   canMove: 0
+  canAttack: 0
   anim: {fileID: 8702489190573897540}
-  attackAnim: {fileID: 7400000, guid: 43749f39664e7dd4da2e8fea5bd64657, type: 3}
-  footSteps: {fileID: 1877959323}
+  attackAnim: {fileID: 7400000, guid: b3df27490cbfce243ad369ceb9c150bb, type: 3}
 --- !u!114 &8702489190573897537
 MonoBehaviour:
   m_ObjectHideFlags: 0

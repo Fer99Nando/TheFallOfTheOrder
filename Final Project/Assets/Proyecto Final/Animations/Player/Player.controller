@@ -538,7 +538,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Dodge_001
-  m_Speed: 1.2
+  m_Speed: 1.75
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101497704635800030}

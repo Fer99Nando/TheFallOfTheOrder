@@ -102,12 +102,8 @@ public class PlayerWeapon : MonoBehaviour
 
     public void Death()
     {
-    // Animacion de muerte;
         gameOver.SetActive(true);
         Cursor.visible = true;
         Destroy(gameObject);
-        //playerControl.enabled = false;
-        
-        
     }
 }

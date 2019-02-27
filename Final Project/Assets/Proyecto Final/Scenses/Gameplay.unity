@@ -125532,36 +125532,6 @@ PrefabInstance:
       propertyPath: slotPot.Array.data[2]
       value: 
       objectReference: {fileID: 242936925}
-    - target: {fileID: 3825284411388981146, guid: 9264cb0dd0994904f950ddcc03a22aa9,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 0.0049207797
-      objectReference: {fileID: 0}
-    - target: {fileID: 3825284411388981146, guid: 9264cb0dd0994904f950ddcc03a22aa9,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 0.035682812
-      objectReference: {fileID: 0}
-    - target: {fileID: 3825284411388981146, guid: 9264cb0dd0994904f950ddcc03a22aa9,
-        type: 3}
-      propertyPath: m_Size.z
-      value: 0.04215371
-      objectReference: {fileID: 0}
-    - target: {fileID: 3825284411388981146, guid: 9264cb0dd0994904f950ddcc03a22aa9,
-        type: 3}
-      propertyPath: m_Center.x
-      value: -0.000000111348726
-      objectReference: {fileID: 0}
-    - target: {fileID: 3825284411388981146, guid: 9264cb0dd0994904f950ddcc03a22aa9,
-        type: 3}
-      propertyPath: m_Center.y
-      value: 0.018560145
-      objectReference: {fileID: 0}
-    - target: {fileID: 3825284411388981146, guid: 9264cb0dd0994904f950ddcc03a22aa9,
-        type: 3}
-      propertyPath: m_Center.z
-      value: -0.044725075
-      objectReference: {fileID: 0}
     - target: {fileID: 8935259095188588188, guid: 9264cb0dd0994904f950ddcc03a22aa9,
         type: 3}
       propertyPath: gameOver
@@ -125577,29 +125547,5 @@ PrefabInstance:
       propertyPath: healthSlider
       value: 
       objectReference: {fileID: 875457922}
-    - target: {fileID: 8702489190573897543, guid: 9264cb0dd0994904f950ddcc03a22aa9,
-        type: 3}
-      propertyPath: m_StepOffset
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8702489190573897543, guid: 9264cb0dd0994904f950ddcc03a22aa9,
-        type: 3}
-      propertyPath: m_SkinWidth
-      value: 0.08
-      objectReference: {fileID: 0}
-    - target: {fileID: 8702489190573897543, guid: 9264cb0dd0994904f950ddcc03a22aa9,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8702489190573897540, guid: 9264cb0dd0994904f950ddcc03a22aa9,
-        type: 3}
-      propertyPath: m_ApplyRootMotion
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1877959323, guid: 9264cb0dd0994904f950ddcc03a22aa9, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9264cb0dd0994904f950ddcc03a22aa9, type: 3}
