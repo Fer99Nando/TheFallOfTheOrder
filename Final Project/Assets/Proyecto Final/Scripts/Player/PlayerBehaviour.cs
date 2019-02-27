@@ -39,6 +39,7 @@ public class PlayerBehaviour : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        dodgeTime = false;
         canAttack = false;
         cooldownTime = 0;
         godMode = false;
@@ -98,8 +99,26 @@ public class PlayerBehaviour : MonoBehaviour
 
         if (Input.GetButtonDown("Dodge"))
         {
-            StartCoroutine(Dodge());
-        } 
+            dodgeTime = true;
+            anim.SetTrigger("Dodge 0");
+        }
+
+        if (dodgeTime)
+        {
+            forwardSpeed = 4;
+        }
+        else
+        {
+            if (forwardSpeed < 8 && forwardSpeed > 0)
+            {
+                forwardSpeed+= Time.deltaTime * 4;
+            }
+            else if (forwardSpeed >= 8)
+            {
+                forwardSpeed = 8;
+            }
+
+        }
 
         if (canMove)
         {
@@ -123,7 +142,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     public void DodgeAcabado()
     {
-        canMove = true;
+        dodgeTime = false;
     }
 
     #region Coroutines
@@ -136,15 +155,6 @@ public class PlayerBehaviour : MonoBehaviour
             yield return new WaitForSeconds(attackTime);
             playerWeapon.BoxDisabled();
             canMove = true;
-    }
-
-    IEnumerator Dodge()
-    {
-        canMove = false;
-        //anim.SetBool("Walk", false);
-        anim.SetTrigger("Dodge 0");
-        yield return new WaitForSeconds(attackTime);
-        canMove = true; 
     }
 
     #endregion 
@@ -236,6 +246,7 @@ public class PlayerBehaviour : MonoBehaviour
     {
         transform.rotation = Quaternion.Euler(0, this.lookAt.eulerAngles.y, 0);
     }
+
     private bool Grounded()
     {
         return Physics.Raycast(transform.position + this.controller.center, Vector3.down, this.controller.bounds.extents.y + 0.001f);
@@ -254,6 +265,4 @@ public class PlayerBehaviour : MonoBehaviour
         }
         transform.Translate(new Vector3(movementH* 0.2f, 0,movementV* 0.2f), Space.Self);
     }
-
-
 }
