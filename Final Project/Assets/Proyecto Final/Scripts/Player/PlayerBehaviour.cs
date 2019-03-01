@@ -44,7 +44,7 @@ public class PlayerBehaviour : MonoBehaviour
         cooldownTime = 0;
         godMode = false;
         attackTime = attackAnim.length;
-        attackTime *= 0.8f;
+        attackTime *= 0.9f;
 
         anim = GetComponent<Animator>();  
 
@@ -133,7 +133,7 @@ public class PlayerBehaviour : MonoBehaviour
             Move();
         }
 
-        if (cooldownTime >= 1f)
+        if (cooldownTime >= 0.5f)
         {
             canAttack = false;
             cooldownTime = 0;
@@ -148,13 +148,14 @@ public class PlayerBehaviour : MonoBehaviour
     #region Coroutines
     IEnumerator Attack()
     {
-            canMove = false;
-            anim.SetBool("Walk", false);
-            anim.SetTrigger("Attack");
-            playerWeapon.BoxEnabled();
-            yield return new WaitForSeconds(attackTime);
-            playerWeapon.BoxDisabled();
-            canMove = true;
+        canMove = false;
+        anim.SetBool("Walk", false);
+        anim.SetTrigger("Attack");
+        playerWeapon.BoxEnabled();
+        yield return new WaitForSeconds(attackTime);
+        playerWeapon.BoxDisabled();
+        canMove = true;
+        //anim.SetBool("Walk", true);
     }
 
     #endregion 
