@@ -82,12 +82,15 @@ public class DistanceEnemy : MonoBehaviour
             default:
                 break;
         }
-
     }
 
     void LateUpdate()
     {
         distanceFromTarget = GetDistanceFromTarget();
+
+        targetPosition = player.transform.position - transform.position;
+        Quaternion newRotation = Quaternion.LookRotation(targetPosition);
+        transform.rotation = Quaternion.Lerp(transform.rotation, newRotation, rotationSpeed * 0.1f);
     }
 
     #region AllUpdatesStates
@@ -162,10 +165,6 @@ public class DistanceEnemy : MonoBehaviour
     {
         Debug.Log("CASI DAÑO");
         agent.SetDestination(player.transform.position);
-
-        targetPosition = player.transform.position - transform.position;
-        Quaternion newRotation = Quaternion.LookRotation(targetPosition);
-        transform.rotation = Quaternion.Lerp(transform.rotation, newRotation, rotationSpeed * 0.005f);
 
         if (distanceFromTarget < attackRange)
         {

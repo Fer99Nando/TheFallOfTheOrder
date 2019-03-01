@@ -101,6 +101,8 @@ public class PlayerBehaviour : MonoBehaviour
         {
             dodgeTime = true;
             anim.SetTrigger("Dodge 0");
+            this.moveDirection = transform.TransformDirection(this.moveDirection);
+            this.moveDirection.Set(0, 0, 10);
         }
 
         if (dodgeTime)
@@ -151,14 +153,24 @@ public class PlayerBehaviour : MonoBehaviour
         canMove = false;
         anim.SetBool("Walk", false);
         anim.SetTrigger("Attack");
-        playerWeapon.BoxEnabled();
+        //playerWeapon.BoxEnabled();
         yield return new WaitForSeconds(attackTime);
         playerWeapon.BoxDisabled();
         canMove = true;
         //anim.SetBool("Walk", true);
     }
-
     #endregion 
+
+    public void ColliderWeapon()
+    {
+        playerWeapon.BoxEnabled();
+    }
+
+    public void DisColliderWeapon()
+    {
+        playerWeapon.BoxDisabled();
+    }
+    
 
     // Escucha todas las teclas que controlan al jugador
     private bool GetInput()
