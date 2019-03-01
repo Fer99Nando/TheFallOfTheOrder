@@ -15,8 +15,14 @@ public class DistanceEnemy : MonoBehaviour
     private GameObject player;
 
     [Header("Arquero")]
-
+    
+    public float rotationSpeed;
+    public float particleSpeed;
     public GameObject spawnarrow;
+    public GameObject particlePrefab;
+
+    private GameObject shootedParticle;
+
 
     [Header("Paths")]
 
@@ -127,7 +133,7 @@ public class DistanceEnemy : MonoBehaviour
 
         if (distanceFromTarget > chaseRange)
         {
-            anim.SetBool("Shoot", true);
+            anim.SetBool("Shoot", false);
             timeToPatrol += Time.deltaTime;
             if (timeToPatrol >= 3)
             {
@@ -139,9 +145,8 @@ public class DistanceEnemy : MonoBehaviour
         else
         {
             if (distanceFromTarget > attackRange)
-
             {
-                anim.SetBool("Melee", true);
+                anim.SetBool("Shoot", true);
             }
         }
 
@@ -158,6 +163,10 @@ public class DistanceEnemy : MonoBehaviour
         Debug.Log("CASI DAÑO");
         agent.SetDestination(player.transform.position);
 
+        targetPosition = player.transform.position - transform.position;
+        Quaternion newRotation = Quaternion.LookRotation(targetPosition);
+        transform.rotation = Quaternion.Lerp(transform.rotation, newRotation, rotationSpeed * 0.005f);
+
         if (distanceFromTarget < attackRange)
         {
             Debug.Log("ATTACK");
@@ -171,7 +180,7 @@ public class DistanceEnemy : MonoBehaviour
         else
         {
             Debug.Log("Salio Del Range");
-            anim.SetBool("Melee", true);
+            anim.SetBool("Melee", false);
             agent.isStopped = false;
             SetChase();
             return;
@@ -223,6 +232,12 @@ public class DistanceEnemy : MonoBehaviour
     }
 
     #endregion
+
+    public void InstaArrow()
+    {
+        shootedParticle = Instantiate(particlePrefab, spawnarrow.transform.position, Quaternion.identity);
+        shootedParticle.GetComponent<Rigidbody>().velocity = transform.forward * particleSpeed;
+    }
 
     float GetDistanceFromTarget()       // Calcula la distancia con el player
     {
