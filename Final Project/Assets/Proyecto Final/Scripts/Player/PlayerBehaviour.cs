@@ -44,7 +44,7 @@ public class PlayerBehaviour : MonoBehaviour
         cooldownTime = 0;
         godMode = false;
         attackTime = attackAnim.length;
-        attackTime *= 0.9f;
+        attackTime *= 0.7f;
 
         anim = GetComponent<Animator>();  
 
@@ -83,13 +83,14 @@ public class PlayerBehaviour : MonoBehaviour
             GodMode();
         }
 
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Attack_Melee"))
         {
-            if (cooldownTime == 0)
-            {
+            //if (cooldownTime == 0)
+            //{
+                anim.SetTrigger("Attack");
                 canAttack = true;
                 StartCoroutine(Attack());
-            }
+            //}
         }
 
         if (canAttack)
@@ -135,7 +136,7 @@ public class PlayerBehaviour : MonoBehaviour
             Move();
         }
 
-        if (cooldownTime >= 0.5f)
+        if (cooldownTime >= 1)
         {
             canAttack = false;
             cooldownTime = 0;
@@ -151,9 +152,9 @@ public class PlayerBehaviour : MonoBehaviour
     IEnumerator Attack()
     {
         canMove = false;
+        
         anim.SetBool("Walk", false);
-        anim.SetTrigger("Attack");
-        //playerWeapon.BoxEnabled();
+        
         yield return new WaitForSeconds(attackTime);
         playerWeapon.BoxDisabled();
         canMove = true;
@@ -210,12 +211,12 @@ public class PlayerBehaviour : MonoBehaviour
 
             else if (this.inputH > 0 && this.inputV == 0) // DERECHA
             {
-                this.moveDirection.Set(this.inputH * this.forwardSpeed, 0, 0);
+                this.moveDirection.Set(this.inputH * this.forwardSpeed / 1.2f, 0, 0);
             }
 
             else if (this.inputH < 0 && this.inputV == 0) // IZQUIERDA
             {
-                this.moveDirection.Set(this.inputH * this.backSpeed, 0, 0);
+                this.moveDirection.Set(this.inputH * this.backSpeed / 1.2f, 0, 0);
             }
 
             else if (this.inputV > 0 && this.inputH > 0) // AVANZA-DERECHA
