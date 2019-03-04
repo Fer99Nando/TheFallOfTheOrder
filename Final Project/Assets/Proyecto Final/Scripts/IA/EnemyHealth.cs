@@ -42,14 +42,14 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    /*private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "PlayerWeapon")
         {
             transform.GetComponent<MeshRenderer>().material = mat2;
         }
         else transform.GetComponent<MeshRenderer>().material = mat1;
-    }
+    }*/
 
         void Death()
     {

@@ -16,10 +16,13 @@ public class ArrowBehaviour : MonoBehaviour
 
         playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
         player = GameObject.FindGameObjectWithTag("Player");
+
         targetPosition = player.transform.position - transform.position;
         Quaternion newRotation = Quaternion.LookRotation(targetPosition);
         transform.rotation = Quaternion.Lerp(transform.rotation, newRotation, 1);
     }
+
+
 
     private void OnCollisionEnter(Collision col)
     {
@@ -35,6 +38,7 @@ public class ArrowBehaviour : MonoBehaviour
         {
             Debug.Log("AAuuuuuux");
             playerHealth.currentHp -= bossprueba.bonusEnemyStats;
+            Destroy(gameObject);
         }
     }
 }
