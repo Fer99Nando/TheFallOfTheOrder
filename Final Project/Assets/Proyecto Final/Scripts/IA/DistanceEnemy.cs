@@ -14,6 +14,7 @@ public class DistanceEnemy : MonoBehaviour
     private Vector3 targetPosition;
     private GameObject player;
 
+
     [Header("Arquero")]
     
     public float rotationSpeed;
@@ -32,10 +33,11 @@ public class DistanceEnemy : MonoBehaviour
     public float attackRange;       // Rango de Ataque
     [SerializeField] private float distanceFromTarget = Mathf.Infinity;     // Distancia del target que puede ser hasta infinito
 
+
     [Header("Speeds")]
 
-    public float chaseSpeed;        // Velocidad de Persecucion
     public float patrolSpeed;       // Velocidad  mientras Patrulla
+
 
     [Header("Timers")]
 
@@ -45,9 +47,11 @@ public class DistanceEnemy : MonoBehaviour
 
     public float coolDownAttack = 0;   // Enfriamineto despues de atacar
 
+
     [Header("Stats")]
 
     //private bool canAttack = false;     // El ataque del enemigo desactivado
+
 
     [Header("Animation")]
 
@@ -89,6 +93,7 @@ public class DistanceEnemy : MonoBehaviour
         distanceFromTarget = GetDistanceFromTarget();
 
         targetPosition = player.transform.position - transform.position;
+        targetPosition.y = 0;
         Quaternion newRotation = Quaternion.LookRotation(targetPosition);
         transform.rotation = Quaternion.Lerp(transform.rotation, newRotation, rotationSpeed * 0.1f);
     }
@@ -131,7 +136,6 @@ public class DistanceEnemy : MonoBehaviour
 
     void ChaseUpdate()
     {
-        // animacion de giro hacia el personaje
         anim.SetBool("Shoot", true);
 
         if (distanceFromTarget > chaseRange)
@@ -164,7 +168,6 @@ public class DistanceEnemy : MonoBehaviour
     void ActionUpdate()
     {
         Debug.Log("CASI DAÑO");
-        agent.SetDestination(player.transform.position);
 
         if (distanceFromTarget < attackRange)
         {
@@ -215,11 +218,6 @@ public class DistanceEnemy : MonoBehaviour
 
     void SetChase()
     {
-        // Animacion de caminar
-
-
-        agent.speed = chaseSpeed;   // La velocidad del enemigo pasa a ser igual que la de modo persecucion
-
         state = EnemyState.Chase;   // El estado pasa a ser persecucion
     }
 
