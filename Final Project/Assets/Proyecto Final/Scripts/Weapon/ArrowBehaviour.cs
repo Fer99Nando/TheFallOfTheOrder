@@ -8,6 +8,7 @@ public class ArrowBehaviour : MonoBehaviour
     private GameObject player;
     BossPrueba bossprueba;
 
+    public ParticleSystem trail;
     private Vector3 targetPosition;
 
     void Start()
@@ -20,6 +21,8 @@ public class ArrowBehaviour : MonoBehaviour
         targetPosition = player.transform.position - transform.position;
         Quaternion newRotation = Quaternion.LookRotation(targetPosition);
         transform.rotation = Quaternion.Lerp(transform.rotation, newRotation, 1);
+
+        trail.Play();
     }
 
 
