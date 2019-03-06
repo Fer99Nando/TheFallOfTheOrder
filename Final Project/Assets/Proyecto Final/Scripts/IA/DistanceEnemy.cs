@@ -22,8 +22,9 @@ public class DistanceEnemy : MonoBehaviour
     public GameObject spawnarrow;
     public GameObject particlePrefab;
 
+    public ParticleSystem trail;
     private GameObject shootedParticle;
-
+    ArrowBehaviour arrowParticlesTrail;
 
     [Header("Paths")]
 
@@ -64,6 +65,7 @@ public class DistanceEnemy : MonoBehaviour
         anim = GetComponent<Animator>();        // Llamamos a las animaciones
 
         player = GameObject.FindGameObjectWithTag("Player");
+        arrowParticlesTrail = GetComponent<ArrowBehaviour>();
     }
 
     // Update is called once per frame
@@ -232,8 +234,10 @@ public class DistanceEnemy : MonoBehaviour
 
     public void InstaArrow()
     {
+        trail.Play();
         shootedParticle = Instantiate(particlePrefab, spawnarrow.transform.position, Quaternion.identity);
         shootedParticle.GetComponent<Rigidbody>().velocity = transform.forward * particleSpeed;
+        //arrowParticlesTrail.ParticleRastro();
     }
 
     float GetDistanceFromTarget()       // Calcula la distancia con el player
