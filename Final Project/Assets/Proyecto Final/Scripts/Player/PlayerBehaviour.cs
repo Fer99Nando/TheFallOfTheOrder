@@ -6,6 +6,7 @@ public class PlayerBehaviour : MonoBehaviour
 {
     private CharacterController controller;
     PlayerWeapon playerWeapon;
+    private GameObject player;
 
     public Transform lookAt;
 
@@ -21,9 +22,12 @@ public class PlayerBehaviour : MonoBehaviour
     private float inputH;                   // Tecla de avance lateral
     //private float jumpInput;
     private float attackTime;
+    private float esquiveTime;
+    private float esquiveSuma;
     private float cooldownTime;
 
     private bool dodgeTime;
+    private bool dodgeTrue;
     private bool attackOne;
     public  bool canMove;
     public  bool canAttack;
@@ -31,8 +35,6 @@ public class PlayerBehaviour : MonoBehaviour
 
     public Animator anim;
     public AnimationClip attackAnim;
-
-    private BoxCollider boxColliderDodge;
 
     PlayerHealth playerHealth;
 
@@ -46,14 +48,15 @@ public class PlayerBehaviour : MonoBehaviour
         canAttack = false;
         cooldownTime = 0;
         godMode = false;
+
         attackTime = attackAnim.length;
         attackTime *= 0.7f;
 
         anim = GetComponent<Animator>();
-        boxColliderDodge = GetComponent<BoxCollider>();
         this.controller = GetComponent<CharacterController>();
         playerHealth = GetComponent<PlayerHealth>();
         playerWeapon = GameObject.FindGameObjectWithTag("PlayerWeapon").GetComponent<PlayerWeapon>();
+        player = GameObject.FindGameObjectWithTag("Player");
 
         canMove = true;
 
@@ -77,10 +80,14 @@ public class PlayerBehaviour : MonoBehaviour
                 godMode = true;
             }
         }
-        /*if (inputH != 0 || inputV != 0)
+
+        if (dodgeTrue)
         {
-            footSteps.Play();
-        } else footSteps.Stop();*/
+            esquiveSuma += Time.deltaTime/4;
+            esquiveTime = esquiveSuma;
+
+            player.transform.position += new Vector3(0, 0, esquiveTime);
+        }
 
         if (godMode){
             GodMode();
@@ -102,10 +109,12 @@ public class PlayerBehaviour : MonoBehaviour
 
         if (Input.GetButtonDown("Dodge"))
         {
+            dodgeTrue = true;
+
+            controller.center = new Vector3(0, -0.032f, 0.008f);
+            controller.height = 0.013f;
             dodgeTime = true;
             anim.SetTrigger("Dodge 0");
-            this.moveDirection = transform.TransformDirection(this.moveDirection);
-            this.moveDirection.Set(0, 0, 10);
         }
 
         if (dodgeTime)
@@ -147,6 +156,12 @@ public class PlayerBehaviour : MonoBehaviour
 
     public void DodgeAcabado()
     {
+        this.moveDirection = transform.TransformDirection(this.moveDirection);
+        this.moveDirection.Set(0, 0, 0);
+        dodgeTrue = false;
+        esquiveSuma = 0;
+        controller.height = 0.13f;
+        controller.center = new Vector3(0, 0.007f, 0.008f);
         dodgeTime = false;
     }
 
@@ -184,7 +199,6 @@ public class PlayerBehaviour : MonoBehaviour
 
         if (this.inputV != 0 || this.inputH != 0)
         {
-            //footSteps.Stop();
             return true;
         }
         return false;
@@ -214,12 +228,12 @@ public class PlayerBehaviour : MonoBehaviour
 
             else if (this.inputH > 0 && this.inputV == 0) // DERECHA
             {
-                this.moveDirection.Set(this.inputH * this.forwardSpeed / 1.2f, 0, 0);
+                this.moveDirection.Set(this.inputH * this.forwardSpeed / 1.3f, 0, 0);
             }
 
             else if (this.inputH < 0 && this.inputV == 0) // IZQUIERDA
             {
-                this.moveDirection.Set(this.inputH * this.backSpeed / 1.2f, 0, 0);
+                this.moveDirection.Set(this.inputH * this.backSpeed / 1.3f, 0, 0);
             }
 
             else if (this.inputV > 0 && this.inputH > 0) // AVANZA-DERECHA
@@ -234,12 +248,12 @@ public class PlayerBehaviour : MonoBehaviour
 
             else if (this.inputV < 0 && this.inputH > 0) // RETROCEDE-DERECHA
             {
-                this.moveDirection.Set(this.inputH * this.diagonalBackSpeed, 0, this.inputV * this.diagonalBackSpeed);
+                this.moveDirection.Set(this.inputH * this.diagonalBackSpeed, 0, this.inputV * this.diagonalBackSpeed / 1.3f);
             }
 
             else if (this.inputV < 0 && this.inputH < 0) // RETROCEDE-IZQUIERDA
             {
-                this.moveDirection.Set(this.inputH * this.diagonalBackSpeed, 0, this.inputV * this.diagonalBackSpeed);
+                this.moveDirection.Set(this.inputH * this.diagonalBackSpeed, 0, this.inputV * this.diagonalBackSpeed / 1.3f);
             }
 
             this.moveDirection = transform.TransformDirection(this.moveDirection); // Transformamos la direccion de loca a world space

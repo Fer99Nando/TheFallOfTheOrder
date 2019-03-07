@@ -124606,6 +124606,11 @@ PrefabInstance:
       propertyPath: lookAt
       value: 
       objectReference: {fileID: 1849063440}
+    - target: {fileID: 8702489190573897542, guid: 9264cb0dd0994904f950ddcc03a22aa9,
+        type: 3}
+      propertyPath: esquiveAnim
+      value: 
+      objectReference: {fileID: 7400000, guid: 38595bdd04d1f304fbca06784197b685, type: 3}
     - target: {fileID: 8702489190573897537, guid: 9264cb0dd0994904f950ddcc03a22aa9,
         type: 3}
       propertyPath: healthSlider
@@ -124695,6 +124700,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Center.z
       value: 0.008
+      objectReference: {fileID: 0}
+    - target: {fileID: 8702489190573897543, guid: 9264cb0dd0994904f950ddcc03a22aa9,
+        type: 3}
+      propertyPath: m_Height
+      value: 0.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 8702489190573897543, guid: 9264cb0dd0994904f950ddcc03a22aa9,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.007
       objectReference: {fileID: 0}
     - target: {fileID: 1510992902255097356, guid: 9264cb0dd0994904f950ddcc03a22aa9,
         type: 3}
