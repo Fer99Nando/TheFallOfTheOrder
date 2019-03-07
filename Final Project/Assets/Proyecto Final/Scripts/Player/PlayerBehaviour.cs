@@ -28,8 +28,11 @@ public class PlayerBehaviour : MonoBehaviour
     public  bool canMove;
     public  bool canAttack;
     private bool godMode;
+
     public Animator anim;
     public AnimationClip attackAnim;
+
+    private BoxCollider boxColliderDodge;
 
     PlayerHealth playerHealth;
 
@@ -46,8 +49,8 @@ public class PlayerBehaviour : MonoBehaviour
         attackTime = attackAnim.length;
         attackTime *= 0.7f;
 
-        anim = GetComponent<Animator>();  
-
+        anim = GetComponent<Animator>();
+        boxColliderDodge = GetComponent<BoxCollider>();
         this.controller = GetComponent<CharacterController>();
         playerHealth = GetComponent<PlayerHealth>();
         playerWeapon = GameObject.FindGameObjectWithTag("PlayerWeapon").GetComponent<PlayerWeapon>();
@@ -87,7 +90,6 @@ public class PlayerBehaviour : MonoBehaviour
         {
             //if (cooldownTime == 0)
             //{
-                anim.SetTrigger("Attack");
                 canAttack = true;
                 StartCoroutine(Attack());
             //}
@@ -151,6 +153,7 @@ public class PlayerBehaviour : MonoBehaviour
     #region Coroutines
     IEnumerator Attack()
     {
+        anim.SetTrigger("Attack");
         canMove = false;
         
         anim.SetBool("Walk", false);

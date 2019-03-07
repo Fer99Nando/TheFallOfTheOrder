@@ -169,7 +169,7 @@ public class PlayerHealth : MonoBehaviour
     {
         isDead = true;
         anim.SetBool("Died", true);
-       //playerControl.enabled = false;
+       playerControl.enabled = false;
     }
 
     public void DieAcabado()
