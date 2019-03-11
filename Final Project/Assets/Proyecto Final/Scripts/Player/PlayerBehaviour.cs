@@ -95,11 +95,9 @@ public class PlayerBehaviour : MonoBehaviour
 
         if (Input.GetButtonDown("Attack_Melee"))
         {
-            //if (cooldownTime == 0)
-            //{
+            anim.SetTrigger("Attack");
                 canAttack = true;
                 StartCoroutine(Attack());
-            //}
         }
 
         if (canAttack)
@@ -168,15 +166,12 @@ public class PlayerBehaviour : MonoBehaviour
     #region Coroutines
     IEnumerator Attack()
     {
-        anim.SetTrigger("Attack");
         canMove = false;
         
         anim.SetBool("Walk", false);
         
         yield return new WaitForSeconds(attackTime);
-        playerWeapon.BoxDisabled();
         canMove = true;
-        //anim.SetBool("Walk", true);
     }
     #endregion 
 

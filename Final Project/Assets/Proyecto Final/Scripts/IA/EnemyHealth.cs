@@ -10,9 +10,6 @@ public class EnemyHealth : MonoBehaviour
 
     public Slider healthSlider;
 
-    public Material mat1;
-    public Material mat2;
-
     // Sonido muerte
 
     Animator anim;
@@ -38,24 +35,28 @@ public class EnemyHealth : MonoBehaviour
 
         if (currentHp <= 0 && !isDead)
         {
-            Death();
+            anim.SetBool("Death", true);
         }
     }
 
-    /*private void OnTriggerEnter(Collider other)
+    public void SeAcaboElHit()
+    {
+        anim.ResetTrigger("Hit");
+    }
+
+    private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "PlayerWeapon")
         {
-            transform.GetComponent<MeshRenderer>().material = mat2;
+            anim.SetTrigger("Hit");
         }
-        else transform.GetComponent<MeshRenderer>().material = mat1;
-    }*/
+    }
 
         void Death()
     {
         isDead = true;
 
-        // Animacion de muerte;
+        
         Destroy(gameObject);
     }
 }
