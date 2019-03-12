@@ -13,6 +13,7 @@ public class EnemyHealth : MonoBehaviour
     // Sonido muerte
 
     Animator anim;
+    CharacterController controller;
 
     // Sonidos
 
@@ -20,6 +21,7 @@ public class EnemyHealth : MonoBehaviour
 
     void Awake()
     {
+        controller = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
         currentHp = startingHp;
     }
@@ -35,6 +37,7 @@ public class EnemyHealth : MonoBehaviour
 
         if (currentHp <= 0 && !isDead)
         {
+            controller.enabled = false;
             anim.SetBool("Death", true);
         }
     }
@@ -52,11 +55,9 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
-        void Death()
+    public void Death()
     {
         isDead = true;
-
-        
         Destroy(gameObject);
     }
 }

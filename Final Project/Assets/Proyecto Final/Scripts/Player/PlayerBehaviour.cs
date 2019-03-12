@@ -10,6 +10,8 @@ public class PlayerBehaviour : MonoBehaviour
 
     public Transform lookAt;
 
+    [Header("Speed & Direction")]
+
     public float forwardSpeed;              // Velocidad de avance
     private float diagonalForwardSpeed;     // Velocidad de avance en cada eje cuando avanza diagonalmente
     private float backSpeed;                // Velocidad de retroceso
@@ -18,23 +20,39 @@ public class PlayerBehaviour : MonoBehaviour
 
     private Vector3 moveDirection;          // Vector de la direccion
 
+    [Header("Inputs")]
+
     private float inputV;                   // Tecla de avance recto
     private float inputH;                   // Tecla de avance lateral
-    //private float jumpInput;
+    private float inputDodge;                   // Tecla de esquivar lateral
+
+    [Header("Times")]
+
     private float attackTime;
+
     private float esquiveTime;
     private float esquiveSuma;
+
     private float cooldownTime;
+
+    [Header("Bools")]
 
     private bool dodgeTime;
     private bool dodgeTrue;
+
+    private bool comboOn;
+    private bool attackOn;
     private bool attackOne;
+    public bool canAttack;
+
     public  bool canMove;
-    public  bool canAttack;
+    
     private bool godMode;
 
+    [Header("Animator")]
+
     public Animator anim;
-    public AnimationClip attackAnim;
+    //public AnimationClip attackAnim;
 
     PlayerHealth playerHealth;
 
@@ -44,13 +62,15 @@ public class PlayerBehaviour : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        comboOn = false;
+        attackOn = false;
         dodgeTime = false;
         canAttack = false;
         cooldownTime = 0;
         godMode = false;
 
-        attackTime = attackAnim.length;
-        attackTime *= 0.7f;
+        //attackTime = attackAnim.length;
+        //attackTime *= 0.9f;
 
         anim = GetComponent<Animator>();
         this.controller = GetComponent<CharacterController>();
@@ -83,10 +103,13 @@ public class PlayerBehaviour : MonoBehaviour
 
         if (dodgeTrue)
         {
-            esquiveSuma += Time.deltaTime/4;
-            esquiveTime = esquiveSuma;
+            //esquiveSuma += Time.deltaTime/4;
+            // esquiveTime = esquiveSuma;
 
-            player.transform.position += new Vector3(0, 0, esquiveTime);
+            // player.transform.position += new Vector3(0, 0, esquiveTime);
+
+            this.moveDirection.Set(0, 0, this.inputDodge * this.forwardSpeed);
+            this.moveDirection = transform.TransformDirection(this.moveDirection);
         }
 
         if (godMode){
@@ -95,9 +118,18 @@ public class PlayerBehaviour : MonoBehaviour
 
         if (Input.GetButtonDown("Attack_Melee"))
         {
-            anim.SetTrigger("Attack");
+            if (attackOn == false)
+            {
+                attackOn = true;
+                anim.SetTrigger("Attack");
                 canAttack = true;
                 StartCoroutine(Attack());
+            }
+
+            if (comboOn)
+            {
+                anim.SetTrigger("FirstCombo");
+            }
         }
 
         if (canAttack)
@@ -107,12 +139,14 @@ public class PlayerBehaviour : MonoBehaviour
 
         if (Input.GetButtonDown("Dodge"))
         {
-            dodgeTrue = true;
-
-            controller.center = new Vector3(0, -0.032f, 0.008f);
-            controller.height = 0.013f;
-            dodgeTime = true;
-            anim.SetTrigger("Dodge 0");
+            if (dodgeTrue == false)
+            {
+                dodgeTrue = true;
+                anim.SetTrigger("Dodge 0");
+                controller.center = new Vector3(0, -0.032f, 0.008f);
+                controller.height = 0.013f;
+                dodgeTime = true;
+            } 
         }
 
         if (dodgeTime)
@@ -154,13 +188,28 @@ public class PlayerBehaviour : MonoBehaviour
 
     public void DodgeAcabado()
     {
-        this.moveDirection = transform.TransformDirection(this.moveDirection);
-        this.moveDirection.Set(0, 0, 0);
         dodgeTrue = false;
         esquiveSuma = 0;
         controller.height = 0.13f;
         controller.center = new Vector3(0, 0.007f, 0.008f);
         dodgeTime = false;
+    }
+
+    public void AtaqueAcabado()
+    {
+        attackOn = false;
+    }
+
+    public void ComboComienzo()
+    {
+        comboOn = true;
+    }
+
+    public void SinCombo()
+    {
+        attackOn = false;
+        comboOn = false;
+        anim.ResetTrigger("FirstCombo");
     }
 
     #region Coroutines
@@ -170,7 +219,7 @@ public class PlayerBehaviour : MonoBehaviour
         
         anim.SetBool("Walk", false);
         
-        yield return new WaitForSeconds(attackTime);
+        yield return new WaitForSeconds(1);
         canMove = true;
     }
     #endregion 
@@ -191,6 +240,7 @@ public class PlayerBehaviour : MonoBehaviour
     {        
         this.inputV = Input.GetAxis("Vertical");
         this.inputH = Input.GetAxis("Horizontal");
+        this.inputDodge = Input.GetAxis("Dodge");
 
         if (this.inputV != 0 || this.inputH != 0)
         {
@@ -223,6 +273,7 @@ public class PlayerBehaviour : MonoBehaviour
 
             else if (this.inputH > 0 && this.inputV == 0) // DERECHA
             {
+                transform.rotation = Quaternion.Euler(0, this.lookAt.eulerAngles.y, 0);
                 this.moveDirection.Set(this.inputH * this.forwardSpeed / 1.3f, 0, 0);
             }
 
