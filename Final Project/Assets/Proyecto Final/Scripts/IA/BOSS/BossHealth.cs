@@ -14,14 +14,11 @@ public class BossHealth : MonoBehaviour
 
     CharacterController controller;
 
-    public Material mat1;
-    public Material mat2;
-
     int phase;
 
     // Sonido muerte
 
-    //Animator anim;
+    Animator anim;
 
     // Sonidos
 
@@ -36,7 +33,7 @@ public class BossHealth : MonoBehaviour
 
         bossBehaviour = GetComponent<BossPrueba>();
         controller = GetComponent<CharacterController>();
-        //anim = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
         currentHp = startingHp;
         healthSlider.fillAmount = currentHp / startingHp;
     }
@@ -94,26 +91,25 @@ public class BossHealth : MonoBehaviour
             isDead = true;
             if (isDead)
             {
-                Death();
+                anim.SetBool("Death", true);
             }
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+   /* private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "PlayerWeapon")
         {
-            transform.GetComponentInChildren<SkinnedMeshRenderer>().material = mat2;
+            
         }
-        else transform.GetComponentInChildren<SkinnedMeshRenderer>().material = mat1;
-    }
+    }*/
 
     void Death()
     {
-        // Animacion de muerte;
-        Destroy(gameObject);
-        victory.SetActive(true);
-        Time.timeScale = 0;
-        Cursor.visible = true;
+        controller.enabled = false;
+        //Destroy(gameObject);
+        //victory.SetActive(true);
+        //Time.timeScale = 0;
+        //Cursor.visible = true;
     }
 }
