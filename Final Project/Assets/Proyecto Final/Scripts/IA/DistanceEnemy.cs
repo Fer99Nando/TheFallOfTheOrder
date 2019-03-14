@@ -22,7 +22,6 @@ public class DistanceEnemy : MonoBehaviour
     public GameObject spawnarrow;
     public GameObject particlePrefab;
 
-    public ParticleSystem trail;
     private GameObject shootedParticle;
     ArrowBehaviour arrowParticlesTrail;
 
@@ -234,7 +233,6 @@ public class DistanceEnemy : MonoBehaviour
 
     public void InstaArrow()
     {
-        trail.Play();
         shootedParticle = Instantiate(particlePrefab, spawnarrow.transform.position, Quaternion.identity);
         shootedParticle.GetComponent<Rigidbody>().velocity = transform.forward * particleSpeed;
         //arrowParticlesTrail.ParticleRastro();

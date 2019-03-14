@@ -4840,7 +4840,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b4eb8df9e88f9340bd9040ff6f8b752, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHp: 500
+  startingHp: 100
   startingV: 0
   currentHp: 0
   currentV: 0
@@ -4876,10 +4876,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8702489190573897536}
     m_Modifications:
-    - target: {fileID: 100000, guid: b4524dfce8c5f244593d3b1906ae2236, type: 3}
-      propertyPath: m_Name
-      value: Anim_Tai_Iddle (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: b4524dfce8c5f244593d3b1906ae2236, type: 3}
       propertyPath: m_Layer
       value: 12
@@ -4887,6 +4883,10 @@ PrefabInstance:
     - target: {fileID: 100002, guid: b4524dfce8c5f244593d3b1906ae2236, type: 3}
       propertyPath: m_TagString
       value: PlayerWeapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b4524dfce8c5f244593d3b1906ae2236, type: 3}
+      propertyPath: m_Name
+      value: Anim_Tai_Iddle (1)
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b4524dfce8c5f244593d3b1906ae2236, type: 3}
       propertyPath: m_LocalPosition.x

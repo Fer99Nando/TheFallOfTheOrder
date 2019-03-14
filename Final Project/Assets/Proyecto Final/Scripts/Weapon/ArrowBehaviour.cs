@@ -8,33 +8,24 @@ public class ArrowBehaviour : MonoBehaviour
     private GameObject player;
     BossPrueba bossprueba;
 
+    public ParticleSystem trail;
+
     //public ParticleSystem trail;
     private Vector3 targetPosition;
 
     void Start()
     {
-        bossprueba = GameObject.FindGameObjectWithTag("Boss").GetComponent<BossPrueba>(); ;
+        bossprueba = GameObject.FindGameObjectWithTag("Boss").GetComponent<BossPrueba>();
 
         playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
+
         player = GameObject.FindGameObjectWithTag("Player");
 
         targetPosition = player.transform.position - transform.position;
         Quaternion newRotation = Quaternion.LookRotation(targetPosition);
         transform.rotation = Quaternion.Lerp(transform.rotation, newRotation, 1);
-    }
 
-    /*public void ParticleRastro()
-    {
         trail.Play();
-    }*/
-
-    private void OnCollisionEnter(Collision col)
-    {
-        if (col.gameObject)
-        {
-            //trail.Stop();
-            Destroy(gameObject);
-        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -42,9 +33,19 @@ public class ArrowBehaviour : MonoBehaviour
         if (other.tag == "Player")
         {
             Debug.Log("AAuuuuuux");
-            //trail.Stop();
-            playerHealth.currentHp -= bossprueba.bonusEnemyStats;
+            playerHealth.currentHp -= 10;
             Destroy(gameObject);
         }
+
     }
+
+    /*private void OnCollisionEnter(Collision col)
+    {
+        if (col.gameObject)
+        {
+            Destroy(gameObject);
+        }
+    }*/
+
+
 }
