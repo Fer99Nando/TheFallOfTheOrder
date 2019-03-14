@@ -41,6 +41,7 @@ public class PlayerBehaviour : MonoBehaviour
     private bool dodgeTrue;
 
     private bool comboOn;
+    private bool comboTwoOn;
     private bool attackOn;
     private bool attackOne;
     public bool canAttack;
@@ -62,6 +63,7 @@ public class PlayerBehaviour : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        comboTwoOn = false;
         comboOn = false;
         attackOn = false;
         dodgeTime = false;
@@ -130,6 +132,11 @@ public class PlayerBehaviour : MonoBehaviour
             {
                 anim.SetTrigger("FirstCombo");
             }
+
+            if (comboTwoOn)
+            {
+                anim.SetTrigger("SecondCombo");
+            }
         }
 
         if (canAttack)
@@ -195,9 +202,18 @@ public class PlayerBehaviour : MonoBehaviour
         dodgeTime = false;
     }
 
+    #region Attack Combo
     public void AtaqueAcabado()
     {
         attackOn = false;
+    }
+
+    public void SinCombo()
+    {
+        attackOn = false;
+        comboTwoOn = false;
+        comboOn = false;
+        anim.ResetTrigger("SecondCombo");
     }
 
     public void ComboComienzo()
@@ -205,12 +221,12 @@ public class PlayerBehaviour : MonoBehaviour
         comboOn = true;
     }
 
-    public void SinCombo()
+    public void ComboTwoComienzo()
     {
-        attackOn = false;
+        comboTwoOn = true;
         comboOn = false;
-        anim.ResetTrigger("FirstCombo");
     }
+    #endregion
 
     #region Coroutines
     IEnumerator Attack()

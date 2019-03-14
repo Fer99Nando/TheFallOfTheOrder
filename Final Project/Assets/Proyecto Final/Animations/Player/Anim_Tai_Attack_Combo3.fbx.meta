@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c7b2ee016c6e3f8469bdb9b9b2db76ec
+guid: 4685c53875823a3458c87f555f8087b3
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -195,7 +195,7 @@ ModelImporter:
     3300000: ArmaTai:polySurface1
     4300000: Tai:polySurface1
     4300002: ArmaTai:polySurface1
-    7400000: AtaqueCombo02_Player
+    7400000: Attack_Combo3_Player
     9500000: //RootNode
     13700000: Tai:polySurface1
     2186277476908879412: ImportLogs
@@ -228,10 +228,10 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: AtaqueCombo02_Player
+      name: Attack_Combo3_Player
       takeName: Take 001
       firstFrame: 1
-      lastFrame: 13
+      lastFrame: 14
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -251,35 +251,21 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.39518613
+      - time: 0.2522936
         functionName: ColliderWeapon
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.55936074
+      - time: 0.39220184
         functionName: DisColliderWeapon
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.5993468
-        functionName: ComboTwoComienzo
-        data: 
-        objectReferenceParameter: {instanceID: 0}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
-      - time: 0.969419
-        functionName: AtaqueAcabado
-        data: 
-        objectReferenceParameter: {instanceID: 0}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
-      - time: 0.991479
+      - time: 0.9830508
         functionName: SinCombo
         data: 
         objectReferenceParameter: {instanceID: 0}
