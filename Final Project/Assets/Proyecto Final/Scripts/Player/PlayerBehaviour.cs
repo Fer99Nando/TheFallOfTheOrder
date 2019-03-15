@@ -34,11 +34,14 @@ public class PlayerBehaviour : MonoBehaviour
     private float esquiveSuma;
 
     private float cooldownTime;
+    private float cooldownChargeTime;
 
     [Header("Bools")]
 
     private bool dodgeTime;
     private bool dodgeTrue;
+
+    private bool chargeAttack;
 
     private bool comboOn;
     private bool comboTwoOn;
@@ -63,10 +66,13 @@ public class PlayerBehaviour : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        chargeAttack = false;
         comboTwoOn = false;
         comboOn = false;
         attackOn = false;
+
         dodgeTime = false;
+
         canAttack = false;
         cooldownTime = 0;
         godMode = false;
@@ -114,34 +120,57 @@ public class PlayerBehaviour : MonoBehaviour
             this.moveDirection = transform.TransformDirection(this.moveDirection);
         }
 
-        if (godMode){
+        if (godMode)
+        {
             GodMode();
+        }
+
+        if (Input.GetButtonDown("Charge_Attack"))
+        {
+            if (attackOn == false)
+            {
+                attackOn = true;
+                chargeAttack = true;
+                anim.SetTrigger("ChargeAttack");
+            }
         }
 
         if (Input.GetButtonDown("Attack_Melee"))
         {
             if (attackOn == false)
             {
+                canAttack = true;
                 attackOn = true;
                 anim.SetTrigger("Attack");
-                canAttack = true;
-                StartCoroutine(Attack());
             }
 
             if (comboOn)
             {
+                canAttack = true;
                 anim.SetTrigger("FirstCombo");
             }
 
             if (comboTwoOn)
             {
+                canAttack = true;
                 anim.SetTrigger("SecondCombo");
             }
         }
 
         if (canAttack)
         {
+            canMove = false;
+        
+            anim.SetBool("Walk", false);
             cooldownTime += Time.deltaTime;
+        }
+
+        if (chargeAttack)
+        {
+            canMove = false;
+        
+            anim.SetBool("Walk", false);
+            cooldownChargeTime += Time.deltaTime;
         }
 
         if (Input.GetButtonDown("Dodge"))
@@ -179,6 +208,11 @@ public class PlayerBehaviour : MonoBehaviour
             {
                 anim.SetBool("Walk", true);
 
+                if(inputH != 0)
+                {
+                    forwardSpeed = 4;
+                }
+
                 Rotate();
             }
             else anim.SetBool("Walk", false);
@@ -190,6 +224,12 @@ public class PlayerBehaviour : MonoBehaviour
         {
             canAttack = false;
             cooldownTime = 0;
+        }
+                
+        if (cooldownChargeTime >= 10)
+        {
+            canAttack = false;
+            cooldownChargeTime = 0;
         }
     }
 
@@ -205,7 +245,12 @@ public class PlayerBehaviour : MonoBehaviour
     #region Attack Combo
     public void AtaqueAcabado()
     {
+        canMove = true;
         attackOn = false;
+        anim.ResetTrigger("SecondCombo");
+        anim.ResetTrigger("FirstCombo");
+        anim.ResetTrigger("Attack");
+        anim.ResetTrigger("ChargeAttack");
     }
 
     public void SinCombo()
@@ -214,6 +259,7 @@ public class PlayerBehaviour : MonoBehaviour
         comboTwoOn = false;
         comboOn = false;
         anim.ResetTrigger("SecondCombo");
+        anim.ResetTrigger("FirstCombo");
     }
 
     public void ComboComienzo()
@@ -227,18 +273,6 @@ public class PlayerBehaviour : MonoBehaviour
         comboOn = false;
     }
     #endregion
-
-    #region Coroutines
-    IEnumerator Attack()
-    {
-        canMove = false;
-        
-        anim.SetBool("Walk", false);
-        
-        yield return new WaitForSeconds(1);
-        canMove = true;
-    }
-    #endregion 
 
     public void ColliderWeapon()
     {

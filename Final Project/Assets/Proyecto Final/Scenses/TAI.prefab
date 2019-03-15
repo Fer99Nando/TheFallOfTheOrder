@@ -4876,6 +4876,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8702489190573897536}
     m_Modifications:
+    - target: {fileID: 100000, guid: b4524dfce8c5f244593d3b1906ae2236, type: 3}
+      propertyPath: m_Name
+      value: Anim_Tai_Iddle (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: b4524dfce8c5f244593d3b1906ae2236, type: 3}
       propertyPath: m_Layer
       value: 12
@@ -4883,10 +4887,6 @@ PrefabInstance:
     - target: {fileID: 100002, guid: b4524dfce8c5f244593d3b1906ae2236, type: 3}
       propertyPath: m_TagString
       value: PlayerWeapon
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: b4524dfce8c5f244593d3b1906ae2236, type: 3}
-      propertyPath: m_Name
-      value: Anim_Tai_Iddle (1)
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b4524dfce8c5f244593d3b1906ae2236, type: 3}
       propertyPath: m_LocalPosition.x

@@ -644,8 +644,6 @@ MonoBehaviour:
   startingHp: 100
   currentHp: 0
   healthSlider: {fileID: 3287856542842189729}
-  mat1: {fileID: 2100000, guid: 40457f94824f52d4d9297b2c94015c8e, type: 2}
-  mat2: {fileID: 2100000, guid: 2761fff7ec9a6b948b0c0abf9224d00d, type: 2}
 --- !u!114 &3287856544337090210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -663,7 +661,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   pathIndex: 0
-  chaseRange: 15
+  chaseRange: 6
   attackRange: 3
   distanceFromTarget: Infinity
   chaseSpeed: 4
