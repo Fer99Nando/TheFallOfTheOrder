@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerWeapon : MonoBehaviour 
 {
-    private int bonusStats;
+    public int bonusStats;
 
     public GameObject gameOver;
 

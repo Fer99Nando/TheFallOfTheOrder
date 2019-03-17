@@ -265,7 +265,7 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.9957805
+      - time: 0.98708487
         functionName: AtaqueAcabado
         data: 
         objectReferenceParameter: {instanceID: 0}

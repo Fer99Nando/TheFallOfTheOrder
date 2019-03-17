@@ -28,7 +28,7 @@ public class BossPrueba : MonoBehaviour
     //public GameObject bossTransformation;
 
 
-    [Header("Paths")]
+    [Header("FeedBack")]
     public Material mat1;
 
     [Header("Paths")]
@@ -40,6 +40,7 @@ public class BossPrueba : MonoBehaviour
 
     [Header("Speeds")]
 
+    public float rotationSpeed;
     public float chaseSpeed;        // Velocidad de Persecucion
     public float patrolSpeed;       // Velocidad  mientras Patrulla
 
@@ -67,13 +68,18 @@ public class BossPrueba : MonoBehaviour
         anim = GetComponent<Animator>();        // Llamamos a las animaciones
 
         player = GameObject.FindGameObjectWithTag("Player");
-        playerWeapon = GameObject.FindGameObjectWithTag("Weapon").GetComponent<WeaponBoss>();
+        playerWeapon = GameObject.FindGameObjectWithTag("WeaponBoss").GetComponent<WeaponBoss>();
     }
 
 
     // Update is called once per frame
     void Update()
     {
+        targetPosition = player.transform.position - transform.position;
+        targetPosition.y = 0;
+        Quaternion newRotation = Quaternion.LookRotation(targetPosition);
+        transform.rotation = Quaternion.Lerp(transform.rotation, newRotation, rotationSpeed * 0.1f);
+
         switch (phase)
         {
             case BossPhase.PhaseOne:

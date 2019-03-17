@@ -43,13 +43,15 @@ public class PlayerBehaviour : MonoBehaviour
 
     private bool chargeAttack;
 
+    private bool cooldown;
+
     private bool comboOn;
     private bool comboTwoOn;
     private bool attackOn;
     private bool attackOne;
-    public bool canAttack;
+    private bool canAttack;
 
-    public  bool canMove;
+    private bool canMove;
     
     private bool godMode;
 
@@ -66,6 +68,7 @@ public class PlayerBehaviour : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        cooldown = false;
         chargeAttack = false;
         comboTwoOn = false;
         comboOn = false;
@@ -127,17 +130,19 @@ public class PlayerBehaviour : MonoBehaviour
 
         if (Input.GetButtonDown("Charge_Attack"))
         {
-            if (attackOn == false)
+            if (attackOn == false && cooldown == false)
             {
                 attackOn = true;
                 chargeAttack = true;
                 anim.SetTrigger("ChargeAttack");
+                playerWeapon.bonusStats += 15;
+                cooldown = true;
             }
         }
 
         if (Input.GetButtonDown("Attack_Melee"))
         {
-            if (attackOn == false)
+            if (attackOn == false && cooldown == false)
             {
                 canAttack = true;
                 attackOn = true;
@@ -148,12 +153,14 @@ public class PlayerBehaviour : MonoBehaviour
             {
                 canAttack = true;
                 anim.SetTrigger("FirstCombo");
+                //playerWeapon.bonusStats += 2;
             }
 
             if (comboTwoOn)
             {
                 canAttack = true;
                 anim.SetTrigger("SecondCombo");
+                //playerWeapon.bonusStats += 3;
             }
         }
 
@@ -220,16 +227,20 @@ public class PlayerBehaviour : MonoBehaviour
             Move();
         }
 
-        if (cooldownTime >= 1)
+        if (cooldown)
         {
-            canAttack = false;
-            cooldownTime = 0;
-        }
-                
-        if (cooldownChargeTime >= 10)
-        {
-            canAttack = false;
-            cooldownChargeTime = 0;
+            cooldownChargeTime += Time.deltaTime;
+            if (cooldownTime >= 1)
+            {
+                cooldown = false;
+                cooldownTime = 0;
+            }
+
+            if (cooldownChargeTime >= 5)
+            {
+                cooldown = false;
+                cooldownChargeTime = 0;
+            }
         }
     }
 
@@ -245,6 +256,8 @@ public class PlayerBehaviour : MonoBehaviour
     #region Attack Combo
     public void AtaqueAcabado()
     {
+        chargeAttack = false;
+        canAttack = false;
         canMove = true;
         attackOn = false;
         anim.ResetTrigger("SecondCombo");
@@ -258,8 +271,6 @@ public class PlayerBehaviour : MonoBehaviour
         attackOn = false;
         comboTwoOn = false;
         comboOn = false;
-        anim.ResetTrigger("SecondCombo");
-        anim.ResetTrigger("FirstCombo");
     }
 
     public void ComboComienzo()
