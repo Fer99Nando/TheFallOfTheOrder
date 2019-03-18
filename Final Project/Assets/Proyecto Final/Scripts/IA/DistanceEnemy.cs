@@ -250,9 +250,4 @@ public class DistanceEnemy : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, attackRange);
     }
-
-    public void OnDestroy()
-    {
-        Destroy(this.gameObject);
-    }
 }

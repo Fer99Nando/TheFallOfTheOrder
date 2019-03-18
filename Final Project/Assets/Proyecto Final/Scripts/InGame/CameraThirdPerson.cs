@@ -10,12 +10,20 @@ public class CameraThirdPerson : MonoBehaviour
 
 	public float distance; //distancia original de la camara respecto al lookAt
 	float fixedDist; //distancia corregida de la camara respecto al lookAt en caso de collision u oclusion
-
 	float sensitivityWheel; //sensibilidad del zoom (Rueda del raton)
+
 	public LayerMask cameraMask;
 
 	private float timeCount;
 
+	public GameObject[] enemy;
+	public float focusCamera; // Focus hacia un enemigo
+	private float distanceFromTarget = Mathf.Infinity;     // Distancia del target que puede ser hasta infinito
+
+	void Awake()
+	{
+		enemy = GameObject.FindGameObjectsWithTag("Enemy");
+	}
     // Use this for initialization
     void Start () 
 	{
@@ -30,6 +38,10 @@ public class CameraThirdPerson : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
+		/*if (Input.GetButtonDown("Focus_Enemy"))
+		{
+
+		}*/
 
 		this.distance = Mathf.Clamp(this.distance, 5f, 6f); // Limitacion de zoom in and zoom out
 
@@ -37,6 +49,8 @@ public class CameraThirdPerson : MonoBehaviour
 	}
 	void LateUpdate()
 	{
+		//distanceFromTarget = GetDistanceFromTarget();
+
 		this.positionIncrease = this.lookAt.forward * this.fixedDist;
 		transform.position = Vector3.Lerp(transform.position, this.lookAt.position - this.positionIncrease, 5f * Time.deltaTime );
 
@@ -55,5 +69,15 @@ public class CameraThirdPerson : MonoBehaviour
         }
         return hit.distance = 5; //Si no colisiona se devuelve la distancia original
  
+	}
+
+    /*float GetDistanceFromTarget()       // Calcula la distancia con el player
+    {
+        return Vector3.Distance(enemy.transform.position, transform.position);
+    }*/
+	    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, focusCamera);
 	}
 }

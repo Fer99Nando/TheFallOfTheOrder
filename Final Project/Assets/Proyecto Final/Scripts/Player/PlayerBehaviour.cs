@@ -44,7 +44,7 @@ public class PlayerBehaviour : MonoBehaviour
     private bool dodgeTime;
     private bool dodgeTrue;
 
-    private bool chargeAttack;
+    public bool chargeAttack;
 
     public bool cooldown;
 

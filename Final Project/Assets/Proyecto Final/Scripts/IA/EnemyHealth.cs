@@ -15,6 +15,8 @@ public class EnemyHealth : MonoBehaviour
     Animator anim;
     CharacterController controller;
 
+    PlayerBehaviour playerBehaviour;
+
     // Sonidos
 
     bool isDead;
@@ -24,6 +26,7 @@ public class EnemyHealth : MonoBehaviour
         controller = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
         currentHp = startingHp;
+        playerBehaviour = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerBehaviour>();;
     }
 
     public void TakeDamage(int amount)
@@ -49,7 +52,7 @@ public class EnemyHealth : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "PlayerWeapon")
+        if (other.tag == "PlayerWeapon" && playerBehaviour.chargeAttack == true)
         {
             anim.SetTrigger("Hit");
         }
