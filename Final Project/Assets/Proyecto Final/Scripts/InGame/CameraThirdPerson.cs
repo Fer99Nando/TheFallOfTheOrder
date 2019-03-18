@@ -13,16 +13,26 @@ public class CameraThirdPerson : MonoBehaviour
 	float sensitivityWheel; //sensibilidad del zoom (Rueda del raton)
 
 	public LayerMask cameraMask;
+	
+	private GameObject closestEnemy;
+	private float closestDist;
 
+	private GameObject focusEnemy;
 	private float timeCount;
 
+	public GameObject player;
+	private Transform playerPos;
 	public GameObject[] enemy;
 	public float focusCamera; // Focus hacia un enemigo
 	private float distanceFromTarget = Mathf.Infinity;     // Distancia del target que puede ser hasta infinito
 
+	private bool tab = false;
+
 	void Awake()
 	{
+		//player = GameObject.FindGameObjectWithTag("Player");
 		enemy = GameObject.FindGameObjectsWithTag("Enemy");
+		playerPos = player.transform;
 	}
     // Use this for initialization
     void Start () 
@@ -40,12 +50,30 @@ public class CameraThirdPerson : MonoBehaviour
 	{
 		/*if (Input.GetButtonDown("Focus_Enemy"))
 		{
-
+			if(tab)
+			{
+				tab = false;
+			}else
+			{
+				FocusRange(playerPos.position, 10f);
+			}
 		}*/
+
+		playerPos = player.transform;
 
 		this.distance = Mathf.Clamp(this.distance, 5f, 6f); // Limitacion de zoom in and zoom out
 
 		this.fixedDist = FixDistance();
+
+		transform.LookAt(this.lookAt);
+
+		/*if(tab)
+		{
+			transform.LookAt(closestEnemy.transform.position);
+		}else
+		{
+			transform.LookAt(this.lookAt);
+		}*/
 	}
 	void LateUpdate()
 	{
@@ -53,8 +81,7 @@ public class CameraThirdPerson : MonoBehaviour
 
 		this.positionIncrease = this.lookAt.forward * this.fixedDist;
 		transform.position = Vector3.Lerp(transform.position, this.lookAt.position - this.positionIncrease, 5f * Time.deltaTime );
-
-		transform.LookAt(this.lookAt);
+		
 	}
 	//Corrige la distancia ante las colisiones u oclusiones de la camara
 	float FixDistance()
@@ -75,9 +102,37 @@ public class CameraThirdPerson : MonoBehaviour
     {
         return Vector3.Distance(enemy.transform.position, transform.position);
     }*/
-	    private void OnDrawGizmos()
+
+	    /*public void FocusRange(Vector3 center, float radius)
     {
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, focusCamera);
-	}
+        Collider[] hitColliders = Physics.OverlapSphere(center, radius);
+        int i = 0;
+        while (i < hitColliders.Length)
+        {
+			tab = true;
+			if(hitColliders[i].tag == "Enemy")
+			{
+				float distance = Vector3.Distance (playerPos.position, hitColliders[i].transform.position);
+
+				if(i == 0){
+					distance = Vector3.Distance (playerPos.position, hitColliders[i].transform.position);
+					closestEnemy = hitColliders[i].gameObject;
+				}
+
+				if(distance < closestDist)
+				{
+					closestEnemy = hitColliders[i].gameObject;
+					closestDist = distance;
+				}
+				Debug.Log(hitColliders[i].name);
+			}
+            i++;
+        }
+    }*/
+	/*private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawWireSphere(playerPos.position, focusCamera);
+	} */
+	    
 }
