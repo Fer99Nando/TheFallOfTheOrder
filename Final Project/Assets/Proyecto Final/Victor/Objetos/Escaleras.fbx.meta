@@ -49,6 +49,10 @@ ModelImporter:
     100086: pCube99
     100088: Rampa
     100090: SueloSuperior
+    100092: Rampa1
+    100094: ArcoPuerta1
+    100096: Escalones1
+    100098: Rampa2
     400000: ArcoPuerta2
     400002: ArcoPuerta3
     400004: //RootNode
@@ -95,6 +99,10 @@ ModelImporter:
     400086: pCube99
     400088: Rampa
     400090: SueloSuperior
+    400092: Rampa1
+    400094: ArcoPuerta1
+    400096: Escalones1
+    400098: Rampa2
     2100000: lambert1
     2300000: ArcoPuerta2
     2300002: ArcoPuerta3
@@ -140,6 +148,10 @@ ModelImporter:
     2300082: pCube99
     2300084: Rampa
     2300086: SueloSuperior
+    2300088: Rampa1
+    2300090: ArcoPuerta1
+    2300092: Escalones1
+    2300094: Rampa2
     3300000: ArcoPuerta2
     3300002: ArcoPuerta3
     3300004: Pared
@@ -184,6 +196,10 @@ ModelImporter:
     3300082: pCube99
     3300084: Rampa
     3300086: SueloSuperior
+    3300088: Rampa1
+    3300090: ArcoPuerta1
+    3300092: Escalones1
+    3300094: Rampa2
     4300000: Pared
     4300002: pCube39
     4300004: pCube76
@@ -228,6 +244,10 @@ ModelImporter:
     4300082: ArcoPuerta2
     4300084: ArcoPuerta3
     4300086: Rampa
+    4300088: Rampa1
+    4300090: ArcoPuerta1
+    4300092: Rampa2
+    4300094: Escalones1
   externalObjects: {}
   materials:
     importMaterials: 1
