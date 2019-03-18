@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerBehaviour : MonoBehaviour
 {
     private CharacterController controller;
     PlayerWeapon playerWeapon;
     private GameObject player;
+
+    public Image cooldownFilled;
 
     public Transform lookAt;
 
@@ -43,7 +46,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     private bool chargeAttack;
 
-    private bool cooldown;
+    public bool cooldown;
 
     private bool comboOn;
     private bool comboTwoOn;
@@ -82,6 +85,8 @@ public class PlayerBehaviour : MonoBehaviour
 
         //attackTime = attackAnim.length;
         //attackTime *= 0.9f;
+
+        cooldownFilled.fillAmount = 0;
 
         anim = GetComponent<Animator>();
         this.controller = GetComponent<CharacterController>();
@@ -132,6 +137,8 @@ public class PlayerBehaviour : MonoBehaviour
         {
             if (attackOn == false && cooldown == false)
             {
+                cooldownFilled.fillAmount = 1;
+
                 attackOn = true;
                 chargeAttack = true;
                 anim.SetTrigger("ChargeAttack");
@@ -229,15 +236,20 @@ public class PlayerBehaviour : MonoBehaviour
 
         if (cooldown)
         {
+            
+            cooldownFilled.fillAmount -= Time.deltaTime/2.5f;
+
             cooldownChargeTime += Time.deltaTime;
             if (cooldownTime >= 1)
             {
+                cooldownFilled.fillAmount = 0;
                 cooldown = false;
                 cooldownTime = 0;
             }
 
-            if (cooldownChargeTime >= 5)
+            if (cooldownChargeTime >= 4)
             {
+                cooldownFilled.fillAmount = 0;
                 cooldown = false;
                 cooldownChargeTime = 0;
             }
