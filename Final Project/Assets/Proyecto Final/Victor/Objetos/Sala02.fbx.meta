@@ -1,0 +1,417 @@
+fileFormatVersion: 2
+guid: 26a3c4951deb45044baaae67b0cd49d2
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Ae01:group10
+    100002: Ae01:group11
+    100004: Ae01:group14
+    100006: Ae01:group15
+    100008: Ae01:group16
+    100010: Ae01:group3
+    100012: Ae01:group4
+    100014: Ae01:group4 1
+    100016: Ae01:group5
+    100018: Ae01:group5 1
+    100020: Ae01:group6
+    100022: Ae01:group7
+    100024: Ae01:pCube25
+    100026: Ae01:pCube26
+    100028: Ae01:pCube29
+    100030: Ae01:pCube32
+    100032: Ae01:pCube35
+    100034: Ae01:pCube45
+    100036: Ae01:pCube46
+    100038: Ae01:pCube60
+    100040: Ae01:pCube61
+    100042: Ae01:pCube62
+    100044: Ae01:pCube63
+    100046: Ae01:pCube64
+    100048: Ae01:pCube65
+    100050: Ae01:pCube66
+    100052: Ae01:pCube67
+    100054: Ae01:pCylinder2
+    100056: Ae01:pCylinder3
+    100058: Ae01:pCylinder3 1
+    100060: Ae01:pCylinder4
+    100062: Ae01:pCylinder4 1
+    100064: Ae01:pCylinder4 2
+    100066: Ae01:pCylinder4 3
+    100068: Ae01:pCylinder5
+    100070: Ae01:pCylinder5 1
+    100072: Ae01:pCylinder5 2
+    100074: Ae01:pCylinder5 3
+    100076: Ae01:pCylinder6
+    100078: Ae01:polySurface1
+    100080: Ae01:polySurface2
+    100082: Ae01:polySurface3
+    100084: Ae01:polySurface4
+    100086: Ae01:polySurface5
+    100088: Ae01:polySurface6
+    100090: Ae01:Porton
+    100092: Ae01:pPlane2
+    100094: Ae01:pTorus3
+    100096: Ae01:pTorus3 1
+    100098: Ae01:Puerta_D
+    100100: Ae01:PuertaI
+    100102: ArcoPuerta
+    100104: ArcoPuerta 1
+    100106: ArcoPuerta 2
+    100108: group12
+    100110: group12 1
+    100112: group12 2
+    100114: pCube38
+    100116: pCylinder10
+    100118: pCylinder10 1
+    100120: pCylinder10 2
+    100122: pCylinder3
+    100124: pCylinder3 1
+    100126: pCylinder3 2
+    100128: pCylinder8
+    100130: pCylinder8 1
+    100132: pCylinder8 2
+    100134: Pilar
+    100136: Porton
+    100138: pPlane3
+    100140: pPlane3 1
+    100142: pPlane3 2
+    100144: pPlane4
+    100146: pTorus3
+    100148: pTorus3 1
+    100150: pTorus3 2
+    100152: Puerta
+    100154: Puerta 1
+    100156: Puerta 2
+    100158: Puerta1
+    100160: Puerta2
+    100162: Puerta3
+    100164: //RootNode
+    400000: Ae01:group10
+    400002: Ae01:group11
+    400004: Ae01:group14
+    400006: Ae01:group15
+    400008: Ae01:group16
+    400010: Ae01:group3
+    400012: Ae01:group4
+    400014: Ae01:group4 1
+    400016: Ae01:group5
+    400018: Ae01:group5 1
+    400020: Ae01:group6
+    400022: Ae01:group7
+    400024: Ae01:pCube25
+    400026: Ae01:pCube26
+    400028: Ae01:pCube29
+    400030: Ae01:pCube32
+    400032: Ae01:pCube35
+    400034: Ae01:pCube45
+    400036: Ae01:pCube46
+    400038: Ae01:pCube60
+    400040: Ae01:pCube61
+    400042: Ae01:pCube62
+    400044: Ae01:pCube63
+    400046: Ae01:pCube64
+    400048: Ae01:pCube65
+    400050: Ae01:pCube66
+    400052: Ae01:pCube67
+    400054: Ae01:pCylinder2
+    400056: Ae01:pCylinder3
+    400058: Ae01:pCylinder3 1
+    400060: Ae01:pCylinder4
+    400062: Ae01:pCylinder4 1
+    400064: Ae01:pCylinder4 2
+    400066: Ae01:pCylinder4 3
+    400068: Ae01:pCylinder5
+    400070: Ae01:pCylinder5 1
+    400072: Ae01:pCylinder5 2
+    400074: Ae01:pCylinder5 3
+    400076: Ae01:pCylinder6
+    400078: Ae01:polySurface1
+    400080: Ae01:polySurface2
+    400082: Ae01:polySurface3
+    400084: Ae01:polySurface4
+    400086: Ae01:polySurface5
+    400088: Ae01:polySurface6
+    400090: Ae01:Porton
+    400092: Ae01:pPlane2
+    400094: Ae01:pTorus3
+    400096: Ae01:pTorus3 1
+    400098: Ae01:Puerta_D
+    400100: Ae01:PuertaI
+    400102: ArcoPuerta
+    400104: ArcoPuerta 1
+    400106: ArcoPuerta 2
+    400108: group12
+    400110: group12 1
+    400112: group12 2
+    400114: pCube38
+    400116: pCylinder10
+    400118: pCylinder10 1
+    400120: pCylinder10 2
+    400122: pCylinder3
+    400124: pCylinder3 1
+    400126: pCylinder3 2
+    400128: pCylinder8
+    400130: pCylinder8 1
+    400132: pCylinder8 2
+    400134: Pilar
+    400136: Porton
+    400138: pPlane3
+    400140: pPlane3 1
+    400142: pPlane3 2
+    400144: pPlane4
+    400146: pTorus3
+    400148: pTorus3 1
+    400150: pTorus3 2
+    400152: Puerta
+    400154: Puerta 1
+    400156: Puerta 2
+    400158: Puerta1
+    400160: Puerta2
+    400162: Puerta3
+    400164: //RootNode
+    2100000: lambert1
+    2300000: Ae01:pCube25
+    2300002: Ae01:pCube26
+    2300004: Ae01:pCube29
+    2300006: Ae01:pCube32
+    2300008: Ae01:pCube35
+    2300010: Ae01:pCube45
+    2300012: Ae01:pCube46
+    2300014: Ae01:pCube60
+    2300016: Ae01:pCube61
+    2300018: Ae01:pCube62
+    2300020: Ae01:pCube63
+    2300022: Ae01:pCube64
+    2300024: Ae01:pCube65
+    2300026: Ae01:pCube66
+    2300028: Ae01:pCube67
+    2300030: Ae01:pCylinder3
+    2300032: Ae01:pCylinder3 1
+    2300034: Ae01:pCylinder4
+    2300036: Ae01:pCylinder4 1
+    2300038: Ae01:pCylinder4 2
+    2300040: Ae01:pCylinder4 3
+    2300042: Ae01:pCylinder5
+    2300044: Ae01:pCylinder5 1
+    2300046: Ae01:pCylinder5 2
+    2300048: Ae01:pCylinder5 3
+    2300050: Ae01:polySurface1
+    2300052: Ae01:polySurface2
+    2300054: Ae01:polySurface3
+    2300056: Ae01:polySurface4
+    2300058: Ae01:polySurface5
+    2300060: Ae01:polySurface6
+    2300062: Ae01:pTorus3
+    2300064: Ae01:pTorus3 1
+    2300066: ArcoPuerta
+    2300068: ArcoPuerta 1
+    2300070: ArcoPuerta 2
+    2300072: pCube38
+    2300074: pCylinder10
+    2300076: pCylinder10 1
+    2300078: pCylinder10 2
+    2300080: pCylinder3
+    2300082: pCylinder3 1
+    2300084: pCylinder3 2
+    2300086: pCylinder8
+    2300088: pCylinder8 1
+    2300090: pCylinder8 2
+    2300092: pPlane3
+    2300094: pPlane3 1
+    2300096: pPlane3 2
+    2300098: pPlane4
+    2300100: pTorus3
+    2300102: pTorus3 1
+    2300104: pTorus3 2
+    3300000: Ae01:pCube25
+    3300002: Ae01:pCube26
+    3300004: Ae01:pCube29
+    3300006: Ae01:pCube32
+    3300008: Ae01:pCube35
+    3300010: Ae01:pCube45
+    3300012: Ae01:pCube46
+    3300014: Ae01:pCube60
+    3300016: Ae01:pCube61
+    3300018: Ae01:pCube62
+    3300020: Ae01:pCube63
+    3300022: Ae01:pCube64
+    3300024: Ae01:pCube65
+    3300026: Ae01:pCube66
+    3300028: Ae01:pCube67
+    3300030: Ae01:pCylinder3
+    3300032: Ae01:pCylinder3 1
+    3300034: Ae01:pCylinder4
+    3300036: Ae01:pCylinder4 1
+    3300038: Ae01:pCylinder4 2
+    3300040: Ae01:pCylinder4 3
+    3300042: Ae01:pCylinder5
+    3300044: Ae01:pCylinder5 1
+    3300046: Ae01:pCylinder5 2
+    3300048: Ae01:pCylinder5 3
+    3300050: Ae01:polySurface1
+    3300052: Ae01:polySurface2
+    3300054: Ae01:polySurface3
+    3300056: Ae01:polySurface4
+    3300058: Ae01:polySurface5
+    3300060: Ae01:polySurface6
+    3300062: Ae01:pTorus3
+    3300064: Ae01:pTorus3 1
+    3300066: ArcoPuerta
+    3300068: ArcoPuerta 1
+    3300070: ArcoPuerta 2
+    3300072: pCube38
+    3300074: pCylinder10
+    3300076: pCylinder10 1
+    3300078: pCylinder10 2
+    3300080: pCylinder3
+    3300082: pCylinder3 1
+    3300084: pCylinder3 2
+    3300086: pCylinder8
+    3300088: pCylinder8 1
+    3300090: pCylinder8 2
+    3300092: pPlane3
+    3300094: pPlane3 1
+    3300096: pPlane3 2
+    3300098: pPlane4
+    3300100: pTorus3
+    3300102: pTorus3 1
+    3300104: pTorus3 2
+    4300000: Ae01:pCube25
+    4300002: Ae01:pCube26
+    4300004: Ae01:pCube63
+    4300006: Ae01:pCube64
+    4300008: Ae01:pCube65
+    4300010: Ae01:pCube29
+    4300012: Ae01:pCube60
+    4300014: Ae01:pCube61
+    4300016: Ae01:pCube62
+    4300018: Ae01:pCube32
+    4300020: Ae01:pCube46
+    4300022: Ae01:pCube45
+    4300024: Ae01:polySurface1
+    4300026: Ae01:polySurface3
+    4300028: Ae01:polySurface5
+    4300030: Ae01:pCylinder4
+    4300032: Ae01:pCylinder5
+    4300034: Ae01:pCylinder4
+    4300036: Ae01:pCylinder5
+    4300038: Ae01:pCylinder3
+    4300040: Ae01:pTorus3
+    4300042: Ae01:pCylinder4
+    4300044: Ae01:pCylinder5
+    4300046: Ae01:pCylinder4
+    4300048: Ae01:pCylinder5
+    4300050: Ae01:pCylinder3
+    4300052: Ae01:pTorus3
+    4300054: Ae01:polySurface4
+    4300056: Ae01:polySurface2
+    4300058: Ae01:polySurface6
+    4300060: pPlane4
+    4300062: ArcoPuerta
+    4300064: pCylinder3
+    4300066: pTorus3
+    4300068: pPlane3
+    4300070: pCylinder8
+    4300072: pCylinder10
+    4300074: ArcoPuerta
+    4300076: pCylinder3
+    4300078: pTorus3
+    4300080: pPlane3
+    4300082: pCylinder8
+    4300084: pCylinder10
+    4300086: ArcoPuerta
+    4300088: pCylinder3
+    4300090: pTorus3
+    4300092: pPlane3
+    4300094: pCylinder8
+    4300096: pCylinder10
+    4300098: Ae01:pCube35
+    4300100: Ae01:pCube66
+    4300102: Ae01:pCube67
+    4300104: pCube38
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
