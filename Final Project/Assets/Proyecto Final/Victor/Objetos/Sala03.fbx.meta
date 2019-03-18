@@ -1,0 +1,518 @@
+fileFormatVersion: 2
+guid: 7e596b453bae17f4297b928a2598a9f4
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: ArcoPuerta
+    100002: Paredes
+    100004: pCube117
+    100006: pPlane7
+    100008: //RootNode
+    100010: Sala03:Columnas
+    100012: Sala03:De
+    100014: Sala03:De_group31
+    100016: Sala03:group14
+    100018: Sala03:group14 1
+    100020: Sala03:group14 2
+    100022: Sala03:group14 3
+    100024: Sala03:group14 4
+    100026: Sala03:group15
+    100028: Sala03:group15 1
+    100030: Sala03:group15 2
+    100032: Sala03:group15 3
+    100034: Sala03:group15 4
+    100036: Sala03:group16
+    100038: Sala03:group16 1
+    100040: Sala03:group16 2
+    100042: Sala03:group16 3
+    100044: Sala03:group16 4
+    100046: Sala03:group31
+    100048: Sala03:group37
+    100050: Sala03:group38
+    100052: Sala03:group38 1
+    100054: Sala03:group39
+    100056: Sala03:group40
+    100058: Sala03:group41
+    100060: Sala03:group42
+    100062: Sala03:group43
+    100064: Sala03:group44
+    100066: Sala03:group45
+    100068: Sala03:group46
+    100070: Sala03:group46 1
+    100072: Sala03:group47
+    100074: Sala03:group47 1
+    100076: Sala03:Iz
+    100078: Sala03:pCone6
+    100080: Sala03:pCone6 1
+    100082: Sala03:pCube25
+    100084: Sala03:pCube25 1
+    100086: Sala03:pCube25 2
+    100088: Sala03:pCube25 3
+    100090: Sala03:pCube25 4
+    100092: Sala03:pCube26
+    100094: Sala03:pCube26 1
+    100096: Sala03:pCube26 2
+    100098: Sala03:pCube26 3
+    100100: Sala03:pCube26 4
+    100102: Sala03:pCube27
+    100104: Sala03:pCube27 1
+    100106: Sala03:pCube27 2
+    100108: Sala03:pCube27 3
+    100110: Sala03:pCube27 4
+    100112: Sala03:pCube28
+    100114: Sala03:pCube28 1
+    100116: Sala03:pCube28 2
+    100118: Sala03:pCube28 3
+    100120: Sala03:pCube28 4
+    100122: Sala03:pCube29
+    100124: Sala03:pCube29 1
+    100126: Sala03:pCube29 2
+    100128: Sala03:pCube29 3
+    100130: Sala03:pCube29 4
+    100132: Sala03:pCube30
+    100134: Sala03:pCube30 1
+    100136: Sala03:pCube30 2
+    100138: Sala03:pCube30 3
+    100140: Sala03:pCube30 4
+    100142: Sala03:pCube31
+    100144: Sala03:pCube31 1
+    100146: Sala03:pCube31 2
+    100148: Sala03:pCube31 3
+    100150: Sala03:pCube31 4
+    100152: Sala03:pCube32
+    100154: Sala03:pCube32 1
+    100156: Sala03:pCube32 2
+    100158: Sala03:pCube32 3
+    100160: Sala03:pCube32 4
+    100162: Sala03:pCube53
+    100164: Sala03:pCube53 1
+    100166: Sala03:pCube54
+    100168: Sala03:pCube54 1
+    100170: Sala03:pCube55
+    100172: Sala03:pCube55 1
+    100174: Sala03:pCube56
+    100176: Sala03:pCube56 1
+    100178: Sala03:pCube57
+    100180: Sala03:pCube57 1
+    100182: Sala03:pCube58
+    100184: Sala03:pCube58 1
+    100186: Sala03:pCylinder15
+    100188: Sala03:pCylinder15 1
+    100190: Sala03:pCylinder9
+    100192: Sala03:pCylinder9 1
+    100194: Sala03:pCylinder9 2
+    100196: Sala03:pCylinder9 3
+    100198: Sala03:pCylinder9 4
+    100200: Sala03:polySurface11
+    100202: Sala03:polySurface11 1
+    100204: Sala03:polySurface13
+    100206: Sala03:polySurface13 1
+    100208: Sala03:polySurface7
+    100210: Sala03:polySurface7 1
+    100212: Sala03:polySurface9
+    100214: Sala03:polySurface9 1
+    400000: ArcoPuerta
+    400002: Paredes
+    400004: pCube117
+    400006: pPlane7
+    400008: //RootNode
+    400010: Sala03:Columnas
+    400012: Sala03:De
+    400014: Sala03:De_group31
+    400016: Sala03:group14
+    400018: Sala03:group14 1
+    400020: Sala03:group14 2
+    400022: Sala03:group14 3
+    400024: Sala03:group14 4
+    400026: Sala03:group15
+    400028: Sala03:group15 1
+    400030: Sala03:group15 2
+    400032: Sala03:group15 3
+    400034: Sala03:group15 4
+    400036: Sala03:group16
+    400038: Sala03:group16 1
+    400040: Sala03:group16 2
+    400042: Sala03:group16 3
+    400044: Sala03:group16 4
+    400046: Sala03:group31
+    400048: Sala03:group37
+    400050: Sala03:group38
+    400052: Sala03:group38 1
+    400054: Sala03:group39
+    400056: Sala03:group40
+    400058: Sala03:group41
+    400060: Sala03:group42
+    400062: Sala03:group43
+    400064: Sala03:group44
+    400066: Sala03:group45
+    400068: Sala03:group46
+    400070: Sala03:group46 1
+    400072: Sala03:group47
+    400074: Sala03:group47 1
+    400076: Sala03:Iz
+    400078: Sala03:pCone6
+    400080: Sala03:pCone6 1
+    400082: Sala03:pCube25
+    400084: Sala03:pCube25 1
+    400086: Sala03:pCube25 2
+    400088: Sala03:pCube25 3
+    400090: Sala03:pCube25 4
+    400092: Sala03:pCube26
+    400094: Sala03:pCube26 1
+    400096: Sala03:pCube26 2
+    400098: Sala03:pCube26 3
+    400100: Sala03:pCube26 4
+    400102: Sala03:pCube27
+    400104: Sala03:pCube27 1
+    400106: Sala03:pCube27 2
+    400108: Sala03:pCube27 3
+    400110: Sala03:pCube27 4
+    400112: Sala03:pCube28
+    400114: Sala03:pCube28 1
+    400116: Sala03:pCube28 2
+    400118: Sala03:pCube28 3
+    400120: Sala03:pCube28 4
+    400122: Sala03:pCube29
+    400124: Sala03:pCube29 1
+    400126: Sala03:pCube29 2
+    400128: Sala03:pCube29 3
+    400130: Sala03:pCube29 4
+    400132: Sala03:pCube30
+    400134: Sala03:pCube30 1
+    400136: Sala03:pCube30 2
+    400138: Sala03:pCube30 3
+    400140: Sala03:pCube30 4
+    400142: Sala03:pCube31
+    400144: Sala03:pCube31 1
+    400146: Sala03:pCube31 2
+    400148: Sala03:pCube31 3
+    400150: Sala03:pCube31 4
+    400152: Sala03:pCube32
+    400154: Sala03:pCube32 1
+    400156: Sala03:pCube32 2
+    400158: Sala03:pCube32 3
+    400160: Sala03:pCube32 4
+    400162: Sala03:pCube53
+    400164: Sala03:pCube53 1
+    400166: Sala03:pCube54
+    400168: Sala03:pCube54 1
+    400170: Sala03:pCube55
+    400172: Sala03:pCube55 1
+    400174: Sala03:pCube56
+    400176: Sala03:pCube56 1
+    400178: Sala03:pCube57
+    400180: Sala03:pCube57 1
+    400182: Sala03:pCube58
+    400184: Sala03:pCube58 1
+    400186: Sala03:pCylinder15
+    400188: Sala03:pCylinder15 1
+    400190: Sala03:pCylinder9
+    400192: Sala03:pCylinder9 1
+    400194: Sala03:pCylinder9 2
+    400196: Sala03:pCylinder9 3
+    400198: Sala03:pCylinder9 4
+    400200: Sala03:polySurface11
+    400202: Sala03:polySurface11 1
+    400204: Sala03:polySurface13
+    400206: Sala03:polySurface13 1
+    400208: Sala03:polySurface7
+    400210: Sala03:polySurface7 1
+    400212: Sala03:polySurface9
+    400214: Sala03:polySurface9 1
+    2100000: lambert1
+    2300000: ArcoPuerta
+    2300002: pCube117
+    2300004: pPlane7
+    2300006: Sala03:De_group31
+    2300008: Sala03:group37
+    2300010: Sala03:pCube25
+    2300012: Sala03:pCube25 1
+    2300014: Sala03:pCube25 2
+    2300016: Sala03:pCube25 3
+    2300018: Sala03:pCube25 4
+    2300020: Sala03:pCube26
+    2300022: Sala03:pCube26 1
+    2300024: Sala03:pCube26 2
+    2300026: Sala03:pCube26 3
+    2300028: Sala03:pCube26 4
+    2300030: Sala03:pCube27
+    2300032: Sala03:pCube27 1
+    2300034: Sala03:pCube27 2
+    2300036: Sala03:pCube27 3
+    2300038: Sala03:pCube27 4
+    2300040: Sala03:pCube28
+    2300042: Sala03:pCube28 1
+    2300044: Sala03:pCube28 2
+    2300046: Sala03:pCube28 3
+    2300048: Sala03:pCube28 4
+    2300050: Sala03:pCube29
+    2300052: Sala03:pCube29 1
+    2300054: Sala03:pCube29 2
+    2300056: Sala03:pCube29 3
+    2300058: Sala03:pCube29 4
+    2300060: Sala03:pCube30
+    2300062: Sala03:pCube30 1
+    2300064: Sala03:pCube30 2
+    2300066: Sala03:pCube30 3
+    2300068: Sala03:pCube30 4
+    2300070: Sala03:pCube31
+    2300072: Sala03:pCube31 1
+    2300074: Sala03:pCube31 2
+    2300076: Sala03:pCube31 3
+    2300078: Sala03:pCube31 4
+    2300080: Sala03:pCube32
+    2300082: Sala03:pCube32 1
+    2300084: Sala03:pCube32 2
+    2300086: Sala03:pCube32 3
+    2300088: Sala03:pCube32 4
+    2300090: Sala03:pCube53
+    2300092: Sala03:pCube53 1
+    2300094: Sala03:pCube54
+    2300096: Sala03:pCube54 1
+    2300098: Sala03:pCube55
+    2300100: Sala03:pCube55 1
+    2300102: Sala03:pCube56
+    2300104: Sala03:pCube56 1
+    2300106: Sala03:pCube57
+    2300108: Sala03:pCube57 1
+    2300110: Sala03:pCube58
+    2300112: Sala03:pCube58 1
+    2300114: Sala03:pCylinder9
+    2300116: Sala03:pCylinder9 1
+    2300118: Sala03:pCylinder9 2
+    2300120: Sala03:pCylinder9 3
+    2300122: Sala03:pCylinder9 4
+    2300124: Sala03:polySurface11
+    2300126: Sala03:polySurface11 1
+    2300128: Sala03:polySurface13
+    2300130: Sala03:polySurface13 1
+    2300132: Sala03:polySurface7
+    2300134: Sala03:polySurface7 1
+    2300136: Sala03:polySurface9
+    2300138: Sala03:polySurface9 1
+    3300000: ArcoPuerta
+    3300002: pCube117
+    3300004: pPlane7
+    3300006: Sala03:De_group31
+    3300008: Sala03:group37
+    3300010: Sala03:pCube25
+    3300012: Sala03:pCube25 1
+    3300014: Sala03:pCube25 2
+    3300016: Sala03:pCube25 3
+    3300018: Sala03:pCube25 4
+    3300020: Sala03:pCube26
+    3300022: Sala03:pCube26 1
+    3300024: Sala03:pCube26 2
+    3300026: Sala03:pCube26 3
+    3300028: Sala03:pCube26 4
+    3300030: Sala03:pCube27
+    3300032: Sala03:pCube27 1
+    3300034: Sala03:pCube27 2
+    3300036: Sala03:pCube27 3
+    3300038: Sala03:pCube27 4
+    3300040: Sala03:pCube28
+    3300042: Sala03:pCube28 1
+    3300044: Sala03:pCube28 2
+    3300046: Sala03:pCube28 3
+    3300048: Sala03:pCube28 4
+    3300050: Sala03:pCube29
+    3300052: Sala03:pCube29 1
+    3300054: Sala03:pCube29 2
+    3300056: Sala03:pCube29 3
+    3300058: Sala03:pCube29 4
+    3300060: Sala03:pCube30
+    3300062: Sala03:pCube30 1
+    3300064: Sala03:pCube30 2
+    3300066: Sala03:pCube30 3
+    3300068: Sala03:pCube30 4
+    3300070: Sala03:pCube31
+    3300072: Sala03:pCube31 1
+    3300074: Sala03:pCube31 2
+    3300076: Sala03:pCube31 3
+    3300078: Sala03:pCube31 4
+    3300080: Sala03:pCube32
+    3300082: Sala03:pCube32 1
+    3300084: Sala03:pCube32 2
+    3300086: Sala03:pCube32 3
+    3300088: Sala03:pCube32 4
+    3300090: Sala03:pCube53
+    3300092: Sala03:pCube53 1
+    3300094: Sala03:pCube54
+    3300096: Sala03:pCube54 1
+    3300098: Sala03:pCube55
+    3300100: Sala03:pCube55 1
+    3300102: Sala03:pCube56
+    3300104: Sala03:pCube56 1
+    3300106: Sala03:pCube57
+    3300108: Sala03:pCube57 1
+    3300110: Sala03:pCube58
+    3300112: Sala03:pCube58 1
+    3300114: Sala03:pCylinder9
+    3300116: Sala03:pCylinder9 1
+    3300118: Sala03:pCylinder9 2
+    3300120: Sala03:pCylinder9 3
+    3300122: Sala03:pCylinder9 4
+    3300124: Sala03:polySurface11
+    3300126: Sala03:polySurface11 1
+    3300128: Sala03:polySurface13
+    3300130: Sala03:polySurface13 1
+    3300132: Sala03:polySurface7
+    3300134: Sala03:polySurface7 1
+    3300136: Sala03:polySurface9
+    3300138: Sala03:polySurface9 1
+    4300000: Sala03:pCube58
+    4300002: Sala03:pCube57
+    4300004: Sala03:pCube56
+    4300006: Sala03:pCube55
+    4300008: Sala03:pCube54
+    4300010: Sala03:pCube58
+    4300012: Sala03:pCube57
+    4300014: Sala03:pCube56
+    4300016: Sala03:pCube55
+    4300018: Sala03:pCube54
+    4300020: Sala03:group37
+    4300022: Sala03:pCube53
+    4300024: Sala03:polySurface9
+    4300026: Sala03:polySurface13
+    4300028: Sala03:polySurface11
+    4300030: Sala03:polySurface7
+    4300032: Sala03:pCube53
+    4300034: Sala03:polySurface9
+    4300036: Sala03:polySurface13
+    4300038: Sala03:polySurface11
+    4300040: Sala03:polySurface7
+    4300042: pPlane7
+    4300044: pCube117
+    4300046: Sala03:pCube25
+    4300048: Sala03:pCube31
+    4300050: Sala03:pCube26
+    4300052: Sala03:pCube27
+    4300054: Sala03:pCube28
+    4300056: Sala03:pCube29
+    4300058: Sala03:pCube30
+    4300060: Sala03:pCube32
+    4300062: Sala03:pCylinder9
+    4300064: Sala03:pCube25
+    4300066: Sala03:pCube31
+    4300068: Sala03:pCube26
+    4300070: Sala03:pCube27
+    4300072: Sala03:pCube28
+    4300074: Sala03:pCube29
+    4300076: Sala03:pCube30
+    4300078: Sala03:pCube32
+    4300080: Sala03:pCylinder9
+    4300082: Sala03:pCube25
+    4300084: Sala03:pCube31
+    4300086: Sala03:pCube26
+    4300088: Sala03:pCube27
+    4300090: Sala03:pCube28
+    4300092: Sala03:pCube29
+    4300094: Sala03:pCube30
+    4300096: Sala03:pCube32
+    4300098: Sala03:pCylinder9
+    4300100: Sala03:pCube25
+    4300102: Sala03:pCube31
+    4300104: Sala03:pCube26
+    4300106: Sala03:pCube27
+    4300108: Sala03:pCube28
+    4300110: Sala03:pCube29
+    4300112: Sala03:pCube30
+    4300114: Sala03:pCube32
+    4300116: Sala03:pCylinder9
+    4300118: Sala03:pCube25
+    4300120: Sala03:pCube31
+    4300122: Sala03:pCube26
+    4300124: Sala03:pCube27
+    4300126: Sala03:pCube28
+    4300128: Sala03:pCube29
+    4300130: Sala03:pCube30
+    4300132: Sala03:pCube32
+    4300134: Sala03:pCylinder9
+    4300136: Sala03:De_group31
+    4300138: ArcoPuerta
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
