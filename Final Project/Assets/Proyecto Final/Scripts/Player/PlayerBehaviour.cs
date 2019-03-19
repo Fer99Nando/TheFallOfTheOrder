@@ -137,13 +137,14 @@ public class PlayerBehaviour : MonoBehaviour
         {
             if (attackOn == false && cooldown == false)
             {
+                playerWeapon.attackStats += 15;
+                cooldown = true;
                 cooldownFilled.fillAmount = 1;
 
                 attackOn = true;
                 chargeAttack = true;
+
                 anim.SetTrigger("ChargeAttack");
-                playerWeapon.bonusStats += 15;
-                cooldown = true;
             }
         }
 
@@ -160,14 +161,14 @@ public class PlayerBehaviour : MonoBehaviour
             {
                 canAttack = true;
                 anim.SetTrigger("FirstCombo");
-                //playerWeapon.bonusStats += 2;
+                playerWeapon.bonusStats += 2;
             }
 
             if (comboTwoOn)
             {
                 canAttack = true;
                 anim.SetTrigger("SecondCombo");
-                //playerWeapon.bonusStats += 3;
+                playerWeapon.bonusStats += 3;
             }
         }
 
@@ -184,7 +185,6 @@ public class PlayerBehaviour : MonoBehaviour
             canMove = false;
         
             anim.SetBool("Walk", false);
-            cooldownChargeTime += Time.deltaTime;
         }
 
         if (Input.GetButtonDown("Dodge"))
@@ -236,10 +236,8 @@ public class PlayerBehaviour : MonoBehaviour
 
         if (cooldown)
         {
-            
             cooldownFilled.fillAmount -= Time.deltaTime/2.5f;
 
-            cooldownChargeTime += Time.deltaTime;
             if (cooldownTime >= 1)
             {
                 cooldownFilled.fillAmount = 0;
@@ -247,11 +245,11 @@ public class PlayerBehaviour : MonoBehaviour
                 cooldownTime = 0;
             }
 
-            if (cooldownChargeTime >= 4)
+            if (cooldownFilled.fillAmount == 0)
             {
+                playerWeapon.attackStats -= 15;
                 cooldownFilled.fillAmount = 0;
                 cooldown = false;
-                cooldownChargeTime = 0;
             }
         }
     }

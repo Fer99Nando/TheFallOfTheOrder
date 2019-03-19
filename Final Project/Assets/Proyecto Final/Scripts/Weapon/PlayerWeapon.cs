@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class PlayerWeapon : MonoBehaviour 
 {
     public int bonusStats;
+    public int attackStats;
 
     public GameObject gameOver;
 
@@ -18,12 +19,14 @@ public class PlayerWeapon : MonoBehaviour
 
     void Start()
     {
+        attackStats = 5;
         playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
         boxCol = GetComponent<BoxCollider>();
         boxCol.enabled = false;
     }
     void Update()
     {
+        bonusStats = attackStats;
         DamageVirus();
     }
 
@@ -53,37 +56,37 @@ public class PlayerWeapon : MonoBehaviour
         if (virusSlider.fillAmount == 0)
         {
             //Debug.Log("Base Daño");
-            bonusStats = 5;
+            //attackStats = 5;
         }
 
         else if (virusSlider.fillAmount > 0 && virusSlider.fillAmount < 0.25f)
         {
             //Debug.Log("10 Daño");
-            bonusStats = 15;
+            attackStats = 5;
         }
 
         if (virusSlider.fillAmount >= 0.25f && virusSlider.fillAmount < 0.5f)
         {
             //Debug.Log("15 Daño");
-            bonusStats = 35;
+            attackStats = 15;
         }
         
         if (virusSlider.fillAmount >= 0.5f && virusSlider.fillAmount < 0.75f)
         {
            // Debug.Log("20 Daño");
-            bonusStats = 75;
+            attackStats = 30;
         }
 
         if (virusSlider.fillAmount >= 0.75f && virusSlider.fillAmount < 1f)
         {
             //Debug.Log("25 Daño");
-            bonusStats = 110;
+            attackStats = 40;
         }
 
         if (virusSlider.fillAmount >= 1)
         {
             //Debug.Log("50 Daño");
-            bonusStats = 150;
+            attackStats = 50;
             virusEffect.Play();
 
             playerHealth.MaximusPower();
