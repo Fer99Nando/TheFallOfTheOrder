@@ -607,6 +607,7 @@ ModelImporter:
     101202: PuertaCelda 7
     101204: //RootNode
     101206: Suelo
+    101208: Celdas1
     400000: ArcoPuerta
     400002: BarrotesCarcel:group3
     400004: BarrotesLateralesCelda
@@ -1211,6 +1212,7 @@ ModelImporter:
     401202: PuertaCelda 7
     401204: //RootNode
     401206: Suelo
+    401208: Celdas1
     2100000: lambert3
     2100002: lambert1
     2300000: ArcoPuerta
@@ -1728,6 +1730,7 @@ ModelImporter:
     2301024: pPlane3
     2301026: pTorus3
     2301028: Suelo
+    2301030: Celdas1
     3300000: ArcoPuerta
     3300002: pasted__pasted__pasted__pCylinder10
     3300004: pasted__pasted__pasted__pCylinder10 1
@@ -2243,6 +2246,7 @@ ModelImporter:
     3301024: pPlane3
     3301026: pTorus3
     3301028: Suelo
+    3301030: Celdas1
     4300000: Suelo
     4300002: pCylinder2
     4300004: pCylinder9
@@ -2758,6 +2762,7 @@ ModelImporter:
     4301024: pPlane3
     4301026: pCylinder8
     4301028: pCylinder10
+    4301030: Celdas1
   externalObjects: {}
   materials:
     importMaterials: 1

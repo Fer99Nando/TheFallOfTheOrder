@@ -1,14 +1,16 @@
 fileFormatVersion: 2
-guid: 3d692a631b1658a428881580e85bdc8e
+guid: eb886905b434e2a4ebae977d93b7649d
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
+    100002: Celdas1
     400000: //RootNode
+    400002: Celdas1
     2100000: lambert1
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: pCube176
+    2300000: Celdas1
+    3300000: Celdas1
+    4300000: Celdas1
   externalObjects: {}
   materials:
     importMaterials: 1
