@@ -6,16 +6,21 @@ ModelImporter:
     100000: //RootNode
     100002: pCube35
     100004: pPlane6
+    100006: group16
     400000: //RootNode
     400002: pCube35
     400004: pPlane6
+    400006: group16
     2100000: lambert1
     2300000: pCube35
     2300002: pPlane6
+    2300004: group16
     3300000: pCube35
     3300002: pPlane6
+    3300004: group16
     4300000: pCube35
     4300002: pPlane6
+    4300004: group16
   externalObjects: {}
   materials:
     importMaterials: 1
