@@ -61,7 +61,6 @@ public class PlayerBehaviour : MonoBehaviour
     [Header("Animator")]
 
     public Animator anim;
-    //public AnimationClip attackAnim;
 
     PlayerHealth playerHealth;
 
@@ -225,6 +224,28 @@ public class PlayerBehaviour : MonoBehaviour
                 if(inputH != 0)
                 {
                     forwardSpeed = 4;
+
+                    if(inputH < 0)
+                    {
+                        anim.SetFloat("SpeedX", -1);
+                        anim.SetFloat("SpeedZ", 0);
+                    }
+                    else if (inputH > 0)
+                    {
+                        anim.SetFloat("SpeedX", 1);
+                        anim.SetFloat("SpeedZ", 0);
+                    }
+                }
+
+                if (inputV < 0)
+                {
+                    anim.SetFloat("SpeedZ", -1);
+                    anim.SetFloat("SpeedX", 0);
+                }
+                else if (inputV > 0)
+                {
+                    anim.SetFloat("SpeedZ", 1);
+                    anim.SetFloat("SpeedX", 0);
                 }
 
                 Rotate();
