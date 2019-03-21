@@ -225,28 +225,51 @@ public class PlayerBehaviour : MonoBehaviour
                 {
                     forwardSpeed = 4;
 
-                    if(inputH < 0)
+                    if (inputH < 0 && inputV == 0)
                     {
                         anim.SetFloat("SpeedX", -1);
-                        anim.SetFloat("SpeedZ", 0);
                     }
-                    else if (inputH > 0)
+                    else if (inputH > 0 && inputV == 0)
                     {
                         anim.SetFloat("SpeedX", 1);
-                        anim.SetFloat("SpeedZ", 0);
                     }
-                }
+                } else anim.SetFloat("SpeedX", 0);
 
-                if (inputV < 0)
+                if (inputV != 0)
+                { 
+                    if (inputV < 0 && inputH == 0)
+                    {
+                        anim.SetFloat("SpeedZ", -1);
+                    }
+                    else if (inputV > 0 && inputH == 0)
+                    {
+                        anim.SetFloat("SpeedZ", 1);
+                    }
+                } else anim.SetFloat("SpeedZ", 0);
+
+                /*if (inputV != 0 && inputH != 0)
                 {
-                    anim.SetFloat("SpeedZ", -1);
-                    anim.SetFloat("SpeedX", 0);
-                }
-                else if (inputV > 0)
-                {
-                    anim.SetFloat("SpeedZ", 1);
-                    anim.SetFloat("SpeedX", 0);
-                }
+                    if (inputV > 0 && inputH < 0)
+                    {
+                        anim.SetFloat("SpeedZ", 1);
+                        anim.SetFloat("SpeedX", -1);
+                    }
+                    if (inputV < 0 && inputH < 0)
+                    {
+                        anim.SetFloat("SpeedZ", -1);
+                        anim.SetFloat("SpeedX", -1);
+                    }
+                    if (inputV > 0 && inputH > 0)
+                    {
+                        anim.SetFloat("SpeedZ", 1);
+                        anim.SetFloat("SpeedX", 1);
+                    }
+                    if (inputV < 0 && inputH > 0)
+                    {
+                        anim.SetFloat("SpeedZ", -1);
+                        anim.SetFloat("SpeedX", 1);
+                    }
+                }*/
 
                 Rotate();
             }

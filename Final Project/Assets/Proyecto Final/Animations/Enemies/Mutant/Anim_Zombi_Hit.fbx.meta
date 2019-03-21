@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b2e2dfeb6fbe5d444ac65244d4bde261
+guid: e6ff75b780c00e149b3e2e78aee1edc4
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -187,7 +187,7 @@ ModelImporter:
     400180: ZombieLowUVs:polySurface1
     2100000: lambert1
     4300000: ZombieLowUVs:polySurface1
-    7400000: Attack_Mutant
+    7400000: Hit
     9500000: //RootNode
     13700000: ZombieLowUVs:polySurface1
     2186277476908879412: ImportLogs
@@ -220,17 +220,17 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Attack_Mutant
+      name: Hit
       takeName: Take 001
       firstFrame: 1
-      lastFrame: 25
+      lastFrame: 20
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -242,7 +242,14 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.9156118
+        functionName: SeAcaboElHit
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}

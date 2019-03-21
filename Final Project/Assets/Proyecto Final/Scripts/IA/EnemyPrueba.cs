@@ -26,6 +26,7 @@ public class EnemyPrueba : MonoBehaviour
 
     public float chaseSpeed;        // Velocidad de Persecucion
     public float patrolSpeed;       // Velocidad  mientras Patrulla
+    public float rotationSpeed;     // Velocidad  rotation hacia el player
 
     [Header("Timers")]
 
@@ -73,6 +74,10 @@ public class EnemyPrueba : MonoBehaviour
                 break;
         }
 
+        targetPosition = player.transform.position - transform.position;
+        targetPosition.y = 0;
+        Quaternion newRotation = Quaternion.LookRotation(targetPosition);
+        transform.rotation = Quaternion.Lerp(transform.rotation, newRotation, rotationSpeed * 0.1f);
     }
 
     void LateUpdate()
@@ -94,8 +99,11 @@ public class EnemyPrueba : MonoBehaviour
 
     void PatrolUpdate()
     {
+        anim.SetBool("Walk", true);
+
         if (distanceFromTarget < chaseRange)
         {
+            anim.SetBool("Walk", false);
             SetChase();
             return;
         }
@@ -158,6 +166,8 @@ public class EnemyPrueba : MonoBehaviour
 
         if (distanceFromTarget < attackRange)
         {
+            chaseSpeed = 0;
+            agent.stoppingDistance = 2;
             Debug.Log("ATTACK");
             agent.isStopped = true;
             anim.SetBool("Action", true);
@@ -216,7 +226,7 @@ public class EnemyPrueba : MonoBehaviour
     void SetAction()
     {
         // Sonidos de Ataque si los tiene
-        agent.stoppingDistance = 1;
+        agent.stoppingDistance = 2;
         state = EnemyState.Attack;
     }
 

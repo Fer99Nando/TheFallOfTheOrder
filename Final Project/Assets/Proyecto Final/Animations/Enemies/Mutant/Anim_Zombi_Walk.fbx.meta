@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b2e2dfeb6fbe5d444ac65244d4bde261
+guid: 6d3f29d7826e8e84a8d7e3b56afd7fa4
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -187,7 +187,7 @@ ModelImporter:
     400180: ZombieLowUVs:polySurface1
     2100000: lambert1
     4300000: ZombieLowUVs:polySurface1
-    7400000: Attack_Mutant
+    7400000: Walk_Mutant
     9500000: //RootNode
     13700000: ZombieLowUVs:polySurface1
     2186277476908879412: ImportLogs
@@ -220,10 +220,10 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Attack_Mutant
+      name: Walk_Mutant
       takeName: Take 001
       firstFrame: 1
-      lastFrame: 25
+      lastFrame: 56
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
