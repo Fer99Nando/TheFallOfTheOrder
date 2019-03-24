@@ -23,6 +23,7 @@ public class BossPrueba : MonoBehaviour
 
     CharacterController controller;
     WeaponBoss playerWeapon;
+    BossHealth enemyDeath;
 
     //public ParticleSystem bossTransformation;
     //public GameObject bossTransformation;
@@ -69,16 +70,20 @@ public class BossPrueba : MonoBehaviour
 
         player = GameObject.FindGameObjectWithTag("Player");
         playerWeapon = GameObject.FindGameObjectWithTag("WeaponBoss").GetComponent<WeaponBoss>();
+        enemyDeath = GetComponent<BossHealth>();
     }
 
 
     // Update is called once per frame
     void Update()
     {
-        targetPosition = player.transform.position - transform.position;
-        targetPosition.y = 0;
-        Quaternion newRotation = Quaternion.LookRotation(targetPosition);
-        transform.rotation = Quaternion.Lerp(transform.rotation, newRotation, rotationSpeed * 0.1f);
+        if (enemyDeath.isDead == false)
+        {
+            targetPosition = player.transform.position - transform.position;
+            targetPosition.y = 0;
+            Quaternion newRotation = Quaternion.LookRotation(targetPosition);
+            transform.rotation = Quaternion.Lerp(transform.rotation, newRotation, rotationSpeed * 0.1f);
+        }
 
         switch (phase)
         {

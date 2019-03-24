@@ -24257,12 +24257,6 @@ Transform:
   m_Father: {fileID: 979480711}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &538218107 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8702489190573897539, guid: 9264cb0dd0994904f950ddcc03a22aa9,
-    type: 3}
-  m_PrefabInstance: {fileID: 8702489192078273642}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &539257530
 GameObject:
   m_ObjectHideFlags: 0
@@ -67802,9 +67796,6 @@ MonoBehaviour:
   cameraMask:
     serializedVersion: 2
     m_Bits: 1031
-  player: {fileID: 538218107}
-  enemy: []
-  focusCamera: 0
 --- !u!92 &2006784993
 Behaviour:
   m_ObjectHideFlags: 0
@@ -69623,6 +69614,7 @@ MonoBehaviour:
   currentHp: 0
   healthSlider: {fileID: 1268961070}
   victory: {fileID: 1439944170}
+  isDead: 0
 --- !u!195 &2062060036
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -69633,9 +69625,9 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.035
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
+  m_Speed: 5
+  m_Acceleration: 15
+  avoidancePriority: 99
   m_AngularSpeed: 120
   m_StoppingDistance: 2
   m_AutoTraverseOffMeshLink: 1
@@ -69657,7 +69649,7 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 2
   m_Height: 0.14
-  m_Radius: 0.036
+  m_Radius: 0.04
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
@@ -72611,6 +72603,41 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5296933097484845254, guid: ec56fe68e57d5904eb86579dbc36e3b9,
+        type: 3}
+      propertyPath: m_AutoBraking
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5296933097484845254, guid: ec56fe68e57d5904eb86579dbc36e3b9,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 5296933097484845254, guid: ec56fe68e57d5904eb86579dbc36e3b9,
+        type: 3}
+      propertyPath: m_BaseOffset
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5296933097484845254, guid: ec56fe68e57d5904eb86579dbc36e3b9,
+        type: 3}
+      propertyPath: m_AngularSpeed
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 5296933097484845254, guid: ec56fe68e57d5904eb86579dbc36e3b9,
+        type: 3}
+      propertyPath: avoidancePriority
+      value: 99
+      objectReference: {fileID: 0}
+    - target: {fileID: 5296933097484845254, guid: ec56fe68e57d5904eb86579dbc36e3b9,
+        type: 3}
+      propertyPath: m_Speed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5296933097484845254, guid: ec56fe68e57d5904eb86579dbc36e3b9,
+        type: 3}
+      propertyPath: m_Acceleration
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec56fe68e57d5904eb86579dbc36e3b9, type: 3}

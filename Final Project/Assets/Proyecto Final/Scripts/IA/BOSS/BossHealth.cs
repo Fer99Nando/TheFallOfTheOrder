@@ -24,7 +24,7 @@ public class BossHealth : MonoBehaviour
 
     BossPrueba bossBehaviour;
 
-    bool isDead;
+    public bool isDead;
     bool segundaFase;
 
     void Awake()

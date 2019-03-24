@@ -19,14 +19,15 @@ public class EnemyHealth : MonoBehaviour
 
     // Sonidos
 
-    bool isDead;
+    public bool isDead;
 
     void Awake()
     {
         controller = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
         currentHp = startingHp;
-        playerBehaviour = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerBehaviour>();;
+        playerBehaviour = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerBehaviour>();
+        healthSlider.value = currentHp;
     }
 
     public void TakeDamage(int amount)

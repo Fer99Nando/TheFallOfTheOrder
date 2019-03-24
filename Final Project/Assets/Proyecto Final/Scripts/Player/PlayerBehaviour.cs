@@ -55,6 +55,7 @@ public class PlayerBehaviour : MonoBehaviour
     private bool canAttack;
 
     private bool canMove;
+    private bool isWalking;
     
     private bool godMode;
 
@@ -94,6 +95,7 @@ public class PlayerBehaviour : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
 
         canMove = true;
+        isWalking = false;
 
         this.diagonalForwardSpeed = (float)Mathf.Sqrt(this.forwardSpeed * this.forwardSpeed / 2);
         this.backSpeed = this.forwardSpeed / 2;
@@ -188,7 +190,7 @@ public class PlayerBehaviour : MonoBehaviour
 
         if (Input.GetButtonDown("Dodge"))
         {
-            if (dodgeTrue == false)
+            if (dodgeTrue == false  && isWalking)
             {
                 dodgeTrue = true;
                 anim.SetTrigger("Dodge 0");
@@ -219,9 +221,10 @@ public class PlayerBehaviour : MonoBehaviour
         {
             if (GetInput())
             {
+                isWalking = true;
                 anim.SetBool("Walk", true);
 
-                if(inputH != 0)
+                if (inputH != 0)
                 {
                     forwardSpeed = 4;
 
@@ -233,10 +236,11 @@ public class PlayerBehaviour : MonoBehaviour
                     {
                         anim.SetFloat("SpeedX", 1);
                     }
-                } else anim.SetFloat("SpeedX", 0);
+                }
+                else anim.SetFloat("SpeedX", 0);
 
                 if (inputV != 0)
-                { 
+                {
                     if (inputV < 0 && inputH == 0)
                     {
                         anim.SetFloat("SpeedZ", -1);
@@ -245,7 +249,8 @@ public class PlayerBehaviour : MonoBehaviour
                     {
                         anim.SetFloat("SpeedZ", 1);
                     }
-                } else anim.SetFloat("SpeedZ", 0);
+                }
+                else anim.SetFloat("SpeedZ", 0);
 
                 /*if (inputV != 0 && inputH != 0)
                 {
@@ -273,7 +278,11 @@ public class PlayerBehaviour : MonoBehaviour
 
                 Rotate();
             }
-            else anim.SetBool("Walk", false);
+            else
+            {
+                anim.SetBool("Walk", false);
+                isWalking = false;
+            }
 
             Move();
         }

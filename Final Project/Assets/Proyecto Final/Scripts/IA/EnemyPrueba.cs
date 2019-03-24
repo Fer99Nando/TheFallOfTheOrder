@@ -13,6 +13,7 @@ public class EnemyPrueba : MonoBehaviour
 
     private Vector3 targetPosition;
     private GameObject player;
+    EnemyHealth enemyDeath;
 
     [Header("Paths")]
 
@@ -51,6 +52,8 @@ public class EnemyPrueba : MonoBehaviour
         anim = GetComponent<Animator>();        // Llamamos a las animaciones
 
         player = GameObject.FindGameObjectWithTag("Player");
+
+        enemyDeath = GetComponent<EnemyHealth>();
     }
 
     // Update is called once per frame
@@ -74,10 +77,13 @@ public class EnemyPrueba : MonoBehaviour
                 break;
         }
 
-        targetPosition = player.transform.position - transform.position;
-        targetPosition.y = 0;
-        Quaternion newRotation = Quaternion.LookRotation(targetPosition);
-        transform.rotation = Quaternion.Lerp(transform.rotation, newRotation, rotationSpeed * 0.1f);
+        if (enemyDeath.isDead == false)
+        {
+            targetPosition = player.transform.position - transform.position;
+            targetPosition.y = 0;
+            Quaternion newRotation = Quaternion.LookRotation(targetPosition);
+            transform.rotation = Quaternion.Lerp(transform.rotation, newRotation, rotationSpeed * 0.1f);
+        }
     }
 
     void LateUpdate()
