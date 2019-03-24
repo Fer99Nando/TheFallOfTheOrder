@@ -252,8 +252,9 @@ public class PlayerBehaviour : MonoBehaviour
                 }
                 else anim.SetFloat("SpeedZ", 0);
 
-                /*if (inputV != 0 && inputH != 0)
+                if (inputV != 0 && inputH != 0)
                 {
+                    anim.SetBool("Diagonal", true);
                     if (inputV > 0 && inputH < 0)
                     {
                         anim.SetFloat("SpeedZ", 1);
@@ -274,7 +275,7 @@ public class PlayerBehaviour : MonoBehaviour
                         anim.SetFloat("SpeedZ", -1);
                         anim.SetFloat("SpeedX", 1);
                     }
-                }*/
+                } else anim.SetBool("Diagonal", false);
 
                 Rotate();
             }
