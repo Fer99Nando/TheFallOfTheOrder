@@ -69596,7 +69596,7 @@ MonoBehaviour:
   patrolSpeed: 2
   idleTime: 1
   timeCounter: 0
-  coolDownAttack: 0
+  coolDownAttack: 5
   anim: {fileID: 2062060038}
 --- !u!114 &2062060035
 MonoBehaviour:
@@ -72744,6 +72744,11 @@ PrefabInstance:
       propertyPath: personajes
       value: 
       objectReference: {fileID: 392353377}
+    - target: {fileID: 8702489190573897537, guid: 9264cb0dd0994904f950ddcc03a22aa9,
+        type: 3}
+      propertyPath: startingHp
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 8702489190573897541, guid: 9264cb0dd0994904f950ddcc03a22aa9,
         type: 3}
       propertyPath: slotPot.Array.data[0]
@@ -72774,5 +72779,10 @@ PrefabInstance:
       propertyPath: healthSlider
       value: 
       objectReference: {fileID: 875457922}
+    - target: {fileID: 8935259095188588188, guid: 9264cb0dd0994904f950ddcc03a22aa9,
+        type: 3}
+      propertyPath: bonusStats
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9264cb0dd0994904f950ddcc03a22aa9, type: 3}

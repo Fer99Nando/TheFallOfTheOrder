@@ -276,10 +276,18 @@ public class BossPrueba : MonoBehaviour
         {
             Debug.Log("ME CAGO EN TOOO");
             agent.isStopped = true;
-            anim.SetBool("Action2", true);
-            idleTime = coolDownAttack; // Esto es si quiero que tenga un time para quese  enfrie y poderle atacar
 
-            return;
+            if (Random.value <= 0.5f)
+            {
+                anim.SetTrigger("Action2");
+                idleTime = coolDownAttack; // Esto es si quiero que tenga un time para quese  enfrie y poderle atacar
+            }
+
+            if(Random.value > 0.5f)
+            {
+                anim.SetTrigger("Action1");
+                idleTime = coolDownAttack; // Esto es si quiero que tenga un time para quese  enfrie y poderle atacar
+            }
         }
         else if (distanceFromTarget > attackRange)
         {
