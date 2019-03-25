@@ -172,7 +172,6 @@ public class EnemyPrueba : MonoBehaviour
 
         if (distanceFromTarget < attackRange)
         {
-            chaseSpeed = 0;
             agent.stoppingDistance = 2;
             Debug.Log("ATTACK");
             agent.isStopped = true;
