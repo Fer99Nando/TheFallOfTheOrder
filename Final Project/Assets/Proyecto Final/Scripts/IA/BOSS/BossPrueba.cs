@@ -21,6 +21,9 @@ public class BossPrueba : MonoBehaviour
     
     public int bonusEnemyStats;
 
+    public bool coolDown;
+    public bool coolDownJump;
+
     CharacterController controller;
     WeaponBoss playerWeapon;
     BossHealth enemyDeath;
@@ -50,7 +53,7 @@ public class BossPrueba : MonoBehaviour
     public float idleTime;      // IDLE
     public float timeCounter = 0;  // Contador de tiempo
 
-    public float coolDownAttack = 0;   // Enfriamineto despues de atacar
+    public float RandomAttack = 0;   // Enfriamineto despues de atacar
 
     [Header("Stats")]
 
@@ -62,6 +65,8 @@ public class BossPrueba : MonoBehaviour
 
     private void Awake()
     {
+        coolDownJump = false;
+        coolDown = false;
         //bossTransformation.SetActive(false);
         bonusEnemyStats = 10;
         agent = GetComponent<NavMeshAgent>();
@@ -130,6 +135,38 @@ public class BossPrueba : MonoBehaviour
 
         }
 
+        if(coolDown)
+        {
+            anim.ResetTrigger("Action");
+            anim.SetBool("IddleTime", true);
+                
+            timeCounter += Time.deltaTime; // Esto es si quiero que tenga un time para quese  enfrie y poderle atacar
+
+            if(timeCounter > 1)
+            {
+                RandomAttack = Random.value;
+                timeCounter = 0;
+                coolDown = false;
+                anim.SetBool("IddleTime", false);
+            }
+        }
+
+        if(coolDownJump)
+        {
+            anim.ResetTrigger("Action2");
+            anim.SetBool("JumpAttackCooldown", true);
+                
+            timeCounter += Time.deltaTime; // Esto es si quiero que tenga un time para quese  enfrie y poderle atacar
+
+            if(timeCounter > 3)
+            {
+                RandomAttack = Random.value;
+                timeCounter = 0;
+                coolDownJump = false;
+                anim.SetBool("JumpAttackCooldown", false);
+            }
+        }
+
     }
 
     void LateUpdate()
@@ -142,8 +179,6 @@ public class BossPrueba : MonoBehaviour
     void IdleUpdate()
     {
             state = EnemyState.Chase;
-            timeCounter = 0;
-
             return;
     }
 
@@ -171,18 +206,24 @@ public class BossPrueba : MonoBehaviour
 
         if (distanceFromTarget < attackRange)
         {
-            Debug.Log("ATTACK");
-            agent.isStopped = true;
-            anim.SetBool("Action", true);
-            idleTime = coolDownAttack; // Esto es si quiero que tenga un time para quese  enfrie y poderle atacar
+            if(coolDown == false && RandomAttack < 0.5f)
+            {
+                Debug.Log("ATTACK");
+                agent.isStopped = true;
+                anim.SetTrigger("Action");
+            }
 
+            if(coolDown == false && RandomAttack > 0.5f)
+            {
+                Debug.Log("ATTACK");
+                agent.isStopped = true;
+                anim.SetTrigger("Action2");
+            }
             return;
-
         }
         else
         {
             Debug.Log("Salio Del Range");
-            anim.SetBool("Action", false);
             agent.isStopped = false;
             SetChase();
             return;
@@ -242,7 +283,6 @@ public class BossPrueba : MonoBehaviour
 
         attackRange = 4;
         controller.enabled = true;
-        anim.SetBool("Action", false);
         anim.SetBool("Chase", false);
         stateTwo = BossPhaseTwo.ChaseTwo;
     }
@@ -277,22 +317,19 @@ public class BossPrueba : MonoBehaviour
             Debug.Log("ME CAGO EN TOOO");
             agent.isStopped = true;
 
-            if (Random.value <= 0.5f)
+            if (Random.value <= 0.5f && coolDown == false)
             {
                 anim.SetTrigger("Action2");
-                idleTime = coolDownAttack; // Esto es si quiero que tenga un time para quese  enfrie y poderle atacar
             }
 
-            if(Random.value > 0.5f)
+            else if(Random.value > 0.5f && coolDown == false)
             {
                 anim.SetTrigger("Action1");
-                idleTime = coolDownAttack; // Esto es si quiero que tenga un time para quese  enfrie y poderle atacar
             }
         }
         else if (distanceFromTarget > attackRange)
         {
             Debug.Log("Salio Del Range");
-            anim.SetBool("Action2", false);
             agent.isStopped = false;
             SetChase();
             return;
@@ -307,6 +344,13 @@ public class BossPrueba : MonoBehaviour
     public void FinalAtaque()
     {
         playerWeapon.BoxDisabled();
+        coolDown = true;
+    }
+
+    public void FinalJumpAtaque()
+    {
+        playerWeapon.BoxDisabled();
+        coolDownJump = true;
     }
     #endregion
     float GetDistanceFromTarget()       // Calcula la distancia con el player
