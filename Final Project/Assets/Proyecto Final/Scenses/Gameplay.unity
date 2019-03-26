@@ -19878,6 +19878,12 @@ Transform:
   m_Father: {fileID: 688471864}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &381452765 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400088, guid: 3d63aea5ac1b4ec4c808f4bfcb6be04b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1259548131}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &382643396
 GameObject:
   m_ObjectHideFlags: 0
@@ -65020,6 +65026,63 @@ Transform:
   m_Father: {fileID: 1427206270}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1893970607
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1893970608}
+  - component: {fileID: 1893970609}
+  - component: {fileID: 1893970610}
+  m_Layer: 11
+  m_Name: AttackJumpActive
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1893970608
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893970607}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.02395048, y: -0.095, z: 0.0551}
+  m_LocalScale: {x: 0.020983012, y: 0.020983009, z: 0.020983003}
+  m_Children: []
+  m_Father: {fileID: 381452765}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1893970609
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893970607}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.459634, y: 0.5431183, z: 13.29631}
+  m_Center: {x: -0.39182466, y: 4.8657537, z: 4.159993}
+--- !u!114 &1893970610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893970607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 092010ba7bafa464aac1488e67f2fa6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1895814311
 GameObject:
   m_ObjectHideFlags: 0
@@ -69584,7 +69647,10 @@ MonoBehaviour:
   state: 0
   stateTwo: 0
   phase: 0
+  colliderJumpAttack: {fileID: 1893970607}
   bonusEnemyStats: 0
+  coolDown: 0
+  coolDownJump: 0
   mat1: {fileID: 2100000, guid: 0ad5b4806ebdd794ebce3edb3be2670b, type: 2}
   points:
   - {fileID: 1311747156}
@@ -69596,7 +69662,7 @@ MonoBehaviour:
   patrolSpeed: 2
   idleTime: 1
   timeCounter: 0
-  coolDownAttack: 5
+  RandomAttack: 0
   anim: {fileID: 2062060038}
 --- !u!114 &2062060035
 MonoBehaviour:
@@ -69629,7 +69695,7 @@ NavMeshAgent:
   m_Acceleration: 15
   avoidancePriority: 99
   m_AngularSpeed: 120
-  m_StoppingDistance: 2
+  m_StoppingDistance: 1
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1

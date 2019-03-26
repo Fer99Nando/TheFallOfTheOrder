@@ -18,7 +18,9 @@ public class BossPrueba : MonoBehaviour
 
     private Vector3 targetPosition;
     private GameObject player;
-    
+    public GameObject colliderJumpAttack;
+
+
     public int bonusEnemyStats;
 
     public bool coolDown;
@@ -27,6 +29,7 @@ public class BossPrueba : MonoBehaviour
     CharacterController controller;
     WeaponBoss playerWeapon;
     BossHealth enemyDeath;
+    PlayerHealth playerHealth;
 
     //public ParticleSystem bossTransformation;
     //public GameObject bossTransformation;
@@ -65,6 +68,7 @@ public class BossPrueba : MonoBehaviour
 
     private void Awake()
     {
+        colliderJumpAttack.SetActive(false);
         coolDownJump = false;
         coolDown = false;
         //bossTransformation.SetActive(false);
@@ -73,6 +77,7 @@ public class BossPrueba : MonoBehaviour
         controller = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();        // Llamamos a las animaciones
 
+        playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
         player = GameObject.FindGameObjectWithTag("Player");
         playerWeapon = GameObject.FindGameObjectWithTag("WeaponBoss").GetComponent<WeaponBoss>();
         enemyDeath = GetComponent<BossHealth>();
@@ -142,12 +147,13 @@ public class BossPrueba : MonoBehaviour
                 
             timeCounter += Time.deltaTime; // Esto es si quiero que tenga un time para quese  enfrie y poderle atacar
 
-            if(timeCounter > 1)
+            if(timeCounter > 2)
             {
                 RandomAttack = Random.value;
                 timeCounter = 0;
                 coolDown = false;
                 anim.SetBool("IddleTime", false);
+                agent.isStopped = false;
             }
         }
 
@@ -164,6 +170,7 @@ public class BossPrueba : MonoBehaviour
                 timeCounter = 0;
                 coolDownJump = false;
                 anim.SetBool("JumpAttackCooldown", false);
+                agent.isStopped = false;
             }
         }
 
@@ -324,6 +331,7 @@ public class BossPrueba : MonoBehaviour
 
             else if(Random.value > 0.5f && coolDown == false)
             {
+                agent.isStopped = true;
                 anim.SetTrigger("Action1");
             }
         }
@@ -347,9 +355,17 @@ public class BossPrueba : MonoBehaviour
         coolDown = true;
     }
 
+    public void ComienzoJumpAtaque()
+    {
+
+        colliderJumpAttack.SetActive(true);
+    }
+
     public void FinalJumpAtaque()
     {
-        playerWeapon.BoxDisabled();
+
+        colliderJumpAttack.SetActive(false);
+        agent.isStopped = true;
         coolDownJump = true;
     }
     #endregion
@@ -358,6 +374,15 @@ public class BossPrueba : MonoBehaviour
         return Vector3.Distance(player.transform.position, transform.position);
     }
 
+    private void OnTriggerEnter(Collider col)
+    {
+        //col = colliderJumpAttack;
+        if(col.CompareTag("Player"))
+        {
+            playerHealth.currentHp -= 50;
+            colliderJumpAttack.SetActive(false);
+        }
+    }
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
