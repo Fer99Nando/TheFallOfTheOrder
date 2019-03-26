@@ -271,14 +271,14 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.45764804
-        functionName: ComienzoAtaque
+      - time: 0.55618817
+        functionName: ComienzoJumpAtaque
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.5914235
+      - time: 0.7556571
         functionName: FinalJumpAtaque
         data: 
         objectReferenceParameter: {instanceID: 0}

@@ -10,7 +10,9 @@ public class BossHealth : MonoBehaviour
 
     public Image healthSlider;
 
-    public GameObject victory;
+    //public GameObject victory;
+    public GameObject victoryObject;
+    public GameObject desactivarHud;
 
     CharacterController controller;
 
@@ -29,6 +31,7 @@ public class BossHealth : MonoBehaviour
 
     void Awake()
     {
+        victoryObject.SetActive(false);
         segundaFase = true;
 
         bossBehaviour = GetComponent<BossPrueba>();
@@ -59,8 +62,6 @@ public class BossHealth : MonoBehaviour
         }
 
         TakeDamage();
-
-
     }
 
     public void TakeDamage()
@@ -96,20 +97,11 @@ public class BossHealth : MonoBehaviour
         }
     }
 
-   /* private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "PlayerWeapon")
-        {
-            
-        }
-    }*/
-
     void Death()
     {
         controller.enabled = false;
-        //Destroy(gameObject);
-        //victory.SetActive(true);
-        //Time.timeScale = 0;
-        //Cursor.visible = true;
+        victoryObject.SetActive(true);
+        desactivarHud.SetActive(false);
+        Cursor.visible = true;
     }
 }

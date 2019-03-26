@@ -28,6 +28,7 @@ public class BossPrueba : MonoBehaviour
 
     CharacterController controller;
     WeaponBoss playerWeapon;
+    JumpAttack jumpAttack;
     BossHealth enemyDeath;
     PlayerHealth playerHealth;
 
@@ -68,7 +69,7 @@ public class BossPrueba : MonoBehaviour
 
     private void Awake()
     {
-        colliderJumpAttack.SetActive(false);
+        //colliderJumpAttack.SetActive(false);
         coolDownJump = false;
         coolDown = false;
         //bossTransformation.SetActive(false);
@@ -77,9 +78,10 @@ public class BossPrueba : MonoBehaviour
         controller = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();        // Llamamos a las animaciones
 
-        playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
+        //playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
         player = GameObject.FindGameObjectWithTag("Player");
         playerWeapon = GameObject.FindGameObjectWithTag("WeaponBoss").GetComponent<WeaponBoss>();
+        jumpAttack = colliderJumpAttack.GetComponent<JumpAttack>();
         enemyDeath = GetComponent<BossHealth>();
     }
 
@@ -93,6 +95,10 @@ public class BossPrueba : MonoBehaviour
             targetPosition.y = 0;
             Quaternion newRotation = Quaternion.LookRotation(targetPosition);
             transform.rotation = Quaternion.Lerp(transform.rotation, newRotation, rotationSpeed * 0.1f);
+        }
+        else
+        {
+            agent.isStopped = true;
         }
 
         switch (phase)
@@ -303,11 +309,14 @@ public class BossPrueba : MonoBehaviour
     void ChaseUpdateTwo()
     {
         // animacion de giro hacia el personaje
-        anim.SetBool("Chase2", true);
-        agent.isStopped = false;
-        agent.SetDestination(player.transform.position);
+        if (enemyDeath.isDead == false)
+        {
+            anim.SetBool("Chase2", true);
+            agent.isStopped = false;
+            agent.SetDestination(player.transform.position);
+        }
 
-        if (distanceFromTarget < attackRange)
+        if (distanceFromTarget < attackRange && enemyDeath.isDead == false)
         {
             anim.SetBool("Chase2", false);
             SetAction();
@@ -319,7 +328,7 @@ public class BossPrueba : MonoBehaviour
     {
         Debug.Log("TORTON Y AL SUELO");
 
-        if (distanceFromTarget < attackRange)
+        if (distanceFromTarget < attackRange && enemyDeath.isDead == false)
         {
             Debug.Log("ME CAGO EN TOOO");
             agent.isStopped = true;
@@ -335,7 +344,7 @@ public class BossPrueba : MonoBehaviour
                 anim.SetTrigger("Action1");
             }
         }
-        else if (distanceFromTarget > attackRange)
+        else if (distanceFromTarget > attackRange && enemyDeath.isDead == false)
         {
             Debug.Log("Salio Del Range");
             agent.isStopped = false;
@@ -357,14 +366,14 @@ public class BossPrueba : MonoBehaviour
 
     public void ComienzoJumpAtaque()
     {
-
-        colliderJumpAttack.SetActive(true);
+        jumpAttack.BoxEnabled();
+        //colliderJumpAttack.SetActive(true);
     }
 
     public void FinalJumpAtaque()
     {
-
-        colliderJumpAttack.SetActive(false);
+        jumpAttack.BoxDisabled();
+        //colliderJumpAttack.SetActive(false);
         agent.isStopped = true;
         coolDownJump = true;
     }
@@ -374,7 +383,7 @@ public class BossPrueba : MonoBehaviour
         return Vector3.Distance(player.transform.position, transform.position);
     }
 
-    private void OnTriggerEnter(Collider col)
+    /*private void OnTriggerEnter(Collider col)
     {
         //col = colliderJumpAttack;
         if(col.CompareTag("Player"))
@@ -382,7 +391,7 @@ public class BossPrueba : MonoBehaviour
             playerHealth.currentHp -= 50;
             colliderJumpAttack.SetActive(false);
         }
-    }
+    }*/
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
