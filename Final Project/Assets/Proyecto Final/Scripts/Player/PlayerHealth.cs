@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.Video;
 using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour 
@@ -27,7 +28,9 @@ public class PlayerHealth : MonoBehaviour
     public Image virusSlider;
 
     // Activamos el gameobject GameOver
+    public VideoPlayer loser;
     public GameObject gameOver;
+    public GameObject desactivarHud;
     public GameObject personajes;
 
     // Sonido muerte
@@ -174,8 +177,10 @@ public class PlayerHealth : MonoBehaviour
 
     public void DieAcabado()
     {
-        Destroy(personajes);
+        desactivarHud.SetActive(false);
+        loser.Play();
         gameOver.SetActive(true);
+        Destroy(personajes);
         Cursor.visible = true;
     }
 
