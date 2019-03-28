@@ -5,7 +5,12 @@ using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
+    PlayerBehaviour playerBehaviour;
     PlayerHealth playerHealth;
+    Animator anim;
+
+    private bool timeReg;
+    private float tomandoPoti;
 
     //public Image[] inventory;
     public Sprite[] spriteItems;
@@ -18,7 +23,10 @@ public class Inventory : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        timeReg = false;
+        anim = GetComponent<Animator>();
         playerHealth = GetComponent<PlayerHealth>();
+        playerBehaviour = GetComponent<PlayerBehaviour>();
         inventoryAmount = 0;
         slotPot[0].SetActive(false);
         slotPot[1].SetActive(false);
@@ -30,15 +38,23 @@ public class Inventory : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Alpha1))
         {
+            timeReg = true;
             UsePotion(0);
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
+            timeReg = true;
             UsePotion(1);
         }
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
+            timeReg = true;
             UsePotion(2);
+        }
+
+        if(timeReg)
+        {
+            tomandoPoti += Time.deltaTime;
         }
     }
 
@@ -46,27 +62,49 @@ public class Inventory : MonoBehaviour
     {
         if(inventoryAmount >= 1)
         {
+            playerBehaviour.canMove = false;
+            anim.SetBool("PotiOn", true);
             inventoryAmount -= 1;
+
             if (slotType[slot] == 0)
             {
-                Debug.Log("health");
-                playerHealth.PotionHelath();
+                if (tomandoPoti >= 1)
+                {
+                    Debug.Log("health");
+                    playerHealth.PotionHelath();
+                    tomandoPoti = 0;
+                    timeReg = false;
+                }
             }
             if (slotType[slot] == 1)
             {
-                Debug.Log("antidoto");
-                playerHealth.PotionAntidoto();
+                if (tomandoPoti >= 1)
+                {
+                    Debug.Log("antidoto");
+                    playerHealth.PotionAntidoto();
+                    tomandoPoti = 0;
+                    timeReg = false;
+                }
             }
             if (slotType[slot] == 2)
             {
-                Debug.Log("toditoenuno");
-                playerHealth.PotionAllInOne();
+                if (tomandoPoti >= 1)
+                {
+                    Debug.Log("toditoenuno");
+                    playerHealth.PotionAllInOne();
+                    tomandoPoti = 0;
+                    timeReg = false;
+                }
             }
 
             slotPot[slot].SetActive(false);
             slotType[slot] = 3;
         }
+    }
 
+    public void PotiTerminada()
+    {
+        playerBehaviour.canMove = true;
     }
 
     public void ItemsVida(int potion)

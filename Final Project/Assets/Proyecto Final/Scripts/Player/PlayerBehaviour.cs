@@ -54,7 +54,7 @@ public class PlayerBehaviour : MonoBehaviour
     private bool attackOne;
     private bool canAttack;
 
-    private bool canMove;
+    public bool canMove;
     private bool isWalking;
     
     private bool godMode;
