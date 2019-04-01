@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4144756898710853517}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4144756899007101032}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,7 +69,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4144756899148280447}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Barriles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83,7 +83,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4144756899148280446}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -73.73418, y: 5.6565337, z: 44.0203}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -104,7 +104,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4144756900037153002}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -134,7 +134,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4144756900097604795}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -166,6 +166,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Barril (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5577811694962991391, guid: dc5fd494955e7044ebceb871f3306a30,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6653168740773471940, guid: dc5fd494955e7044ebceb871f3306a30,
         type: 3}
@@ -222,6 +227,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7263452213110526486, guid: dc5fd494955e7044ebceb871f3306a30,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cfdf93488e0af4c41927678799cabff9, type: 2}
+    - target: {fileID: 6798376138993738478, guid: dc5fd494955e7044ebceb871f3306a30,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 1.4343596
+      objectReference: {fileID: 0}
+    - target: {fileID: 6798376138993738478, guid: dc5fd494955e7044ebceb871f3306a30,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 3.5940475
+      objectReference: {fileID: 0}
+    - target: {fileID: 6798376138993738478, guid: dc5fd494955e7044ebceb871f3306a30,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 1.421874
+      objectReference: {fileID: 0}
+    - target: {fileID: 6798376138993738478, guid: dc5fd494955e7044ebceb871f3306a30,
+        type: 3}
+      propertyPath: m_Center.x
+      value: 0.10355997
+      objectReference: {fileID: 0}
+    - target: {fileID: 6798376138993738478, guid: dc5fd494955e7044ebceb871f3306a30,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 1.4229145
+      objectReference: {fileID: 0}
+    - target: {fileID: 6798376138993738478, guid: dc5fd494955e7044ebceb871f3306a30,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 0.09731722
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc5fd494955e7044ebceb871f3306a30, type: 3}
 --- !u!4 &7336908913809188126 stripped
@@ -241,6 +281,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Barril (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5577811694962991391, guid: dc5fd494955e7044ebceb871f3306a30,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6653168740773471940, guid: dc5fd494955e7044ebceb871f3306a30,
         type: 3}
@@ -297,7 +342,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 7263452213110526486, guid: dc5fd494955e7044ebceb871f3306a30,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cfdf93488e0af4c41927678799cabff9, type: 2}
+    m_RemovedComponents:
+    - {fileID: 6798376138993738478, guid: dc5fd494955e7044ebceb871f3306a30, type: 3}
+    - {fileID: 6798376138993738478, guid: dc5fd494955e7044ebceb871f3306a30, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: dc5fd494955e7044ebceb871f3306a30, type: 3}
 --- !u!4 &7336908913851164058 stripped
 Transform:
@@ -316,6 +368,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Barril (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5577811694962991391, guid: dc5fd494955e7044ebceb871f3306a30,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6653168740773471940, guid: dc5fd494955e7044ebceb871f3306a30,
         type: 3}
@@ -372,6 +429,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7263452213110526486, guid: dc5fd494955e7044ebceb871f3306a30,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cfdf93488e0af4c41927678799cabff9, type: 2}
+    - target: {fileID: 6798376138993738478, guid: dc5fd494955e7044ebceb871f3306a30,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 1.2580261
+      objectReference: {fileID: 0}
+    - target: {fileID: 6798376138993738478, guid: dc5fd494955e7044ebceb871f3306a30,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 3.630293
+      objectReference: {fileID: 0}
+    - target: {fileID: 6798376138993738478, guid: dc5fd494955e7044ebceb871f3306a30,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 2.7433395
+      objectReference: {fileID: 0}
+    - target: {fileID: 6798376138993738478, guid: dc5fd494955e7044ebceb871f3306a30,
+        type: 3}
+      propertyPath: m_Center.x
+      value: 0.12901306
+      objectReference: {fileID: 0}
+    - target: {fileID: 6798376138993738478, guid: dc5fd494955e7044ebceb871f3306a30,
+        type: 3}
+      propertyPath: m_Center.y
+      value: -0.17010546
+      objectReference: {fileID: 0}
+    - target: {fileID: 6798376138993738478, guid: dc5fd494955e7044ebceb871f3306a30,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 0.6437378
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc5fd494955e7044ebceb871f3306a30, type: 3}
 --- !u!4 &7336908912389367401 stripped
@@ -392,6 +484,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barril (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 5577811694962991391, guid: dc5fd494955e7044ebceb871f3306a30,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6653168740773471940, guid: dc5fd494955e7044ebceb871f3306a30,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -400,7 +497,7 @@ PrefabInstance:
     - target: {fileID: 6653168740773471940, guid: dc5fd494955e7044ebceb871f3306a30,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.3002081
+      value: -0.11
       objectReference: {fileID: 0}
     - target: {fileID: 6653168740773471940, guid: dc5fd494955e7044ebceb871f3306a30,
         type: 3}
@@ -447,10 +544,40 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 22.786001
       objectReference: {fileID: 0}
-    - target: {fileID: 6653168740773471940, guid: dc5fd494955e7044ebceb871f3306a30,
+    - target: {fileID: 7263452213110526486, guid: dc5fd494955e7044ebceb871f3306a30,
         type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cfdf93488e0af4c41927678799cabff9, type: 2}
+    - target: {fileID: 6798376138993738478, guid: dc5fd494955e7044ebceb871f3306a30,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 1.5056937
+      objectReference: {fileID: 0}
+    - target: {fileID: 6798376138993738478, guid: dc5fd494955e7044ebceb871f3306a30,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 2.1633162
+      objectReference: {fileID: 0}
+    - target: {fileID: 6798376138993738478, guid: dc5fd494955e7044ebceb871f3306a30,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 4.2541804
+      objectReference: {fileID: 0}
+    - target: {fileID: 6798376138993738478, guid: dc5fd494955e7044ebceb871f3306a30,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -0.012841579
+      objectReference: {fileID: 0}
+    - target: {fileID: 6798376138993738478, guid: dc5fd494955e7044ebceb871f3306a30,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.55766004
+      objectReference: {fileID: 0}
+    - target: {fileID: 6798376138993738478, guid: dc5fd494955e7044ebceb871f3306a30,
+        type: 3}
+      propertyPath: m_Center.z
+      value: -1.3317201
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc5fd494955e7044ebceb871f3306a30, type: 3}
@@ -471,6 +598,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Barril (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5577811694962991391, guid: dc5fd494955e7044ebceb871f3306a30,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6653168740773471940, guid: dc5fd494955e7044ebceb871f3306a30,
         type: 3}
@@ -527,6 +659,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7263452213110526486, guid: dc5fd494955e7044ebceb871f3306a30,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cfdf93488e0af4c41927678799cabff9, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc5fd494955e7044ebceb871f3306a30, type: 3}
 --- !u!4 &7336908913035562439 stripped
