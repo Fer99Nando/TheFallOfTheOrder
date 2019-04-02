@@ -15,12 +15,15 @@ ModelImporter:
     2300000: pCube35
     2300002: pPlane6
     2300004: group16
+    2300006: //RootNode
     3300000: pCube35
     3300002: pPlane6
     3300004: group16
+    3300006: //RootNode
     4300000: pCube35
     4300002: pPlane6
     4300004: group16
+    4300006: PasilloGrande
   externalObjects: {}
   materials:
     importMaterials: 1

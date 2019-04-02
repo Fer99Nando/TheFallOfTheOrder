@@ -1,24 +1,23 @@
 fileFormatVersion: 2
-guid: f3c6c89382785b7489e4f9deb86de237
+guid: 23f91e7005d84614db16c6e5ee020a61
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: pCube35
-    100004: pPlane6
-    400000: //RootNode
-    400002: pCube35
-    400004: pPlane6
+    100000: Ae01:Ae01:Puerta_D
+    100002: Ae01:Ae01:Puerta_D1
+    100004: Ae01:Porton
+    100006: //RootNode
+    400000: Ae01:Ae01:Puerta_D
+    400002: Ae01:Ae01:Puerta_D1
+    400004: Ae01:Porton
+    400006: //RootNode
     2100000: lambert1
-    2300000: pCube35
-    2300002: pPlane6
-    2300004: //RootNode
-    3300000: pCube35
-    3300002: pPlane6
-    3300004: //RootNode
-    4300000: pCube35
-    4300002: pPlane6
-    4300004: PasilloGrande
+    2300000: Ae01:Ae01:Puerta_D
+    2300002: Ae01:Ae01:Puerta_D1
+    3300000: Ae01:Ae01:Puerta_D
+    3300002: Ae01:Ae01:Puerta_D1
+    4300000: Ae01:Ae01:Puerta_D1
+    4300002: Ae01:Ae01:Puerta_D
   externalObjects: {}
   materials:
     importMaterials: 1
