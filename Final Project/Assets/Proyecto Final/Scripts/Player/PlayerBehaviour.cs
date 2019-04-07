@@ -7,7 +7,6 @@ public class PlayerBehaviour : MonoBehaviour
 {
     private CharacterController controller;
     PlayerWeapon playerWeapon;
-    private GameObject player;
 
     public Image cooldownFilled;
 
@@ -92,7 +91,6 @@ public class PlayerBehaviour : MonoBehaviour
         this.controller = GetComponent<CharacterController>();
         playerHealth = GetComponent<PlayerHealth>();
         playerWeapon = GameObject.FindGameObjectWithTag("PlayerWeapon").GetComponent<PlayerWeapon>();
-        player = GameObject.FindGameObjectWithTag("Player");
 
         canMove = true;
         isWalking = false;
@@ -120,11 +118,6 @@ public class PlayerBehaviour : MonoBehaviour
 
         if (dodgeTrue)
         {
-            //esquiveSuma += Time.deltaTime/4;
-            // esquiveTime = esquiveSuma;
-
-            // player.transform.position += new Vector3(0, 0, esquiveTime);
-
             this.moveDirection.Set(0, 0, this.inputDodge * this.forwardSpeed);
             this.moveDirection = transform.TransformDirection(this.moveDirection);
         }

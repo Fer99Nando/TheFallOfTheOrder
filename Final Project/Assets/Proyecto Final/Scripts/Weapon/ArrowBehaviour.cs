@@ -6,7 +6,6 @@ public class ArrowBehaviour : MonoBehaviour
 {
     private PlayerHealth playerHealth;
     private GameObject player;
-    BossPrueba bossprueba;
 
     public ParticleSystem trail;
 
@@ -15,8 +14,6 @@ public class ArrowBehaviour : MonoBehaviour
 
     void Start()
     {
-        bossprueba = GameObject.FindGameObjectWithTag("Boss").GetComponent<BossPrueba>();
-
         playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
 
         player = GameObject.FindGameObjectWithTag("Player");
