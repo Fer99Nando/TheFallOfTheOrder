@@ -9,9 +9,6 @@ public class Inventory : MonoBehaviour
     PlayerHealth playerHealth;
     Animator anim;
 
-    private bool timeReg;
-    private float tomandoPoti;
-
     //public Image[] inventory;
     public Sprite[] spriteItems;
     public GameObject[] slotPot;
@@ -23,7 +20,6 @@ public class Inventory : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        timeReg = false;
         anim = GetComponent<Animator>();
         playerHealth = GetComponent<PlayerHealth>();
         playerBehaviour = GetComponent<PlayerBehaviour>();
@@ -38,23 +34,15 @@ public class Inventory : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Alpha1))
         {
-            timeReg = true;
             UsePotion(0);
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            timeReg = true;
             UsePotion(1);
         }
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            timeReg = true;
             UsePotion(2);
-        }
-
-        if(timeReg)
-        {
-            tomandoPoti += Time.deltaTime;
         }
     }
 
@@ -68,33 +56,18 @@ public class Inventory : MonoBehaviour
 
             if (slotType[slot] == 0)
             {
-                if (tomandoPoti >= 1)
-                {
                     Debug.Log("health");
                     playerHealth.PotionHelath();
-                    tomandoPoti = 0;
-                    timeReg = false;
-                }
             }
             if (slotType[slot] == 1)
             {
-                if (tomandoPoti >= 1)
-                {
                     Debug.Log("antidoto");
                     playerHealth.PotionAntidoto();
-                    tomandoPoti = 0;
-                    timeReg = false;
-                }
             }
             if (slotType[slot] == 2)
             {
-                if (tomandoPoti >= 1)
-                {
                     Debug.Log("toditoenuno");
                     playerHealth.PotionAllInOne();
-                    tomandoPoti = 0;
-                    timeReg = false;
-                }
             }
 
             slotPot[slot].SetActive(false);
@@ -105,6 +78,7 @@ public class Inventory : MonoBehaviour
     public void PotiTerminada()
     {
         playerBehaviour.canMove = true;
+        anim.SetBool("PotiOn", false);
     }
 
     public void ItemsVida(int potion)

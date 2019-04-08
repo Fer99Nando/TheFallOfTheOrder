@@ -183,8 +183,4 @@ public class PlayerHealth : MonoBehaviour
         Destroy(personajes);
         Cursor.visible = true;
     }
-
-
-
-
 }
