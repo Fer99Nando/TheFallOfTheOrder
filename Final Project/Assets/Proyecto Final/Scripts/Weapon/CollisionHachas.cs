@@ -5,7 +5,7 @@ using UnityEngine;
 public class CollisionHachas : MonoBehaviour
 {
     private PlayerHealth playerHealth;
-    //public MeshCollider este;
+    public MeshCollider este;
 
     private void Start()
     {
