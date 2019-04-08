@@ -5713,7 +5713,10 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
 >>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 --- !u!1 &123942997 stripped
@@ -5755,6 +5758,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   este: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
 --- !u!1 &125956885
 GameObject:
@@ -5848,6 +5852,8 @@ MeshFilter:
   m_GameObject: {fileID: 125956885}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 >>>>>>> c385554ab53b5601f9cb6096bbc388296efe4059
+=======
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
 >>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 --- !u!1 &126086286 stripped
@@ -6978,12 +6984,150 @@ CanvasRenderer:
   m_CullTransparentMesh: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 --- !u!1001 &249598525
 PrefabInstance:
 =======
 --- !u!1001 &249598525
 PrefabInstance:
+=======
+--- !u!1001 &249598525
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1734412717}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 608bd9775b63ce846bfb59c001bd4633, type: 3}
+      propertyPath: m_Name
+      value: Trampa
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 608bd9775b63ce846bfb59c001bd4633, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 608bd9775b63ce846bfb59c001bd4633, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 608bd9775b63ce846bfb59c001bd4633, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.00157547
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 608bd9775b63ce846bfb59c001bd4633, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.6216326
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 608bd9775b63ce846bfb59c001bd4633, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0004196167
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 608bd9775b63ce846bfb59c001bd4633, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 608bd9775b63ce846bfb59c001bd4633, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 608bd9775b63ce846bfb59c001bd4633, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 608bd9775b63ce846bfb59c001bd4633, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 608bd9775b63ce846bfb59c001bd4633, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 608bd9775b63ce846bfb59c001bd4633, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 608bd9775b63ce846bfb59c001bd4633, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 608bd9775b63ce846bfb59c001bd4633, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 608bd9775b63ce846bfb59c001bd4633, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.010000015
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 608bd9775b63ce846bfb59c001bd4633, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.010000015
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 608bd9775b63ce846bfb59c001bd4633, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a7fd230c0c86cca49827bf8ee839d7ae, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 608bd9775b63ce846bfb59c001bd4633, type: 3}
+--- !u!1 &255832064
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 255832069}
+  - component: {fileID: 255832068}
+  - component: {fileID: 255832067}
+  - component: {fileID: 255832066}
+  - component: {fileID: 255832065}
+  m_Layer: 5
+  m_Name: UI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!95 &255832065
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 255832064}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2d51b2346b739564d87d7857ca41b3a3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &255832066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 255832064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &255832067
+MonoBehaviour:
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
@@ -13550,6 +13694,7 @@ CanvasRenderer:
   m_CullTransparentMesh: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!4 &432982471 stripped
 =======
 --- !u!1001 &421034337
@@ -13731,6 +13876,9 @@ Transform:
   m_PrefabInstance: {fileID: 1901896433037051998}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &445056699
+=======
+--- !u!1 &426960756 stripped
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
 --- !u!1 &426960756 stripped
 >>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
@@ -14928,6 +15076,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1001 &562939173
 =======
 --- !u!1001 &566428006
@@ -15081,6 +15230,8 @@ Transform:
   m_PrefabInstance: {fileID: 566428006}
   m_PrefabAsset: {fileID: 0}
 >>>>>>> c385554ab53b5601f9cb6096bbc388296efe4059
+=======
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
 >>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 --- !u!1 &572294395 stripped
@@ -15263,6 +15414,7 @@ MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 578703595}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &600046087
@@ -15456,6 +15608,8 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1901896434388274689}
   m_PrefabAsset: {fileID: 0}
+=======
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 --- !u!1 &621118630 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100004, guid: 3cf3831877998f54c9ded77bf8c82c9c,
@@ -15775,6 +15929,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &667923532 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 608bd9775b63ce846bfb59c001bd4633,
@@ -15847,6 +16002,8 @@ Transform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 >>>>>>> c385554ab53b5601f9cb6096bbc388296efe4059
+=======
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
 >>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 --- !u!1 &672937178
@@ -16465,6 +16622,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 723315887}
   m_CullTransparentMesh: 0
+<<<<<<< HEAD
 --- !u!1 &724163392
 GameObject:
   m_ObjectHideFlags: 0
@@ -16502,6 +16660,8 @@ Transform:
   m_Father: {fileID: 1639906027572432504}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 --- !u!4 &731874475 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400004, guid: 113087ee4a06fcd46a173a1370bf41a6,
@@ -17826,6 +17986,7 @@ CanvasRenderer:
   m_CullTransparentMesh: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &892423931 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 608bd9775b63ce846bfb59c001bd4633,
@@ -17955,6 +18116,8 @@ MeshFilter:
   m_GameObject: {fileID: 894725594}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 >>>>>>> c385554ab53b5601f9cb6096bbc388296efe4059
+=======
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
 >>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 --- !u!1 &924885476
@@ -18306,6 +18469,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 937758965}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 --- !u!1001 &938952200
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18386,6 +18550,8 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1901896432697512722}
   m_PrefabAsset: {fileID: 0}
+=======
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 --- !u!1 &953143972
 GameObject:
   m_ObjectHideFlags: 0
@@ -19403,6 +19569,129 @@ CanvasRenderer:
   m_CullTransparentMesh: 0
 --- !u!1001 &1050376904
 PrefabInstance:
+<<<<<<< HEAD
+=======
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1875763228}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 608bd9775b63ce846bfb59c001bd4633, type: 3}
+      propertyPath: m_Name
+      value: Trampa
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 608bd9775b63ce846bfb59c001bd4633, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 608bd9775b63ce846bfb59c001bd4633, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 608bd9775b63ce846bfb59c001bd4633, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.00157547
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 608bd9775b63ce846bfb59c001bd4633, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.6216326
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 608bd9775b63ce846bfb59c001bd4633, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0004196167
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 608bd9775b63ce846bfb59c001bd4633, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 608bd9775b63ce846bfb59c001bd4633, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 608bd9775b63ce846bfb59c001bd4633, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 608bd9775b63ce846bfb59c001bd4633, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 608bd9775b63ce846bfb59c001bd4633, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 608bd9775b63ce846bfb59c001bd4633, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 608bd9775b63ce846bfb59c001bd4633, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 608bd9775b63ce846bfb59c001bd4633, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 608bd9775b63ce846bfb59c001bd4633, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.010000015
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 608bd9775b63ce846bfb59c001bd4633, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.010000015
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 608bd9775b63ce846bfb59c001bd4633, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a7fd230c0c86cca49827bf8ee839d7ae, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 608bd9775b63ce846bfb59c001bd4633, type: 3}
+--- !u!1 &1051507272 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100004, guid: 3cf3831877998f54c9ded77bf8c82c9c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1901896432971016045}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1058306521
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1058306522}
+  m_Layer: 0
+  m_Name: TrampaActive
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1058306522
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058306521}
+  m_LocalRotation: {x: 0, y: 0, z: -0.52740073, w: 0.84961665}
+  m_LocalPosition: {x: 30.077, y: -7.5599995, z: 25.150002}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1333546251}
+  m_Father: {fileID: 2091865920}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -63.66}
+--- !u!1 &1060494593 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 3cf3831877998f54c9ded77bf8c82c9c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1901896432697512722}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1066406460
+GameObject:
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
@@ -20441,6 +20730,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &1093803568 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 608bd9775b63ce846bfb59c001bd4633,
@@ -20575,6 +20865,8 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1091057320}
   m_PrefabAsset: {fileID: 0}
+=======
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 --- !u!1 &1099038268
 GameObject:
   m_ObjectHideFlags: 0
@@ -21127,8 +21419,11 @@ RectTransform:
   m_Pivot: {x: 0.5, y: 0.5}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &1148002777
 =======
+=======
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 --- !u!4 &1160700969 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 159005968928874060, guid: cf294f8886975ac4da81f831be1277c9,
@@ -21136,6 +21431,9 @@ Transform:
   m_PrefabInstance: {fileID: 1901896433022244068}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1197012518
+<<<<<<< HEAD
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
+=======
 >>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 GameObject:
   m_ObjectHideFlags: 0
@@ -21145,16 +21443,22 @@ GameObject:
   serializedVersion: 6
   m_Component:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - component: {fileID: 1148002778}
   - component: {fileID: 1148002779}
   m_Layer: 11
   m_Name: TrampaActive (6)
 =======
+=======
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
   - component: {fileID: 1197012519}
   - component: {fileID: 1197012521}
   - component: {fileID: 1197012520}
   m_Layer: 5
   m_Name: Fade
+<<<<<<< HEAD
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
+=======
 >>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21162,8 +21466,13 @@ GameObject:
   m_StaticEditorFlags: 0
   m_IsActive: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!4 &1148002778
 Transform:
+=======
+--- !u!224 &1197012519
+RectTransform:
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
 --- !u!224 &1197012519
 RectTransform:
@@ -21172,6 +21481,7 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
   m_GameObject: {fileID: 1148002777}
   m_LocalRotation: {x: -0.5, y: 0.8660254, z: -0, w: 0}
@@ -21186,6 +21496,8 @@ RectTransform:
 Animator:
   serializedVersion: 3
 =======
+=======
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
   m_GameObject: {fileID: 1197012518}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -21357,6 +21669,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1159744370}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
 --- !u!1001 &1160165382
 PrefabInstance:
@@ -21537,6 +21850,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1166720849
 =======
+=======
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 --- !u!1 &1227199797
 GameObject:
   m_ObjectHideFlags: 0
@@ -21569,6 +21884,7 @@ Transform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1268961068
+<<<<<<< HEAD
 >>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 GameObject:
   m_ObjectHideFlags: 0
@@ -23406,6 +23722,8 @@ Transform:
   m_PrefabInstance: {fileID: 1353060776}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1353689278
+=======
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -24174,7 +24492,24 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1477418855}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 --- !u!1 &1478558924
+=======
+--- !u!114 &1333546252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333546250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a1b7f346b9d7024d8b0857e44ea60df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  este: {fileID: 0}
+--- !u!1 &1336277708
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -24440,7 +24775,90 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1486661081}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 --- !u!1001 &1487144464
+=======
+  m_GameObject: {fileID: 1336277708}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1344377750
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 134055749}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 608bd9775b63ce846bfb59c001bd4633, type: 3}
+      propertyPath: m_Name
+      value: Trampa
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 608bd9775b63ce846bfb59c001bd4633, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 608bd9775b63ce846bfb59c001bd4633, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 608bd9775b63ce846bfb59c001bd4633, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.00157547
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 608bd9775b63ce846bfb59c001bd4633, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.6216326
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 608bd9775b63ce846bfb59c001bd4633, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0004196167
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 608bd9775b63ce846bfb59c001bd4633, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 608bd9775b63ce846bfb59c001bd4633, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 608bd9775b63ce846bfb59c001bd4633, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 608bd9775b63ce846bfb59c001bd4633, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 608bd9775b63ce846bfb59c001bd4633, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 608bd9775b63ce846bfb59c001bd4633, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 608bd9775b63ce846bfb59c001bd4633, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 608bd9775b63ce846bfb59c001bd4633, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 608bd9775b63ce846bfb59c001bd4633, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.010000015
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 608bd9775b63ce846bfb59c001bd4633, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.010000015
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 608bd9775b63ce846bfb59c001bd4633, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a7fd230c0c86cca49827bf8ee839d7ae, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 608bd9775b63ce846bfb59c001bd4633, type: 3}
+--- !u!1001 &1353060776
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -30921,6 +31339,7 @@ ParticleSystem:
     vectorLabel1_3: W
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &1680866035
 =======
 --- !u!1 &1687884232
@@ -31000,6 +31419,8 @@ Animator:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 >>>>>>> c385554ab53b5601f9cb6096bbc388296efe4059
+=======
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
 >>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 --- !u!1 &1703649330
@@ -33108,7 +33529,10 @@ BoxCollider:
   m_Center: {x: -0.0000016955837, y: 0.5783966, z: -2.0747108}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
 >>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 --- !u!1 &1875763227
@@ -33142,6 +33566,7 @@ Transform:
   m_Father: {fileID: 2091865920}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -54.89}
+<<<<<<< HEAD
 <<<<<<< HEAD
 --- !u!1001 &1875862839
 PrefabInstance:
@@ -33219,6 +33644,8 @@ Transform:
   m_PrefabInstance: {fileID: 1875862839}
   m_PrefabAsset: {fileID: 0}
 >>>>>>> c385554ab53b5601f9cb6096bbc388296efe4059
+=======
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
 >>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 --- !u!1 &1879669451
@@ -33469,7 +33896,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
 >>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 --- !u!1 &1904173409
@@ -33503,6 +33933,7 @@ Transform:
   m_Father: {fileID: 2091865920}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -58.18}
+<<<<<<< HEAD
 <<<<<<< HEAD
 --- !u!1001 &1908741123
 PrefabInstance:
@@ -33595,6 +34026,8 @@ Transform:
   m_PrefabInstance: {fileID: 1908741123}
   m_PrefabAsset: {fileID: 0}
 >>>>>>> c385554ab53b5601f9cb6096bbc388296efe4059
+=======
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
 >>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 --- !u!1 &1917565297
@@ -34911,6 +35344,7 @@ CanvasRenderer:
   m_CullTransparentMesh: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 --- !u!1001 &2039231254
 PrefabInstance:
@@ -34989,6 +35423,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
 =======
 >>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
+=======
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 --- !u!1 &2041844550
 GameObject:
   m_ObjectHideFlags: 0
@@ -35059,6 +35495,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   este: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
 --- !u!1 &2052201412
 GameObject:
@@ -35311,6 +35748,8 @@ Transform:
   m_PrefabInstance: {fileID: 2073109836}
   m_PrefabAsset: {fileID: 0}
 >>>>>>> c385554ab53b5601f9cb6096bbc388296efe4059
+=======
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
 >>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 --- !u!1 &2073754425
@@ -50206,10 +50645,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 101.1
 =======
       value: 31.6
 >>>>>>> c385554ab53b5601f9cb6096bbc388296efe4059
+=======
+      value: 101.77
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
       value: 101.77
 >>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
@@ -50219,10 +50662,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 1.26
 =======
       value: 17.99
 >>>>>>> c385554ab53b5601f9cb6096bbc388296efe4059
+=======
+      value: 1.28
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
       value: 1.28
 >>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
@@ -50232,10 +50679,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: -44.36
 =======
       value: -271.53
 >>>>>>> c385554ab53b5601f9cb6096bbc388296efe4059
+=======
+      value: -45.438
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
       value: -45.438
 >>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
