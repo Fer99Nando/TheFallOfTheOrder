@@ -5715,7 +5715,10 @@ Transform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
 >>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
@@ -5761,6 +5764,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   este: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -5856,6 +5860,8 @@ MeshFilter:
   m_GameObject: {fileID: 125956885}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 >>>>>>> c385554ab53b5601f9cb6096bbc388296efe4059
+=======
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
 >>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
@@ -6992,6 +6998,7 @@ CanvasRenderer:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 --- !u!1001 &249598525
 PrefabInstance:
@@ -6999,6 +7006,8 @@ PrefabInstance:
 --- !u!1001 &249598525
 PrefabInstance:
 =======
+=======
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
 >>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 --- !u!1001 &249598525
@@ -7136,6 +7145,7 @@ MonoBehaviour:
     m_Bits: 4294967295
 --- !u!114 &255832067
 MonoBehaviour:
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
   m_ObjectHideFlags: 0
@@ -7440,6 +7450,8 @@ MonoBehaviour:
     m_Bits: 4294967295
 --- !u!114 &255832067
 MonoBehaviour:
+=======
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
 >>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
   m_ObjectHideFlags: 0
@@ -13708,6 +13720,7 @@ CanvasRenderer:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!4 &432982471 stripped
 =======
 --- !u!1001 &421034337
@@ -13889,6 +13902,9 @@ Transform:
   m_PrefabInstance: {fileID: 1901896433037051998}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &445056699
+=======
+--- !u!1 &426960756 stripped
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
 --- !u!1 &426960756 stripped
 >>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
@@ -15094,6 +15110,7 @@ Transform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1001 &562939173
 =======
 --- !u!1001 &566428006
@@ -15247,6 +15264,8 @@ Transform:
   m_PrefabInstance: {fileID: 566428006}
   m_PrefabAsset: {fileID: 0}
 >>>>>>> c385554ab53b5601f9cb6096bbc388296efe4059
+=======
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
 >>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
@@ -15433,6 +15452,7 @@ MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   m_GameObject: {fileID: 578703595}
@@ -15628,6 +15648,8 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1901896434388274689}
   m_PrefabAsset: {fileID: 0}
+=======
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
 >>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
@@ -15953,6 +15975,7 @@ Transform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &667923532 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 608bd9775b63ce846bfb59c001bd4633,
@@ -16025,6 +16048,8 @@ Transform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 >>>>>>> c385554ab53b5601f9cb6096bbc388296efe4059
+=======
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
 >>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
@@ -16649,6 +16674,7 @@ CanvasRenderer:
   m_CullTransparentMesh: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &724163392
 GameObject:
   m_ObjectHideFlags: 0
@@ -16686,6 +16712,8 @@ Transform:
   m_Father: {fileID: 1639906027572432504}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
 >>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
@@ -18016,6 +18044,7 @@ CanvasRenderer:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &892423931 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 608bd9775b63ce846bfb59c001bd4633,
@@ -18145,6 +18174,8 @@ MeshFilter:
   m_GameObject: {fileID: 894725594}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 >>>>>>> c385554ab53b5601f9cb6096bbc388296efe4059
+=======
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
 >>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
@@ -18582,6 +18613,9 @@ Transform:
   m_PrefabInstance: {fileID: 1901896432697512722}
   m_PrefabAsset: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
 >>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
@@ -19605,7 +19639,10 @@ CanvasRenderer:
 PrefabInstance:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
 >>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
   m_ObjectHideFlags: 0
@@ -19720,6 +19757,7 @@ Transform:
   m_Father: {fileID: 2091865920}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -63.66}
+<<<<<<< HEAD
 <<<<<<< HEAD
 --- !u!1 &1060494593 stripped
 GameObject:
@@ -19932,6 +19970,8 @@ Transform:
   m_Father: {fileID: 2091865920}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -63.66}
+=======
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
 >>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 --- !u!1 &1060494593 stripped
@@ -20772,6 +20812,7 @@ Transform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &1093803568 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 608bd9775b63ce846bfb59c001bd4633,
@@ -20906,6 +20947,8 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1091057320}
   m_PrefabAsset: {fileID: 0}
+=======
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
 >>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
@@ -21464,8 +21507,11 @@ RectTransform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &1148002777
 =======
+=======
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
 >>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
@@ -21479,6 +21525,9 @@ Transform:
 --- !u!1 &1197012518
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
+=======
 >>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
 >>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
@@ -21494,11 +21543,14 @@ GameObject:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   - component: {fileID: 1148002778}
   - component: {fileID: 1148002779}
   m_Layer: 11
   m_Name: TrampaActive (6)
 =======
+=======
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
 >>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
@@ -21510,6 +21562,9 @@ GameObject:
   m_Name: Fade
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
+=======
 >>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
 >>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
@@ -21520,6 +21575,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -21537,10 +21593,15 @@ RectTransform:
 --- !u!224 &1197012519
 RectTransform:
 >>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
+=======
+--- !u!224 &1197012519
+RectTransform:
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -21557,6 +21618,8 @@ RectTransform:
 Animator:
   serializedVersion: 3
 =======
+=======
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
 >>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
@@ -21732,6 +21795,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1159744370}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -21918,6 +21982,8 @@ Transform:
 >>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
 >>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
+=======
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 --- !u!1 &1227199797
 GameObject:
   m_ObjectHideFlags: 0
@@ -21950,6 +22016,7 @@ Transform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1268961068
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
@@ -22119,6 +22186,8 @@ Transform:
   m_PrefabInstance: {fileID: 1194137597}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1197012518
+=======
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
 >>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 GameObject:
@@ -31410,6 +31479,7 @@ ParticleSystem:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &1680866035
 =======
 --- !u!1 &1687884232
@@ -31489,6 +31559,8 @@ Animator:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 >>>>>>> c385554ab53b5601f9cb6096bbc388296efe4059
+=======
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
 >>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
@@ -33603,7 +33675,10 @@ BoxCollider:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
 >>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
@@ -33641,6 +33716,7 @@ Transform:
   m_Father: {fileID: 2091865920}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -54.89}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -33720,6 +33796,8 @@ Transform:
   m_PrefabInstance: {fileID: 1875862839}
   m_PrefabAsset: {fileID: 0}
 >>>>>>> c385554ab53b5601f9cb6096bbc388296efe4059
+=======
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
 >>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
@@ -33976,7 +34054,10 @@ GameObject:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
 >>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
@@ -34014,6 +34095,7 @@ Transform:
   m_Father: {fileID: 2091865920}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -58.18}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -34108,6 +34190,8 @@ Transform:
   m_PrefabInstance: {fileID: 1908741123}
   m_PrefabAsset: {fileID: 0}
 >>>>>>> c385554ab53b5601f9cb6096bbc388296efe4059
+=======
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
 >>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
@@ -35430,6 +35514,7 @@ CanvasRenderer:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 --- !u!1001 &2039231254
 PrefabInstance:
@@ -35512,6 +35597,8 @@ Transform:
 >>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
 >>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
+=======
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 --- !u!1 &2041844550
 GameObject:
   m_ObjectHideFlags: 0
@@ -35582,6 +35669,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   este: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -35836,6 +35924,8 @@ Transform:
   m_PrefabInstance: {fileID: 2073109836}
   m_PrefabAsset: {fileID: 0}
 >>>>>>> c385554ab53b5601f9cb6096bbc388296efe4059
+=======
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
 >>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
@@ -50737,10 +50827,14 @@ PrefabInstance:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 101.1
 =======
       value: 31.6
 >>>>>>> c385554ab53b5601f9cb6096bbc388296efe4059
+=======
+      value: 101.77
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
       value: 101.77
 >>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
@@ -50758,10 +50852,14 @@ PrefabInstance:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 1.26
 =======
       value: 17.99
 >>>>>>> c385554ab53b5601f9cb6096bbc388296efe4059
+=======
+      value: 1.28
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
       value: 1.28
 >>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
@@ -50779,10 +50877,14 @@ PrefabInstance:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: -44.36
 =======
       value: -271.53
 >>>>>>> c385554ab53b5601f9cb6096bbc388296efe4059
+=======
+      value: -45.438
+>>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
 =======
       value: -45.438
 >>>>>>> parent of 299ae55... putas hachas acabadas final putu pau
