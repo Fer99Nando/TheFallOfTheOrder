@@ -51,7 +51,6 @@ public class Inventory : MonoBehaviour
         if(inventoryAmount >= 1)
         {
             playerBehaviour.canMove = false;
-            anim.SetBool("PotiOn", true);
             inventoryAmount -= 1;
 
             if (slotType[slot] == 0)
@@ -73,12 +72,6 @@ public class Inventory : MonoBehaviour
             slotPot[slot].SetActive(false);
             slotType[slot] = 3;
         }
-    }
-
-    public void PotiTerminada()
-    {
-        playerBehaviour.canMove = true;
-        anim.SetBool("PotiOn", false);
     }
 
     public void ItemsVida(int potion)
