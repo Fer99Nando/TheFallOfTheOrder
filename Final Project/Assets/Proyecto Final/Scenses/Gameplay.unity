@@ -5531,6 +5531,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 134055749}
+  - component: {fileID: 134055750}
   m_Layer: 0
   m_Name: TrampaActive (6)
   m_TagString: Untagged
@@ -5553,6 +5554,25 @@ Transform:
   m_Father: {fileID: 2091865920}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 55.82}
+--- !u!95 &134055750
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134055748}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e39b117949d5e6c4d985243b79408ef5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &142212386
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17257,6 +17277,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1058306522}
+  - component: {fileID: 1058306523}
   m_Layer: 0
   m_Name: TrampaActive
   m_TagString: Untagged
@@ -17279,6 +17300,25 @@ Transform:
   m_Father: {fileID: 2091865920}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -63.66}
+--- !u!95 &1058306523
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058306521}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e39b117949d5e6c4d985243b79408ef5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1060494593 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 3cf3831877998f54c9ded77bf8c82c9c,
@@ -26384,6 +26424,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1734412717}
+  - component: {fileID: 1734412718}
   m_Layer: 0
   m_Name: TrampaActive (2)
   m_TagString: Untagged
@@ -26406,6 +26447,25 @@ Transform:
   m_Father: {fileID: 2091865920}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -60.71}
+--- !u!95 &1734412718
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1734412716}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e39b117949d5e6c4d985243b79408ef5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1736457266
 GameObject:
   m_ObjectHideFlags: 0
@@ -27565,6 +27625,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1875763228}
+  - component: {fileID: 1875763229}
   m_Layer: 0
   m_Name: TrampaActive (5)
   m_TagString: Untagged
@@ -27587,6 +27648,25 @@ Transform:
   m_Father: {fileID: 2091865920}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -54.89}
+--- !u!95 &1875763229
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875763227}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e39b117949d5e6c4d985243b79408ef5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1879669451
 GameObject:
   m_ObjectHideFlags: 0
@@ -27842,6 +27922,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1904173410}
+  - component: {fileID: 1904173411}
   m_Layer: 0
   m_Name: TrampaActive (4)
   m_TagString: Untagged
@@ -27864,6 +27945,25 @@ Transform:
   m_Father: {fileID: 2091865920}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -58.18}
+--- !u!95 &1904173411
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1904173409}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e39b117949d5e6c4d985243b79408ef5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1916811256
 GameObject:
   m_ObjectHideFlags: 0
@@ -29500,6 +29600,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2024924722}
+  - component: {fileID: 2024924723}
   m_Layer: 0
   m_Name: TrampaActive (1)
   m_TagString: Untagged
@@ -29522,6 +29623,25 @@ Transform:
   m_Father: {fileID: 2091865920}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 65.13}
+--- !u!95 &2024924723
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024924721}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e39b117949d5e6c4d985243b79408ef5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2024968749
 GameObject:
   m_ObjectHideFlags: 0
@@ -29770,6 +29890,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2041844551}
+  - component: {fileID: 2041844552}
   m_Layer: 0
   m_Name: TrampaActive (3)
   m_TagString: Untagged
@@ -29792,6 +29913,25 @@ Transform:
   m_Father: {fileID: 2091865920}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 59.94}
+--- !u!95 &2041844552
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041844550}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e39b117949d5e6c4d985243b79408ef5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2044254107 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 608bd9775b63ce846bfb59c001bd4633,
