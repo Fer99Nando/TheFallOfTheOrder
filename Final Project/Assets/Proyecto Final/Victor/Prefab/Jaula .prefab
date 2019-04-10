@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6531443534942032723}
   - component: {fileID: 6531443534938608499}
   - component: {fileID: 6531443534939607475}
+  - component: {fileID: 4891854691875209913}
   m_Layer: 0
   m_Name: 'Jaula '
   m_TagString: Untagged
@@ -25,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6531443534941802355}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -12.874085, y: 0.31518674, z: -2.0889018}
   m_LocalScale: {x: 0.4982145, y: 0.4982145, z: 0.4982145}
   m_Children: []
@@ -77,3 +78,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &4891854691875209913
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6531443534941802355}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.7469969, y: 7.754097, z: 3.746994}
+  m_Center: {x: -0.0000010728836, y: 0, z: 0.00000029802322}
