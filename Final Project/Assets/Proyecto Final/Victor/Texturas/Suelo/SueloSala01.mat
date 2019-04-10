@@ -63,8 +63,8 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _LightSmoothness: 1
-    - _LightThreshold: 0.01
+    - _LightSmoothness: 0.19
+    - _LightThreshold: 0.23
     - _MKEditorShowDetailBehavior: 0
     - _MKEditorShowDissolveBehavior: 0
     - _MKEditorShowLightBehavior: 1
@@ -86,10 +86,10 @@ Material:
     - _RimSize: 3
     - _RimSmoothness: 1
     - _ShadowIntensity: 0.53
-    - _Shininess: 0.01
+    - _Shininess: 0.89
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
-    - _SpecularIntensity: 0
+    - _SpecularIntensity: 0.07
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
