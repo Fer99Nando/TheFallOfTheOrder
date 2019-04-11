@@ -165,10 +165,11 @@ public class BossPrueba : MonoBehaviour
 
         if(coolDownJump)
         {
+            agent.isStopped = true;
             anim.ResetTrigger("Action2");
             anim.SetBool("JumpAttackCooldown", true);
                 
-            timeCounter += Time.deltaTime; // Esto es si quiero que tenga un time para quese  enfrie y poderle atacar
+            timeCounter += Time.deltaTime; // Esto es si quiero que tenga un time para quese enfrie y poderle atacar
 
             if(timeCounter > 3)
             {
@@ -378,6 +379,7 @@ public class BossPrueba : MonoBehaviour
         coolDownJump = true;
     }
     #endregion
+
     float GetDistanceFromTarget()       // Calcula la distancia con el player
     {
         return Vector3.Distance(player.transform.position, transform.position);
