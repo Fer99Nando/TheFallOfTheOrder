@@ -258,15 +258,15 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.5102041
-        functionName: ColliderWeapon
+      - time: 0.47903118
+        functionName: ComboComienzo
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.51128924
-        functionName: ComboComienzo
+      - time: 0.5102041
+        functionName: ColliderWeapon
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
