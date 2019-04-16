@@ -19,7 +19,7 @@ public class PlayerWeapon : MonoBehaviour
 
     void Start()
     {
-        attackStats = 5;
+        attackStats = 200;
         playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
         boxCol = GetComponent<BoxCollider>();
         boxCol.enabled = false;

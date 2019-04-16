@@ -95,6 +95,7 @@ public class EnemyPrueba : MonoBehaviour
 
     void IdleUpdate()
     {
+
         // El personaje este quieto
         if (timeCounter >= idleTime)
         {
@@ -122,7 +123,7 @@ public class EnemyPrueba : MonoBehaviour
             {
                 pathIndex = 0;
             }
-
+            anim.SetBool("Walk", false);
             SetIdle();  // Si queremos que se pare cuando llegue a un punto
         }
 
