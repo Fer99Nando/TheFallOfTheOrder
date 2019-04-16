@@ -133,6 +133,7 @@ public class EnemyPrueba : MonoBehaviour
 
     void ChaseUpdate()
     {
+        agent.isStopped = false;
         // animacion de giro hacia el personaje
         anim.SetBool("Chase", true);
 
@@ -168,6 +169,7 @@ public class EnemyPrueba : MonoBehaviour
 
     void ActionUpdate()
     {
+        agent.isStopped = true;
         Debug.Log("CASI DAÑO");
         agent.SetDestination(player.transform.position);
 
@@ -175,18 +177,15 @@ public class EnemyPrueba : MonoBehaviour
         {
             agent.stoppingDistance = 2;
             Debug.Log("ATTACK");
-            agent.isStopped = true;
             anim.SetBool("Action", true);
             idleTime = coolDownAttack; // Esto es si quiero que tenga un time para quese  enfrie y poderle atacar
 
             return;
-
         }
         else
         {
             Debug.Log("Salio Del Range");
             anim.SetBool("Action", false);
-            agent.isStopped = false;
             SetChase();
             return;
         }
@@ -237,6 +236,16 @@ public class EnemyPrueba : MonoBehaviour
     }
 
     #endregion
+
+    public void FinalAtaque()
+    {
+        agent.isStopped = false;
+    }
+
+    public void ComienzoAtaque()
+    {
+        agent.isStopped = false;
+    }
 
     float GetDistanceFromTarget()       // Calcula la distancia con el player
     {

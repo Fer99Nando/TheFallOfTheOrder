@@ -168,6 +168,15 @@ public class PlayerHealth : MonoBehaviour
             Death();
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Arrow" || other.tag == "WeaponBoss")
+        {
+            anim.SetTrigger("Hit");
+        }
+    }
+
     public void Death()
     {
         isDead = true;

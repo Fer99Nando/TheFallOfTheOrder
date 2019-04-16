@@ -10,8 +10,6 @@ public class Weapon : MonoBehaviour {
 
 	void Start () 
 	{
-        bossprueba = GameObject.FindGameObjectWithTag("Boss").GetComponent<BossPrueba>(); ;
-
         playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
 	}
 	
@@ -19,7 +17,7 @@ public class Weapon : MonoBehaviour {
 	{
         if (other.tag == "Player")
         {
-            playerHealth.currentHp -= bossprueba.bonusEnemyStats;
+            playerHealth.currentHp -= 5;
 
             playerHealth.TakeVirus();
         }
