@@ -54,7 +54,6 @@ public class BossPrueba : MonoBehaviour
 
     [Header("Timers")]
 
-    public float idleTime;      // IDLE
     public float timeCounter = 0;  // Contador de tiempo
 
     public float RandomAttack = 0;   // Enfriamineto despues de atacar
@@ -97,7 +96,7 @@ public class BossPrueba : MonoBehaviour
             Quaternion newRotation = Quaternion.LookRotation(targetPosition);
             transform.rotation = Quaternion.Lerp(transform.rotation, newRotation, rotationSpeed * 0.1f);
         }
-        else if (enemyDeath.isDead || coolDown || coolDownJump)
+        else if (enemyDeath.isDead)
         {
             agent.isStopped = true;
         }
@@ -154,13 +153,18 @@ public class BossPrueba : MonoBehaviour
                 
             timeCounter += Time.deltaTime; // Esto es si quiero que tenga un time para quese  enfrie y poderle atacar
 
-            if(timeCounter > 5 || distanceFromTarget >= 10)
+            if(timeCounter > 5 || distanceFromTarget >= 15)
             {
-                RandomAttack = Random.value;
+                //anim.ResetTrigger("Action");
                 timeCounter = 0;
                 coolDown = false;
                 anim.SetBool("IddleTime", false);
                 agent.isStopped = false;
+            }
+
+            if (timeCounter == 0.1f)
+            {
+                RandomAttack = Random.value;
             }
         }
 
@@ -171,16 +175,20 @@ public class BossPrueba : MonoBehaviour
                 
             timeCounter += Time.deltaTime; // Esto es si quiero que tenga un time para quese enfrie y poderle atacar
 
-            if(timeCounter > 5 || distanceFromTarget >= 10)
+            if(timeCounter > 5 || distanceFromTarget >= 15)
             {
-                RandomAttack = Random.value;
                 timeCounter = 0;
                 coolDownJump = false;
                 anim.SetBool("JumpAttackCooldown", false);
                 agent.isStopped = false;
+                SetChase();
+            }
+
+            if( timeCounter == 1)
+            {
+                RandomAttack = Random.value;
             }
         }
-
     }
 
     void LateUpdate()
@@ -201,6 +209,7 @@ public class BossPrueba : MonoBehaviour
         if (coolDown == false && coolDownJump == false)
         {
             // animacion de giro hacia el personaje
+
             anim.SetBool("Chase", true);
 
             if (distanceFromTarget > attackRange)
@@ -215,15 +224,18 @@ public class BossPrueba : MonoBehaviour
                 return;
             }
 
-            if (distanceFromTarget >= 10 && distanceFromTarget <= 15)
+            /*if (distanceFromTarget >= 10 && distanceFromTarget <= 15)
             {
-                RandomChaseAttack += Random.value;
+                RandomChaseAttack = Random.value;
                 if(RandomChaseAttack > 0.9)
                 {
                     Debug.Log("ATTACK");
                     anim.SetTrigger("Action2");
                 }
-            }
+                else
+                {
+                }
+            }*/
         }
     }
 
@@ -231,28 +243,19 @@ public class BossPrueba : MonoBehaviour
     {
         if (distanceFromTarget < attackRange && enemyDeath.isDead == false)
         {
-                if (distanceFromTarget < attackRange)
+            if(coolDownJump == false && coolDown == false && RandomAttack < 0.5f)
             {
-                if(coolDown == false && RandomAttack < 0.5f)
-                {
-                    Debug.Log("ATTACK");
-                    anim.SetTrigger("Action");
-                    agent.isStopped = true;
-                }
+                Debug.Log("ATTACK");
+                anim.SetTrigger("Action");
+                agent.isStopped = true;
+            }
 
-                if(coolDown == false && RandomAttack > 0.5f)
-                {
-                    Debug.Log("ATTACK");
-                    anim.SetTrigger("Action2");
-                }
-                return;
-            }
-            else
+            if(coolDownJump == false && coolDown == false && RandomAttack > 0.5f)
             {
-                Debug.Log("Salio Del Range");
-                SetChase();
-                return;
+                Debug.Log("ATTACK");
+                anim.SetTrigger("Action2");
             }
+            return;
         }
         else if (distanceFromTarget > attackRange && enemyDeath.isDead == false)
         {
@@ -281,7 +284,7 @@ public class BossPrueba : MonoBehaviour
 
                 state = EnemyState.Chase;   // El estado pasa a ser persecucion
             }
-            else
+            else if (phase == BossPhase.PhaseTwo)
             {
                 agent.speed = chaseSpeed;   // La velocidad del enemigo pasa a ser igual que la de modo persecucion
 
@@ -297,7 +300,7 @@ public class BossPrueba : MonoBehaviour
             agent.stoppingDistance = 3.5f;
             state = EnemyState.Attack;
         }
-        else
+        else if (phase == BossPhase.PhaseTwo)
         {
             // Sonidos de Ataque si los tiene
             agent.stoppingDistance = 3.5f;
@@ -312,13 +315,16 @@ public class BossPrueba : MonoBehaviour
     {
         Debug.Log("Animacion terminada");
 
+        anim.ResetTrigger("Action2");
+        anim.ResetTrigger("Action");
+        anim.ResetTrigger("Action1");
+        anim.ResetTrigger("PhaseTwo 0");
         attackRange = 4;
         controller.enabled = true;
-        anim.SetBool("Chase", false);
         stateTwo = BossPhaseTwo.ChaseTwo;
     }
     public void ChangePhase()
-    {
+    {        
         bonusEnemyStats = 30;
         phase = BossPhase.PhaseTwo;
         stateTwo = BossPhaseTwo.Transformation;
@@ -326,41 +332,63 @@ public class BossPrueba : MonoBehaviour
     
     void ChaseUpdateTwo()
     {
-        // animacion de giro hacia el personaje
-        if (enemyDeath.isDead == false || coolDown == false || coolDownJump == false)
+        if (coolDown == false && coolDownJump == false && enemyDeath.isDead == false)
         {
+            // animacion de giro hacia el personaje
+
             anim.SetBool("Chase2", true);
-            agent.isStopped = false;
-            agent.SetDestination(player.transform.position);
+
+            if (distanceFromTarget > attackRange)
+            {
+                agent.SetDestination(player.transform.position);
+            }
+
+            if (distanceFromTarget < attackRange)
+            {
+                anim.SetBool("Chase2", false);
+                SetAction();
+                return;
+            }
         }
 
-        if (distanceFromTarget < attackRange && enemyDeath.isDead == false)
-        {
-            anim.SetBool("Chase2", false);
-            SetAction();
-            return;
-        }
+            /*// animacion de giro hacia el personaje
+            if (enemyDeath.isDead == false || coolDown == false || coolDownJump == false)
+            {
+                anim.SetBool("Chase2", true);
+
+                if (distanceFromTarget > attackRange)
+                {
+                    agent.isStopped = false;
+                    agent.SetDestination(player.transform.position);
+                    return;
+                }
+
+                else if (distanceFromTarget < attackRange)
+                {
+                    anim.SetBool("Chase2", false);
+                    SetAction();
+                    return;
+                }
+            }*/
     }
 
     void ActionUpdateTwo()
     {
-        Debug.Log("TORTON Y AL SUELO");
-
         if (distanceFromTarget < attackRange && enemyDeath.isDead == false)
         {
-            Debug.Log("ME CAGO EN TOOO");
-            agent.isStopped = true;
-
-            if (Random.value <= 0.5f && coolDown == false)
+            if (coolDownJump == false && coolDown == false && RandomAttack < 0.5f)
             {
+                Debug.Log("ATTACK");
+                anim.SetTrigger("Action");
                 agent.isStopped = true;
+            }
+
+            if (coolDownJump == false && coolDown == false && RandomAttack > 0.5f)
+            {
+                Debug.Log("ATTACK");
                 anim.SetTrigger("Action2");
             }
-
-            else if(Random.value > 0.5f && coolDown == false)
-            {
-                anim.SetTrigger("Action1");
-            }
+            return;
         }
         else if (distanceFromTarget > attackRange && enemyDeath.isDead == false)
         {
@@ -368,6 +396,31 @@ public class BossPrueba : MonoBehaviour
             SetChase();
             return;
         }
+
+        /*Debug.Log("TORTON Y AL SUELO");
+
+        if (distanceFromTarget < attackRange && enemyDeath.isDead == false)
+        {
+            Debug.Log("ME CAGO EN TOOO");
+            agent.isStopped = true;
+
+            if (Random.value <= 0.5f && coolDownJump == false && coolDown == false)
+            {
+                anim.SetTrigger("Action");
+            }
+
+            else if(Random.value > 0.5f && coolDownJump == false && coolDown == false)
+            {
+                agent.isStopped = false;
+                anim.SetTrigger("Action2");
+            }
+        }
+        else if (distanceFromTarget > attackRange && enemyDeath.isDead == false)
+        {
+            Debug.Log("Salio Del Range");
+            SetChase();
+            return;
+        }*/
     }
 
     public void ComienzoAtaque()

@@ -53708,6 +53708,11 @@ PrefabInstance:
       propertyPath: points.Array.data[0]
       value: 
       objectReference: {fileID: 1311747156}
+    - target: {fileID: 3090486629045920492, guid: 9f304f69a9e7d9247becaaaeb1e359a6,
+        type: 3}
+      propertyPath: idleTime
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3090486629045920493, guid: 9f304f69a9e7d9247becaaaeb1e359a6,
         type: 3}
       propertyPath: healthSlider
