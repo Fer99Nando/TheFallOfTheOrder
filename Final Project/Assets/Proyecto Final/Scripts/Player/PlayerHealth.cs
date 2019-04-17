@@ -7,6 +7,8 @@ public class PlayerHealth : MonoBehaviour
 {
     private float maxVirus = 100;
 
+    PlayerBehaviour playerBehaviour;
+
     /*[Header("Material")]
     public Material mat1;
     public Material mat2;*/
@@ -48,7 +50,8 @@ public class PlayerHealth : MonoBehaviour
 
 	void Awake()
 	{
-		anim = GetComponent<Animator>();
+        playerBehaviour = GetComponent<PlayerBehaviour>();
+        anim = GetComponent<Animator>();
 		playerControl = GetComponent<PlayerBehaviour>();
 		currentHp = startingHp;
         healthSlider.fillAmount = currentHp/startingHp;
@@ -173,8 +176,29 @@ public class PlayerHealth : MonoBehaviour
     {
         if (other.tag == "Arrow" || other.tag == "WeaponBoss")
         {
+            playerBehaviour.canMove = false;
             anim.SetTrigger("Hit");
         }
+    }
+
+    public void HitAcabado()
+    {
+        playerBehaviour.canMove = true;
+
+        playerBehaviour.comboOn = false;
+        playerBehaviour.cooldown = false;
+        playerBehaviour.attackOn = false;
+        playerBehaviour.attackOne = false;
+        playerBehaviour.comboTwoOn = false;
+        playerBehaviour.dodgeTime = false;
+        playerBehaviour.dodgeTrue = false;
+        playerBehaviour.canAttack = false;
+
+        anim.ResetTrigger("FirstCombo");
+        anim.ResetTrigger("SecondCombo");
+        anim.ResetTrigger("ChargeAttack");
+        anim.ResetTrigger("Attack");
+        anim.ResetTrigger("Hit");
     }
 
     public void Death()

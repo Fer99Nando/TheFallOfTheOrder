@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.AI;
 
 public class EnemyHealth : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class EnemyHealth : MonoBehaviour
     public int currentHp;
 
     public Slider healthSlider;
+
+    private NavMeshAgent agent;
 
     // Sonido muerte
 
@@ -23,6 +26,7 @@ public class EnemyHealth : MonoBehaviour
 
     void Awake()
     {
+        agent = GetComponent<NavMeshAgent>();
         controller = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
         currentHp = startingHp;
@@ -41,6 +45,7 @@ public class EnemyHealth : MonoBehaviour
 
         if (currentHp <= 0 && !isDead)
         {
+            agent.isStopped = true;
             controller.enabled = false;
             anim.SetBool("Death", true);
         }

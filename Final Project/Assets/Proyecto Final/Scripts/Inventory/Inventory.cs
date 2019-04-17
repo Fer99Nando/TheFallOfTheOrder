@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
-    PlayerBehaviour playerBehaviour;
     PlayerHealth playerHealth;
     Animator anim;
 
@@ -22,7 +21,6 @@ public class Inventory : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         playerHealth = GetComponent<PlayerHealth>();
-        playerBehaviour = GetComponent<PlayerBehaviour>();
         inventoryAmount = 0;
         slotPot[0].SetActive(false);
         slotPot[1].SetActive(false);
@@ -50,7 +48,6 @@ public class Inventory : MonoBehaviour
     {
         if(inventoryAmount >= 1)
         {
-            playerBehaviour.canMove = false;
             inventoryAmount -= 1;
 
             if (slotType[slot] == 0)

@@ -23,7 +23,6 @@ public class DistanceEnemy : MonoBehaviour
     public GameObject particlePrefab;
 
     private GameObject shootedParticle;
-    ArrowBehaviour arrowParticlesTrail;
 
     [Header("Paths")]
 
@@ -64,7 +63,6 @@ public class DistanceEnemy : MonoBehaviour
         anim = GetComponent<Animator>();        // Llamamos a las animaciones
 
         player = GameObject.FindGameObjectWithTag("Player");
-        arrowParticlesTrail = GetComponent<ArrowBehaviour>();
     }
 
     // Update is called once per frame

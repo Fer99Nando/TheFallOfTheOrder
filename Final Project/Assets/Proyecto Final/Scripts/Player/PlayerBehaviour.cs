@@ -40,18 +40,18 @@ public class PlayerBehaviour : MonoBehaviour
 
     [Header("Bools")]
 
-    private bool dodgeTime;
-    private bool dodgeTrue;
+    public bool dodgeTime;
+    public bool dodgeTrue;
 
     public bool chargeAttack;
 
     public bool cooldown;
 
-    private bool comboOn;
-    private bool comboTwoOn;
-    private bool attackOn;
-    private bool attackOne;
-    private bool canAttack;
+    public bool comboOn;
+    public bool comboTwoOn;
+    public bool attackOn;
+    public bool attackOne;
+    public bool canAttack;
 
     public bool canMove;
     private bool isWalking;
@@ -146,6 +146,7 @@ public class PlayerBehaviour : MonoBehaviour
         {
             if (attackOn == false && cooldown == false)
             {
+                Debug.Log("AtacoXD");
                 canAttack = true;
                 attackOn = true;
                 anim.SetTrigger("Attack");
