@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 2340796379757579998}
   - component: {fileID: 1108357446684450010}
   - component: {fileID: 8366294551602918066}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Soporte
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2340796379757579998
 Transform:
@@ -88,12 +88,12 @@ GameObject:
   - component: {fileID: 1929625180346127301}
   - component: {fileID: 2594001807735456649}
   - component: {fileID: 2995611834655048667}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pCube16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1929625180346127301
 Transform:
@@ -165,12 +165,12 @@ GameObject:
   - component: {fileID: 3024569493184337385}
   - component: {fileID: 5464951861788521082}
   - component: {fileID: 7419452797316838184}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pCube13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3024569493184337385
 Transform:
@@ -242,12 +242,12 @@ GameObject:
   - component: {fileID: 7895345516589074435}
   - component: {fileID: 1322204319178778832}
   - component: {fileID: 5757690670110582535}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pCube14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7895345516589074435
 Transform:
@@ -317,12 +317,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7220087448112204335}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: group1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7220087448112204335
 Transform:
@@ -355,12 +355,12 @@ GameObject:
   - component: {fileID: 7271244234886811721}
   - component: {fileID: 8172246041232388284}
   - component: {fileID: 4739487539190714855}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pTorus1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7271244234886811721
 Transform:
@@ -430,12 +430,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6777608645934484722}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Antorcha
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6777608645934484722
 Transform:
@@ -465,12 +465,12 @@ GameObject:
   - component: {fileID: 3381120824101297082}
   - component: {fileID: 300433405157123684}
   - component: {fileID: 6202896856927890080}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pCylinder1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3381120824101297082
 Transform:
@@ -542,12 +542,12 @@ GameObject:
   - component: {fileID: 3027790457800330529}
   - component: {fileID: 4617006893687890877}
   - component: {fileID: 4843853340037064497}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pCube17
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3027790457800330529
 Transform:
@@ -618,12 +618,12 @@ GameObject:
   m_Component:
   - component: {fileID: 159005968928874060}
   - component: {fileID: 5429874237035189577}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Antorcha
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &159005968928874060
 Transform:
@@ -632,7 +632,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5517480257958087353}
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 10.940442, y: 1.9182699, z: -1.4650741}
   m_LocalScale: {x: 0.0100000035, y: 0.01, z: 0.0100000035}
   m_Children:
@@ -663,12 +663,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7455895113447737535}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Torus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7455895113447737535
 Transform:
@@ -697,12 +697,12 @@ GameObject:
   - component: {fileID: 466945921740689558}
   - component: {fileID: 857710190157849787}
   - component: {fileID: 8456133555983579639}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pTorus2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &466945921740689558
 Transform:
@@ -774,12 +774,12 @@ GameObject:
   - component: {fileID: 3608488774928512115}
   - component: {fileID: 3912294212732014641}
   - component: {fileID: 1972773478486910645}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pCube6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3608488774928512115
 Transform:
@@ -851,12 +851,12 @@ GameObject:
   - component: {fileID: 3882775898941571135}
   - component: {fileID: 1971809884667872085}
   - component: {fileID: 4242371564283534505}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pCube15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3882775898941571135
 Transform:
