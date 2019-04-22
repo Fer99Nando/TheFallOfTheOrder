@@ -20,6 +20,12 @@ public class EnemyHealth : MonoBehaviour
 
     PlayerBehaviour playerBehaviour;
 
+    public GameObject[] bloodPart;
+    public GameObject SpawnDamage;
+    GameObject currentBlood;
+    private GameObject bloodinsta;
+    int index;
+
     // Sonidos
 
     public bool isDead;
@@ -58,10 +64,17 @@ public class EnemyHealth : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "PlayerWeapon" && playerBehaviour.chargeAttack == true)
+        if (other.tag == "PlayerWeapon")
+        {
+            index = Random.Range(0, bloodPart.Length);
+            currentBlood = bloodPart[index];
+            bloodinsta = Instantiate(currentBlood, SpawnDamage.transform.position, Quaternion.identity);
+        }
+        else if (other.tag == "PlayerWeapon" && playerBehaviour.chargeAttack == true)
         {
             anim.SetTrigger("Hit");
         }
+
     }
 
     public void Death()
