@@ -19,6 +19,7 @@ public class BossPrueba : MonoBehaviour
     private Vector3 targetPosition;
     private GameObject player;
     public GameObject colliderJumpAttack;
+    public GameObject ArmaTrail;
 
     public int bonusEnemyStats;
 
@@ -69,6 +70,7 @@ public class BossPrueba : MonoBehaviour
 
     private void Awake()
     {
+        ArmaTrail.SetActive(false);
         //colliderJumpAttack.SetActive(false);
         coolDownJump = false;
         coolDown = false;
@@ -261,6 +263,7 @@ public class BossPrueba : MonoBehaviour
         {
             if(coolDownJump == false && coolDown == false && RandomAttack < 0.7f)
             {
+                ArmaTrail.SetActive(true);
                 Debug.Log("ATTACK");
                 anim.SetTrigger("Action");
                 agent.isStopped = true;
@@ -268,6 +271,7 @@ public class BossPrueba : MonoBehaviour
 
             if(coolDownJump == false && coolDown == false && RandomAttack > 0.7f)
             {
+                ArmaTrail.SetActive(true);
                 Debug.Log("ATTACK");
                 anim.SetTrigger("Action2");
             }
@@ -275,6 +279,7 @@ public class BossPrueba : MonoBehaviour
         }
         else if (distanceFromTarget > attackRange && enemyDeath.isDead == false)
         {
+            ArmaTrail.SetActive(false);
             Debug.Log("Salio Del Range");
             SetChase();
             return;
@@ -330,6 +335,7 @@ public class BossPrueba : MonoBehaviour
 
     public void InstantiatePart()
     {
+        ArmaTrail.SetActive(true);
         jumpAttack.ParticlesLava();
     }
 
@@ -341,6 +347,7 @@ public class BossPrueba : MonoBehaviour
     {
         Debug.Log("Animacion terminada");
 
+        ArmaTrail.SetActive(false);
         bossTransformation.SetActive(false);
         anim.SetBool("Chase2", false);
         anim.ResetTrigger("Action2");
@@ -368,6 +375,7 @@ public class BossPrueba : MonoBehaviour
 
             if (distanceFromTarget > attackRange)
             {
+                ArmaTrail.SetActive(false);
                 anim.SetBool("Chase2", true);
                 agent.SetDestination(player.transform.position);
             }

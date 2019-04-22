@@ -12,6 +12,8 @@ public class PlayerBehaviour : MonoBehaviour
 
     public Transform lookAt;
 
+    public GameObject armaTrail;
+
     [Header("Speed & Direction")]
 
     public float forwardSpeed;              // Velocidad de avance
@@ -85,6 +87,8 @@ public class PlayerBehaviour : MonoBehaviour
         //attackTime = attackAnim.length;
         //attackTime *= 0.9f;
 
+        armaTrail.SetActive(false);
+
         cooldownFilled.fillAmount = 0;
 
         anim = GetComponent<Animator>();
@@ -131,6 +135,7 @@ public class PlayerBehaviour : MonoBehaviour
         {
             if (attackOn == false && cooldown == false)
             {
+                armaTrail.SetActive(true);
                 playerWeapon.attackStats += 15;
                 cooldown = true;
                 cooldownFilled.fillAmount = 1;
@@ -147,6 +152,7 @@ public class PlayerBehaviour : MonoBehaviour
             if (attackOn == false && cooldown == false)
             {
                 Debug.Log("AtacoXD");
+                armaTrail.SetActive(true);
                 canAttack = true;
                 attackOn = true;
                 anim.SetTrigger("Attack");
@@ -154,6 +160,7 @@ public class PlayerBehaviour : MonoBehaviour
 
             if (comboOn)
             {
+                armaTrail.SetActive(true);
                 canAttack = true;
                 anim.SetTrigger("FirstCombo");
                 playerWeapon.bonusStats += 2;
@@ -161,6 +168,7 @@ public class PlayerBehaviour : MonoBehaviour
 
             if (comboTwoOn)
             {
+                armaTrail.SetActive(true);
                 canAttack = true;
                 anim.SetTrigger("SecondCombo");
                 playerWeapon.bonusStats += 3;
@@ -272,10 +280,12 @@ public class PlayerBehaviour : MonoBehaviour
         anim.ResetTrigger("FirstCombo");
         anim.ResetTrigger("Attack");
         anim.ResetTrigger("ChargeAttack");
+        armaTrail.SetActive(false);
     }
 
     public void SinCombo()
     {
+        armaTrail.SetActive(false);
         attackOn = false;
         comboTwoOn = false;
         comboOn = false;
@@ -343,12 +353,12 @@ public class PlayerBehaviour : MonoBehaviour
             else if (this.inputH > 0 && this.inputV == 0) // DERECHA
             {
                 transform.rotation = Quaternion.Euler(0, this.lookAt.eulerAngles.y, 0);
-                this.moveDirection.Set(this.inputH * this.forwardSpeed / 1.3f, 0, 0);
+                this.moveDirection.Set(this.inputH * this.forwardSpeed / 1.5f, 0, 0);
             }
 
             else if (this.inputH < 0 && this.inputV == 0) // IZQUIERDA
             {
-                this.moveDirection.Set(this.inputH * this.backSpeed / 1.3f, 0, 0);
+                this.moveDirection.Set(this.inputH * this.backSpeed / 1.5f, 0, 0);
             }
 
             else if (this.inputV > 0 && this.inputH > 0) // AVANZA-DERECHA
@@ -363,12 +373,12 @@ public class PlayerBehaviour : MonoBehaviour
 
             else if (this.inputV < 0 && this.inputH > 0) // RETROCEDE-DERECHA
             {
-                this.moveDirection.Set(this.inputH * this.diagonalBackSpeed, 0, this.inputV * this.diagonalBackSpeed / 1.3f);
+                this.moveDirection.Set(this.inputH * this.diagonalBackSpeed, 0, this.inputV * this.diagonalBackSpeed / 1.5f);
             }
 
             else if (this.inputV < 0 && this.inputH < 0) // RETROCEDE-IZQUIERDA
             {
-                this.moveDirection.Set(this.inputH * this.diagonalBackSpeed, 0, this.inputV * this.diagonalBackSpeed / 1.3f);
+                this.moveDirection.Set(this.inputH * this.diagonalBackSpeed, 0, this.inputV * this.diagonalBackSpeed / 1.5f);
             }
 
             this.moveDirection = transform.TransformDirection(this.moveDirection); // Transformamos la direccion de loca a world space

@@ -34,6 +34,7 @@ public class PlayerHealth : MonoBehaviour
     public GameObject gameOver;
     public GameObject desactivarHud;
     public GameObject personajes;
+    public GameObject armaTrail;
 
     // Sonido muerte
 
@@ -176,6 +177,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (other.tag == "Arrow" || other.tag == "WeaponBoss")
         {
+            armaTrail.SetActive(false);
             playerBehaviour.canMove = false;
             anim.SetTrigger("Hit");
         }
@@ -203,6 +205,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void Death()
     {
+        armaTrail.SetActive(false);
         isDead = true;
         anim.SetBool("Died", true);
        playerControl.enabled = false;
