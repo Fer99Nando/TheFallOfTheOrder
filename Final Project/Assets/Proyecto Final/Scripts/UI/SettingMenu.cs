@@ -9,6 +9,10 @@ public class SettingMenu : MonoBehaviour
 {
     //public Slider volumeSlider;
     public AudioMixer audioMixer;
+    //public AudioMixer fxMusic;
+
+   // public Slider volume;
+   // public Slider fxVolume;
 
     public Dropdown resolutionsDropsown;
 
@@ -16,6 +20,9 @@ public class SettingMenu : MonoBehaviour
 
     void Start ()
     {
+       // fxVolume.value = PlayerPrefs.GetFloat("MusicVolume");
+       // volume.value = PlayerPrefs.GetFloat("FxVolume");
+
         resolutions = Screen.resolutions;
 
         resolutionsDropsown.ClearOptions();
@@ -40,6 +47,11 @@ public class SettingMenu : MonoBehaviour
         resolutionsDropsown.RefreshShownValue();
     }
 
+    private void Update()
+    {
+        // = volume.value;
+    }
+
     public void SetResolution (int resolutionIndex)
     {
         Resolution resolution = resolutions[resolutionIndex];
@@ -51,6 +63,7 @@ public class SettingMenu : MonoBehaviour
         //volume = volumeSlider.value;
 
         audioMixer.SetFloat("volume", volume);
+        //fxMusic.SetFloat("volume", volume);
     }
     
     public void SetQuality (int qualityIndex)
