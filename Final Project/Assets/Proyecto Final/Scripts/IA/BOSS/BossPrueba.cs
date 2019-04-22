@@ -20,7 +20,6 @@ public class BossPrueba : MonoBehaviour
     private GameObject player;
     public GameObject colliderJumpAttack;
 
-
     public int bonusEnemyStats;
 
     public bool coolDown;
@@ -30,17 +29,15 @@ public class BossPrueba : MonoBehaviour
 
     CharacterController controller;
     WeaponBoss playerWeapon;
-    JumpAttack jumpAttack;
     BossHealth enemyDeath;
     PlayerHealth playerHealth;
-
-    //public ParticleSystem bossTransformation;
-    
-
+    JumpAttack jumpAttack;
 
     [Header("FeedBack")]
     //public Material mat1;
     public GameObject bossTransformation; // Transformation Particles
+    public RFX4_EffectSettings bossPart; // Transformation Particles
+
 
     [Header("Paths")]
 
@@ -77,6 +74,7 @@ public class BossPrueba : MonoBehaviour
         coolDown = false;
         TimeToTransform = false;
         bossTransformation.SetActive(false);
+        bossPart = bossTransformation.GetComponent<RFX4_EffectSettings>();
         bonusEnemyStats = 10;
         agent = GetComponent<NavMeshAgent>();
         controller = GetComponent<CharacterController>();
@@ -87,6 +85,7 @@ public class BossPrueba : MonoBehaviour
         playerWeapon = GameObject.FindGameObjectWithTag("WeaponBoss").GetComponent<WeaponBoss>();
         jumpAttack = colliderJumpAttack.GetComponent<JumpAttack>();
         enemyDeath = GetComponent<BossHealth>();
+        bossPart.IsVisible = false;
     }
 
 
@@ -132,10 +131,12 @@ public class BossPrueba : MonoBehaviour
                     case BossPhaseTwo.Transformation:
                         Debug.Log("O DIOOMIITO SE TRANSFORMA");
                         anim.SetTrigger("PhaseTwo 0");
+                        bossTransformation.SetActive(true);
                         TimeToTransform = true;
                         agent.isStopped = true;
+                        bossPart.IsVisible = true;
                         //bossTransformation.Play();
-                        bossTransformation.SetActive(true);
+                        //bossTransformation.SetActive(true);
                         break;
                     case BossPhaseTwo.ChaseTwo:
                         //bossTransformation.SetActive(false);
@@ -176,7 +177,7 @@ public class BossPrueba : MonoBehaviour
                 SetChase();
             }
 
-            if (timeCounter == 0.1f)
+            if (timeCounter < 0.5f)
             {
                 RandomAttack = Random.value;
             }
@@ -199,7 +200,7 @@ public class BossPrueba : MonoBehaviour
                 SetChase();
             }
 
-            if( timeCounter == 1)
+            if( timeCounter < 0.5f)
             {
                 RandomAttack = Random.value;
             }
@@ -258,14 +259,14 @@ public class BossPrueba : MonoBehaviour
     {
         if (distanceFromTarget < attackRange && enemyDeath.isDead == false)
         {
-            if(coolDownJump == false && coolDown == false && RandomAttack < 0.4f)
+            if(coolDownJump == false && coolDown == false && RandomAttack < 0.7f)
             {
                 Debug.Log("ATTACK");
                 anim.SetTrigger("Action");
                 agent.isStopped = true;
             }
 
-            if(coolDownJump == false && coolDown == false && RandomAttack > 0.4f)
+            if(coolDownJump == false && coolDown == false && RandomAttack > 0.7f)
             {
                 Debug.Log("ATTACK");
                 anim.SetTrigger("Action2");
@@ -326,16 +327,27 @@ public class BossPrueba : MonoBehaviour
     #endregion
 
     #region PhaseTwo
+
+    public void InstantiatePart()
+    {
+        jumpAttack.ParticlesLava();
+    }
+
+    public void FaseParticulas()
+    {
+        bossPart.IsVisible = false;
+    }
     public void AnimacionTerminada()
     {
         Debug.Log("Animacion terminada");
 
         bossTransformation.SetActive(false);
+        anim.SetBool("Chase2", false);
         anim.ResetTrigger("Action2");
         anim.ResetTrigger("Action");
         anim.ResetTrigger("Action1");
         anim.ResetTrigger("PhaseTwo 0");
-        attackRange = 4;
+        //attackRange = 4;
         controller.enabled = true;
         agent.isStopped = false;
         TimeToTransform = false;
@@ -354,10 +366,9 @@ public class BossPrueba : MonoBehaviour
         {
             // animacion de giro hacia el personaje
 
-            anim.SetBool("Chase2", true);
-
             if (distanceFromTarget > attackRange)
             {
+                anim.SetBool("Chase2", true);
                 agent.SetDestination(player.transform.position);
             }
 
@@ -394,14 +405,14 @@ public class BossPrueba : MonoBehaviour
     {
         if (distanceFromTarget < attackRange && enemyDeath.isDead == false && TimeToTransform == false)
         {
-            if (coolDownJump == false && coolDown == false && RandomAttack < 0.4f)
+            if (coolDownJump == false && coolDown == false && RandomAttack < 0.5f)
             {
                 Debug.Log("ATTACK");
                 anim.SetTrigger("Action");
                 agent.isStopped = true;
             }
 
-            if (coolDownJump == false && coolDown == false && RandomAttack > 0.4f)
+            if (coolDownJump == false && coolDown == false && RandomAttack > 0.5f)
             {
                 Debug.Log("ATTACK");
                 anim.SetTrigger("Action2");

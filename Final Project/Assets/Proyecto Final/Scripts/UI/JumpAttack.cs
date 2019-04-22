@@ -11,6 +11,12 @@ public class JumpAttack : MonoBehaviour
 
     BoxCollider boxCol;
 
+    private GameObject particlePref;
+    public GameObject particlePrefP;
+    public GameObject SpawnPart;
+
+    //private bool lavaSuelo;
+
     void Start()
     {
         bossprueba = GameObject.FindGameObjectWithTag("Boss").GetComponent<BossPrueba>(); ;
@@ -37,5 +43,10 @@ public class JumpAttack : MonoBehaviour
     public void BoxDisabled()
     {
         boxCol.enabled = false;
+    }
+
+    public void ParticlesLava()
+    {
+        particlePref = Instantiate(particlePrefP, SpawnPart.transform.position, SpawnPart.transform.rotation);
     }
 }
