@@ -34,6 +34,7 @@ public class ArrowBehaviour : MonoBehaviour
             Destroy(gameObject);
         }
 
+        Destroy(gameObject);
     }
 
     /*private void OnCollisionEnter(Collision col)
