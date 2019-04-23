@@ -95,6 +95,10 @@ public class EnemyPrueba : MonoBehaviour
 
     void IdleUpdate()
     {
+        if(distanceFromTarget < chaseRange)
+        {
+            SetChase();
+        }
 
         // El personaje este quieto
         if (timeCounter >= idleTime)
@@ -124,7 +128,7 @@ public class EnemyPrueba : MonoBehaviour
                 pathIndex = 0;
             }
             anim.SetBool("Walk", false);
-            SetIdle();  // Si queremos que se pare cuando llegue a un punto
+            //SetIdle();  // Si queremos que se pare cuando llegue a un punto
         }
 
         // Aqui va el rugido de los monstruos cada x tiempo
