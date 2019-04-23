@@ -7,9 +7,15 @@ using UnityEngine.UI;
 
 public class SettingMenu : MonoBehaviour
 {
+    //public AudioMixer fxMusic;
     //public Slider volumeSlider;
     public AudioMixer audioMixer;
-    //public AudioMixer fxMusic;
+    public float vol_1;
+    public float vol_2;
+    public float vol_3;
+    public Slider master;
+    public Slider effects;
+    public Slider music;
 
    // public Slider volume;
    // public Slider fxVolume;
@@ -20,8 +26,21 @@ public class SettingMenu : MonoBehaviour
 
     void Start ()
     {
-       // fxVolume.value = PlayerPrefs.GetFloat("MusicVolume");
-       // volume.value = PlayerPrefs.GetFloat("FxVolume");
+        // fxVolume.value = PlayerPrefs.GetFloat("MusicVolume");
+        // volume.value = PlayerPrefs.GetFloat("FxVolume");
+
+        vol_1 = PlayerPrefs.GetFloat("Master_Vol");
+        master.value = vol_1;
+        Debug.Log(master.value);
+        audioMixer.SetFloat("Master", vol_1);
+
+        vol_2 = PlayerPrefs.GetFloat("Effects_Vol");
+        effects.value = vol_2;
+        audioMixer.SetFloat("Effects", vol_2);
+
+        vol_3 = PlayerPrefs.GetFloat("Music_Vol");
+        music.value = vol_3;
+        audioMixer.SetFloat("Music", vol_3);
 
         resolutions = Screen.resolutions;
 
@@ -47,25 +66,33 @@ public class SettingMenu : MonoBehaviour
         resolutionsDropsown.RefreshShownValue();
     }
 
-    private void Update()
-    {
-        // = volume.value;
-    }
-
     public void SetResolution (int resolutionIndex)
     {
         Resolution resolution = resolutions[resolutionIndex];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
     }
 
-    public void SetVolume ( float volume)
+    public void SetVolumeMaster ( float volume_1)
     {
-        //volume = volumeSlider.value;
-
-        audioMixer.SetFloat("volume", volume);
-        //fxMusic.SetFloat("volume", volume);
+        vol_1 = volume_1;
+        audioMixer.SetFloat("Master", volume_1);
+        SaveVolume_Master();
     }
-    
+
+    public void SetVolumeEffects ( float volume_2)
+    {
+        vol_2 = volume_2;
+        audioMixer.SetFloat("Effects", volume_2);
+        SaveVolume_Effects();
+    }
+
+    public void SetVolumeMusic ( float volume_3)
+    {
+        vol_3 = volume_3;
+        audioMixer.SetFloat("Music", volume_3);
+        SaveVolume_Music();
+    }
+
     public void SetQuality (int qualityIndex)
     {
         QualitySettings.SetQualityLevel(qualityIndex);
@@ -75,4 +102,23 @@ public class SettingMenu : MonoBehaviour
     {
         Screen.fullScreen = isFullscreen;
     }
+
+    #region SAVE
+    void SaveVolume_Master()
+    {
+        PlayerPrefs.SetFloat("Master_Vol", vol_1);
+        Debug.Log(vol_1);
+        //PlayerPrefs.Save();
+    }
+
+    void SaveVolume_Effects()
+    {
+        PlayerPrefs.SetFloat("Effects_Vol", vol_2);
+    }
+
+    void SaveVolume_Music()
+    {
+        PlayerPrefs.SetFloat("Music_Vol", vol_3);
+    }
+    #endregion
 }
