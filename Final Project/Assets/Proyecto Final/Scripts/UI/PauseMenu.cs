@@ -59,7 +59,6 @@ public class PauseMenu : MonoBehaviour
 	// Update is called once per frame
 	void LateUpdate () 
 	{
-		
 			if (Input.GetKeyDown(KeyCode.Escape))
 			{
 				if (GameIsPaused == true)
@@ -70,13 +69,12 @@ public class PauseMenu : MonoBehaviour
 					}
 					else
 					{
-
+                        return;
 					}
 				}
-
 				else
 				{
-				Pause ();
+				    Pause ();
 				}
 			}
 

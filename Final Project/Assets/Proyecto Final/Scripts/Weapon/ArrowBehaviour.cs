@@ -33,7 +33,7 @@ public class ArrowBehaviour : MonoBehaviour
             playerHealth.currentHp -= 10;
             Destroy(gameObject);
         }
-        else
+        else if(other.tag == "Grounded" || other.tag == "Enemy")
         {
             Destroy(gameObject);
         }

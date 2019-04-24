@@ -5,40 +5,26 @@ using UnityEngine.UI;
 
 public class TutoVida : MonoBehaviour
 {
-    public GameObject tutVida;
-
-    bool tut1;
+    public GameObject General;
 
     private void Awake()
     {
-        tutVida.SetActive(false);
-    }
-
-    private void Update()
-    {
-        if(tut1)
-        {
-            Time.timeScale = 0f;
-            Cursor.visible = true;
-        }
-        else
-        {
-            Time.timeScale = 1f;
-            Cursor.visible = false;
-        }
+        General.SetActive(false);
     }
 
     public void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Player")
         {
-            tutVida.SetActive(true);
-            tut1 = true;
+            General.SetActive(true);
+            Time.timeScale = 0f;
+            Cursor.visible = true;
         }
     }
-
-    public void Resumebutton1()
+    public void Resume()
     {
-        tut1 = false;
+        Debug.Log("Funciona a medias");
+        Time.timeScale = 1f;
+        Cursor.visible = false;
     }
 }
