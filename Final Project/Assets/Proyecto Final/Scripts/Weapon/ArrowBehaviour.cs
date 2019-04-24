@@ -27,23 +27,15 @@ public class ArrowBehaviour : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player" || other.tag == "PlayerWeapon")
         {
             Debug.Log("AAuuuuuux");
             playerHealth.currentHp -= 10;
             Destroy(gameObject);
         }
-
-        Destroy(gameObject);
-    }
-
-    /*private void OnCollisionEnter(Collision col)
-    {
-        if (col.gameObject)
+        else
         {
             Destroy(gameObject);
         }
-    }*/
-
-
+    }
 }
