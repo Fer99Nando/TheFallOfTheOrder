@@ -66,7 +66,9 @@ public class PlayerBehaviour : MonoBehaviour
 
     PlayerHealth playerHealth;
 
-    //public AudioSource footSteps;
+    [Header("Sonidos")]
+
+    public AudioSource footSteps;
     //public AudioSource
 
     // Use this for initialization
@@ -406,6 +408,11 @@ public class PlayerBehaviour : MonoBehaviour
     private bool Grounded()
     {
         return Physics.Raycast(transform.position + this.controller.center, Vector3.down, this.controller.bounds.extents.y + 0.001f);
+    }
+
+    public void Zapatazo()
+    {
+        footSteps.Play();
     }
 
     public void GodMode()
