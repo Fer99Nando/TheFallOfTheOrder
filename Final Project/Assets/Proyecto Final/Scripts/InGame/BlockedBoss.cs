@@ -6,6 +6,8 @@ public class BlockedBoss : MonoBehaviour
 {
     public GameObject bloqueNoPass;
 
+    public AudioSource musicaBossEpic;
+
     private void Start()
     {
         bloqueNoPass.SetActive(false);
@@ -15,6 +17,7 @@ public class BlockedBoss : MonoBehaviour
     {
         if(other.tag == "Player")
         {
+            musicaBossEpic.Play();
             bloqueNoPass.SetActive(true);
         }
     }

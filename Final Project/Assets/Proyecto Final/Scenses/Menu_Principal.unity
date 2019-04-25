@@ -1001,7 +1001,7 @@ GameObject:
   - component: {fileID: 1578391701}
   - component: {fileID: 1578391700}
   m_Layer: 5
-  m_Name: ContPartida (1)
+  m_Name: Creditos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1024,8 +1024,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000030518, y: -275.5}
-  m_SizeDelta: {x: 522.2, y: 97.9}
+  m_AnchoredPosition: {x: -0.00005859, y: -348}
+  m_SizeDelta: {x: 366, y: 84.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1578391700
 MonoBehaviour:
@@ -1054,10 +1054,10 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: ea124f226e35a5e4f96cc5effe7e32c9,
+    m_HighlightedSprite: {fileID: 21300000, guid: e6c27841fb84a0f42b200db066f2d492,
       type: 3}
     m_PressedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 21300000, guid: 1257180464264454d82062286cd648dd, type: 3}
+    m_DisabledSprite: {fileID: 21300000, guid: 13516d19249ac0a40b7a63dcbee691bf, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -1067,7 +1067,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1578391701}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 855153931}
+        m_MethodName: CreditsScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1578391701
@@ -1090,7 +1101,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 1257180464264454d82062286cd648dd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 13516d19249ac0a40b7a63dcbee691bf, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1419,7 +1430,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000034332, y: -358.8}
+  m_AnchoredPosition: {x: -0.000029295, y: -260.95}
   m_SizeDelta: {x: 321.1, y: 68.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1902340606
