@@ -15,6 +15,7 @@ TagManager:
   - BossMesh
   - WeaponBoss
   - Arrow
+  - MuerteVacio
   layers:
   - Default
   - TransparentFX

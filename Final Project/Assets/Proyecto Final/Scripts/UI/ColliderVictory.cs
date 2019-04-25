@@ -7,11 +7,14 @@ public class ColliderVictory : MonoBehaviour
 {
     public VideoPlayer victoryVideo;
 
+    public GameObject victory;
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Player"))
         {
             victoryVideo.Play();
+            victory.SetActive(true);
         }
     }
 }

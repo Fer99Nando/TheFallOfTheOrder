@@ -13,6 +13,9 @@ public class PlayerHealth : MonoBehaviour
     public Material mat1;
     public Material mat2;*/
 
+    public GameObject volverDerrota;
+    public GameObject volverVictoria;
+
     [Header("Life")]
 	public float startingHp;
 	public float startingV;
@@ -51,6 +54,9 @@ public class PlayerHealth : MonoBehaviour
 
 	void Awake()
 	{
+        volverDerrota.SetActive(false);
+        volverVictoria.SetActive(false);
+
         playerBehaviour = GetComponent<PlayerBehaviour>();
         anim = GetComponent<Animator>();
 		playerControl = GetComponent<PlayerBehaviour>();
@@ -181,6 +187,11 @@ public class PlayerHealth : MonoBehaviour
             playerBehaviour.canMove = false;
             anim.SetTrigger("Hit");
         }
+
+        if (other.tag == "MuerteVacio")
+        {
+            DieAcabado();
+        }
     }
 
     public void HitAcabado()
@@ -218,5 +229,8 @@ public class PlayerHealth : MonoBehaviour
         gameOver.SetActive(true);
         Destroy(personajes);
         Cursor.visible = true;
+
+        volverDerrota.SetActive(true);
+        volverVictoria.SetActive(true);
     }
 }

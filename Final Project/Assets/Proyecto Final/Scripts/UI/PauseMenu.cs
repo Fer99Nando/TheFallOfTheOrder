@@ -135,4 +135,10 @@ public class PauseMenu : MonoBehaviour
         Resolution resolution = resolutions[resolutionIndex];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
     }
+
+    public void ResumeTut()
+    {
+        Time.timeScale = 1f;
+        Cursor.visible = false;
+    }
 }

@@ -30,10 +30,10 @@ public class ArrowBehaviour : MonoBehaviour
         if (other.tag == "Player" || other.tag == "PlayerWeapon")
         {
             Debug.Log("AAuuuuuux");
-            playerHealth.currentHp -= 10;
+            playerHealth.currentHp -= 3;
             Destroy(gameObject);
         }
-        else if(other.tag == "Grounded" || other.tag == "Enemy")
+        else if(other.tag != "Player" || other.tag != "PlayerWeapon")
         {
             Destroy(gameObject);
         }

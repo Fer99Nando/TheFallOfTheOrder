@@ -19,12 +19,7 @@ public class TutoVida : MonoBehaviour
             General.SetActive(true);
             Time.timeScale = 0f;
             Cursor.visible = true;
+            Destroy(gameObject);
         }
-    }
-    public void Resume()
-    {
-        Debug.Log("Funciona a medias");
-        Time.timeScale = 1f;
-        Cursor.visible = false;
     }
 }
