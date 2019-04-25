@@ -70,6 +70,8 @@ public class PlayerBehaviour : MonoBehaviour
 
     public AudioSource footSteps;
     public AudioSource axeSwing;
+    public AudioClip footStepR;
+    public AudioClip footStepL;
 
     // Use this for initialization
     void Start()
@@ -415,8 +417,15 @@ public class PlayerBehaviour : MonoBehaviour
         return Physics.Raycast(transform.position + this.controller.center, Vector3.down, this.controller.bounds.extents.y + 0.001f);
     }
 
-    public void Zapatazo()
+    public void ZapatazoR()
     {
+        footSteps.clip = footStepR;
+        footSteps.Play();
+    }
+
+    public void ZapatazoL()
+    {
+        footSteps.clip = footStepL;
         footSteps.Play();
     }
 

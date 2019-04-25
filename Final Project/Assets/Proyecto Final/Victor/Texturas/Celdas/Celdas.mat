@@ -80,7 +80,7 @@ Material:
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 0.33
-    - _OutlineSize: 0.5
+    - _OutlineSize: 0.005
     - _Parallax: 0.012
     - _RimIntensity: 0
     - _RimSize: 3

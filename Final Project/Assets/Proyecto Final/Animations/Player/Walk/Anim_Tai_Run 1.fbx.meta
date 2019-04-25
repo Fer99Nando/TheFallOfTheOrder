@@ -250,14 +250,14 @@ ModelImporter:
       curves: []
       events:
       - time: 0.012658229
-        functionName: Zapatazo
+        functionName: ZapatazoL
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
       - time: 0.5208734
-        functionName: Zapatazo
+        functionName: ZapatazoR
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
