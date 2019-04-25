@@ -72,6 +72,7 @@ public class PlayerBehaviour : MonoBehaviour
     public AudioSource axeSwing;
     public AudioClip footStepR;
     public AudioClip footStepL;
+    public AudioClip hitSound;
 
     // Use this for initialization
     void Start()
@@ -426,6 +427,12 @@ public class PlayerBehaviour : MonoBehaviour
     public void ZapatazoL()
     {
         footSteps.clip = footStepL;
+        footSteps.Play();
+    }
+
+    public void HitPlayer()
+    {
+        footSteps.clip = hitSound;
         footSteps.Play();
     }
 

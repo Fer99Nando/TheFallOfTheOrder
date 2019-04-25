@@ -19,7 +19,7 @@ public class PlayerWeapon : MonoBehaviour
 
     void Start()
     {
-        attackStats = 200;
+        attackStats = 10;
         playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
         boxCol = GetComponent<BoxCollider>();
         boxCol.enabled = false;
@@ -62,13 +62,13 @@ public class PlayerWeapon : MonoBehaviour
         else if (virusSlider.fillAmount > 0 && virusSlider.fillAmount < 0.25f)
         {
             //Debug.Log("10 Daño");
-            attackStats = 5;
+            attackStats = 15;
         }
 
         if (virusSlider.fillAmount >= 0.25f && virusSlider.fillAmount < 0.5f)
         {
             //Debug.Log("15 Daño");
-            attackStats = 15;
+            attackStats = 20;
         }
         
         if (virusSlider.fillAmount >= 0.5f && virusSlider.fillAmount < 0.75f)
