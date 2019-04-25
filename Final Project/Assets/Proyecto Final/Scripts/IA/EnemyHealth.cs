@@ -13,7 +13,8 @@ public class EnemyHealth : MonoBehaviour
 
     private NavMeshAgent agent;
 
-    // Sonido muerte
+    public AudioSource mouthSounds;
+    public AudioClip hitSound;
 
     Animator anim;
     CharacterController controller;
@@ -69,12 +70,14 @@ public class EnemyHealth : MonoBehaviour
             index = Random.Range(0, bloodPart.Length);
             currentBlood = bloodPart[index];
             bloodinsta = Instantiate(currentBlood, SpawnDamage.transform.position, Quaternion.identity);
-        }
-        else if (other.tag == "PlayerWeapon" && playerBehaviour.chargeAttack == true)
-        {
-            anim.SetTrigger("Hit");
-        }
 
+            if(playerBehaviour.chargeAttack == true)
+            {
+                anim.SetTrigger("Hit");
+                mouthSounds.clip = hitSound;
+                mouthSounds.Play();
+            }
+        }
     }
 
     public void Death()

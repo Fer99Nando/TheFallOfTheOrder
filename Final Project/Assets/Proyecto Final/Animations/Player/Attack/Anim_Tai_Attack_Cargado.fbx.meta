@@ -258,6 +258,13 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
+      - time: 0.60368663
+        functionName: AudioAxeSwing
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       - time: 0.6666666
         functionName: DisColliderWeapon
         data: 
@@ -267,13 +274,6 @@ ModelImporter:
         messageOptions: 0
       - time: 0.98708487
         functionName: AtaqueAcabado
-        data: 
-        objectReferenceParameter: {instanceID: 0}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
-      - time: 0
-        functionName: AudioAxeSwing
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0

@@ -45,6 +45,12 @@ public class EnemyPrueba : MonoBehaviour
 
     public Animator anim;           // Para poder poner Animaciones
 
+    [Header("Sonido")]
+
+    public AudioSource mouthSound;
+    public AudioClip sonidoMuerte;
+    public AudioClip soundIdle;
+
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -262,5 +268,17 @@ public class EnemyPrueba : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, chaseRange);
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, attackRange);
+    }
+
+    public void SonidoMutante()
+    {
+        mouthSound.clip = soundIdle;
+        mouthSound.Play();
+    }
+
+    public void SonidoMuerte()
+    {
+        mouthSound.clip = sonidoMuerte;
+        mouthSound.Play();
     }
 }

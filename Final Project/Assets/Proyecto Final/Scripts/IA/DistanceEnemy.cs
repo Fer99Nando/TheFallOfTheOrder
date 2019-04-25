@@ -56,6 +56,11 @@ public class DistanceEnemy : MonoBehaviour
 
     public Animator anim;           // Para poder poner Animaciones
 
+    [Header("Animation")]
+
+    public AudioSource mouthSound;
+    public AudioClip sonidoFlechazo;
+
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -247,5 +252,11 @@ public class DistanceEnemy : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, chaseRange);
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, attackRange);
+    }
+
+    public void FlechazoSound()
+    {
+        mouthSound.clip = sonidoFlechazo;
+        mouthSound.Play();
     }
 }
