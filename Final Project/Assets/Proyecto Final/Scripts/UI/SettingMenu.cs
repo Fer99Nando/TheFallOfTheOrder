@@ -11,8 +11,8 @@ public class SettingMenu : MonoBehaviour
     //public Slider volumeSlider;
     public AudioMixer audioMixer;
     public float vol_1;
-    public float vol_2;
-    public float vol_3;
+    private float vol_2;
+    private float vol_3;
     public Slider master;
     public Slider effects;
     public Slider music;

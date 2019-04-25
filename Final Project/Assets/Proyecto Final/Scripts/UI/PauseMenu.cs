@@ -15,12 +15,12 @@ public class PauseMenu : MonoBehaviour
 
 	public bool resumeButton;
 
-    public Dropdown resolutionsDropsown;
+    //public Dropdown resolutionsDropsown;
 
-    Resolution[] resolutions;
+    //Resolution[] resolutions;
 
     //MUSICA
-    public AudioMixer audioMixer;
+    //public AudioMixer audioMixer;
 
 	// Use this for initialization
 	void Start () 
@@ -32,7 +32,7 @@ public class PauseMenu : MonoBehaviour
 		gameOver.SetActive (false);
 
  
-        resolutions = Screen.resolutions;
+        /*resolutions = Screen.resolutions;
 
         resolutionsDropsown.ClearOptions();
 
@@ -53,7 +53,7 @@ public class PauseMenu : MonoBehaviour
 
         resolutionsDropsown.AddOptions(options);
         resolutionsDropsown.value = currentResolutionIndex;
-        resolutionsDropsown.RefreshShownValue();
+        resolutionsDropsown.RefreshShownValue();*/
     }
 	
 	// Update is called once per frame
@@ -115,7 +115,7 @@ public class PauseMenu : MonoBehaviour
 		Application.Quit ();
 	}
 
-	    public void SetVolume ( float volume)
+	    /*public void SetVolume ( float volume)
     {
         audioMixer.SetFloat("volume", volume);
     }
@@ -134,7 +134,7 @@ public class PauseMenu : MonoBehaviour
     {
         Resolution resolution = resolutions[resolutionIndex];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
-    }
+    }*/
 
     public void ResumeTut()
     {

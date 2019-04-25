@@ -5,6 +5,7 @@ using UnityEngine;
 public class MuerteVacio : MonoBehaviour
 {
     PlayerHealth player;
+    GameObject playerObject;
 
     private void Start()
     {

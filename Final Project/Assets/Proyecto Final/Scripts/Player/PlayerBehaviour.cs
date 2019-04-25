@@ -69,7 +69,7 @@ public class PlayerBehaviour : MonoBehaviour
     [Header("Sonidos")]
 
     public AudioSource footSteps;
-    //public AudioSource
+    public AudioSource axeSwing;
 
     // Use this for initialization
     void Start()
@@ -262,6 +262,11 @@ public class PlayerBehaviour : MonoBehaviour
         }
     }
 
+    public void AudioAxeSwing()
+    {
+        axeSwing.Play();
+    }
+
     public void DodgeAcabado()
     {
         dodgeTrue = false;
@@ -355,12 +360,12 @@ public class PlayerBehaviour : MonoBehaviour
             else if (this.inputH > 0 && this.inputV == 0) // DERECHA
             {
                 transform.rotation = Quaternion.Euler(0, this.lookAt.eulerAngles.y, 0);
-                this.moveDirection.Set(this.inputH * this.forwardSpeed / 1.5f, 0, 0);
+                this.moveDirection.Set(this.inputH * this.forwardSpeed / 1.2f, 0, 0);
             }
 
             else if (this.inputH < 0 && this.inputV == 0) // IZQUIERDA
             {
-                this.moveDirection.Set(this.inputH * this.backSpeed / 1.5f, 0, 0);
+                this.moveDirection.Set(this.inputH * this.backSpeed / 1.2f, 0, 0);
             }
 
             else if (this.inputV > 0 && this.inputH > 0) // AVANZA-DERECHA
@@ -375,12 +380,12 @@ public class PlayerBehaviour : MonoBehaviour
 
             else if (this.inputV < 0 && this.inputH > 0) // RETROCEDE-DERECHA
             {
-                this.moveDirection.Set(this.inputH * this.diagonalBackSpeed, 0, this.inputV * this.diagonalBackSpeed / 1.5f);
+                this.moveDirection.Set(this.inputH * this.diagonalBackSpeed, 0, this.inputV * this.diagonalBackSpeed / 1.2f);
             }
 
             else if (this.inputV < 0 && this.inputH < 0) // RETROCEDE-IZQUIERDA
             {
-                this.moveDirection.Set(this.inputH * this.diagonalBackSpeed, 0, this.inputV * this.diagonalBackSpeed / 1.5f);
+                this.moveDirection.Set(this.inputH * this.diagonalBackSpeed, 0, this.inputV * this.diagonalBackSpeed / 1.2f);
             }
 
             this.moveDirection = transform.TransformDirection(this.moveDirection); // Transformamos la direccion de loca a world space

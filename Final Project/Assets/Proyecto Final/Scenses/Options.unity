@@ -494,17 +494,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 106770270}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4db79a42dd9f1a54189c8bfd989d39e9, type: 3}
+  m_Script: {fileID: 11500000, guid: f055ac5b08cc76344b5fa56d233b4c46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  masterVol: {fileID: 24100000, guid: 124b634313c120648a88135629fc133f, type: 2}
+  audioMixer: {fileID: 24100000, guid: 124b634313c120648a88135629fc133f, type: 2}
   vol_1: 0
   master: {fileID: 1177165961}
   effects: {fileID: 1462887068}
   music: {fileID: 1270106581}
-  lightSl: {fileID: 526225833}
-  selectedRes: {fileID: 106770274}
-  selectedQual: {fileID: 106770274}
+  resolutionsDropsown: {fileID: 1799230424}
 --- !u!95 &106770276
 Animator:
   serializedVersion: 3
@@ -1937,7 +1935,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 364101685}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.7353334
+  m_Size: 0.73533326
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3186,7 +3184,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 739444183}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.9999997
+  m_Size: 0.70659983
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -4063,7 +4061,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.000049591064}
+  m_AnchoredPosition: {x: 0, y: 0.00004196167}
   m_SizeDelta: {x: 0, y: 44.01}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &1375701350
