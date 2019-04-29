@@ -11,11 +11,20 @@ public class MuerteVacio : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
     }
-    public void OnTriggerEnter(Collider other)
+    /*public void OnTriggerEnter(Collider other)
     {
         if(other.tag == ("Player"))
         {
             player.DieAcabado();
         }
-    }
+    }*/
+
+     public void OnCollisionEnter (Collision col)
+ {
+     if (col.gameObject.tag == "Player")
+     {
+         Debug.Log("TOCOESPASIO");
+         player.DieAcabado();
+     }
+ }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 
-public class TutoVida : MonoBehaviour
+public class Tutorial : MonoBehaviour
 {
     public GameObject general;
     public Image general1;
@@ -13,12 +13,14 @@ public class TutoVida : MonoBehaviour
     public float timeCount;
     public bool timeOn;
 
-    private void Awake()
+    // Start is called before the first frame update
+    void Start()
     {
         timeOn = false;
         general.SetActive(false);
     }
 
+    // Update is called once per frame
     void Update()
     {
         if (timeOn)
@@ -43,7 +45,7 @@ public class TutoVida : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Player")
+        if (other.tag == "Player")
         {
             Debug.Log("Toco El Collider");
             general.SetActive(true);
