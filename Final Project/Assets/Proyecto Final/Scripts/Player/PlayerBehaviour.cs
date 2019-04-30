@@ -7,12 +7,15 @@ public class PlayerBehaviour : MonoBehaviour
 {
     private CharacterController controller;
     PlayerWeapon playerWeapon;
+    AreaDamage areaDamage;
 
     public Image cooldownFilled;
 
     public Transform lookAt;
 
     public GameObject armaTrail;
+
+    public LayerMask groundMask;
 
     [Header("Speed & Direction")]
 
@@ -169,6 +172,7 @@ public class PlayerBehaviour : MonoBehaviour
                 canAttack = true;
                 anim.SetTrigger("FirstCombo");
                 playerWeapon.bonusStats += 2;
+
             }
 
             if (comboTwoOn)
@@ -268,6 +272,11 @@ public class PlayerBehaviour : MonoBehaviour
     public void AudioAxeSwing()
     {
         axeSwing.Play();
+    }
+
+    public void WeaponDamage()
+    {
+        playerWeapon.Attack();
     }
 
     public void DodgeAcabado()
@@ -415,7 +424,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     private bool Grounded()
     {
-        return Physics.Raycast(transform.position + this.controller.center, Vector3.down, this.controller.bounds.extents.y + 0.001f);
+        return Physics.Raycast(transform.position + this.controller.center, Vector3.down, this.controller.bounds.extents.y + 0.001f, groundMask, QueryTriggerInteraction.Ignore);
     }
 
     public void ZapatazoR()

@@ -14,13 +14,18 @@ public class ArrowBehaviour : MonoBehaviour
 
     void Start()
     {
-        playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
-
         player = GameObject.FindGameObjectWithTag("Player");
 
-        targetPosition = player.transform.position - transform.position;
-        Quaternion newRotation = Quaternion.LookRotation(targetPosition);
-        transform.rotation = Quaternion.Lerp(transform.rotation, newRotation, 1);
+        if ((object)player != null)
+        {
+            playerHealth = player.GetComponent<PlayerHealth>();
+            
+
+            targetPosition = player.transform.position - transform.position;
+            Quaternion newRotation = Quaternion.LookRotation(targetPosition);
+            transform.rotation = Quaternion.Lerp(transform.rotation, newRotation, 1);
+           
+        }
 
         trail.Play();
     }

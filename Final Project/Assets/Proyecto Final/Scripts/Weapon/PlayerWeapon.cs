@@ -11,6 +11,7 @@ public class PlayerWeapon : MonoBehaviour
     public GameObject gameOver;
 
     PlayerHealth playerHealth;
+    public AreaDamage areaDamage;
 
     public Image virusSlider;
     public Image healthSlider;
@@ -30,6 +31,12 @@ public class PlayerWeapon : MonoBehaviour
         DamageVirus();
     }
 
+    public void Attack()
+    {
+        areaDamage.bonusStats = bonusStats;
+        areaDamage.Box();
+    }
+    /*
     void OnTriggerEnter(Collider other)
 	{
 		if (other.tag == "Enemy")
@@ -48,7 +55,7 @@ public class PlayerWeapon : MonoBehaviour
             boxCol.enabled = false;
         }
     }
-
+    */
     public void DamageVirus()
     {
         Debug.Log("Sube Daño");

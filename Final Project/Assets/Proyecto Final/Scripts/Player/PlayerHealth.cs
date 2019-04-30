@@ -227,9 +227,9 @@ public class PlayerHealth : MonoBehaviour
         desactivarHud.SetActive(false);
         loser.Play();
         gameOver.SetActive(true);
-        Destroy(personajes);
+        //Destroy(personajes);
         Cursor.visible = true;
-
+        this.gameObject.SetActive(false);
         volverDerrota.SetActive(true);
         volverVictoria.SetActive(true);
     }

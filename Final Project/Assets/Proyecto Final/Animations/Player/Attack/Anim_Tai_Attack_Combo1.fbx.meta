@@ -252,7 +252,7 @@ ModelImporter:
       curves: []
       events:
       - time: 0.41221374
-        functionName: ColliderWeapon
+        functionName: WeaponDamage
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
