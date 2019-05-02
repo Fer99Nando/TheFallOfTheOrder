@@ -14348,6 +14348,7 @@ Transform:
   m_LocalPosition: {x: -15.337067, y: 0.9082918, z: 0.109999985}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 826069406}
   - {fileID: 813049299}
   - {fileID: 544254054}
   - {fileID: 937233306}
@@ -33481,7 +33482,7 @@ Transform:
   - {fileID: 408593545}
   - {fileID: 298544935}
   m_Father: {fileID: 208429555}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &404261123
 PrefabInstance:
@@ -39918,8 +39919,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   general: {fileID: 1296769832}
+  vida: {fileID: 0}
   general1: {fileID: 1431428598}
   general2: {fileID: 508251619}
+  tutAntidoto: {fileID: 0}
+  antidoto: {fileID: 0}
+  antidoto1: {fileID: 0}
+  antidoto2: {fileID: 0}
+  tutTotal: {fileID: 0}
+  total: {fileID: 0}
+  total1: {fileID: 0}
+  total2: {fileID: 0}
   timeCount: 0
   timeOn: 0
 --- !u!4 &495257247 stripped
@@ -41102,7 +41112,7 @@ Transform:
   - {fileID: 251799850}
   - {fileID: 903704582}
   m_Father: {fileID: 208429555}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &545024506
 PrefabInstance:
@@ -45744,7 +45754,7 @@ Transform:
   - {fileID: 577281468}
   - {fileID: 355503318}
   m_Father: {fileID: 208429555}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &814650360 stripped
 GameObject:
@@ -45771,8 +45781,74 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   general: {fileID: 2033131662}
+  vida: {fileID: 0}
   general1: {fileID: 1564796897}
   general2: {fileID: 872124820}
+  tutAntidoto: {fileID: 0}
+  antidoto: {fileID: 0}
+  antidoto1: {fileID: 0}
+  antidoto2: {fileID: 0}
+  tutTotal: {fileID: 0}
+  total: {fileID: 0}
+  total1: {fileID: 0}
+  total2: {fileID: 0}
+  timeCount: 0
+  timeOn: 0
+--- !u!1 &826069405
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 826069406}
+  - component: {fileID: 826069407}
+  m_Layer: 0
+  m_Name: TutorialPanel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &826069406
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 826069405}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 208429555}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &826069407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 826069405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a997e853dda6a804e869bd4a1647430d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  general: {fileID: 0}
+  vida: {fileID: 0}
+  general1: {fileID: 0}
+  general2: {fileID: 0}
+  tutAntidoto: {fileID: 0}
+  antidoto: {fileID: 0}
+  antidoto1: {fileID: 0}
+  antidoto2: {fileID: 0}
+  tutTotal: {fileID: 0}
+  total: {fileID: 0}
+  total1: {fileID: 0}
+  total2: {fileID: 0}
   timeCount: 0
   timeOn: 0
 --- !u!1 &827179791 stripped
@@ -48343,7 +48419,7 @@ Transform:
   m_Children:
   - {fileID: 1663156565}
   m_Father: {fileID: 208429555}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &939691450 stripped
 Transform:
@@ -112210,8 +112286,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   general: {fileID: 213040520}
+  vida: {fileID: 0}
   general1: {fileID: 201758331}
   general2: {fileID: 2008713045}
+  tutAntidoto: {fileID: 0}
+  antidoto: {fileID: 0}
+  antidoto1: {fileID: 0}
+  antidoto2: {fileID: 0}
+  tutTotal: {fileID: 0}
+  total: {fileID: 0}
+  total1: {fileID: 0}
+  total2: {fileID: 0}
   timeCount: 0
   timeOn: 0
 --- !u!1 &1898738598 stripped
