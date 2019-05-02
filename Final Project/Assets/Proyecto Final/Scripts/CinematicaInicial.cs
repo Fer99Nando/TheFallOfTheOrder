@@ -9,18 +9,18 @@ public class CinematicaInicial : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        info.SetActive(false);
+        //info.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        timeToDestroy += Time.deltaTime;
+        /*timeToDestroy += Time.deltaTime;
 
         if (timeToDestroy >= 21)
         {
             info.SetActive(true);
             Destroy(gameObject);
-        }
+        }*/
     }
 }

@@ -321,16 +321,6 @@ public class PlayerBehaviour : MonoBehaviour
         comboOn = false;
     }
     #endregion
-
-    public void ColliderWeapon()
-    {
-        playerWeapon.BoxEnabled();
-    }
-
-    public void DisColliderWeapon()
-    {
-        playerWeapon.BoxDisabled();
-    }
     
 
     // Escucha todas las teclas que controlan al jugador

@@ -16,14 +16,11 @@ public class PlayerWeapon : MonoBehaviour
     public Image virusSlider;
     public Image healthSlider;
     public ParticleSystem virusEffect;
-    BoxCollider boxCol;
 
     void Start()
     {
         attackStats = 10;
         playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
-        boxCol = GetComponent<BoxCollider>();
-        boxCol.enabled = false;
     }
     void Update()
     {
@@ -98,16 +95,6 @@ public class PlayerWeapon : MonoBehaviour
 
             playerHealth.MaximusPower();
         } else virusEffect.Stop();
-    }
-
-    public void BoxEnabled()
-    {
-        boxCol.enabled = true;
-    }
-
-    public void BoxDisabled()
-    {
-        boxCol.enabled = false;
     }
 
     public void Death()
