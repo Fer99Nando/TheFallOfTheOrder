@@ -15,10 +15,12 @@ public class PlayerWeapon : MonoBehaviour
 
     public Image virusSlider;
     public Image healthSlider;
-    public ParticleSystem virusEffect;
+    //public ParticleSystem virusEffect;
+    public GameObject virusEffect;
 
     void Start()
     {
+        virusEffect.SetActive(false);
         attackStats = 10;
         playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
     }
@@ -91,10 +93,11 @@ public class PlayerWeapon : MonoBehaviour
         {
             //Debug.Log("50 Daño");
             attackStats = 50;
-            virusEffect.Play();
+            //virusEffect.Play();
+            virusEffect.SetActive(true);
 
             playerHealth.MaximusPower();
-        } else virusEffect.Stop();
+        } else virusEffect.SetActive(false);     //virusEffect.Stop();
     }
 
     public void Death()
