@@ -12,9 +12,8 @@ public class PlayerWeapon : MonoBehaviour
 
     PlayerHealth playerHealth;
     public AreaDamage areaDamage;
+    private float maxVirus;
 
-    public Image virusSlider;
-    public Image healthSlider;
     //public ParticleSystem virusEffect;
     public GameObject virusEffect;
 
@@ -23,11 +22,12 @@ public class PlayerWeapon : MonoBehaviour
         virusEffect.SetActive(false);
         attackStats = 10;
         playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
+        maxVirus = 100;
     }
     void Update()
-    {
-        bonusStats = attackStats;
+    {        
         DamageVirus();
+        bonusStats = attackStats;
     }
 
     public void Attack()
@@ -56,48 +56,24 @@ public class PlayerWeapon : MonoBehaviour
     }
     */
     public void DamageVirus()
-    {
-        Debug.Log("Sube Daño");
-
-        if (virusSlider.fillAmount == 0)
+    {        
+        if (playerHealth.currentV >= maxVirus)
         {
-            //Debug.Log("Base Daño");
-            //attackStats = 5;
-        }
-
-        else if (virusSlider.fillAmount > 0 && virusSlider.fillAmount < 0.25f)
-        {
-            //Debug.Log("10 Daño");
-            attackStats = 15;
-        }
-
-        if (virusSlider.fillAmount >= 0.25f && virusSlider.fillAmount < 0.5f)
-        {
-            //Debug.Log("15 Daño");
-            attackStats = 20;
-        }
-        
-        if (virusSlider.fillAmount >= 0.5f && virusSlider.fillAmount < 0.75f)
-        {
-           // Debug.Log("20 Daño");
-            attackStats = 30;
-        }
-
-        if (virusSlider.fillAmount >= 0.75f && virusSlider.fillAmount < 1f)
-        {
-            //Debug.Log("25 Daño");
-            attackStats = 40;
-        }
-
-        if (virusSlider.fillAmount >= 1)
-        {
-            //Debug.Log("50 Daño");
             attackStats = 50;
             //virusEffect.Play();
             virusEffect.SetActive(true);
+        }
+        else
+        {
+            virusEffect.SetActive(false);     //virusEffect.Stop();
 
-            playerHealth.MaximusPower();
-        } else virusEffect.SetActive(false);     //virusEffect.Stop();
+
+            if (playerHealth.currentV >= maxVirus * 0.75f) attackStats = 40;
+            else if (playerHealth.currentV >= maxVirus / 2) attackStats = 30;
+            else if (playerHealth.currentV >= maxVirus / 4) attackStats = 20;
+            else if (playerHealth.currentV > 0) attackStats = 15;
+            else attackStats = 10;
+        }
     }
 
     public void Death()

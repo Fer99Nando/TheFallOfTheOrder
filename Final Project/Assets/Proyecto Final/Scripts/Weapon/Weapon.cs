@@ -7,6 +7,8 @@ public class Weapon : MonoBehaviour {
 
 	private PlayerHealth playerHealth;
     BossPrueba bossprueba;
+    public int hitDamage = 5;
+    public float virusDamage = 10;
 
 	void Start () 
 	{
@@ -17,9 +19,9 @@ public class Weapon : MonoBehaviour {
 	{
         if (other.tag == "Player")
         {
-            playerHealth.currentHp -= 5;
+            playerHealth.Damage(hitDamage);
 
-            playerHealth.TakeVirus();
+            playerHealth.TakeVirus(virusDamage);
         }
 	}
 }

@@ -16,6 +16,11 @@ public class PlayerHealth : MonoBehaviour
     public GameObject volverDerrota;
     public GameObject volverVictoria;
 
+    [Header("Shader")]
+    public GameObject editorShader;
+    private MaterialPropertyBlock block;
+    private SkinnedMeshRenderer renderer;
+
     [Header("Life")]
 	public float startingHp;
 	public float startingV;
@@ -27,6 +32,7 @@ public class PlayerHealth : MonoBehaviour
 	[Header("Times")] 
 	private float toxicTime;
 	private float timeCount;
+    private float virusTime = 1;
 
     [Header("Bars")]
     public Image healthSlider;
@@ -52,8 +58,15 @@ public class PlayerHealth : MonoBehaviour
 	bool damaged;
 	bool intoxicate = false;
 
+    public Color virusColor;
+    public Color normalColor;
+
 	void Awake()
 	{
+        block = new MaterialPropertyBlock();
+        renderer = editorShader.GetComponent<SkinnedMeshRenderer>();
+        renderer.GetPropertyBlock(block);
+
         volverDerrota.SetActive(false);
         volverVictoria.SetActive(false);
 
@@ -66,24 +79,16 @@ public class PlayerHealth : MonoBehaviour
         //virusSlider.value = startingV;
         virusSlider.fillAmount = 0;
         isDead = false;
+        
+        SetRim(0);
     }
 	
 	// Update is called once per frame
 	void Update () 
-	{
-        TakeDamage();
-
-        if (currentHp > 100)
-        {
-            currentHp = startingHp;
-        }
-        if (currentV > 100)
-        {
-            currentV = maxVirus;
-        }
-        if (currentV < 0)
-        {
-            currentV = startingV;
+	{        
+        if(currentV >= maxVirus)
+        {            
+            DyingByVirus();
         }
 
         if(intoxicate)
@@ -94,52 +99,57 @@ public class PlayerHealth : MonoBehaviour
 		}
     }
 
-	void TakeDamage ()
+	void UpdateLifeUI ()
 	{
+        currentHp = Mathf.Clamp(currentHp, 0, startingHp);
         healthSlider.fillAmount = currentHp / startingHp;
+    }
+    void UpdateVirusUI()
+    {        
+        currentV = Mathf.Clamp(currentV, startingV, maxVirus);
+        if (currentV >= maxVirus) SetRim(0.33f);
+        else SetRim(0);
+
+        virusSlider.fillAmount = currentV / maxVirus;
+    }
+
+    public void TakeVirus (float vDamage)
+	{
+        currentV += vDamage;
+        intoxicate = true;
+
+        UpdateVirusUI();
+	}
+    public void Damage(int hit)
+    {
+        currentHp -= hit;
+
         if (currentHp <= 0 && !isDead)
         {
             Death();
         }
+
+        UpdateLifeUI();
     }
 
-	public void TakeVirus ()
-	{
-        float vDamage;
-        vDamage = 10;
-        currentV += vDamage;
-        intoxicate = true;
-        Debug.Log("Me sube el virusOOOOOOOOOOOOO");
-
-        virusSlider.fillAmount = currentV / 100;
-
-		// Sonido asignado del jugador
-
-		if(currentHp <= 0 && !isDead)
-		{
-			return;
-		}
-	}
-
-	void Virus()
+    void Virus()
 	{
 		if (currentHp > 0)
-		{
-			
+		{			
 			if (timeCount >= 3f)
 			{
 				Debug.Log("Me sube el Virus");
 				currentV += 10;
 
-                virusSlider.fillAmount = currentV / 100;
+                UpdateVirusUI();
 				
 				timeCount = 0;
                 return;
 			}
 			if (toxicTime >= 8)
 			{
-					intoxicate = false;
-					toxicTime = 0;
+				intoxicate = false;
+				toxicTime = 0;
 			}
 		}
 	}
@@ -147,36 +157,34 @@ public class PlayerHealth : MonoBehaviour
     #region POTIONS
     public void PotionHelath ()
     {
-        currentHp += 20;
+        currentHp += 20;        
+        UpdateLifeUI();
     }
 
     public void PotionAntidoto ()
     {
         currentV -= 20;
-        virusSlider.fillAmount = currentV / 100;
+        UpdateVirusUI();
     }
 
     public void PotionAllInOne ()
     {
         currentHp += 20;
         currentV -= 20;
-        virusSlider.fillAmount = currentV / 100;
+
+        UpdateLifeUI();
+        UpdateVirusUI();
     }
     #endregion
 
-    public void MaximusPower()
+    public void DyingByVirus()
     {
         if (currentHp > 0)
         {
-            Debug.Log("OJO QUE ME QUEDO SIN VIDA");
-            currentHp -= Time.deltaTime;
-
-            healthSlider.fillAmount = currentHp / startingHp;
+            currentHp -= Time.deltaTime * virusTime;
+            UpdateLifeUI();
         }
-        else
-        {
-            Death();
-        }
+        else  Death();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -216,6 +224,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void Death()
     {
+        Debug.Log("Death");
         armaTrail.SetActive(false);
         isDead = true;
         anim.SetBool("Died", true);
@@ -233,4 +242,15 @@ public class PlayerHealth : MonoBehaviour
         volverDerrota.SetActive(true);
         volverVictoria.SetActive(true);
     }
+
+    void SetRim(float value)
+    {
+        if (value >= maxVirus) block.SetColor("_OutlineColor", virusColor);
+        else block.SetColor("_OutlineColor", normalColor);
+
+        block.SetFloat("_RimIntensity", value);
+        renderer.SetPropertyBlock(block);
+    }
+
+
 }

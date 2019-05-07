@@ -112,11 +112,15 @@ public class PlayerBehaviour : MonoBehaviour
         this.diagonalBackSpeed = (float)Mathf.Sqrt(this.backSpeed * backSpeed / 2);
 
         this.moveDirection = Vector3.zero;
+
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
     void Update()
-    { 
+    {
+       // if (paused) return;
+
         if (Input.GetKeyDown(KeyCode.F10))
         {
             if(godMode){
@@ -267,6 +271,9 @@ public class PlayerBehaviour : MonoBehaviour
                 cooldown = false;
             }
         }
+
+        if (Time.timeScale != 0 && Input.GetMouseButtonDown(0)) Cursor.lockState = CursorLockMode.Locked;
+        else if (Input.GetButtonDown("Cancel")) Cursor.lockState = CursorLockMode.None;
     }
 
     public void AudioAxeSwing()

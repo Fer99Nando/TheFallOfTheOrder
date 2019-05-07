@@ -94570,6 +94570,12 @@ RectTransform:
   m_AnchoredPosition: {x: -461.9, y: -276.7}
   m_SizeDelta: {x: 319.2, y: 166.6}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1714919892 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1510992902254930902, guid: 9264cb0dd0994904f950ddcc03a22aa9,
+    type: 3}
+  m_PrefabInstance: {fileID: 8702489192078273642}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1716605556
 GameObject:
   m_ObjectHideFlags: 0
@@ -140898,6 +140904,51 @@ PrefabInstance:
       propertyPath: volverVictoria
       value: 
       objectReference: {fileID: 1491715409}
+    - target: {fileID: 8702489190573897537, guid: 9264cb0dd0994904f950ddcc03a22aa9,
+        type: 3}
+      propertyPath: rimInt
+      value: 
+      objectReference: {fileID: 2100000, guid: 9c49badd33cae144ea2b167f7af0cd14, type: 2}
+    - target: {fileID: 8702489190573897537, guid: 9264cb0dd0994904f950ddcc03a22aa9,
+        type: 3}
+      propertyPath: editorShader
+      value: 
+      objectReference: {fileID: 1714919892}
+    - target: {fileID: 8702489190573897537, guid: 9264cb0dd0994904f950ddcc03a22aa9,
+        type: 3}
+      propertyPath: virusColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8702489190573897537, guid: 9264cb0dd0994904f950ddcc03a22aa9,
+        type: 3}
+      propertyPath: virusColor.b
+      value: 0.2115438
+      objectReference: {fileID: 0}
+    - target: {fileID: 8702489190573897537, guid: 9264cb0dd0994904f950ddcc03a22aa9,
+        type: 3}
+      propertyPath: virusColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8702489190573897537, guid: 9264cb0dd0994904f950ddcc03a22aa9,
+        type: 3}
+      propertyPath: normalColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8702489190573897537, guid: 9264cb0dd0994904f950ddcc03a22aa9,
+        type: 3}
+      propertyPath: normalColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8702489190573897537, guid: 9264cb0dd0994904f950ddcc03a22aa9,
+        type: 3}
+      propertyPath: normalColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8702489190573897537, guid: 9264cb0dd0994904f950ddcc03a22aa9,
+        type: 3}
+      propertyPath: normalColor.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8702489190573897541, guid: 9264cb0dd0994904f950ddcc03a22aa9,
         type: 3}
       propertyPath: slotPot.Array.data[0]
