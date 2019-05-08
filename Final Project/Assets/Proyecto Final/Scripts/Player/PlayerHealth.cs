@@ -73,10 +73,11 @@ public class PlayerHealth : MonoBehaviour
         playerBehaviour = GetComponent<PlayerBehaviour>();
         anim = GetComponent<Animator>();
 		playerControl = GetComponent<PlayerBehaviour>();
+
 		currentHp = startingHp;
         healthSlider.fillAmount = currentHp/startingHp;
+
 		currentV = startingV;
-        //virusSlider.value = startingV;
         virusSlider.fillAmount = 0;
         isDead = false;
         
@@ -107,7 +108,10 @@ public class PlayerHealth : MonoBehaviour
     void UpdateVirusUI()
     {        
         currentV = Mathf.Clamp(currentV, startingV, maxVirus);
-        if (currentV >= maxVirus) SetRim(0.33f);
+
+        if (currentV >= maxVirus) SetRim(0.8f);
+        else if(currentV >= maxVirus/2 && currentV < maxVirus) SetRim(0.5f);
+        else if(currentV >= maxVirus/3 && currentV < maxVirus/2) SetRim(0.3f);
         else SetRim(0);
 
         virusSlider.fillAmount = currentV / maxVirus;
@@ -238,6 +242,7 @@ public class PlayerHealth : MonoBehaviour
         gameOver.SetActive(true);
         //Destroy(personajes);
         Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
         this.gameObject.SetActive(false);
         volverDerrota.SetActive(true);
         volverVictoria.SetActive(true);
@@ -245,7 +250,7 @@ public class PlayerHealth : MonoBehaviour
 
     void SetRim(float value)
     {
-        if (value >= maxVirus) block.SetColor("_OutlineColor", virusColor);
+        if (value >= 0.8f) block.SetColor("_OutlineColor", virusColor);
         else block.SetColor("_OutlineColor", normalColor);
 
         block.SetFloat("_RimIntensity", value);

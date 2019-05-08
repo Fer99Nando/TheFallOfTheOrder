@@ -65,26 +65,26 @@ public class EnemyPrueba : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        switch (state)
-        {
-            case EnemyState.Idle:
-                IdleUpdate();
-                break;
-            case EnemyState.Patrol:
-                PatrolUpdate();
-                break;
-            case EnemyState.Chase:
-                ChaseUpdate();
-                break;
-            case EnemyState.Attack:
-                ActionUpdate();
-                break;
-            default:
-                break;
-        }
-
         if (enemyDeath.isDead == false)
         {
+                switch (state)
+            {
+                case EnemyState.Idle:
+                    IdleUpdate();
+                    break;
+                case EnemyState.Patrol:
+                    PatrolUpdate();
+                    break;
+                case EnemyState.Chase:
+                    ChaseUpdate();
+                    break;
+                case EnemyState.Attack:
+                    ActionUpdate();
+                    break;
+                default:
+                    break;
+            }
+            
             targetPosition = player.transform.position - transform.position;
             targetPosition.y = 0;
             Quaternion newRotation = Quaternion.LookRotation(targetPosition);

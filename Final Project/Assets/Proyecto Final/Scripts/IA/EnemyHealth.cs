@@ -52,6 +52,7 @@ public class EnemyHealth : MonoBehaviour
 
         if (currentHp <= 0 && !isDead)
         {
+            isDead = true;
             agent.isStopped = true;
             controller.enabled = false;
             anim.SetBool("Death", true);
@@ -82,7 +83,6 @@ public class EnemyHealth : MonoBehaviour
 
     public void Death()
     {
-        isDead = true;
         Destroy(gameObject);
     }
 }

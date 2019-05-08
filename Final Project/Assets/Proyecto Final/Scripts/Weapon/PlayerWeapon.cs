@@ -14,12 +14,8 @@ public class PlayerWeapon : MonoBehaviour
     public AreaDamage areaDamage;
     private float maxVirus;
 
-    //public ParticleSystem virusEffect;
-    public GameObject virusEffect;
-
     void Start()
     {
-        virusEffect.SetActive(false);
         attackStats = 10;
         playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
         maxVirus = 100;
@@ -60,14 +56,9 @@ public class PlayerWeapon : MonoBehaviour
         if (playerHealth.currentV >= maxVirus)
         {
             attackStats = 50;
-            //virusEffect.Play();
-            virusEffect.SetActive(true);
         }
         else
         {
-            virusEffect.SetActive(false);     //virusEffect.Stop();
-
-
             if (playerHealth.currentV >= maxVirus * 0.75f) attackStats = 40;
             else if (playerHealth.currentV >= maxVirus / 2) attackStats = 30;
             else if (playerHealth.currentV >= maxVirus / 4) attackStats = 20;

@@ -7,8 +7,6 @@ using UnityEngine.UI;
 
 public class SettingMenu : MonoBehaviour
 {
-    //public AudioMixer fxMusic;
-    //public Slider volumeSlider;
     public AudioMixer audioMixer;
     public float vol_1;
     private float vol_2;
@@ -17,18 +15,12 @@ public class SettingMenu : MonoBehaviour
     public Slider effects;
     public Slider music;
 
-   // public Slider volume;
-   // public Slider fxVolume;
-
     public Dropdown resolutionsDropsown;
 
     Resolution[] resolutions;
 
     void Start ()
     {
-        // fxVolume.value = PlayerPrefs.GetFloat("MusicVolume");
-        // volume.value = PlayerPrefs.GetFloat("FxVolume");
-
         vol_1 = PlayerPrefs.GetFloat("Master_Vol");
         master.value = vol_1;
         Debug.Log(master.value);
