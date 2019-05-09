@@ -4,13 +4,24 @@ ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
+    100002: pPlane10
+    100004: SalaBossLow1
     400000: //RootNode
+    400002: pPlane10
+    400004: SalaBossLow1
     2100000: lambert1
     2100002: lambert4
+    2100004: lambert7
     2300000: //RootNode
+    2300002: pPlane10
+    2300004: SalaBossLow1
     3300000: //RootNode
+    3300002: pPlane10
+    3300004: SalaBossLow1
     4300000: SalaBoss
     4300002: SalaBossLow
+    4300004: pPlane10
+    4300006: SalaBossLow1
   externalObjects: {}
   materials:
     importMaterials: 1
