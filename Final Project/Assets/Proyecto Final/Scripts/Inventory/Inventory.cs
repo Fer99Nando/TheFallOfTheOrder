@@ -5,8 +5,14 @@ using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
+    PlayerBehaviour playerBehaviour;
     PlayerHealth playerHealth;
-    Animator anim;
+
+    public bool potionOn;
+
+    public GameObject potionLife;
+    public GameObject potionAntidoto;
+    public GameObject potionMix;
 
     //public Image[] inventory;
     public Sprite[] spriteItems;
@@ -19,8 +25,15 @@ public class Inventory : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        anim = GetComponent<Animator>();
+        potionLife.SetActive(false);
+        potionAntidoto.SetActive(false);
+        potionMix.SetActive(false);
+
+        potionOn = false;
+
         playerHealth = GetComponent<PlayerHealth>();
+        playerBehaviour = GetComponent<PlayerBehaviour>();
+
         inventoryAmount = 0;
         slotPot[0].SetActive(false);
         slotPot[1].SetActive(false);
@@ -30,15 +43,15 @@ public class Inventory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Alpha1))
+        if(Input.GetKeyDown(KeyCode.Alpha1) && !potionOn)
         {
             UsePotion(0);
         }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
+        if (Input.GetKeyDown(KeyCode.Alpha2) && !potionOn)
         {
             UsePotion(1);
         }
-        if (Input.GetKeyDown(KeyCode.Alpha3))
+        if (Input.GetKeyDown(KeyCode.Alpha3) && !potionOn)
         {
             UsePotion(2);
         }
@@ -52,18 +65,33 @@ public class Inventory : MonoBehaviour
 
             if (slotType[slot] == 0)
             {
-                    Debug.Log("health");
-                    playerHealth.PotionHelath();
+                Debug.Log("health");
+                playerHealth.PotionHelath();
+
+                potionOn = true;
+
+                playerBehaviour.DrinkPotion();
+                potionLife.SetActive(true);
             }
             if (slotType[slot] == 1)
             {
-                    Debug.Log("antidoto");
-                    playerHealth.PotionAntidoto();
+                Debug.Log("antidoto");
+                playerHealth.PotionAntidoto();
+
+                potionOn = true;
+
+                playerBehaviour.DrinkPotion();
+                potionAntidoto.SetActive(true);
             }
             if (slotType[slot] == 2)
             {
-                    Debug.Log("toditoenuno");
-                    playerHealth.PotionAllInOne();
+                Debug.Log("toditoenuno");
+                playerHealth.PotionAllInOne();
+
+                potionOn = true;
+
+                playerBehaviour.DrinkPotion();
+                potionMix.SetActive(true);
             }
 
             slotPot[slot].SetActive(false);

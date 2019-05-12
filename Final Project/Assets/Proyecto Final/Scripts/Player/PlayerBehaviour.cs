@@ -8,6 +8,7 @@ public class PlayerBehaviour : MonoBehaviour
     private CharacterController controller;
     PlayerWeapon playerWeapon;
     AreaDamage areaDamage;
+    Inventory inventory;
 
     public Image cooldownFilled;
 
@@ -43,6 +44,8 @@ public class PlayerBehaviour : MonoBehaviour
     private float cooldownTime;
     private float cooldownChargeTime;
 
+    private float potionTime;
+
     [Header("Bools")]
 
     public bool dodgeTime;
@@ -66,6 +69,8 @@ public class PlayerBehaviour : MonoBehaviour
     [Header("Animator")]
 
     public Animator anim;
+
+    public AnimationClip potionAnim;
 
     PlayerHealth playerHealth;
 
@@ -99,6 +104,7 @@ public class PlayerBehaviour : MonoBehaviour
 
         cooldownFilled.fillAmount = 0;
 
+        inventory = GetComponent<Inventory>();
         anim = GetComponent<Animator>();
         this.controller = GetComponent<CharacterController>();
         playerHealth = GetComponent<PlayerHealth>();
@@ -143,7 +149,24 @@ public class PlayerBehaviour : MonoBehaviour
             GodMode();
         }
 
-        if (Input.GetButtonDown("Charge_Attack"))
+        if (inventory.potionOn)
+        {
+            canMove = false;
+            potionTime += Time.deltaTime;
+
+            if (potionTime >= potionAnim.length)
+            {
+                inventory.potionAntidoto.SetActive(false);
+                inventory.potionLife.SetActive(false);
+                inventory.potionMix.SetActive(false);
+
+                inventory.potionOn = false;
+                potionTime = 0;
+                canMove = true;
+            }
+        }
+
+        if (Input.GetButtonDown("Charge_Attack") && !inventory.potionOn)
         {
             if (attackOn == false && cooldown == false)
             {
@@ -159,7 +182,7 @@ public class PlayerBehaviour : MonoBehaviour
             }
         }
 
-        if (Input.GetButtonDown("Attack_Melee"))
+        if (Input.GetButtonDown("Attack_Melee") && !inventory.potionOn)
         {
             if (attackOn == false && cooldown == false)
             {
@@ -203,7 +226,7 @@ public class PlayerBehaviour : MonoBehaviour
             anim.SetBool("Walk", false);
         }
 
-        if (Input.GetButtonDown("Dodge"))
+        if (Input.GetButtonDown("Dodge") && !inventory.potionOn)
         {
             if (dodgeTrue == false  && isWalking)
             {
@@ -293,6 +316,11 @@ public class PlayerBehaviour : MonoBehaviour
         controller.height = 0.13f;
         controller.center = new Vector3(0, 0.007f, 0.008f);
         dodgeTime = false;
+    }
+
+    public void DrinkPotion()
+    {
+        anim.SetTrigger("Potion");
     }
 
     #region Attack Combo
