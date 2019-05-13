@@ -30,6 +30,6 @@ public class TutoPots : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         panelInfo.SetActive(false);
-        Destroy(gameObject);
+        Destroy(this.gameObject);
     }
 }
