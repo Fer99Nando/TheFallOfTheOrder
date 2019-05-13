@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.Video;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class PlayerHealth : MonoBehaviour 
 {
@@ -208,6 +209,8 @@ public class PlayerHealth : MonoBehaviour
 
     public void HitAcabado()
     {
+        playerBehaviour.DodgeAcabado();
+
         playerBehaviour.canMove = true;
 
         playerBehaviour.comboOn = false;

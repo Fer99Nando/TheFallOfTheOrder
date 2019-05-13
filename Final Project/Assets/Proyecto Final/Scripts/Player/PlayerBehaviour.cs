@@ -39,7 +39,6 @@ public class PlayerBehaviour : MonoBehaviour
     private float attackTime;
 
     private float esquiveTime;
-    private float esquiveSuma;
 
     private float cooldownTime;
     private float cooldownChargeTime;
@@ -129,7 +128,8 @@ public class PlayerBehaviour : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.F10))
         {
-            if(godMode){
+            if(godMode)
+            {
                 this.controller.enabled = true;
                 godMode = false;
             }else if(!godMode){
@@ -140,7 +140,8 @@ public class PlayerBehaviour : MonoBehaviour
 
         if (dodgeTrue)
         {
-            this.moveDirection.Set(0, 0, this.inputDodge * this.forwardSpeed);
+            //Move();
+            this.moveDirection.Set(this.inputH * this.forwardSpeed, 0, this.inputV * this.forwardSpeed);
             this.moveDirection = transform.TransformDirection(this.moveDirection);
         }
 
@@ -234,13 +235,13 @@ public class PlayerBehaviour : MonoBehaviour
                 anim.SetTrigger("Dodge 0");
                 controller.center = new Vector3(0, -0.032f, 0.008f);
                 controller.height = 0.013f;
-                dodgeTime = true;
+                //dodgeTime = true;
             } 
         }
 
         if (dodgeTime)
         {
-            forwardSpeed = 6f;
+            forwardSpeed = 4f;
         }
         else
         {
@@ -312,7 +313,6 @@ public class PlayerBehaviour : MonoBehaviour
     public void DodgeAcabado()
     {
         dodgeTrue = false;
-        esquiveSuma = 0;
         controller.height = 0.13f;
         controller.center = new Vector3(0, 0.007f, 0.008f);
         dodgeTime = false;
@@ -363,7 +363,7 @@ public class PlayerBehaviour : MonoBehaviour
     {        
         this.inputV = Input.GetAxis("Vertical");
         this.inputH = Input.GetAxis("Horizontal");
-        this.inputDodge = Input.GetAxis("Dodge");
+        //this.inputDodge = Input.GetAxis("Dodge");
 
         if (this.inputV != 0 || this.inputH != 0)
         {
@@ -396,8 +396,8 @@ public class PlayerBehaviour : MonoBehaviour
 
             else if (this.inputH > 0 && this.inputV == 0) // DERECHA
             {
-                transform.rotation = Quaternion.Euler(0, this.lookAt.eulerAngles.y, 0);
-                this.moveDirection.Set(this.inputH * this.forwardSpeed / 1.2f, 0, 0);
+                //transform.rotation = Quaternion.Euler(0, this.lookAt.eulerAngles.y, 0);
+                this.moveDirection.Set(this.inputH * this.backSpeed / 1.2f, 0, 0);
             }
 
             else if (this.inputH < 0 && this.inputV == 0) // IZQUIERDA
