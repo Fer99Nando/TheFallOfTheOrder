@@ -60,12 +60,12 @@ public class BossHealth : MonoBehaviour
             default:
                 break;
         }
-
-        TakeDamage();
     }
 
-    public void TakeDamage()
+    public void TakeDamage(int amount)
     {
+        currentHp -= amount;
+
         healthSlider.fillAmount = currentHp / startingHp;
     }
 

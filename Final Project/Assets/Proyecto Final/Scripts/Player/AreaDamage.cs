@@ -23,6 +23,12 @@ public class AreaDamage : MonoBehaviour
                     EnemyHealth enemy = cols[i].GetComponent<EnemyHealth>();
                     enemy.TakeDamage(bonusStats);
                 }
+
+                if (cols[i].gameObject.tag == "Boss")
+                {
+                    BossHealth boss = cols[i].GetComponent<BossHealth>();
+                    boss.TakeDamage(bonusStats);
+                }
                 Debug.Log(cols[i].name);
             }
         }

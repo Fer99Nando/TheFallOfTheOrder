@@ -16,8 +16,7 @@ public class CollisionHachas : MonoBehaviour
         if (other.tag == "Player")
         {
             Debug.Log("AAuuuuuux");
-            playerHealth.currentHp -= 20;
+            playerHealth.Damage(20);
         }
-
     }
 }

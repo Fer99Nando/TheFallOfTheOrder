@@ -23,7 +23,7 @@ public class WeaponBoss : MonoBehaviour {
 	{
         if (other.tag == "Player")
         {
-            playerHealth.currentHp -= bossprueba.bonusEnemyStats;
+            playerHealth.Damage(bossprueba.bonusEnemyStats);
             boxCol.enabled = false;
         }
 	}
