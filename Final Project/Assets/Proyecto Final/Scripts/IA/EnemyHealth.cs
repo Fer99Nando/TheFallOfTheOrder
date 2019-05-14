@@ -57,28 +57,23 @@ public class EnemyHealth : MonoBehaviour
             controller.enabled = false;
             anim.SetBool("Death", true);
         }
+
+        Debug.Log("DAÑO AL ZOMBIE");
+        index = Random.Range(0, bloodPart.Length);
+        currentBlood = bloodPart[index];
+        bloodinsta = Instantiate(currentBlood, SpawnDamage.transform.position, Quaternion.identity);
+
+        if (playerBehaviour.chargeAttack == true)
+        {
+            anim.SetTrigger("Hit");
+            mouthSounds.clip = hitSound;
+            mouthSounds.Play();
+        }
     }
 
     public void SeAcaboElHit()
     {
         anim.ResetTrigger("Hit");
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "PlayerWeapon")
-        {
-            index = Random.Range(0, bloodPart.Length);
-            currentBlood = bloodPart[index];
-            bloodinsta = Instantiate(currentBlood, SpawnDamage.transform.position, Quaternion.identity);
-
-            if(playerBehaviour.chargeAttack == true)
-            {
-                anim.SetTrigger("Hit");
-                mouthSounds.clip = hitSound;
-                mouthSounds.Play();
-            }
-        }
     }
 
     public void Death()
