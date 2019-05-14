@@ -45,6 +45,7 @@ public class PlayerHealth : MonoBehaviour
     public GameObject desactivarHud;
     public GameObject personajes;
     public GameObject armaTrail;
+    public Image bloodHood;
 
     // Sonido muerte
 
@@ -128,6 +129,8 @@ public class PlayerHealth : MonoBehaviour
     public void Damage(int hit)
     {
         currentHp -= hit;
+        bloodHood.DOFade(1, 0.3f).OnComplete(TerminadoFeedback);
+        //bloodHood.SetActive(true);
 
         if (currentHp <= 0 && !isDead)
         {
@@ -135,6 +138,11 @@ public class PlayerHealth : MonoBehaviour
         }
 
         UpdateLifeUI();
+    }
+
+    public void TerminadoFeedback()
+    {
+        bloodHood.DOFade(0, 0.3f);
     }
 
     void Virus()

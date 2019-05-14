@@ -15,6 +15,7 @@ public class PlayerBehaviour : MonoBehaviour
     public Transform lookAt;
 
     public GameObject armaTrail;
+    public GameObject potion;
 
     public LayerMask groundMask;
 
@@ -71,8 +72,6 @@ public class PlayerBehaviour : MonoBehaviour
 
     public AnimationClip potionAnim;
 
-    PlayerHealth playerHealth;
-
     [Header("Sonidos")]
 
     public AudioSource footSteps;
@@ -96,9 +95,7 @@ public class PlayerBehaviour : MonoBehaviour
         cooldownTime = 0;
         godMode = false;
 
-        //attackTime = attackAnim.length;
-        //attackTime *= 0.9f;
-
+        potion.SetActive(false);
         armaTrail.SetActive(false);
 
         cooldownFilled.fillAmount = 0;
@@ -106,7 +103,6 @@ public class PlayerBehaviour : MonoBehaviour
         inventory = GetComponent<Inventory>();
         anim = GetComponent<Animator>();
         this.controller = GetComponent<CharacterController>();
-        playerHealth = GetComponent<PlayerHealth>();
         playerWeapon = GameObject.FindGameObjectWithTag("PlayerWeapon").GetComponent<PlayerWeapon>();
 
         canMove = true;
@@ -299,7 +295,7 @@ public class PlayerBehaviour : MonoBehaviour
         if (Time.timeScale != 0 && Input.GetMouseButtonDown(0)) Cursor.lockState = CursorLockMode.Locked;
         else if (Input.GetButtonDown("Cancel")) Cursor.lockState = CursorLockMode.None;
     }
-
+    
     public void AudioAxeSwing()
     {
         axeSwing.Play();
@@ -321,6 +317,16 @@ public class PlayerBehaviour : MonoBehaviour
     public void DrinkPotion()
     {
         anim.SetTrigger("Potion");
+    }
+
+    public void PotionAppear()
+    {
+        potion.SetActive(true);
+    }
+
+    public void PotionDisappear()
+    {
+        potion.SetActive(false);
     }
 
     #region Attack Combo
