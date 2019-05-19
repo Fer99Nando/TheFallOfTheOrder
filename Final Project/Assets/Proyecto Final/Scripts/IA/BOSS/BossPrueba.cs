@@ -127,7 +127,6 @@ public class BossPrueba : MonoBehaviour
             }
             break;
             case BossPhase.PhaseTwo:
-                //transform.GetComponentInChildren<SkinnedMeshRenderer>().material = mat1;
                 switch (stateTwo)
                 {
                     case BossPhaseTwo.Transformation:
@@ -137,12 +136,9 @@ public class BossPrueba : MonoBehaviour
                         TimeToTransform = true;
                         agent.isStopped = true;
                         bossPart.IsVisible = true;
-                        //bossTransformation.Play();
-                        //bossTransformation.SetActive(true);
+
                         break;
                     case BossPhaseTwo.ChaseTwo:
-                        //bossTransformation.SetActive(false);
-                        //bossTransformation.Stop();
                         ChaseUpdateTwo();
                         break;
                     case BossPhaseTwo.AttackTwo:
@@ -261,7 +257,7 @@ public class BossPrueba : MonoBehaviour
     {
         if (distanceFromTarget < attackRange && enemyDeath.isDead == false)
         {
-            if(coolDownJump == false && coolDown == false && RandomAttack < 0.7f)
+            if(coolDownJump == false && coolDown == false && RandomAttack < 0.4f)
             {
                 ArmaTrail.SetActive(true);
                 Debug.Log("ATTACK");
@@ -272,8 +268,15 @@ public class BossPrueba : MonoBehaviour
             if(coolDownJump == false && coolDown == false && RandomAttack > 0.7f)
             {
                 ArmaTrail.SetActive(true);
-                Debug.Log("ATTACK");
+                Debug.Log("QUE SALTA");
                 anim.SetTrigger("Action2");
+            }
+
+            if (coolDownJump == false && coolDown == false && RandomAttack > 0.4f && RandomAttack < 0.7f)
+            {
+                ArmaTrail.SetActive(true);
+                Debug.Log("OJO EL AREA");
+                anim.SetTrigger("Action1");
             }
             return;
         }

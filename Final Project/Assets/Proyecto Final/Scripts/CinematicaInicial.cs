@@ -22,5 +22,7 @@ public class CinematicaInicial : MonoBehaviour
             info.SetActive(true);
             Destroy(gameObject);
         }*/
+
+        
     }
 }
