@@ -265,17 +265,17 @@ public class BossPrueba : MonoBehaviour
                 agent.isStopped = true;
             }
 
-            if(coolDownJump == false && coolDown == false && RandomAttack > 0.7f)
+            if(coolDownJump == false && coolDown == false && RandomAttack > 0.4f && RandomAttack < 0.7f)
             {
                 ArmaTrail.SetActive(true);
                 Debug.Log("QUE SALTA");
                 anim.SetTrigger("Action2");
             }
 
-            if (coolDownJump == false && coolDown == false && RandomAttack > 0.4f && RandomAttack < 0.7f)
+            if (coolDownJump == false && coolDown == false && RandomAttack > 0.7f)
             {
                 ArmaTrail.SetActive(true);
-                Debug.Log("OJO EL AREA");
+                Debug.Log("OJO EL pinchazo");
                 anim.SetTrigger("Action1");
             }
             return;
@@ -416,17 +416,31 @@ public class BossPrueba : MonoBehaviour
     {
         if (distanceFromTarget < attackRange && enemyDeath.isDead == false && TimeToTransform == false)
         {
-            if (coolDownJump == false && coolDown == false && RandomAttack < 0.5f)
+            if (coolDownJump == false && coolDown == false && RandomAttack < 0.3f)
             {
                 Debug.Log("ATTACK");
                 anim.SetTrigger("Action");
                 agent.isStopped = true;
             }
 
-            if (coolDownJump == false && coolDown == false && RandomAttack > 0.5f)
+            if (coolDownJump == false && coolDown == false && RandomAttack > 0.8f)
             {
                 Debug.Log("ATTACK");
                 anim.SetTrigger("Action2");
+            }
+
+            if (coolDownJump == false && coolDown == false && RandomAttack > 0.3f && RandomAttack < 0.5f)
+            {
+                ArmaTrail.SetActive(true);
+                Debug.Log("OJO AREA");
+                anim.SetTrigger("Action1");
+            }
+
+            if (coolDownJump == false && coolDown == false && RandomAttack > 0.5f && RandomAttack < 0.8f)
+            {
+                ArmaTrail.SetActive(true);
+                Debug.Log("PINCHAZO");
+                anim.SetTrigger("Action3");
             }
             return;
         }
@@ -469,15 +483,6 @@ public class BossPrueba : MonoBehaviour
         return Vector3.Distance(player.transform.position, transform.position);
     }
 
-    /*private void OnTriggerEnter(Collider col)
-    {
-        //col = colliderJumpAttack;
-        if(col.CompareTag("Player"))
-        {
-            playerHealth.currentHp -= 50;
-            colliderJumpAttack.SetActive(false);
-        }
-    }*/
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
