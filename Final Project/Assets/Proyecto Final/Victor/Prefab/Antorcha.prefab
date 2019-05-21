@@ -1320,6 +1320,10 @@ PrefabInstance:
       propertyPath: m_Range
       value: 4.84
       objectReference: {fileID: 0}
+    - target: {fileID: 10800000, guid: ce30cb90fb0ab7a42939f731c977f0c6, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce30cb90fb0ab7a42939f731c977f0c6, type: 3}
 --- !u!4 &1901896432410231713 stripped
