@@ -298,6 +298,8 @@ public class PlayerBehaviour : MonoBehaviour
     
     public void AudioAxeSwing()
     {
+        axeSwing.pitch = Random.Range(0.95f, 1.05f);
+        // axeSwing.volume = Random.Range(0.95f, 1.05f);
         axeSwing.Play();
     }
 
@@ -460,12 +462,18 @@ public class PlayerBehaviour : MonoBehaviour
 
     public void ZapatazoR()
     {
+        footSteps.pitch = Random.Range(0.95f, 1.05f);
+        footSteps.volume = Random.Range(0.95f, 1.05f);
+
         footSteps.clip = footStepR;
         footSteps.Play();
     }
 
     public void ZapatazoL()
     {
+        footSteps.pitch = Random.Range(0.95f, 1.05f);
+        footSteps.volume = Random.Range(0.45f, 0.55f);
+
         footSteps.clip = footStepL;
         footSteps.Play();
     }
