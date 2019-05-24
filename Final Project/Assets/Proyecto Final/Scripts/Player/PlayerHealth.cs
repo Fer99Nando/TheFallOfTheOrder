@@ -170,20 +170,20 @@ public class PlayerHealth : MonoBehaviour
     #region POTIONS
     public void PotionHelath ()
     {
-        currentHp += 20;        
+        currentHp += 40;        
         UpdateLifeUI();
     }
 
     public void PotionAntidoto ()
     {
-        currentV -= 20;
+        currentV -= 50;
         UpdateVirusUI();
     }
 
     public void PotionAllInOne ()
     {
-        currentHp += 20;
-        currentV -= 20;
+        currentHp += 80;
+        currentV -= 100;
 
         UpdateLifeUI();
         UpdateVirusUI();

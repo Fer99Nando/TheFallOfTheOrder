@@ -76,6 +76,8 @@ public class BossHealth : MonoBehaviour
             //controller.enabled = false;
 
             currentHp = startingHp;
+            healthSlider.fillAmount = currentHp / startingHp;
+
             bossBehaviour.ChangePhase();
 
             segundaFase = false;

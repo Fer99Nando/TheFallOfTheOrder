@@ -165,7 +165,7 @@ public class BossPrueba : MonoBehaviour
                 
             timeCounter += Time.deltaTime; // Esto es si quiero que tenga un time para quese  enfrie y poderle atacar
 
-            if(timeCounter > 3 || distanceFromTarget >= 15)
+            if(timeCounter > 2 || distanceFromTarget >= 15)
             {
                 //anim.ResetTrigger("Action");
                 timeCounter = 0;
@@ -189,7 +189,7 @@ public class BossPrueba : MonoBehaviour
 
             timeCounter += Time.deltaTime; // Esto es si quiero que tenga un time para quese enfrie y poderle atacar
 
-            if(timeCounter > 5 || distanceFromTarget >= 15)
+            if(timeCounter > 3 || distanceFromTarget >= 15)
             {
                 timeCounter = 0;
                 coolDownJump = false;
@@ -277,6 +277,7 @@ public class BossPrueba : MonoBehaviour
                 ArmaTrail.SetActive(true);
                 Debug.Log("OJO EL pinchazo");
                 anim.SetTrigger("Action1");
+                agent.isStopped = true;
             }
             return;
         }
@@ -434,6 +435,7 @@ public class BossPrueba : MonoBehaviour
                 ArmaTrail.SetActive(true);
                 Debug.Log("OJO AREA");
                 anim.SetTrigger("Action1");
+                agent.isStopped = true;
             }
 
             if (coolDownJump == false && coolDown == false && RandomAttack > 0.5f && RandomAttack < 0.8f)
@@ -441,6 +443,7 @@ public class BossPrueba : MonoBehaviour
                 ArmaTrail.SetActive(true);
                 Debug.Log("PINCHAZO");
                 anim.SetTrigger("Action3");
+                agent.isStopped = true;
             }
             return;
         }
