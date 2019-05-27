@@ -29,6 +29,7 @@ public class AreaDamage : MonoBehaviour
                     BossHealth boss = cols[i].GetComponent<BossHealth>();
                     boss.TakeDamage(bonusStats);
                 }
+                
                 Debug.Log(cols[i].name);
             }
         }

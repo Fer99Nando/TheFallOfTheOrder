@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3486642031196265616}
   - component: {fileID: 8910746337211350931}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146,7 +146,7 @@ GameObject:
   - component: {fileID: 2023505790028887256}
   - component: {fileID: 5749568670482728755}
   - component: {fileID: 6172824796805657133}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1438,7 +1438,7 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 1, b: 1, a: 0.39215687}
+        key0: {r: 1, g: 1, b: 1, a: 0.19607843}
         key1: {r: 1, g: 1, b: 1, a: 0.19607843}
         key2: {r: 1, g: 1, b: 1, a: 0}
         key3: {r: 0, g: 1, b: 0.9419038, a: 0}
@@ -4845,7 +4845,7 @@ GameObject:
   - component: {fileID: 1833523873439527623}
   - component: {fileID: 2420955109443265835}
   - component: {fileID: 1108313214140468440}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Arrow
   m_TagString: Arrow
   m_Icon: {fileID: 0}
@@ -4921,6 +4921,26 @@ PrefabInstance:
     - target: {fileID: 100000, guid: e9dc31e72bdabbf48b9ca16dbac4ee69, type: 3}
       propertyPath: m_Name
       value: Flecha
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e9dc31e72bdabbf48b9ca16dbac4ee69, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: e9dc31e72bdabbf48b9ca16dbac4ee69, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: e9dc31e72bdabbf48b9ca16dbac4ee69, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: e9dc31e72bdabbf48b9ca16dbac4ee69, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: e9dc31e72bdabbf48b9ca16dbac4ee69, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e9dc31e72bdabbf48b9ca16dbac4ee69, type: 3}
       propertyPath: m_LocalPosition.x

@@ -176,14 +176,14 @@ public class PlayerHealth : MonoBehaviour
 
     public void PotionAntidoto ()
     {
-        currentV -= 50;
+        currentV -= 30;
         UpdateVirusUI();
     }
 
     public void PotionAllInOne ()
     {
-        currentHp += 80;
-        currentV -= 100;
+        currentHp += 50;
+        currentV -= 75;
 
         UpdateLifeUI();
         UpdateVirusUI();

@@ -31,26 +31,7 @@ public class PlayerWeapon : MonoBehaviour
         areaDamage.bonusStats = bonusStats;
         areaDamage.Box();
     }
-    /*
-    void OnTriggerEnter(Collider other)
-	{
-		if (other.tag == "Enemy")
-		{
-            Debug.Log("enemy atravesado");
-            EnemyHealth enemy = other.GetComponent<EnemyHealth>();
-			enemy.TakeDamage (bonusStats);
-            boxCol.enabled = false;
-        }
 
-        if (other.tag == "Boss")
-        {
-            Debug.Log("BOSS atravesado");
-            BossHealth boss = other.GetComponent<BossHealth>();
-            boss.currentHp -= bonusStats;
-            boxCol.enabled = false;
-        }
-    }
-    */
     public void DamageVirus()
     {        
         if (playerHealth.currentV >= maxVirus)

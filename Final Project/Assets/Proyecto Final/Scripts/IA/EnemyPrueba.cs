@@ -14,6 +14,8 @@ public class EnemyPrueba : MonoBehaviour
     private Vector3 targetPosition;
     private GameObject player;
     EnemyHealth enemyDeath;
+    public OverEnemy OverEnemy;
+    private int bonusStats;
 
     [Header("Paths")]
 
@@ -53,6 +55,8 @@ public class EnemyPrueba : MonoBehaviour
 
     private void Awake()
     {
+        bonusStats = 4;
+
         agent = GetComponent<NavMeshAgent>();
 
         anim = GetComponent<Animator>();        // Llamamos a las animaciones
@@ -255,6 +259,12 @@ public class EnemyPrueba : MonoBehaviour
     public void ComienzoAtaque()
     {
         agent.isStopped = false;
+    }
+
+    public void HandsDamage()
+    {
+        OverEnemy.bonusStats = bonusStats;
+        OverEnemy.Box();
     }
 
     float GetDistanceFromTarget()       // Calcula la distancia con el player
