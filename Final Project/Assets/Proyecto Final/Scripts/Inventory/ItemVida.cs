@@ -6,15 +6,23 @@ public class ItemVida : MonoBehaviour
 {
     public GameObject pot;
     public int potion;
+    public Inventory inventory;
+
+    public void Start()
+    {
+        inventory = inventory.GetComponent<Inventory>();
+    }
 
     private void OnTriggerEnter(Collider col)
     {
         if (col.tag == "Player")
         {
-            Debug.Log("Aaa, me tocaste");
-            Inventory inventory = col.gameObject.GetComponent<Inventory>();
-            inventory.ItemsVida(potion);
-            Destroy(pot);
+            if (inventory.inventoryAmount < 3)
+            {
+                Debug.Log("Aaa, me tocaste");
+                inventory.ItemsVida(potion);
+                Destroy(pot);
+            }
         }
     }
 }

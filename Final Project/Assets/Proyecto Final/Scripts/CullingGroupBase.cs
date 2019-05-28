@@ -10,6 +10,7 @@ public class CullingGroupBase : MonoBehaviour
 
     public Transform[] cullingObj;
     public Transform reference;
+    public float sphereRadius = 4.0f;
     public float[] distances;
 
     protected virtual void Start ()
@@ -18,14 +19,14 @@ public class CullingGroupBase : MonoBehaviour
         
         group.targetCamera = Camera.main;
 
-        spheres = new BoundingSphere[100];
+        spheres = new BoundingSphere[cullingObj.Length];
 
         int len = cullingObj.Length;
-        if(len > 100) len = 100;
+        //if(len > 100) len = 100;
 
         for (int i = 0; i < len; i++)
         {
-            spheres[i] = new BoundingSphere(cullingObj[i].position, 1.5f);
+            spheres[i] = new BoundingSphere(cullingObj[i].position, sphereRadius);
         }
 
         group.SetBoundingSpheres(spheres);

@@ -20,7 +20,7 @@ public class Inventory : MonoBehaviour
     public int[] slotType = { 3, 3, 3};
 
 
-    private int inventoryAmount;
+    public int inventoryAmount;
 
     // Start is called before the first frame update
     void Start()

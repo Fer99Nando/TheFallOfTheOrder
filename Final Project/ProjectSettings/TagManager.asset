@@ -16,6 +16,7 @@ TagManager:
   - WeaponBoss
   - Arrow
   - MuerteVacio
+  - ParticleSystem
   layers:
   - Default
   - TransparentFX
