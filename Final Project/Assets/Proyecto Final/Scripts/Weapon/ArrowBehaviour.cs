@@ -38,7 +38,7 @@ public class ArrowBehaviour : MonoBehaviour
             playerHealth.Damage(3);
             Destroy(gameObject);
         }
-        else if(other.tag != "Player" || other.tag != "PlayerWeapon")
+        else if(other.tag == "Wall")
         {
             Destroy(gameObject);
         }
