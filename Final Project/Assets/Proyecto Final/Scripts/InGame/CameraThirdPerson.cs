@@ -30,17 +30,22 @@ public class CameraThirdPerson : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if(PauseMenu.GameIsPaused == false)
+        { 
         this.distance = Mathf.Clamp(this.distance, 5f, 6f); // Limitacion de zoom in and zoom out
 
         this.fixedDist = FixDistance();
+        }
     }
     void LateUpdate()
     {
-        this.positionIncrease = this.lookAt.forward * this.fixedDist;
-        transform.position = Vector3.Lerp(transform.position, this.lookAt.position - this.positionIncrease, 5f * Time.deltaTime);
+        if (PauseMenu.GameIsPaused == false)
+        {
+            this.positionIncrease = this.lookAt.forward * this.fixedDist;
+            transform.position = Vector3.Lerp(transform.position, this.lookAt.position - this.positionIncrease, 5f * Time.deltaTime);
 
-        transform.LookAt(this.lookAt);
+            transform.LookAt(this.lookAt);
+        }
     }
     //Corrige la distancia ante las colisiones u oclusiones de la camara
     float FixDistance()

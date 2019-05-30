@@ -63,7 +63,10 @@ public class PlayerHealth : MonoBehaviour
     public Color virusColor;
     public Color normalColor;
 
-	void Awake()
+    Tweener tween;
+
+
+    void Awake()
 	{
         block = new MaterialPropertyBlock();
         renderer = editorShader.GetComponent<SkinnedMeshRenderer>();
@@ -105,7 +108,14 @@ public class PlayerHealth : MonoBehaviour
 	void UpdateLifeUI ()
 	{
         currentHp = Mathf.Clamp(currentHp, 0, startingHp);
-        healthSlider.fillAmount = currentHp / startingHp;
+        //healthSlider.DOFillAmount( (healthSlider.fillAmount = currentHp / startingHp), 1);
+
+        float newFillAmount = currentHp / startingHp;
+        if (tween != null && tween.IsPlaying()) tween.Kill();
+        tween = healthSlider.DOFillAmount(newFillAmount, 0.2f);
+        //healthSlider.DOFillAmount(healthSlider.fillAmount, 0.5f);
+        
+        //healthSlider.fillAmount = currentHp / startingHp;
     }
     void UpdateVirusUI()
     {        
