@@ -307,11 +307,15 @@ public class BossPrueba : MonoBehaviour
             {
                 agent.speed = chaseSpeed;   // La velocidad del enemigo pasa a ser igual que la de modo persecucion
 
-                state = EnemyState.Chase;   // El estado pasa a ser persecucion
+                agent.stoppingDistance = 3f;
+
+            state = EnemyState.Chase;   // El estado pasa a ser persecucion
             }
             else if (phase == BossPhase.PhaseTwo)
             {
                 agent.speed = chaseSpeed;   // La velocidad del enemigo pasa a ser igual que la de modo persecucion
+
+                agent.stoppingDistance = 3f;
 
                 stateTwo = BossPhaseTwo.ChaseTwo;   // El estado pasa a ser persecucion
             }
@@ -322,13 +326,13 @@ public class BossPrueba : MonoBehaviour
         if (phase == BossPhase.PhaseOne)
         {
             // Sonidos de Ataque si los tiene
-            agent.stoppingDistance = 3.5f;
+            agent.stoppingDistance = 3f;
             state = EnemyState.Attack;
         }
         else if (phase == BossPhase.PhaseTwo)
         {
             // Sonidos de Ataque si los tiene
-            agent.stoppingDistance = 3.5f;
+            agent.stoppingDistance = 3f;
             stateTwo = BossPhaseTwo.AttackTwo;
         }
     }

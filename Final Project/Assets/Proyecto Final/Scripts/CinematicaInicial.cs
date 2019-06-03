@@ -5,11 +5,17 @@ using UnityEngine;
 public class CinematicaInicial : MonoBehaviour
 {
     public GameObject info;
+    public GameObject infoP;
     public float timeToDestroy;
+    public PlayerBehaviour playerBehaviour;
+
     // Start is called before the first frame update
     void Start()
     {
-        //info.SetActive(false);
+        playerBehaviour = playerBehaviour.GetComponent<PlayerBehaviour>();
+        info.SetActive(false);
+        infoP.SetActive(true);
+        playerBehaviour.canMove = false;
     }
 
     // Update is called once per frame
@@ -17,12 +23,12 @@ public class CinematicaInicial : MonoBehaviour
     {
         timeToDestroy += Time.deltaTime;
 
-        if (timeToDestroy >= 21)
+        if (timeToDestroy >= 19 || Input.anyKeyDown)
         {
+            playerBehaviour.canMove = true;
             info.SetActive(true);
             Destroy(gameObject);
+            Destroy(infoP);
         }
-
-        
     }
 }
