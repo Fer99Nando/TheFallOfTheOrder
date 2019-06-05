@@ -7,7 +7,9 @@ using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour 
 {
-	
+    public PlayerHealth playerHealth;
+    public CinematicaInicial cinematica;
+
 	public static bool GameIsPaused;
 	
 	public GameObject pauseMenuUI;
@@ -15,9 +17,9 @@ public class PauseMenu : MonoBehaviour
 
 	public bool resumeButton;
 
-    //public Dropdown resolutionsDropsown;
+    /*public Dropdown resolutionsDropsown;
 
-    //Resolution[] resolutions;
+    Resolution[] resolutions;*/
 
     //MUSICA
     //public AudioMixer audioMixer;
@@ -25,6 +27,9 @@ public class PauseMenu : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
+        playerHealth = playerHealth.GetComponent<PlayerHealth>();
+        cinematica = cinematica.GetComponent<CinematicaInicial>();
+
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
@@ -59,7 +64,7 @@ public class PauseMenu : MonoBehaviour
 	// Update is called once per frame
 	void LateUpdate () 
 	{
-			if (Input.GetKeyDown(KeyCode.Escape))
+			if (Input.GetKeyDown(KeyCode.Escape) && playerHealth.isDead == false && cinematica.cineOn != true)
 			{
 				if (GameIsPaused == true)
 				{

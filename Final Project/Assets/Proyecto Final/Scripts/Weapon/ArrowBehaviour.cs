@@ -32,15 +32,30 @@ public class ArrowBehaviour : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player" || other.tag == "PlayerWeapon")
+        /*if (other.tag == "Player" || other.tag == "PlayerWeapon")
         {
             Debug.Log("AAuuuuuux");
             playerHealth.Damage(3);
             Destroy(gameObject);
-        }
-        else if(other.tag == "Wall")
+        }*/
+        /*else if(other.tag == "Wall")
         {
             Destroy(gameObject);
+        }*/
+    }
+
+    private void OnCollisionEnter(Collision col)
+    {
+        if (col.collider.tag == "Player" || col.collider.tag == "PlayerWeapon")
+        {
+            Debug.Log("AAuuuuuux");
+            playerHealth.Damage(3);
+            Destroy(this.gameObject);
+        }
+
+        if (col.collider.tag == "Wall")
+        {
+            Destroy(this.gameObject);
         }
     }
 }

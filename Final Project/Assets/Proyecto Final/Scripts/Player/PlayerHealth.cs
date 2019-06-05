@@ -56,7 +56,7 @@ public class PlayerHealth : MonoBehaviour
 
 	PlayerBehaviour playerControl;
 
-	bool isDead;
+	public bool isDead;
 	bool damaged;
 	bool intoxicate = false;
 

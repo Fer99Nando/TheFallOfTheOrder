@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CinematicaInicial : MonoBehaviour
 {
+    public bool cineOn;
+
     public GameObject info;
     public GameObject infoP;
     public float timeToDestroy;
@@ -12,6 +14,8 @@ public class CinematicaInicial : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        cineOn = true;
+
         playerBehaviour = playerBehaviour.GetComponent<PlayerBehaviour>();
         info.SetActive(false);
         infoP.SetActive(true);
@@ -25,6 +29,8 @@ public class CinematicaInicial : MonoBehaviour
 
         if (timeToDestroy >= 19 || Input.anyKeyDown)
         {
+            cineOn = false;
+
             playerBehaviour.canMove = true;
             info.SetActive(true);
             Destroy(gameObject);

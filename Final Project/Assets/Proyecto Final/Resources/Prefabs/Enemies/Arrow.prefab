@@ -1053,7 +1053,7 @@ ParticleSystem:
     rateOverDistance:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 150
+      scalar: 30
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -4890,7 +4890,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7823409599226173734}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.623606, y: 1, z: 3.55116}
