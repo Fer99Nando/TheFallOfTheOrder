@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ArrowBehaviour : MonoBehaviour
 {
+    //public DistanceEnemy distanceEnemy;
     private PlayerHealth playerHealth;
     private GameObject player;
 
@@ -12,8 +13,14 @@ public class ArrowBehaviour : MonoBehaviour
     //public ParticleSystem trail;
     private Vector3 targetPosition;
 
+    //bool arrowWall;
+
+    //float arrowLife;
+
     void Start()
     {
+        //arrowWall = false;
+
         player = GameObject.FindGameObjectWithTag("Player");
 
         if ((object)player != null)
@@ -24,25 +31,23 @@ public class ArrowBehaviour : MonoBehaviour
             targetPosition = player.transform.position - transform.position;
             Quaternion newRotation = Quaternion.LookRotation(targetPosition);
             transform.rotation = Quaternion.Lerp(transform.rotation, newRotation, 1);
-           
         }
 
         trail.Play();
     }
 
-    private void OnTriggerEnter(Collider other)
+    /*private void Update()
     {
-        /*if (other.tag == "Player" || other.tag == "PlayerWeapon")
+        if(arrowWall)
         {
-            Debug.Log("AAuuuuuux");
-            playerHealth.Damage(3);
-            Destroy(gameObject);
-        }*/
-        /*else if(other.tag == "Wall")
-        {
-            Destroy(gameObject);
-        }*/
-    }
+            arrowLife += Time.deltaTime;
+
+            if(arrowLife > 3)
+            {
+                Destroy(this.gameObject);
+            }
+        }
+    }*/
 
     private void OnCollisionEnter(Collision col)
     {
@@ -55,6 +60,10 @@ public class ArrowBehaviour : MonoBehaviour
 
         if (col.collider.tag == "Wall")
         {
+            /*distanceEnemy = distanceEnemy.GetComponent<DistanceEnemy>();
+            distanceEnemy.particleSpeed = 0;
+            arrowWall = true;*/
+
             Destroy(this.gameObject);
         }
     }

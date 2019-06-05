@@ -162,6 +162,7 @@ public class BossPrueba : MonoBehaviour
             anim.ResetTrigger("Action");
             anim.SetBool("IddleTime", true);
             anim.SetBool("Chase2", false);
+            agent.isStopped = true;
                 
             timeCounter += Time.deltaTime; // Esto es si quiero que tenga un time para quese  enfrie y poderle atacar
 
@@ -359,6 +360,7 @@ public class BossPrueba : MonoBehaviour
         bossTransformation.SetActive(false);
         anim.SetBool("Chase2", false);
         anim.ResetTrigger("Action2");
+        anim.ResetTrigger("Action3");
         anim.ResetTrigger("Action");
         anim.ResetTrigger("Action1");
         anim.ResetTrigger("PhaseTwo 0");
@@ -430,11 +432,11 @@ public class BossPrueba : MonoBehaviour
 
             if (coolDownJump == false && coolDown == false && RandomAttack > 0.8f)
             {
-                Debug.Log("ATTACK");
+                Debug.Log("SALTITO");
                 anim.SetTrigger("Action2");
             }
 
-            if (coolDownJump == false && coolDown == false && RandomAttack > 0.3f && RandomAttack < 0.5f)
+            if (coolDownJump == false && coolDown == false && RandomAttack > 0.3f && RandomAttack <= 0.5f)
             {
                 ArmaTrail.SetActive(true);
                 Debug.Log("OJO AREA");

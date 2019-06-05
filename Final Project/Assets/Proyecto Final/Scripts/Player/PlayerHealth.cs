@@ -214,9 +214,20 @@ public class PlayerHealth : MonoBehaviour
     {
         if (other.tag == "Arrow" || other.tag == "WeaponBoss")
         {
-            armaTrail.SetActive(false);
-            playerBehaviour.canMove = false;
-            anim.SetTrigger("Hit");
+            float valueHit;
+            valueHit = Random.value;
+
+            if (valueHit > 0.5)
+            {
+                armaTrail.SetActive(false);
+                playerBehaviour.canMove = false;
+                anim.SetTrigger("Hit");
+            }
+            else
+            {
+                armaTrail.SetActive(false);
+                return;
+            }
         }
 
         if (other.tag == "MuerteVacio")
