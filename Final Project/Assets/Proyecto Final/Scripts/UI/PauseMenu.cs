@@ -64,7 +64,7 @@ public class PauseMenu : MonoBehaviour
 	// Update is called once per frame
 	void LateUpdate () 
 	{
-			if (Input.GetKeyDown(KeyCode.Escape) && playerHealth.isDead == false && cinematica.cineOn != true)
+			if (Input.GetKeyDown(KeyCode.Escape) && playerHealth.isDead == false && cinematica.cineOn == false)
 			{
 				if (GameIsPaused == true)
 				{

@@ -27,7 +27,7 @@ public class CinematicaInicial : MonoBehaviour
     {
         timeToDestroy += Time.deltaTime;
 
-        if (timeToDestroy >= 19 || Input.anyKeyDown)
+        if (timeToDestroy >= 15 || Input.anyKeyDown)
         {
             cineOn = false;
 

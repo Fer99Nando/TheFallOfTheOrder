@@ -25,8 +25,9 @@ public class PlayerHealth : MonoBehaviour
     [Header("Life")]
 	public float startingHp;
 	public float startingV;
-	
-	[Header("Life InGame")]
+    float valueHit;
+
+    [Header("Life InGame")]
 	public float currentHp;
 	public float currentV;
 
@@ -180,7 +181,7 @@ public class PlayerHealth : MonoBehaviour
     #region POTIONS
     public void PotionHelath ()
     {
-        currentHp += 40;        
+        currentHp += 30;        
         UpdateLifeUI();
     }
 
@@ -192,8 +193,8 @@ public class PlayerHealth : MonoBehaviour
 
     public void PotionAllInOne ()
     {
-        currentHp += 50;
-        currentV -= 75;
+        currentHp += 40;
+        currentV -= 60;
 
         UpdateLifeUI();
         UpdateVirusUI();
@@ -214,10 +215,9 @@ public class PlayerHealth : MonoBehaviour
     {
         if (other.tag == "Arrow" || other.tag == "WeaponBoss")
         {
-            float valueHit;
-            valueHit = Random.value;
+            ValueHit();
 
-            if (valueHit > 0.5)
+            if (valueHit > 0.2)
             {
                 armaTrail.SetActive(false);
                 playerBehaviour.canMove = false;
@@ -234,6 +234,11 @@ public class PlayerHealth : MonoBehaviour
         {
             DieAcabado();
         }
+    }
+
+    void ValueHit()
+    {
+        valueHit = Random.value;
     }
 
     public void HitAcabado()
@@ -254,6 +259,7 @@ public class PlayerHealth : MonoBehaviour
         anim.ResetTrigger("FirstCombo");
         anim.ResetTrigger("SecondCombo");
         anim.ResetTrigger("ChargeAttack");
+        anim.ResetTrigger("Dodge 0");
         anim.ResetTrigger("Attack");
         anim.ResetTrigger("Hit");
     }
